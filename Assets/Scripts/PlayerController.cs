@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float jumpForce = 7f;
-    public float groundCheckDistance = 0.1f;
+    public float groundCheckDistance = 1f;
     public LayerMask groundLayer;
 
     private Rigidbody rb;
@@ -41,10 +41,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate() {
         // Apply movement
-        if (movement.magnitude > 0.1f)
-        {
-            Vector3 moveVelocity = movement * moveSpeed;
-            rb.MovePosition(new Vector3(moveVelocity.x, rb.velocity.y, moveVelocity.z));
-        }
+        Vector3 moveVelocity = movement.normalized * moveSpeed;
+        rb.velocity = new Vector3(moveVelocity.x, rb.velocity.y, moveVelocity.z);
     }
 }
