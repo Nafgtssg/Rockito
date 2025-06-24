@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class CameraFollow : MonoBehaviour
 {
@@ -14,11 +15,13 @@ public class CameraFollow : MonoBehaviour
         if (target == null) return;
 
         // Calculate desired position
-        Vector3 desiredPosition = target.position + offset;
-        desiredPosition.y = height; // Maintain constant height
-        desiredPosition.z -= distance; // Offset behind the player
+        Debug.Log($"({transform.rotation.eulerAngles.x}, {transform.rotation.eulerAngles.y}, {transform.rotation.eulerAngles.z})");
+        Vector3 desiredPosition = target.position;
+        desiredPosition.x -= (distance + offset.x) * Mathf.Sin(transform.rotation.eulerAngles.y * Mathf.Deg2Rad);
+        desiredPosition.y += height + offset.y;
+        desiredPosition.z -= (distance + offset.z) * Mathf.Cos(transform.rotation.eulerAngles.y * Mathf.Deg2Rad);
 
-        // Smoothly move to desired position
+        // Smoothly move to desired position, jprdl
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
         transform.position = smoothedPosition;
     }
