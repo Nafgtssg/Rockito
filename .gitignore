@@ -41,7 +41,7 @@ Desktop.ini
 # ============= #
 # Unity Packages #
 # ============= #
-/[Pp]ackages/
+/[Pp]ackages/packages-lock.json
 
 # ==================== #
 # Asset cache and meta #
