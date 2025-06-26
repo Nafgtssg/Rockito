@@ -10,8 +10,7 @@ public class CameraController : MonoBehaviour
     public float smoothSpeed = 0.125f;
     public Vector3 offset;
     [Range(0.0f, 360.0f)] public float rotation = 0;
-    void LateUpdate()
-    {
+    void LateUpdate() {
         if (target == null) return;
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))

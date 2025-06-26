@@ -15,32 +15,24 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool isGrounded;
     private Vector3 movement;
 
-    void Awake()
-    {
+    void Awake() {
         rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
-    {
-        // Ground check
+    void Update() {
         isGrounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance, groundLayer);
 
-        // Get input
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        // Movement vector (ignoring vertical input for true top-down)
         movement = cam.forward * vertical + cam.right * horizontal;
 
-        // Jump input
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
+        if (Input.GetButtonDown("Jump") && isGrounded) {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
 
     void FixedUpdate() {
-        // Apply movement
         Vector3 moveVelocity = movement.normalized * moveSpeed;
         rb.velocity = new Vector3(moveVelocity.x, rb.velocity.y, moveVelocity.z);
     }
