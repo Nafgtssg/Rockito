@@ -7,12 +7,12 @@ public class PlayerController : MonoBehaviour
     public Transform cam;
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
-    //public float jumpForce = 7f;
-    public float groundCheckDistance = 0.1f;
+    public float jumpForce = 7f;
+    public float groundCheckDistance = 1f;
     public LayerMask groundLayer;
 
     private Rigidbody rb;
-    private bool isGrounded;
+    [SerializeField] private bool isGrounded;
     private Vector3 movement;
 
     void Awake()
@@ -33,17 +33,15 @@ public class PlayerController : MonoBehaviour
         movement = cam.forward * vertical + cam.right * horizontal;
 
         // Jump input
-        /*if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        }*/
+        }
     }
 
     void FixedUpdate() {
         // Apply movement
-        
-        Vector3 moveVelocity = movement * moveSpeed;
-        rb.velocity = (new Vector3(moveVelocity.x, rb.velocity.y, moveVelocity.z));
-        
+        Vector3 moveVelocity = movement.normalized * moveSpeed;
+        rb.velocity = new Vector3(moveVelocity.x, rb.velocity.y, moveVelocity.z);
     }
 }
