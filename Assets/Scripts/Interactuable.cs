@@ -60,10 +60,15 @@ public class Interactable : MonoBehaviour
         if (interactableData != null && interactableData.isPickup)
         {
             GameManager.manager.text.text = "";
+            GameManager.manager.inventory.Add(interactableData);
             if (animator == null)
                 Destroy(gameObject);
             else
+            {
+                animator.gameObject.transform.SetParent(null, true);
                 animator.SetTrigger("Destroy");
+                Destroy(gameObject);
+            }
         }
     }
 }

@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public static GameManager manager;
     [Header("UI Stuff")]
     public TextMeshProUGUI text;
+    [Header("Inventory")]
+    public List<InteractableData> inventory;
     void Awake()
     {
         if (manager != null && manager != this) Destroy(gameObject);
