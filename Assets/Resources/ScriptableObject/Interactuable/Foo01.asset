@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Foo01
   m_EditorClassIdentifier: 
   displayName: Foo01
-  icon: {fileID: 0}
+  icon: {fileID: -350136108, guid: 33fbef4a6433f2d439651f2dec2856c6, type: 3}
   isPickup: 1
   interactionSound: {fileID: 0}
   description: 
