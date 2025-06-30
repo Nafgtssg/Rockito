@@ -7,6 +7,8 @@ public class DialogNode : ScriptableObject {
     [Header("Speaker Info")]
     public string displayName;
     public Sprite portrait;
+    public AudioClip sound;
+    public float pitchVariation = 0;
 
     [Header("Dialog Content")]
     [TextArea(0, 300)] public string dialogText;

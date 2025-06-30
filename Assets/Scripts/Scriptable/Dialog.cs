@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dialog : MonoBehaviour
+[CreateAssetMenu(fileName = "NewInteractableData", menuName = "Geodisea/Interactable/Dialog")]
+public class Dialog : Interactable
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    [Header("Dialog Settings")]
+    public DialogNode dialog;
+    public void Display() {
+        GameManager.manager.StartDialog(dialog);
     }
 }

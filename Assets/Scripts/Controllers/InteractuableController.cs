@@ -15,7 +15,7 @@ public class InteractableController : MonoBehaviour
     }
 
     void Update() {
-        if (isPlayerInRange && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)))
+        if (isPlayerInRange && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && !GameManager.manager.inDialog)
             Interact();
     }
 
