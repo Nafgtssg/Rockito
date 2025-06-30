@@ -6,6 +6,7 @@ public class Interactable : ScriptableObject
     [Header("Basic Info")]
     public InteractableType type;
     public string displayName = "Object";
+    public string action = "interactuar";
 
     [Header("Audio")]
     public AudioClip interactionSound;

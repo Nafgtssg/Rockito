@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public Image book;
     public TextMeshProUGUI text;
     [Header("Inventory")]
-    public List<InteractableData> inventory;
+    public List<Pickup> inventory;
     [Header("Dialog System")]
     public DialogNode currentDialog;
     public TextMeshProUGUI charName;

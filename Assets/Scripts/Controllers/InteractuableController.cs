@@ -4,59 +4,49 @@ using UnityEngine;
 public class InteractableController : MonoBehaviour
 {
     [Header("Interaction Settings")]
-    public InteractableData interactableData;
+    public Interactable interactable;
     public Animator animator;
     private bool isPlayerInRange = false;
     private Collider interactionCollider;
 
-    void Awake()
-    {
+    void Awake() {
         interactionCollider = GetComponent<Collider>();
         interactionCollider.isTrigger = true;
     }
 
-    void Update()
-    {
+    void Update() {
         if (isPlayerInRange && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)))
-        {
             Interact();
-        }
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player") && interactableData != null)
-        {
+    void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("Player") && interactable != null) {
             isPlayerInRange = true;
-            onPlayerEnterRange.Invoke();
-            GameManager.manager.text.text = $"Pulsa E o Enter para {(interactableData.isPickup ? "recoger" : "interactuar")}";
+            interactable.onPlayerEnterRange.Invoke();
+            GameManager.manager.text.text = $"Pulsa E o Enter para {interactable.action}";
         }
     }
 
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
+    void OnTriggerExit(Collider other) {
+        if (other.CompareTag("Player")) {
             isPlayerInRange = false;
-            onPlayerExitRange.Invoke();
+            interactable.onPlayerExitRange.Invoke();
             GameManager.manager.text.text = "";
         }
     }
 
-    public virtual void Interact()
-    {
-        onInteract.Invoke();
-        Debug.Log($"Interacted with {interactableData.displayName}");
+    public virtual void Interact() {
+        interactable.onInteract.Invoke();
+        Debug.Log($"Interacted with {interactable.displayName}");
 
-        // If consumable, handle destruction
-        if (interactableData != null && interactableData.isPickup)
-        {
+        // If pickup, handle destruction
+        if (interactable != null && interactable.type == InteractableType.pickup) {
+            Pickup pickup = (Pickup)interactable;
             GameManager.manager.text.text = "";
-            GameManager.manager.inventory.Add(interactableData);
+            GameManager.manager.inventory.Add(pickup);
             if (animator == null)
                 Destroy(gameObject);
-            else
-            {
+            else {
                 animator.gameObject.transform.SetParent(null, true);
                 animator.SetTrigger("Destroy");
                 Destroy(gameObject);
