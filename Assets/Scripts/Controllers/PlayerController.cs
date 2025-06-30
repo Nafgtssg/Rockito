@@ -25,10 +25,11 @@ public class PlayerController : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        movement = cam.forward * vertical + cam.right * horizontal;
-
-        if (Input.GetButtonDown("Jump") && isGrounded) {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        if (!GameManager.manager.inDialog)
+        {
+            movement = cam.forward * vertical + cam.right * horizontal;
+            if (Input.GetButtonDown("Jump") && isGrounded && !GameManager.manager.inDialog)
+                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
 

@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e8e66b627718884da25026fe6d744eb, type: 3}
-  m_Name: mish003
+  m_Name: mish005
   m_EditorClassIdentifier: 
-  displayName: Rockito
+  displayName: Mish
   portrait: {fileID: 0}
-  sound: {fileID: 0}
+  sound: {fileID: 8300000, guid: 1ac995078500e8b4b8ef2c5921230bcd, type: 3}
   pitchVariation: 0
-  dialogText: "\xA1\xBFQu\xE9 hago aqu\xED?!"
-  nextNode: {fileID: 11400000, guid: a01bd64cfb4cd42449afa52f5827aa4b, type: 2}
-  hasChoices: 0
-  choices: []
+  dialogText: "\xBFVoh donde cre\xED que andai?"
+  nextNode: {fileID: 0}
+  hasChoices: 1
+  choices:
+  - {fileID: 11400000, guid: 0a9c55a275b1dda44a480ac42cdaabd7, type: 2}
+  - {fileID: 11400000, guid: 839ce7a93cd7592459297798a92da5cf, type: 2}

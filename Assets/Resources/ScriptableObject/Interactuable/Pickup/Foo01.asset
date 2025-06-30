@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   displayName: Foo01
-  action: recojer
+  action: recoger
   interactionSound: {fileID: 0}
   onInteract:
     m_PersistentCalls:

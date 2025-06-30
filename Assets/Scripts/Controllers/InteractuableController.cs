@@ -16,11 +16,14 @@ public class InteractableController : MonoBehaviour
 
     void Update() {
         if (isPlayerInRange && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && !GameManager.manager.inDialog)
-            Interact();
+        {
+            Interact();   
+            GameManager.manager.text.text = "";
+        }
     }
 
     void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Player") && interactable != null) {
+        if (other.CompareTag("Player") && interactable != null && !GameManager.manager.inDialog) {
             isPlayerInRange = true;
             interactable.onPlayerEnterRange.Invoke();
             GameManager.manager.text.text = $"Pulsa E o Enter para {interactable.action}";
@@ -30,8 +33,8 @@ public class InteractableController : MonoBehaviour
     void OnTriggerExit(Collider other) {
         if (other.CompareTag("Player")) {
             isPlayerInRange = false;
-            interactable.onPlayerExitRange.Invoke();
             GameManager.manager.text.text = "";
+            interactable.onPlayerExitRange.Invoke();
         }
     }
 
@@ -42,7 +45,6 @@ public class InteractableController : MonoBehaviour
         // If pickup, handle destruction
         if (interactable != null && interactable.type == InteractableType.pickup) {
             Pickup pickup = (Pickup)interactable;
-            GameManager.manager.text.text = "";
             GameManager.manager.inventory.Add(pickup);
             if (animator == null)
                 Destroy(gameObject);
