@@ -1,19 +1,11 @@
 using UnityEngine;
-using UnityEngine.Events;
 
 [RequireComponent(typeof(Collider))]
-public class Interactable : MonoBehaviour
+public class InteractableController : MonoBehaviour
 {
     [Header("Interaction Settings")]
     public InteractableData interactableData;
-    public Vector3 interactionOffset = Vector3.zero;
     public Animator animator;
-
-    [Header("Events")]
-    public UnityEvent onInteract;
-    public UnityEvent onPlayerEnterRange;
-    public UnityEvent onPlayerExitRange;
-
     private bool isPlayerInRange = false;
     private Collider interactionCollider;
 

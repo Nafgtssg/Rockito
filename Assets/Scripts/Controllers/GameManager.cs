@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     [Header("Inventory")]
     public List<InteractableData> inventory;
     [Header("Dialog System")]
+    public DialogNode currentDialog;
     public TextMeshProUGUI charName;
     public TextMeshProUGUI dialog;
     void Awake()
