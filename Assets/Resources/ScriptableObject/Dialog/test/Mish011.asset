@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8e66b627718884da25026fe6d744eb, type: 3}
   m_Name: Mish011
   m_EditorClassIdentifier: 
-  displayName: "Se nota poh choro, si er\xED terrible pollo."
+  displayName: Mish
   portrait: {fileID: 0}
   sound: {fileID: 8300000, guid: 1ac995078500e8b4b8ef2c5921230bcd, type: 3}
   pitchVariation: 0.01
-  dialogText: 
+  dialogText: "Se nota poh choro, si er\xED terrible pollo."
   nextNode: {fileID: 0}
   hasChoices: 0
   choices: []

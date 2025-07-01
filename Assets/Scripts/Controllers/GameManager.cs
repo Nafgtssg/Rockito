@@ -3,15 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager manager;
     [Header("UI Stuff")]
-    public Image book;
+    public GameObject book;
+    private bool isBookOpen = false;
     public TextMeshProUGUI text;
     [Header("Inventory")]
     public List<Pickup> inventory;
+    public GameObject[] inventorySlot;
+    public TextMeshProUGUI invName;
+    public TextMeshProUGUI invDescription;
+    public Image invImage;
     [Header("Dialog System")]
     public AudioSource audioSource;
     public DialogNode currentDialog;
@@ -39,10 +45,84 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) book.enabled = !book.enabled;
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            isBookOpen = !isBookOpen;
+            book.SetActive(isBookOpen);
+            if (isBookOpen) UpdateInventory();
+        }
         if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && inDialog && safeDialog && !isChoice)
-            PassDialog();
+                PassDialog();
     }
+    void UpdateInventory() {
+        // Clear all slots first
+        foreach (GameObject slot in inventorySlot)
+        {
+            slot.GetComponent<Image>().sprite = null;
+            slot.GetComponent<Button>().onClick.RemoveAllListeners();
+            slot.SetActive(false);
+        }
+
+        // Populate slots with items
+        for (int i = 0; i < inventory.Count; i++)
+        {
+            if (i >= inventorySlot.Length) break;
+
+            GameObject slot = inventorySlot[i];
+            Pickup item = inventory[i];
+
+            // Set slot active and assign icon
+            slot.SetActive(true);
+            slot.GetComponent<Image>().sprite = item.icon;
+
+            // Add hover events
+            Button slotButton = slot.GetComponent<Button>();
+            slotButton.onClick.AddListener(() => SelectItem(item));
+
+            // Add hover effect
+            EventTrigger trigger = slot.GetComponent<EventTrigger>();
+            if (trigger == null) trigger = slot.AddComponent<EventTrigger>();
+
+            // Clear existing triggers
+            trigger.triggers.Clear();
+
+            // Add pointer enter event
+            var pointerEnter = new EventTrigger.Entry();
+            pointerEnter.eventID = EventTriggerType.PointerEnter;
+            pointerEnter.callback.AddListener((data) => { OnHoverItem(item); });
+            trigger.triggers.Add(pointerEnter);
+
+            // Add pointer exit event
+            var pointerExit = new EventTrigger.Entry();
+            pointerExit.eventID = EventTriggerType.PointerExit;
+            pointerExit.callback.AddListener((data) => { ClearItemDisplay(); });
+            trigger.triggers.Add(pointerExit);
+        }
+
+        // Clear details if inventory is empty
+        if (inventory.Count == 0)
+        {
+            ClearItemDisplay();
+        }
+    }
+    void OnHoverItem(Pickup item)
+    {
+        invName.text = item.displayName;
+        invDescription.text = item.description;
+        invImage.sprite = item.icon;
+    }
+    void ClearItemDisplay()
+    {
+        invName.text = "";
+        invDescription.text = "Posa el cursor sobre un objeto para ver sus detalles.";
+        invImage.sprite = null;
+    }
+    public void SelectItem(Pickup item)
+    {
+        // Handle item selection/use here
+        Debug.Log("Selected: " + item.displayName);
+    }
+    /* DIALOGO */
     public void StartDialog(DialogNode dialog)
     {
         currentDialog = dialog;
@@ -56,10 +136,13 @@ public class GameManager : MonoBehaviour
         dialogBox.SetActive(true);
         charName.text = currentDialog.displayName;
         typingRoutine = StartCoroutine(TypeText(currentDialog.dialogText));
-        if (currentDialog.hasChoices && currentDialog.choices.Length > 0) {
+        if (currentDialog.hasChoices && currentDialog.choices.Length > 0)
+        {
             isChoice = true;
-            for (int i = 0; i < choiceButtons.Length; i++) {
-                if (i < currentDialog.choices.Length) {
+            for (int i = 0; i < choiceButtons.Length; i++)
+            {
+                if (i < currentDialog.choices.Length)
+                {
                     choiceButtons[i].SetActive(true);
                     choiceButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = currentDialog.choices[i].choiceText;
 
