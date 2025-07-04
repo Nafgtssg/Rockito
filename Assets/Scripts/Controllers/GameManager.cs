@@ -25,13 +25,13 @@ public class GameManager : MonoBehaviour
     public GameObject dialogBox;
     public TextMeshProUGUI charName;
     public TextMeshProUGUI dialogText;
+    public Image[] dialogPortrait;
     public GameObject[] choiceButtons;
     public float charactersPerSecond = 30f;
     private bool isTyping = false;
     private bool isChoice = false;
     private bool safeDialog = false;
     private Coroutine typingRoutine;
-    
     void Awake()
     {
         if (manager != null && manager != this) Destroy(gameObject);
@@ -122,7 +122,10 @@ public class GameManager : MonoBehaviour
         // Handle item selection/use here
         Debug.Log("Selected: " + item.displayName);
     }
-    /* DIALOGO */
+
+    /*************
+       DIALOGO 
+    *************/
     public void StartDialog(DialogNode dialog)
     {
         currentDialog = dialog;
@@ -136,6 +139,21 @@ public class GameManager : MonoBehaviour
         dialogBox.SetActive(true);
         charName.text = currentDialog.displayName;
         typingRoutine = StartCoroutine(TypeText(currentDialog.dialogText));
+
+        // Portraits come here
+        if (currentDialog.leftSpeaker != null)
+        {
+            dialogPortrait[0].sprite = currentDialog.leftSpeaker;
+            dialogPortrait[0].gameObject.SetActive(true);
+        }
+        else dialogPortrait[0].gameObject.SetActive(false);
+        if (currentDialog.rightSpeaker != null)
+        {
+            dialogPortrait[1].sprite = currentDialog.rightSpeaker;
+            dialogPortrait[1].gameObject.SetActive(true);
+        }
+        else dialogPortrait[1].gameObject.SetActive(false);
+
         if (currentDialog.hasChoices && currentDialog.choices.Length > 0)
         {
             isChoice = true;
@@ -143,35 +161,44 @@ public class GameManager : MonoBehaviour
             {
                 if (i < currentDialog.choices.Length)
                 {
+                    bool isChoiceValid = currentDialog.choices[i].validator == null || currentDialog.choices[i].validator.Validate();
+
                     choiceButtons[i].SetActive(true);
                     choiceButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = currentDialog.choices[i].choiceText;
 
                     Button button = choiceButtons[i].GetComponent<Button>();
                     button.onClick.RemoveAllListeners();
                     int currentIndex = i;
-                    button.onClick.AddListener(() => MakeChoice(currentIndex));
+                    if (isChoiceValid)
+                        button.onClick.AddListener(() => MakeChoice(currentIndex));
+                    choiceButtons[i].GetComponent<Image>().color = isChoiceValid ? Color.white : new Color(0.5f, 0.5f, 0.5f);
                 }
-                else
-                    choiceButtons[i].SetActive(false);
+                else choiceButtons[i].SetActive(false);
             }
         }
         else
             foreach (var button in choiceButtons)
                 button.SetActive(false);
-    }
-    public void PassDialog() {
+    }    
+
+    public void PassDialog()
+    {
         // If text is still typing, complete it immediately
-        if (isTyping) {
+        if (isTyping)
+        {
             StopCoroutine(typingRoutine);
             dialogText.text = currentDialog.dialogText;
             isTyping = false;
             return;
         }
-        if (currentDialog.nextNode == null) {
+        if (currentDialog.nextNode == null)
+        {
             inDialog = false;
             safeDialog = false;
             isChoice = false;
             dialogBox.SetActive(false);
+            dialogPortrait[0].gameObject.SetActive(false);
+            dialogPortrait[1].gameObject.SetActive(false);
         }
         else StartDialog(currentDialog.nextNode);
     }

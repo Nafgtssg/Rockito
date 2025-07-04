@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: mish005
   m_EditorClassIdentifier: 
   displayName: Mish
-  portrait: {fileID: 0}
+  leftSpeaker: {fileID: -1665800526, guid: 452208542ef7f454797d61a501677bf2, type: 3}
+  rightSpeaker: {fileID: 1381475074, guid: 452208542ef7f454797d61a501677bf2, type: 3}
   sound: {fileID: 8300000, guid: 1ac995078500e8b4b8ef2c5921230bcd, type: 3}
   pitchVariation: 0
   dialogText: "\xBFVoh donde cre\xED que andai?"
@@ -22,3 +23,4 @@ MonoBehaviour:
   choices:
   - {fileID: 11400000, guid: 0a9c55a275b1dda44a480ac42cdaabd7, type: 2}
   - {fileID: 11400000, guid: 839ce7a93cd7592459297798a92da5cf, type: 2}
+  - {fileID: 11400000, guid: a9dda0fb410ee31428ffaddd000c52bc, type: 2}

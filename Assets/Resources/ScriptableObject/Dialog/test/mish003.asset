@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: mish003
   m_EditorClassIdentifier: 
   displayName: Rockito
-  portrait: {fileID: 0}
+  leftSpeaker: {fileID: -1665800526, guid: 452208542ef7f454797d61a501677bf2, type: 3}
+  rightSpeaker: {fileID: 1381475074, guid: 452208542ef7f454797d61a501677bf2, type: 3}
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: "\xA1\xBFQu\xE9 hago aqu\xED?!"

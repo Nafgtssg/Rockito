@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: mish001
   m_EditorClassIdentifier: 
   displayName: Mish
-  portrait: {fileID: 0}
+  leftSpeaker: {fileID: -1665800526, guid: 452208542ef7f454797d61a501677bf2, type: 3}
+  rightSpeaker: {fileID: 1381475074, guid: 452208542ef7f454797d61a501677bf2, type: 3}
   sound: {fileID: 8300000, guid: 1ac995078500e8b4b8ef2c5921230bcd, type: 3}
   pitchVariation: 0
   dialogText: "\xA1Hola! \xA1Estamos probando la funcionalidad del di\xE1logo!"

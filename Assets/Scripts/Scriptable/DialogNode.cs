@@ -6,7 +6,8 @@ using UnityEngine;
 public class DialogNode : ScriptableObject {
     [Header("Speaker Info")]
     public string displayName;
-    public Sprite portrait;
+    public Sprite leftSpeaker;
+    public Sprite rightSpeaker;
     public AudioClip sound;
     public float pitchVariation = 0;
 

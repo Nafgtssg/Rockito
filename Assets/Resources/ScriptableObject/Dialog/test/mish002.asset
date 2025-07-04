@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: mish002
   m_EditorClassIdentifier: 
   displayName: Rockito
-  portrait: {fileID: 0}
+  leftSpeaker: {fileID: -1665800526, guid: 452208542ef7f454797d61a501677bf2, type: 3}
+  rightSpeaker: {fileID: 1381475074, guid: 452208542ef7f454797d61a501677bf2, type: 3}
+  sound: {fileID: 0}
+  pitchVariation: 0
   dialogText: "\xA1\xBFD\xF3nde estoy?!"
   nextNode: {fileID: 11400000, guid: 44bcabec4b72b3d40900f7bcc6d88cf5, type: 2}
   hasChoices: 0

@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e8e66b627718884da25026fe6d744eb, type: 3}
-  m_Name: mish004
+  m_Name: Mish031
   m_EditorClassIdentifier: 
   displayName: Mish
   leftSpeaker: {fileID: -1665800526, guid: 452208542ef7f454797d61a501677bf2, type: 3}
   rightSpeaker: {fileID: 1381475074, guid: 452208542ef7f454797d61a501677bf2, type: 3}
   sound: {fileID: 8300000, guid: 1ac995078500e8b4b8ef2c5921230bcd, type: 3}
-  pitchVariation: 0.05
-  dialogText: "Aer washito, no me vengai a gritar, que no soy nah tu mam\xE1 pa que
-    me vengai a wear as\xED."
-  nextNode: {fileID: 11400000, guid: 2990f9eb183da4549b69d44d580f18b4, type: 2}
+  pitchVariation: 0
+  dialogText: Ja pierdole!
+  nextNode: {fileID: 0}
   hasChoices: 0
   choices: []
