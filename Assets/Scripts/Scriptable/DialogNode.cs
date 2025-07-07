@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Dialog", menuName = "Geodisea/Dialog/Dialog Node")]
+[CreateAssetMenu(fileName = "New Dialog Node", menuName = "Geodisea/Dialog/Dialog Node")]
 public class DialogNode : ScriptableObject {
     [Header("Speaker Info")]
     public string displayName;

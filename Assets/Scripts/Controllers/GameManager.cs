@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public Image invImage;
     [Header("Dialog System")]
     public AudioSource audioSource;
+    [SerializeField] private List<DialogState> dialogStates = new List<DialogState>();
     public DialogNode currentDialog;
     public bool inDialog = false;
     public GameObject dialogBox;
@@ -52,9 +53,10 @@ public class GameManager : MonoBehaviour
             if (isBookOpen) UpdateInventory();
         }
         if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && inDialog && safeDialog && !isChoice)
-                PassDialog();
+            PassDialog();
     }
-    void UpdateInventory() {
+    void UpdateInventory()
+    {
         // Clear all slots first
         foreach (GameObject slot in inventorySlot)
         {
@@ -179,7 +181,7 @@ public class GameManager : MonoBehaviour
         else
             foreach (var button in choiceButtons)
                 button.SetActive(false);
-    }    
+    }
 
     public void PassDialog()
     {
@@ -202,17 +204,21 @@ public class GameManager : MonoBehaviour
         }
         else StartDialog(currentDialog.nextNode);
     }
-    public void MakeChoice(int choiceIndex) {
-        if (currentDialog.hasChoices && choiceIndex < currentDialog.choices.Length) {
+    public void MakeChoice(int choiceIndex)
+    {
+        if (currentDialog.hasChoices && choiceIndex < currentDialog.choices.Length)
+        {
             isChoice = false;
             StartDialog(currentDialog.choices[choiceIndex].nextNode);
         }
     }
-    IEnumerator SafeDialog() {
+    IEnumerator SafeDialog()
+    {
         yield return new WaitForSeconds(0.25f);
         safeDialog = true;
     }
-    IEnumerator TypeText(string text) {
+    IEnumerator TypeText(string text)
+    {
         isTyping = true;
         dialogText.text = "";
         float delay = 1f / charactersPerSecond;
@@ -225,8 +231,10 @@ public class GameManager : MonoBehaviour
             if (!(letter == ' ' || letter == '!' || letter == '?' || letter == '¡' || letter == '¿')) PlayTypeSound();
 
             float timer = 0f;
-            while (timer < delay) {
-                if (Input.GetButtonDown("Submit")) {
+            while (timer < delay)
+            {
+                if (Input.GetButtonDown("Submit"))
+                {
                     dialogText.text = text;
                     isTyping = false;
                     yield break;
@@ -238,11 +246,41 @@ public class GameManager : MonoBehaviour
 
         isTyping = false;
     }
-    void PlayTypeSound() {
-        if (currentDialog.sound != null) {
+    void PlayTypeSound()
+    {
+        if (currentDialog.sound != null)
+        {
             // Small pitch variation for more natural sound
             audioSource.pitch = Random.Range(1f - currentDialog.pitchVariation, 1f + currentDialog.pitchVariation);
             audioSource.PlayOneShot(currentDialog.sound);
         }
     }
+    public int GetDialogState(string id)
+    {
+        DialogState state = dialogStates.Find(s => s.id == id);
+        if (state == null)
+        {
+            state = new DialogState { id = id, dialogState = 0 };
+            dialogStates.Add(state);
+        }
+        return state.dialogState;
+    }
+    public void SetDialogState(string id, int newState)
+    {
+        var state = dialogStates.Find(s => s.id == id);
+        if (state == null)
+        {
+            state = new DialogState { id = id, dialogState = newState };
+            dialogStates.Add(state);
+        }
+        else
+            state.dialogState = newState;
+    }
+}
+
+[System.Serializable]
+public class DialogState
+{
+    public string id;
+    public int dialogState;
 }

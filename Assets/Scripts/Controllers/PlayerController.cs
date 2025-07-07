@@ -34,7 +34,10 @@ public class PlayerController : MonoBehaviour
     }
 
     void FixedUpdate() {
-        Vector3 moveVelocity = movement.normalized * moveSpeed;
-        rb.velocity = new Vector3(moveVelocity.x, rb.velocity.y, moveVelocity.z);
+        if (!GameManager.manager.inDialog)
+        {
+            Vector3 moveVelocity = movement.normalized * moveSpeed;
+            rb.velocity = new Vector3(moveVelocity.x, rb.velocity.y, moveVelocity.z);
+        }
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "DialogChoice", menuName = "Geodisea/Dialog/Dialog Choice")]
+[CreateAssetMenu(fileName = "New Dialog Choice", menuName = "Geodisea/Dialog/Dialog Choice")]
 public class DialogChoice : ScriptableObject
 {
     public string choiceText;

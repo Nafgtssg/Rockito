@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewInteractableData", menuName = "Geodisea/Interactable/Pickup")]
+[CreateAssetMenu(fileName = "New Interactable Pickup", menuName = "Geodisea/Interactable/Pickup")]
 public class Pickup : Interactable
 {
     [Header("Pickup Settings")]

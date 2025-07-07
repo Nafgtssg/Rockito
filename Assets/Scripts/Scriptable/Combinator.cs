@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Validator", menuName = "Geodisea/Validator/Combinator")]
+[CreateAssetMenu(fileName = "New Combinator of Validators", menuName = "Geodisea/Validator/Combinator")]
 public class Combinator : Validator
 {
     [Header("Validator Properties")]

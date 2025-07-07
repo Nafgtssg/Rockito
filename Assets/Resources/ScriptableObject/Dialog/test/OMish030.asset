@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: OMish030
   m_EditorClassIdentifier: 
   choiceText: "Arrepi\xE9ntete de tus pecados"
-  nextNode: {fileID: 11400000, guid: 50b2606fc8edb604bb594bfd8e83e642, type: 2}
+  nextNode: {fileID: 11400000, guid: 9a30cb60dfd151b4d9d1da36a2967fa2, type: 2}
   validator: {fileID: 11400000, guid: ed0e13ba319c27f45b401fdb5865b1a1, type: 2}
