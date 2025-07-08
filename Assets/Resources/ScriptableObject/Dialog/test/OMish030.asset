@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0a4d388c26bd2945a0f96bd26c833c2, type: 3}
+  m_Name: OMish030
+  m_EditorClassIdentifier: 
+  choiceText: "Arrepi\xE9ntete de tus pecados"
+  nextNode: {fileID: 11400000, guid: 9a30cb60dfd151b4d9d1da36a2967fa2, type: 2}
+  validator: {fileID: 11400000, guid: ed0e13ba319c27f45b401fdb5865b1a1, type: 2}
