@@ -12,13 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8e66b627718884da25026fe6d744eb, type: 3}
   m_Name: npcP001
   m_EditorClassIdentifier: 
-  displayName: 
+  displayName: Taipura
   leftSpeaker: {fileID: 0}
-  rightSpeaker: {fileID: 0}
+  rightSpeaker: {fileID: 1381475074, guid: 452208542ef7f454797d61a501677bf2, type: 3}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: 
+  dialogText: "\xBFDe qu\xE9 color es el cielo?"
   nextNode: {fileID: 0}
   effect: {fileID: 0}
-  hasChoices: 0
-  choices: []
+  hasChoices: 1
+  choices:
+  - {fileID: 11400000, guid: d338e5995dc03f446b39ae6bec3c51e1, type: 2}
+  - {fileID: 11400000, guid: 53a7dc276f0ee524e8c20ed9dbcbe718, type: 2}
+  - {fileID: 11400000, guid: 5a9df8b7b9d37a24a8306ca4765eba09, type: 2}

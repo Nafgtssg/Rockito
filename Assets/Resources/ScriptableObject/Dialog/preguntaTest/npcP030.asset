@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8e66b627718884da25026fe6d744eb, type: 3}
   m_Name: npcP030
   m_EditorClassIdentifier: 
-  displayName: 
+  displayName: Taipura
   leftSpeaker: {fileID: 0}
-  rightSpeaker: {fileID: 0}
+  rightSpeaker: {fileID: 1381475074, guid: 452208542ef7f454797d61a501677bf2, type: 3}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: 
+  dialogText: Muy bien!
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   hasChoices: 0
