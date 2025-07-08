@@ -10,6 +10,7 @@ public class CameraController : MonoBehaviour
     public float distance = 5f;
     public float smoothSpeed = 0.125f;
     public Vector3 offset;
+    [Range(0.0f, 360.0f)] public float tilt = 45;
     [Range(0.0f, 360.0f)] public float rotation = 0;
     [Header("Temporal Target")]
     public bool tempMove;
@@ -35,7 +36,7 @@ public class CameraController : MonoBehaviour
         */
 
         // Calculate desired position
-        transform.eulerAngles = new Vector3(45, rotation, 0);
+        transform.eulerAngles = new Vector3(tilt, rotation, 0);
         Vector3 desiredPosition = target.position;
         desiredPosition.x -= (distance + offset.x) * Mathf.Sin(rotation * Mathf.Deg2Rad);
         desiredPosition.y += height + offset.y;

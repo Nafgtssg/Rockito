@@ -17,7 +17,9 @@ public class Interactable : ScriptableObject
     public UnityEvent onPlayerExitRange;
 }
 
-public enum InteractableType {
+public enum InteractableType
+{
     pickup = 0,
     dialog = 1,
+    camera = 2,
 }

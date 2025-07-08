@@ -26,7 +26,8 @@ public class InteractableController : MonoBehaviour
         if (other.CompareTag("Player") && interactable != null && !GameManager.manager.inDialog) {
             isPlayerInRange = true;
             interactable.onPlayerEnterRange.Invoke();
-            GameManager.manager.text.text = $"Pulsa E o Enter para {interactable.action}";
+            if (interactable.type != InteractableType.camera)
+                GameManager.manager.text.text = $"Pulsa E o Enter para {interactable.action}";
         }
     }
 
