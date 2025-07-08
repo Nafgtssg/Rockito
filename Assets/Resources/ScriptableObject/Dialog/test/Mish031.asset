@@ -16,8 +16,9 @@ MonoBehaviour:
   leftSpeaker: {fileID: -1665800526, guid: 452208542ef7f454797d61a501677bf2, type: 3}
   rightSpeaker: {fileID: 1381475074, guid: 452208542ef7f454797d61a501677bf2, type: 3}
   sound: {fileID: 8300000, guid: 1ac995078500e8b4b8ef2c5921230bcd, type: 3}
-  pitchVariation: 0
+  pitchVariation: 0.05
   dialogText: Ja pierdole!
   nextNode: {fileID: 0}
+  effect: {fileID: 11400000, guid: 0dcf34219e6718445b143e5cb63ac636, type: 2}
   hasChoices: 0
   choices: []

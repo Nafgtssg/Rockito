@@ -36,11 +36,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         if (manager != null && manager != this) Destroy(gameObject);
-        else
-        {
-            manager = this;
-            DontDestroyOnLoad(gameObject);
-        }
+        else manager = this;
         audioSource.playOnAwake = false;
     }
 
@@ -156,6 +152,10 @@ public class GameManager : MonoBehaviour
         }
         else dialogPortrait[1].gameObject.SetActive(false);
 
+        // Effects come here
+        if (currentDialog.effect != null) currentDialog.effect.Execute();
+
+        // Choices come here
         if (currentDialog.hasChoices && currentDialog.choices.Length > 0)
         {
             isChoice = true;

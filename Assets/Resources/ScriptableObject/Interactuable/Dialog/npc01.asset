@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: npc01
   m_EditorClassIdentifier: 
   type: 1
-  displayName: Object
+  displayName: npc01
   action: hablar
   interactionSound: {fileID: 0}
   onInteract:
@@ -37,4 +37,7 @@ MonoBehaviour:
   onPlayerExitRange:
     m_PersistentCalls:
       m_Calls: []
-  dialog: {fileID: 11400000, guid: 4823e8ee605bf2e47bd45617fc39983e, type: 2}
+  id: npc01
+  dialog:
+  - {fileID: 11400000, guid: 4823e8ee605bf2e47bd45617fc39983e, type: 2}
+  - {fileID: 11400000, guid: ab16be0484652a8418e743edf8be944a, type: 2}

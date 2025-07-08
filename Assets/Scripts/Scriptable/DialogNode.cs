@@ -14,6 +14,7 @@ public class DialogNode : ScriptableObject {
     [Header("Dialog Content")]
     [TextArea(0, 300)] public string dialogText;
     public DialogNode nextNode;
+    public Effect effect;
     
     [Header("Dialog Options")]
     public bool hasChoices;
