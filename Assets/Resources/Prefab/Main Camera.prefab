@@ -2118,7 +2118,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3374680968248411382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05ed6cd23b6c9a744b8bc8fe4dfc4447, type: 3}
+  m_Script: {fileID: 11500000, guid: 005987599b9893541987508a1601994e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   book: {fileID: 6259055718113838057}
@@ -2129,34 +2129,6 @@ MonoBehaviour:
   - {fileID: 4571688461145865966}
   - {fileID: 2922669366507086154}
   - {fileID: 8329981261134357869}
-  - {fileID: 6929955858252986980}
-  - {fileID: 8025920915779054775}
-  - {fileID: 7034830267825515250}
-  - {fileID: 6256145732342420337}
-  - {fileID: 6952985430913787584}
-  - {fileID: 5862424269766383549}
-  - {fileID: 5151340921131056559}
-  - {fileID: 5597235824140441629}
-  - {fileID: 7343288956382212549}
-  - {fileID: 5514334932302271117}
-  - {fileID: 5037434544126089936}
-  - {fileID: 3871457226892187485}
-  - {fileID: 5522350355134528136}
-  - {fileID: 3424231804398305614}
-  - {fileID: 8590593107120494962}
-  - {fileID: 5264144007584164254}
-  - {fileID: 1700814710048498401}
-  - {fileID: 3588501434459651505}
-  - {fileID: 8988854332640750006}
-  - {fileID: 3945806569650671712}
-  - {fileID: 270678014831081559}
-  - {fileID: 7189990053834498829}
-  - {fileID: 2709938135846954815}
-  - {fileID: 185459840943195645}
-  - {fileID: 1873393853677594929}
-  - {fileID: 8694973583680490768}
-  - {fileID: 8775726969655093204}
-  - {fileID: 5234305891008075720}
   invName: {fileID: 29020073132038352}
   invDescription: {fileID: 3827255351480127670}
   invImage: {fileID: 1873612762634506924}
@@ -2170,11 +2142,7 @@ MonoBehaviour:
   dialogPortrait:
   - {fileID: 7733844656376975687}
   - {fileID: 485620413354883861}
-  choiceButtons:
-  - {fileID: 1099978403228708733}
-  - {fileID: 15574921201129106}
-  - {fileID: 3826424464401297364}
-  - {fileID: 2176494672169794484}
+  choiceButtons: []
   charactersPerSecond: 30
   gameData: {fileID: 0}
   conceptPrefab: {fileID: 0}
@@ -4681,8 +4649,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a4652b06291e84b44a8b72f1139da91a, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: a4652b06291e84b44a8b72f1139da91a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5678,7 +5646,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8312973333131019622}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c051f4bc6b1a9244c956bbc706af6e2a, type: 3}
+  m_Script: {fileID: 11500000, guid: c71f5d7f6728d5443adb7531a0bf16a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
