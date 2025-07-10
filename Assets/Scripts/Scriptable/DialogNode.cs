@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Dialog Node", menuName = "Geodisea/Dialog/Dialog Node")]
-public class DialogNode : ScriptableObject {
+public class DialogNode : Effect {
     [Header("Speaker Info")]
     public string displayName;
     public Sprite leftSpeaker;
