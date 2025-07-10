@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Dialog Interactable", menuName = "Geodisea/Interactable/Dialog")]
-public class Dialog : Interactable
+[CreateAssetMenu(fileName = "New Dialog Trigger", menuName = "Geodisea/Interactable/Dialog Trigger")]
+public class DialogTrigger : Interactable
 {
     [Header("Dialog Settings")]
     public string id;
     public DialogNode[] dialog;
-    public void Display() {
+    public override void Interact() {
         int currentState = GameManager.manager.GetDialogState(id);
 
         if (currentState >= dialog.Length)

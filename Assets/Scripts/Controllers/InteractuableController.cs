@@ -8,6 +8,7 @@ public class InteractableController : MonoBehaviour
     public Animator animator;
     private bool isPlayerInRange = false;
     private Collider interactionCollider;
+    private bool canInteract = true;
 
     void Awake() {
         interactionCollider = GetComponent<Collider>();
@@ -15,9 +16,9 @@ public class InteractableController : MonoBehaviour
     }
 
     void Update() {
-        if (isPlayerInRange && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && !GameManager.manager.inDialog)
+        if (isPlayerInRange && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && !GameManager.manager.inDialog && canInteract)
         {
-            Interact();   
+            Interact();
             GameManager.manager.text.text = "";
         }
     }
@@ -25,31 +26,37 @@ public class InteractableController : MonoBehaviour
     void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player") && interactable != null && !GameManager.manager.inDialog) {
             isPlayerInRange = true;
-            interactable.onPlayerEnterRange.Invoke();
-            if (interactable.type != InteractableType.camera)
+            if (interactable.onPlayerEnterRange != null) interactable.onPlayerEnterRange.Execute();
+            if (interactable is not CameraModifier)
                 GameManager.manager.text.text = $"Pulsa E o Enter para {interactable.action}";
         }
     }
 
     void OnTriggerExit(Collider other) {
-        if (other.CompareTag("Player")) {
+        if (other.CompareTag("Player"))
+        {
             isPlayerInRange = false;
             GameManager.manager.text.text = "";
-            interactable.onPlayerExitRange.Invoke();
+            if (interactable.onPlayerExitRange != null) interactable.onPlayerExitRange.Execute();
+            canInteract = true;
         }
     }
 
-    public virtual void Interact() {
-        interactable.onInteract.Invoke();
+    public void Interact() {
+        if (interactable.onInteract != null) interactable.onInteract.Execute();
+        interactable.Interact();
+
         Debug.Log($"Interacted with {interactable.displayName}");
 
+        canInteract = false;
+
         // If pickup, handle destruction
-        if (interactable != null && interactable.type == InteractableType.pickup) {
-            Pickup pickup = (Pickup)interactable;
-            GameManager.manager.inventory.Add(pickup);
+        if (interactable != null && interactable is Pickup)
+        {
             if (animator == null)
                 Destroy(gameObject);
-            else {
+            else
+            {
                 animator.gameObject.transform.SetParent(null, true);
                 animator.SetTrigger("Destroy");
                 Destroy(gameObject);

@@ -9,4 +9,5 @@ public class Pickup : Interactable
     public Sprite icon;
     [TextArea] public string description;
     public int maxInteractions = 1; // 0 for infinite
+    public override void Interact() => GameManager.manager.inventory.Add(this);
 }

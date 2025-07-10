@@ -33,6 +33,14 @@ public class GameManager : MonoBehaviour
     private bool isChoice = false;
     private bool safeDialog = false;
     private Coroutine typingRoutine;
+    [Header("Concept Game System")]
+    public ConceptData gameData;
+    public GameObject conceptPrefab;
+    public GameObject boxPrefab;
+    public Transform conceptsContainer;
+    public Transform boxesContainer;
+    public GameObject resultsPanel;
+    public TextMeshProUGUI resultsText;
     void Awake()
     {
         if (manager != null && manager != this) Destroy(gameObject);
@@ -275,6 +283,94 @@ public class GameManager : MonoBehaviour
         }
         else
             state.dialogState = newState;
+    }
+    /***************
+      CONCEPT GAME
+    ***************/
+    public void StartConceptGame()
+    {
+        // Clear existing items
+        foreach (Transform child in conceptsContainer) Destroy(child.gameObject);
+        foreach (Transform child in boxesContainer) Destroy(child.gameObject);
+        
+        // Create concepts
+        foreach (var concept in gameData.concepts)
+        {
+            GameObject conceptObj = Instantiate(conceptPrefab, conceptsContainer);
+            ConceptController draggable = conceptObj.GetComponent<ConceptController>();
+            draggable.Initialize(concept);
+        }
+        
+        // Create boxes
+        foreach (var boxID in gameData.boxIDs)
+        {
+            GameObject boxObj = Instantiate(boxPrefab, boxesContainer);
+            ConceptBoxController box = boxObj.GetComponent<ConceptBoxController>();
+            box.boxID = boxID;
+            box.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = boxID;
+        }
+    }
+    
+    public void CheckResults()
+    {
+        int correctMatches = 0;
+        int totalMatches = gameData.concepts.Length;
+        
+        foreach (var concept in gameData.concepts)
+        {
+            // Find all boxes that might have this concept
+            ConceptBoxController[] boxes = FindObjectsOfType<ConceptBoxController>();
+            foreach (var box in boxes)
+            {
+                if (box.currentConcept != null && 
+                    box.currentConcept.conceptID == concept.conceptID &&
+                    box.boxID == concept.correctBoxID)
+                {
+                    correctMatches++;
+                    break;
+                }
+            }
+        }
+        
+        // Show results
+        resultsPanel.SetActive(true);
+        resultsText.text = $"You got {correctMatches} out of {totalMatches} correct!";
+        
+        // Optional: Highlight correct/incorrect matches
+        HighlightMatches();
+    }
+    
+    private void HighlightMatches()
+    {
+        ConceptBoxController[] boxes = FindObjectsOfType<ConceptBoxController>();
+        
+        foreach (var box in boxes)
+        {
+            if (box.currentConcept != null)
+            {
+                bool isCorrect = false;
+                
+                foreach (var concept in gameData.concepts)
+                {
+                    if (concept.conceptID == box.currentConcept.conceptID &&
+                        concept.correctBoxID == box.boxID)
+                    {
+                        isCorrect = true;
+                        break;
+                    }
+                }
+                
+                // Change color based on correctness
+                Image boxImage = box.GetComponent<Image>();
+                boxImage.color = isCorrect ? Color.green : Color.red;
+            }
+        }
+    }
+    
+    public void ResetConceptGame()
+    {
+        resultsPanel.SetActive(false);
+        StartConceptGame();
     }
 }
 

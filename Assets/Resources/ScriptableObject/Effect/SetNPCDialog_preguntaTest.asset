@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf1282c9437f4b342823653212073723, type: 3}
   m_Name: SetNPCDialog_preguntaTest
   m_EditorClassIdentifier: 
-  id: 
-  state: 0
+  id: NPCPreg0
+  state: 1

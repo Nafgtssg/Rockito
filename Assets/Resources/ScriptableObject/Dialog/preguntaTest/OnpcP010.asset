@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0a4d388c26bd2945a0f96bd26c833c2, type: 3}
   m_Name: OnpcP010
   m_EditorClassIdentifier: 
-  choiceText: 
-  nextNode: {fileID: 0}
+  choiceText: Azul
+  nextNode: {fileID: 11400000, guid: 9e49c449951a4cb478078752f994e639, type: 2}
   validator: {fileID: 0}
