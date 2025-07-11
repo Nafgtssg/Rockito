@@ -5341,6 +5341,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &83638273 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7988948756615382377, guid: 812be14f061b08348b516bd2f735055e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1433632532}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &86647153
 GameObject:
   m_ObjectHideFlags: 0
@@ -43660,33 +43666,38 @@ PrefabInstance:
     - target: {fileID: 1645444594648743110, guid: 812be14f061b08348b516bd2f735055e,
         type: 3}
       propertyPath: choiceButtons.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1645444594648743110, guid: 812be14f061b08348b516bd2f735055e,
         type: 3}
       propertyPath: choiceButtons.Array.data[0]
       value: 
-      objectReference: {fileID: 638856931}
+      objectReference: {fileID: 2118586821}
     - target: {fileID: 1645444594648743110, guid: 812be14f061b08348b516bd2f735055e,
         type: 3}
       propertyPath: choiceButtons.Array.data[1]
       value: 
-      objectReference: {fileID: 149241782}
+      objectReference: {fileID: 83638273}
     - target: {fileID: 1645444594648743110, guid: 812be14f061b08348b516bd2f735055e,
         type: 3}
       propertyPath: choiceButtons.Array.data[2]
       value: 
-      objectReference: {fileID: 1951340679}
+      objectReference: {fileID: 2003544569}
     - target: {fileID: 1645444594648743110, guid: 812be14f061b08348b516bd2f735055e,
         type: 3}
       propertyPath: choiceButtons.Array.data[3]
       value: 
-      objectReference: {fileID: 2118586821}
+      objectReference: {fileID: 638856931}
     - target: {fileID: 1645444594648743110, guid: 812be14f061b08348b516bd2f735055e,
         type: 3}
       propertyPath: choiceButtons.Array.data[4]
       value: 
-      objectReference: {fileID: 2118586821}
+      objectReference: {fileID: 149241782}
+    - target: {fileID: 1645444594648743110, guid: 812be14f061b08348b516bd2f735055e,
+        type: 3}
+      propertyPath: choiceButtons.Array.data[5]
+      value: 
+      objectReference: {fileID: 1951340679}
     - target: {fileID: 2503916137067747473, guid: 812be14f061b08348b516bd2f735055e,
         type: 3}
       propertyPath: target
@@ -43742,6 +43753,21 @@ PrefabInstance:
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4932973893819420621, guid: 812be14f061b08348b516bd2f735055e,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0.91194963
+      objectReference: {fileID: 0}
+    - target: {fileID: 4932973893819420621, guid: 812be14f061b08348b516bd2f735055e,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0.41444287
+      objectReference: {fileID: 0}
+    - target: {fileID: 4932973893819420621, guid: 812be14f061b08348b516bd2f735055e,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 0.28390875
+      objectReference: {fileID: 0}
     - target: {fileID: 5560819371804896848, guid: 812be14f061b08348b516bd2f735055e,
         type: 3}
       propertyPath: m_Colors.m_PressedColor.b
@@ -43770,6 +43796,21 @@ PrefabInstance:
     - target: {fileID: 5560819371804896848, guid: 812be14f061b08348b516bd2f735055e,
         type: 3}
       propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6114627722131439526, guid: 812be14f061b08348b516bd2f735055e,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6114627722131439526, guid: 812be14f061b08348b516bd2f735055e,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6114627722131439526, guid: 812be14f061b08348b516bd2f735055e,
+        type: 3}
+      propertyPath: m_fontColor.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7459428532096161235, guid: 812be14f061b08348b516bd2f735055e,
@@ -43853,6 +43894,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7606605114546839571, guid: 812be14f061b08348b516bd2f735055e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7783138038924757423, guid: 812be14f061b08348b516bd2f735055e,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -73858,6 +73904,12 @@ Transform:
   - {fileID: 1568511994}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &2003544569 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6362539996363555539, guid: 812be14f061b08348b516bd2f735055e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1433632532}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2010190485
 GameObject:
   m_ObjectHideFlags: 0
