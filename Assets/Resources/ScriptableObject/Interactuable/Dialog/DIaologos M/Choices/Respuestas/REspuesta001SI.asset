@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
+  m_Name: REspuesta001SI
+  m_EditorClassIdentifier: 
+  displayName: 
+  leftSpeaker: {fileID: 21300000, guid: b67d0d6ae999fd641b41e67d5d655655, type: 3}
+  rightSpeaker: {fileID: 21300000, guid: 3ffb33706d84a1243812301d4dbdbb21, type: 3}
+  sound: {fileID: 0}
+  pitchVariation: 0
+  dialogText: Correcto
+  nextNode: {fileID: 0}
+  effect: {fileID: 0}
+  hasChoices: 0
+  choices: []
