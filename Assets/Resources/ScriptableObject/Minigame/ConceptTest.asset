@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a66077e0ba59ad42933b0cf58b0de78, type: 3}
+  m_Name: ConceptTest
+  m_EditorClassIdentifier: 
+  concepts:
+  - conceptID: fisicaC
+    conceptImage: {fileID: -2048679736, guid: 33fbef4a6433f2d439651f2dec2856c6, type: 3}
+    conceptText: La madre de todas las ciencias
+    correctBoxID: fisica
+  boxIDs:
+  - Fisica

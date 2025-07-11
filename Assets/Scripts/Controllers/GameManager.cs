@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
         if (manager != null && manager != this) Destroy(gameObject);
         else manager = this;
         audioSource.playOnAwake = false;
+        StartConceptGame();
     }
 
     void Update()

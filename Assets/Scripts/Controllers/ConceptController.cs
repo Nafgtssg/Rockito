@@ -33,7 +33,7 @@ public class ConceptController : MonoBehaviour, IBeginDragHandler, IDragHandler,
     public void OnBeginDrag(PointerEventData eventData)
     {
         originalParent = transform.parent;
-        transform.SetParent(transform.root);
+        transform.SetParent(transform.parent);
         canvasGroup.blocksRaycasts = false;
         
         // Remove from current box if assigned
