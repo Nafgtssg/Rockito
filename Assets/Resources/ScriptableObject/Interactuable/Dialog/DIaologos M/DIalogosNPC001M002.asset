@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: DIalogosNPC001M002
   m_EditorClassIdentifier: 
   displayName: 001M
-  leftSpeaker: {fileID: 21300000, guid: b67d0d6ae999fd641b41e67d5d655655, type: 3}
+  leftSpeaker: {fileID: 21300000, guid: 0b582ced812a44242aed80ced25cb16a, type: 3}
   rightSpeaker: {fileID: 21300000, guid: 3ffb33706d84a1243812301d4dbdbb21, type: 3}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: askldhaKJDSAHLJDSA
+  dialogText: eres buena persona??
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   hasChoices: 1
