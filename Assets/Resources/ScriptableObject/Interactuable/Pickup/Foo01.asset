@@ -9,22 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8320c15639f2bf5419be2b026e62235b, type: 3}
+  m_Script: {fileID: 11500000, guid: 40ddff66592ccd04092385150abd2002, type: 3}
   m_Name: Foo01
   m_EditorClassIdentifier: 
-  type: 0
   displayName: Foo01
   action: recoger
   interactionSound: {fileID: 0}
-  onInteract:
-    m_PersistentCalls:
-      m_Calls: []
-  onPlayerEnterRange:
-    m_PersistentCalls:
-      m_Calls: []
-  onPlayerExitRange:
-    m_PersistentCalls:
-      m_Calls: []
-  icon: {fileID: -2048679736, guid: 33fbef4a6433f2d439651f2dec2856c6, type: 3}
-  description: "Fu fu \xF1e mai sock, bitch"
+  onInteract: {fileID: 0}
+  onPlayerEnterRange: {fileID: 0}
+  onPlayerExitRange: {fileID: 0}
+  icon: {fileID: 0}
+  description: 
   maxInteractions: 1

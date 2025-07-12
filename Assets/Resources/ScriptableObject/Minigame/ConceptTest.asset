@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a66077e0ba59ad42933b0cf58b0de78, type: 3}
+  m_Script: {fileID: 11500000, guid: d620a17beb99bea42b7ff1a462943c18, type: 3}
   m_Name: ConceptTest
   m_EditorClassIdentifier: 
   concepts:
-  - conceptID: fisicaC
-    conceptImage: {fileID: -2048679736, guid: 33fbef4a6433f2d439651f2dec2856c6, type: 3}
-    conceptText: La madre de todas las ciencias
-    correctBoxID: fisica
+  - conceptID: f
+    conceptImage: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    conceptText: :3
+    correctBoxID: "F\xEDsica"
   boxIDs:
-  - Fisica
+  - "F\xEDsica"

@@ -2129,6 +2129,34 @@ MonoBehaviour:
   - {fileID: 4571688461145865966}
   - {fileID: 2922669366507086154}
   - {fileID: 8329981261134357869}
+  - {fileID: 6929955858252986980}
+  - {fileID: 8025920915779054775}
+  - {fileID: 7034830267825515250}
+  - {fileID: 6256145732342420337}
+  - {fileID: 6952985430913787584}
+  - {fileID: 5862424269766383549}
+  - {fileID: 5151340921131056559}
+  - {fileID: 5597235824140441629}
+  - {fileID: 7343288956382212549}
+  - {fileID: 5514334932302271117}
+  - {fileID: 5037434544126089936}
+  - {fileID: 3871457226892187485}
+  - {fileID: 5522350355134528136}
+  - {fileID: 3424231804398305614}
+  - {fileID: 8590593107120494962}
+  - {fileID: 5264144007584164254}
+  - {fileID: 1700814710048498401}
+  - {fileID: 3588501434459651505}
+  - {fileID: 8988854332640750006}
+  - {fileID: 3945806569650671712}
+  - {fileID: 270678014831081559}
+  - {fileID: 7189990053834498829}
+  - {fileID: 2709938135846954815}
+  - {fileID: 185459840943195645}
+  - {fileID: 1873393853677594929}
+  - {fileID: 8694973583680490768}
+  - {fileID: 8775726969655093204}
+  - {fileID: 5234305891008075720}
   invName: {fileID: 29020073132038352}
   invDescription: {fileID: 3827255351480127670}
   invImage: {fileID: 1873612762634506924}
@@ -2144,7 +2172,6 @@ MonoBehaviour:
   - {fileID: 485620413354883861}
   choiceButtons:
   - {fileID: 1099978403228708733}
-  - {fileID: 0}
   - {fileID: 3826424464401297364}
   - {fileID: 2176494672169794484}
   - {fileID: 15574921201129106}
@@ -2465,8 +2492,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a4652b06291e84b44a8b72f1139da91a, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: a4652b06291e84b44a8b72f1139da91a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
