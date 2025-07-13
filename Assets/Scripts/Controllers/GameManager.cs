@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public DialogNode currentDialog;
     public bool inDialog = false;
     public GameObject dialogBox;
-    public TextMeshProUGUI charName;
+    public GameObject charName;
     public TextMeshProUGUI dialogText;
     public Image[] dialogPortrait;
     public GameObject[] choiceButtons;
@@ -144,7 +144,7 @@ public class GameManager : MonoBehaviour
         }
         inDialog = true;
         dialogBox.SetActive(true);
-        charName.text = currentDialog.displayName;
+        charName.GetComponentInChildren<TextMeshProUGUI>().text = currentDialog.displayName;
         typingRoutine = StartCoroutine(TypeText(currentDialog.dialogText));
 
         // Portraits come here
@@ -165,7 +165,7 @@ public class GameManager : MonoBehaviour
         if (currentDialog.effect != null) currentDialog.effect.Execute();
 
         // Choices come here
-        if (currentDialog.hasChoices && currentDialog.choices.Length > 0)
+        if (currentDialog.choices.Length > 0)
         {
             isChoice = true;
             for (int i = 0; i < choiceButtons.Length; i++)
@@ -215,7 +215,7 @@ public class GameManager : MonoBehaviour
     }
     public void MakeChoice(int choiceIndex)
     {
-        if (currentDialog.hasChoices && choiceIndex < currentDialog.choices.Length)
+        if (choiceIndex < currentDialog.choices.Length)
         {
             isChoice = false;
             StartDialog(currentDialog.choices[choiceIndex].nextNode);
