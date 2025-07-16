@@ -10,12 +10,15 @@ public class ConceptController : MonoBehaviour, IBeginDragHandler, IDragHandler,
     public Image conceptImage;
     public TextMeshProUGUI conceptText;
     
-    public Transform originalParent;
-    public CanvasGroup canvasGroup;
+    private Transform originalParent;
+    private Vector3 originalPosition;
+    private CanvasGroup canvasGroup;
     public ConceptBoxController currentBox;
+    private RectTransform rectTransform;
 
     void Awake()
     {
+        rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         if (canvasGroup == null)
         {
@@ -33,8 +36,11 @@ public class ConceptController : MonoBehaviour, IBeginDragHandler, IDragHandler,
     public void OnBeginDrag(PointerEventData eventData)
     {
         originalParent = transform.parent;
-        transform.SetParent(transform.parent);
+        originalPosition = rectTransform.anchoredPosition;
         canvasGroup.blocksRaycasts = false;
+        
+        // Bring to front while dragging
+        transform.SetAsLastSibling();
         
         // Remove from current box if assigned
         if (currentBox != null)
@@ -46,25 +52,56 @@ public class ConceptController : MonoBehaviour, IBeginDragHandler, IDragHandler,
 
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = eventData.position;
+        // Convert screen position to local position within parent
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            transform.parent as RectTransform, 
+            eventData.position, 
+            eventData.pressEventCamera, 
+            out Vector2 localPos);
+            
+        rectTransform.anchoredPosition = localPos;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         canvasGroup.blocksRaycasts = true;
         
-        // If not dropped on a box, return to original position
+        // If not dropped on a box, stay where it was dropped
         if (currentBox == null)
         {
-            transform.SetParent(originalParent);
-            transform.localPosition = Vector3.zero;
+            // Keep the current position but ensure it stays within bounds
+            ClampToContainer();
         }
+    }
+
+    private void ClampToContainer()
+    {
+        // Get the container's bounds
+        RectTransform container = originalParent as RectTransform;
+        Vector3[] containerCorners = new Vector3[4];
+        container.GetWorldCorners(containerCorners);
+        
+        // Get the concept's bounds
+        Vector3[] conceptCorners = new Vector3[4];
+        rectTransform.GetWorldCorners(conceptCorners);
+        
+        // Calculate min/max positions
+        float minX = containerCorners[0].x + rectTransform.rect.width/2;
+        float maxX = containerCorners[2].x - rectTransform.rect.width/2;
+        float minY = containerCorners[0].y + rectTransform.rect.height/2;
+        float maxY = containerCorners[2].y - rectTransform.rect.height/2;
+        
+        // Clamp position
+        Vector3 worldPos = rectTransform.position;
+        worldPos.x = Mathf.Clamp(worldPos.x, minX, maxX);
+        worldPos.y = Mathf.Clamp(worldPos.y, minY, maxY);
+        rectTransform.position = worldPos;
     }
 
     public void AssignToBox(ConceptBoxController box)
     {
         currentBox = box;
         transform.SetParent(box.transform);
-        transform.localPosition = Vector3.zero;
+        rectTransform.anchoredPosition = Vector2.zero;
     }
 }

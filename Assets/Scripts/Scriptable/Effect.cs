@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Effect : ScriptableObject
 {
-    Validator validator;
+    [Tooltip("Validador para poder deshabilitar este efecto de ser necesario.")]
+    public Validator validator;
     public virtual void Execute()
     {
         return;

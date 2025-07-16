@@ -18,5 +18,7 @@ MonoBehaviour:
   onInteract: {fileID: 0}
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
-  id: 
-  dialog: []
+  id: mish
+  dialog:
+  - {fileID: 11400000, guid: 6ba56627ef29b1747be587024842e9b1, type: 2}
+  - {fileID: 11400000, guid: 7fe5d8607f5026b4b9e60af1d64f1dd2, type: 2}

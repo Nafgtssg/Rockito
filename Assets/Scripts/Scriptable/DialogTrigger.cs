@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Dialog Trigger", menuName = "Geodisea/Interactable/Dialog Trigger")]
+[CreateAssetMenu(fileName = "Nuevo Activador de Diálogo", menuName = "Geodisea/Interactuable/Activador de Diálogo")]
 public class DialogTrigger : Interactable
 {
-    [Header("Dialog Settings")]
+    [Header("Configuraciones del Diálogo")]
+    [Tooltip("Id de este activador de diálogo, es necesario para que el estado actual de la conversación se guarde correctamente.")]
     public string id;
+    [Tooltip("Nodos de diálogos que se activan dependiendo del estado relacionado a la ID de este activador. Por defecto, el estado es 0, lo que corresponde al primer nodo del arreglo.")]
     public DialogNode[] dialog;
     public override void Interact() {
         int currentState = GameManager.manager.GetDialogState(id);

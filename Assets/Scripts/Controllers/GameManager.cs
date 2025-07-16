@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     private bool safeDialog = false;
     private Coroutine typingRoutine;
     [Header("Concept Game System")]
+    public GameObject conceptGame;
     public ConceptData gameData;
     public GameObject conceptPrefab;
     public GameObject boxPrefab;
@@ -41,12 +42,14 @@ public class GameManager : MonoBehaviour
     public Transform boxesContainer;
     public GameObject resultsPanel;
     public TextMeshProUGUI resultsText;
+    public bool isPlaying;
+    [Header("Popup System")]
+    public GameObject popup;
     void Awake()
     {
         if (manager != null && manager != this) Destroy(gameObject);
         else manager = this;
         audioSource.playOnAwake = false;
-        StartConceptGame();
     }
 
     void Update()
@@ -202,23 +205,26 @@ public class GameManager : MonoBehaviour
             isTyping = false;
             return;
         }
-        if (currentDialog.nextNode == null)
+        if (!isPlaying)
         {
-            inDialog = false;
-            safeDialog = false;
-            isChoice = false;
-            dialogBox.SetActive(false);
-            dialogPortrait[0].gameObject.SetActive(false);
-            dialogPortrait[1].gameObject.SetActive(false);
+            if (currentDialog.nextNode == null)
+            {
+                inDialog = false;
+                safeDialog = false;
+                isChoice = false;
+                dialogBox.SetActive(false);
+                dialogPortrait[0].gameObject.SetActive(false);
+                dialogPortrait[1].gameObject.SetActive(false);
+            }
+            else StartDialog(currentDialog.nextNode);
         }
-        else StartDialog(currentDialog.nextNode);
     }
     public void MakeChoice(int choiceIndex)
     {
         if (choiceIndex < currentDialog.choices.Length)
         {
             isChoice = false;
-            StartDialog(currentDialog.choices[choiceIndex].nextNode);
+            StartDialog(currentDialog.choices[choiceIndex]);
         }
     }
     IEnumerator SafeDialog()
@@ -288,42 +294,131 @@ public class GameManager : MonoBehaviour
     /***************
       CONCEPT GAME
     ***************/
-    public void StartConceptGame()
+    public void StartConceptGame(ConceptData data)
     {
-        // Clear existing items
+        gameData = data;
+        isPlaying = true;
+        inDialog = false;
+        StartCoroutine(SetupConceptGame());
+    }
+    IEnumerator SetupConceptGame()
+    {
+        yield return new WaitForSeconds(2f);
+        dialogBox.SetActive(false);
+        conceptGame.SetActive(true);
+
+        // Limpio los conceptos y cajas ya existentes
         foreach (Transform child in conceptsContainer) Destroy(child.gameObject);
         foreach (Transform child in boxesContainer) Destroy(child.gameObject);
-        
-        // Create concepts
-        foreach (var concept in gameData.concepts)
+
+        // Se inicializa el juego
+        CreateConceptsInColumns();
+        CreateBoxesInColumns();
+        RandomizeConceptPositions();
+    }
+    private void CreateConceptsInColumns() // Se crean los conceptos en columnas bien organizadas
+    {
+        int conceptsPerColumn = Mathf.CeilToInt((float)gameData.concepts.Length / gameData.columns);
+
+        for (int i = 0; i < gameData.concepts.Length; i++)
         {
+            // Determine which column (0 or 1)
+            int column = i / conceptsPerColumn;
+            int positionInColumn = i % conceptsPerColumn;
+            float containerHeight = ((RectTransform)conceptsContainer).rect.height;
+            float verticalSpacing = containerHeight / (conceptsPerColumn + 1);
+
+            // Calculate position
+            Vector2 position = new Vector2(
+            column * gameData.horizontalOffset,
+            -positionInColumn * verticalSpacing + containerHeight / 4
+        );
+
+            // Instantiate concept
             GameObject conceptObj = Instantiate(conceptPrefab, conceptsContainer);
+            conceptObj.GetComponent<RectTransform>().anchoredPosition = position;
+
             ConceptController draggable = conceptObj.GetComponent<ConceptController>();
-            draggable.Initialize(concept);
-        }
-        
-        // Create boxes
-        foreach (var boxID in gameData.boxIDs)
-        {
-            GameObject boxObj = Instantiate(boxPrefab, boxesContainer);
-            ConceptBoxController box = boxObj.GetComponent<ConceptBoxController>();
-            box.boxID = boxID;
-            box.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = boxID;
+            draggable.Initialize(gameData.concepts[i]);
         }
     }
-    
+
+    private void CreateBoxesInColumns() // Se crean las cajas en columnas bien organizadas
+        {
+        int boxesPerColumn = Mathf.CeilToInt(gameData.boxIDs.Length / gameData.columns);
+        
+        // Shuffle box IDs for randomization
+        string[] shuffledBoxIDs = ShuffleArray(gameData.boxIDs);
+        
+        for (int i = 0; i < shuffledBoxIDs.Length; i++)
+        {
+            // Determine which column (0 or 1)
+            int column = i / boxesPerColumn;
+            int positionInColumn = i % boxesPerColumn;
+            float containerHeight = ((RectTransform)conceptsContainer).rect.height;
+            float verticalSpacing = containerHeight / (boxesPerColumn + 1);
+            
+            // Calculate position
+            Vector2 position = new Vector2(
+                column * gameData.horizontalOffset,
+                -positionInColumn * verticalSpacing  + containerHeight / 4
+            );
+            
+            // Instantiate box
+            GameObject boxObj = Instantiate(boxPrefab, boxesContainer);
+            boxObj.GetComponent<RectTransform>().anchoredPosition = position;
+            
+            ConceptBoxController box = boxObj.GetComponent<ConceptBoxController>();
+            box.boxID = shuffledBoxIDs[i];
+            box.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = shuffledBoxIDs[i];
+        }
+    }
+
+    private void RandomizeConceptPositions() // Aleatorizar las posiciones de los conceptos
+        {
+        // Get all concept objects
+        ConceptController[] concepts = conceptsContainer.GetComponentsInChildren<ConceptController>();
+        
+        // Fisher-Yates shuffle algorithm
+        for (int i = 0; i < concepts.Length; i++)
+        {
+            int randomIndex = Random.Range(i, concepts.Length);
+            if (i != randomIndex)
+            {
+                // Swap positions
+                Vector3 tempPos = concepts[i].transform.localPosition;
+                concepts[i].transform.localPosition = concepts[randomIndex].transform.localPosition;
+                concepts[randomIndex].transform.localPosition = tempPos;
+            }
+        }
+    }
+
+// Helper method to shuffle arrays
+    private T[] ShuffleArray<T>(T[] array)
+    {
+        T[] newArray = (T[])array.Clone();
+        for (int i = 0; i < newArray.Length; i++)
+        {
+            int randomIndex = Random.Range(i, newArray.Length);
+            T temp = newArray[i];
+            newArray[i] = newArray[randomIndex];
+            newArray[randomIndex] = temp;
+        }
+        return newArray;
+    }
+
     public void CheckResults()
     {
         int correctMatches = 0;
         int totalMatches = gameData.concepts.Length;
-        
+
         foreach (var concept in gameData.concepts)
         {
             // Find all boxes that might have this concept
             ConceptBoxController[] boxes = FindObjectsOfType<ConceptBoxController>();
             foreach (var box in boxes)
             {
-                if (box.currentConcept != null && 
+                if (box.currentConcept != null &&
                     box.currentConcept.conceptID == concept.conceptID &&
                     box.boxID == concept.correctBoxID)
                 {
@@ -332,25 +427,32 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-        
+
         // Show results
         resultsPanel.SetActive(true);
         resultsText.text = $"You got {correctMatches} out of {totalMatches} correct!";
-        
+
         // Optional: Highlight correct/incorrect matches
         HighlightMatches();
+        StartCoroutine(EndConceptGame());
+    }
+    IEnumerator EndConceptGame()
+    {
+        yield return new WaitForSeconds(5f);
+        isPlaying = false;
+        conceptGame.SetActive(false);
     }
     
     private void HighlightMatches()
     {
         ConceptBoxController[] boxes = FindObjectsOfType<ConceptBoxController>();
-        
+
         foreach (var box in boxes)
         {
             if (box.currentConcept != null)
             {
                 bool isCorrect = false;
-                
+
                 foreach (var concept in gameData.concepts)
                 {
                     if (concept.conceptID == box.currentConcept.conceptID &&
@@ -360,7 +462,7 @@ public class GameManager : MonoBehaviour
                         break;
                     }
                 }
-                
+
                 // Change color based on correctness
                 Image boxImage = box.GetComponent<Image>();
                 boxImage.color = isCorrect ? Color.green : Color.red;
@@ -371,7 +473,7 @@ public class GameManager : MonoBehaviour
     public void ResetConceptGame()
     {
         resultsPanel.SetActive(false);
-        StartConceptGame();
+        StartConceptGame(gameData);
     }
 }
 

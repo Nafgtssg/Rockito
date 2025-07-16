@@ -4,7 +4,7 @@ using System.Collections;
 public class CameraController : MonoBehaviour
 {
     [Header("Camera Settings")]
-    public CameraController controller;
+    public static CameraController controller;
     public Transform target;
     public float height = 10f;
     public float distance = 5f;

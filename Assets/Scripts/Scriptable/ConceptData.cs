@@ -1,10 +1,14 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Concept Data", menuName = "Geodisea/Minigames/Concept for Matching")]
-public class ConceptData : ScriptableObject
+[CreateAssetMenu(fileName = "Nuevo Juego de Unir Conceptos", menuName = "Geodisea/Efectos/Juego Unir Conceptos")]
+public class ConceptData : Effect
 {
+    [Header("Datos del Juego de Conceptos")]
     public ConceptPair[] concepts;
     public string[] boxIDs; // IDs of all available boxes
+    public int columns = 1;
+    public float horizontalOffset = 316f;
+    public override void Execute() => GameManager.manager.StartConceptGame(this);
 }
 
 [System.Serializable]

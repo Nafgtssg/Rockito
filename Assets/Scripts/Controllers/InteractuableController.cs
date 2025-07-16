@@ -8,7 +8,7 @@ public class InteractableController : MonoBehaviour
     public Animator animator;
     private bool isPlayerInRange = false;
     private Collider interactionCollider;
-    private bool canInteract = true;
+    //private bool canInteract = true;
 
     void Awake() {
         interactionCollider = GetComponent<Collider>();
@@ -16,7 +16,7 @@ public class InteractableController : MonoBehaviour
     }
 
     void Update() {
-        if (isPlayerInRange && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && !GameManager.manager.inDialog && canInteract)
+        if (isPlayerInRange && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && !GameManager.manager.inDialog)// && canInteract)
         {
             Interact();
             GameManager.manager.text.text = "";
@@ -38,7 +38,7 @@ public class InteractableController : MonoBehaviour
             isPlayerInRange = false;
             GameManager.manager.text.text = "";
             if (interactable.onPlayerExitRange != null) interactable.onPlayerExitRange.Execute();
-            canInteract = true;
+            //canInteract = true;
         }
     }
 
@@ -48,7 +48,7 @@ public class InteractableController : MonoBehaviour
 
         Debug.Log($"Interacted with {interactable.displayName}");
 
-        canInteract = false;
+        //canInteract = false;
 
         // If pickup, handle destruction
         if (interactable != null && interactable is Pickup)
