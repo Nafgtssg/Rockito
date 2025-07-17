@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Popup_Test
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  type: 0
-  title: 
-  description: 
+  type: 1
+  title: Sample Text
+  description: Lorem ipsum domine scriviti
   sprite: {fileID: 21300000, guid: 6d18ca9baf327804aa2fcbfe54006baf, type: 3}
-  size: {x: 1920, y: 1080}
+  size: {x: 200, y: 1080}
   onEnding: {fileID: 0}

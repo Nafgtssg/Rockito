@@ -12,20 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d620a17beb99bea42b7ff1a462943c18, type: 3}
   m_Name: CD_ConceptTest
   m_EditorClassIdentifier: 
+  validator: {fileID: 0}
   concepts:
   - conceptID: f
     conceptImage: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
     conceptText: :3
+    description: 
     correctBoxID: "F\xEDsica"
   - conceptID: q
     conceptImage: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
     conceptText: '>:3'
+    description: 
     correctBoxID: "Qu\xEDmica"
   - conceptID: b
     conceptImage: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
     conceptText: '>:3c'
+    description: 
     correctBoxID: "Biolog\xEDa"
   boxIDs:
   - "F\xEDsica"
   - "Qu\xEDmica"
   - "Biolog\xEDa"
+  columns: 1
+  horizontalOffset: 316
+  onEnding: {fileID: 0}
+  onCorrect: {fileID: 0}
