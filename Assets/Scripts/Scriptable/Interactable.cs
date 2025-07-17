@@ -1,5 +1,5 @@
 using UnityEngine;
-[CreateAssetMenu(fileName = "Nuevo Interactuable Simple", menuName = "Geodisea/Interactuables/Interactuable Simple")]
+[CreateAssetMenu(fileName = "Nuevo Interactuable Simple", menuName = "Geodisea/Interactuable/Interactuable Simple")]
 public class Interactable : ScriptableObject
 {
     [Header("Basic Info")]
