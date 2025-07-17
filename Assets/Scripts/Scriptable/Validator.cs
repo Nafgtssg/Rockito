@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Basic Validator", menuName = "Geodisea/Validator/Validator")]
+[CreateAssetMenu(fileName = "Nuevo Validador Básico", menuName = "Geodisea/Validadores/Validador")]
 public class Validator : ScriptableObject
 {
     public bool negation;

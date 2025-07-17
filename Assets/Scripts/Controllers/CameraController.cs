@@ -12,10 +12,10 @@ public class CameraController : MonoBehaviour
     public Vector3 offset;
     [Range(0.0f, 360.0f)] public float tilt = 45;
     [Range(0.0f, 360.0f)] public float rotation = 0;
-    [Header("Temporal Target")]
-    public bool tempMove;
-    public Vector3 tempOffset;
-    [Range(0.0f, 360.0f)] public float tempRotation;
+    //[Header("Temporal Target")]
+    //public bool tempMove;
+    //public Vector3 tempOffset;
+    //[Range(0.0f, 360.0f)] public float tempRotation;
     void Awake()
     {
         if (controller != null && controller != this) Destroy(gameObject);

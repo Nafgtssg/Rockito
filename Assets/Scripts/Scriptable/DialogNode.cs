@@ -22,6 +22,8 @@ public class DialogNode : Effect
     public DialogNode nextNode;
     [Tooltip("Efecto que se ejecuta cuando empieza el diálogo.")]
     public Effect effect;
+    [Tooltip("Efecto que se ejecuta cuando termina este diálogo.")]
+    public Effect onEnding;
     [Header("Opciones de Elección")]
     [Tooltip("Nodos de diálogo que aparecen como botones en pantalla, para bifurcar la conversación.")]
     public DialogNode[] choices;

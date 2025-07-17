@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "Nuevo Popup", menuName = "Geodisea/Efectos/Popup")]
 public class Popup : Effect
 {
     [Header("Datos del Popup")]
@@ -24,5 +25,5 @@ public enum PopupType
 {
     none = 0,
     fade = 1,
-    bounce = 2
+    //bounce = 2
 }

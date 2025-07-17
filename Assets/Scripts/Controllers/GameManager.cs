@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
     }
     void PassAction()
     {
-        if (inPopup) PassPopup();
+        if (inPopup) StartCoroutine(PassPopup());
         else if (inDialog && safeDialog && !isChoice) PassDialog();
     }
     void UpdateInventory()
@@ -235,6 +235,7 @@ public class GameManager : MonoBehaviour
         inDialog = false;
         safeDialog = false;
         isChoice = false;
+        if (currentDialog.onEnding != null) currentDialog.onEnding.Execute();
     }
     public void MakeChoice(int choiceIndex)
     {
@@ -513,10 +514,11 @@ public class GameManager : MonoBehaviour
         popupAnimator.SetTrigger("popup");
         currentPopup = data;
     }
-    public void PassPopup()
+    IEnumerator PassPopup()
     {
-        inPopup = false;
+        yield return new WaitForSeconds(.1f);
         popup.SetActive(false);
+        inPopup = false;
         if (currentPopup.onEnding != null) currentPopup.onEnding.Execute();
     }
 }

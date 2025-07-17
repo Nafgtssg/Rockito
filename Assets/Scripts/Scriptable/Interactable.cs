@@ -1,10 +1,11 @@
 using UnityEngine;
-
+[CreateAssetMenu(fileName = "Nuevo Interactuable Simple", menuName = "Geodisea/Interactuables/Interactuable Simple")]
 public class Interactable : ScriptableObject
 {
     [Header("Basic Info")]
     public string displayName = "Object";
     public string action = "interactuar";
+    public bool showDisplay = true;
 
     [Header("Audio")]
     public AudioClip interactionSound;

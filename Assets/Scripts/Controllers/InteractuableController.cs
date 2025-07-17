@@ -16,7 +16,7 @@ public class InteractableController : MonoBehaviour
     }
 
     void Update() {
-        if (isPlayerInRange && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && !GameManager.manager.inDialog)// && canInteract)
+        if (isPlayerInRange && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && !GameManager.manager.inDialog && !GameManager.manager.inPopup)// && canInteract)
         {
             Interact();
             GameManager.manager.text.text = "";
@@ -24,10 +24,10 @@ public class InteractableController : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Player") && interactable != null && !GameManager.manager.inDialog) {
+        if (other.CompareTag("Player") && interactable != null && !GameManager.manager.inDialog && !GameManager.manager.inPopup) {
             isPlayerInRange = true;
             if (interactable.onPlayerEnterRange != null) interactable.onPlayerEnterRange.Execute();
-            if (interactable is not CameraModifier)
+            if (interactable.showDisplay)
                 GameManager.manager.text.text = $"Pulsa E o Enter para {interactable.action}";
         }
     }
