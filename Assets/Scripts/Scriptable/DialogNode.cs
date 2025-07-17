@@ -27,4 +27,5 @@ public class DialogNode : Effect
     public DialogNode[] choices;
     [Tooltip("Texto que aparece cuando este nodo actúe como elección.")]
     public string choiceText = "Opción";
+    public override void Execute() => GameManager.manager.StartDialog(this);
 }

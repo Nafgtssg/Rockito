@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
   m_Name: mish030
   m_EditorClassIdentifier: 
-  displayName: 
+  validator: {fileID: 11400000, guid: 3eb3211494486194bad014ecf4dd7c8a, type: 2}
+  displayName: Mish
   leftSpeaker: {fileID: 0}
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: 
+  dialogText: Mish?
   nextNode: {fileID: 11400000, guid: c5675ed0cdfeb2445afd204873f5058b, type: 2}
   effect: {fileID: 0}
   choices: []
-  choiceText: "Opci\xF3n"
-  validator: {fileID: 0}
+  choiceText: Objeto

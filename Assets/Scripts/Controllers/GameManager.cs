@@ -44,7 +44,14 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI resultsText;
     public bool isPlaying;
     [Header("Popup System")]
+    public Popup currentPopup;
     public GameObject popup;
+    public Animator popupAnimator;
+    public GameObject popupTitle;
+    public GameObject popupDescription;
+    public Image popupImage;
+    public RectTransform popupMaster;
+    public bool inPopup;
     void Awake()
     {
         if (manager != null && manager != this) Destroy(gameObject);
@@ -60,8 +67,13 @@ public class GameManager : MonoBehaviour
             book.SetActive(isBookOpen);
             if (isBookOpen) UpdateInventory();
         }
-        if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && inDialog && safeDialog && !isChoice)
-            PassDialog();
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return))
+            PassAction();
+    }
+    void PassAction()
+    {
+        if (inPopup) PassPopup();
+        else if (inDialog && safeDialog && !isChoice) PassDialog();
     }
     void UpdateInventory()
     {
@@ -209,15 +221,20 @@ public class GameManager : MonoBehaviour
         {
             if (currentDialog.nextNode == null)
             {
-                inDialog = false;
-                safeDialog = false;
-                isChoice = false;
                 dialogBox.SetActive(false);
                 dialogPortrait[0].gameObject.SetActive(false);
                 dialogPortrait[1].gameObject.SetActive(false);
+                StartCoroutine(SafeDialogEnd());
             }
             else StartDialog(currentDialog.nextNode);
         }
+    }
+    IEnumerator SafeDialogEnd()
+    {
+        yield return new WaitForSeconds(.1f);
+        inDialog = false;
+        safeDialog = false;
+        isChoice = false;
     }
     public void MakeChoice(int choiceIndex)
     {
@@ -270,7 +287,7 @@ public class GameManager : MonoBehaviour
             audioSource.PlayOneShot(currentDialog.sound);
         }
     }
-    public int GetDialogState(string id)
+    public int GetDialogState(string id) // Intento obtener el estado de un NPC dada su Id, en caso de no existir, retorna el primer estado y guarda al NPC
     {
         DialogState state = dialogStates.Find(s => s.id == id);
         if (state == null)
@@ -280,7 +297,7 @@ public class GameManager : MonoBehaviour
         }
         return state.dialogState;
     }
-    public void SetDialogState(string id, int newState)
+    public void SetDialogState(string id, int newState) //Establezco un estado a los diálogos de un NPC dada su Id
     {
         var state = dialogStates.Find(s => s.id == id);
         if (state == null)
@@ -344,12 +361,12 @@ public class GameManager : MonoBehaviour
     }
 
     private void CreateBoxesInColumns() // Se crean las cajas en columnas bien organizadas
-        {
+    {
         int boxesPerColumn = Mathf.CeilToInt(gameData.boxIDs.Length / gameData.columns);
-        
+
         // Shuffle box IDs for randomization
         string[] shuffledBoxIDs = ShuffleArray(gameData.boxIDs);
-        
+
         for (int i = 0; i < shuffledBoxIDs.Length; i++)
         {
             // Determine which column (0 or 1)
@@ -357,28 +374,28 @@ public class GameManager : MonoBehaviour
             int positionInColumn = i % boxesPerColumn;
             float containerHeight = ((RectTransform)conceptsContainer).rect.height;
             float verticalSpacing = containerHeight / (boxesPerColumn + 1);
-            
+
             // Calculate position
             Vector2 position = new Vector2(
                 column * gameData.horizontalOffset,
-                -positionInColumn * verticalSpacing  + containerHeight / 4
+                -positionInColumn * verticalSpacing + containerHeight / 4
             );
-            
+
             // Instantiate box
             GameObject boxObj = Instantiate(boxPrefab, boxesContainer);
             boxObj.GetComponent<RectTransform>().anchoredPosition = position;
-            
+
             ConceptBoxController box = boxObj.GetComponent<ConceptBoxController>();
             box.boxID = shuffledBoxIDs[i];
-            box.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = shuffledBoxIDs[i];
+            box.GetComponentInChildren<TextMeshProUGUI>().text = shuffledBoxIDs[i];
         }
     }
 
     private void RandomizeConceptPositions() // Aleatorizar las posiciones de los conceptos
-        {
+    {
         // Get all concept objects
         ConceptController[] concepts = conceptsContainer.GetComponentsInChildren<ConceptController>();
-        
+
         // Fisher-Yates shuffle algorithm
         for (int i = 0; i < concepts.Length; i++)
         {
@@ -393,7 +410,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-// Helper method to shuffle arrays
+    // Helper method to shuffle arrays
     private T[] ShuffleArray<T>(T[] array)
     {
         T[] newArray = (T[])array.Clone();
@@ -434,15 +451,17 @@ public class GameManager : MonoBehaviour
 
         // Optional: Highlight correct/incorrect matches
         HighlightMatches();
-        StartCoroutine(EndConceptGame());
+        StartCoroutine(EndConceptGame(correctMatches == totalMatches));
     }
-    IEnumerator EndConceptGame()
+    IEnumerator EndConceptGame(bool perfect)
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(4f);
         isPlaying = false;
         conceptGame.SetActive(false);
+        if (gameData.onCorrect != null && perfect) gameData.onCorrect.Execute();
+        else if (gameData.onEnding != null) gameData.onEnding.Execute();
     }
-    
+
     private void HighlightMatches()
     {
         ConceptBoxController[] boxes = FindObjectsOfType<ConceptBoxController>();
@@ -469,11 +488,36 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    
-    public void ResetConceptGame()
+    public void TriggerPopup(Popup data)
     {
-        resultsPanel.SetActive(false);
-        StartConceptGame(gameData);
+        inPopup = true;
+        popup.SetActive(true);
+        if (data.title == "") popupTitle.SetActive(false);
+        else
+        {
+            popupTitle.SetActive(true);
+            popupTitle.GetComponentInChildren<TextMeshProUGUI>().text = data.title;
+        }
+
+        if (data.description == "") popupDescription.SetActive(false);
+        else
+        {
+            popupDescription.SetActive(true);
+            popupDescription.GetComponentInChildren<TextMeshProUGUI>().text = data.description;
+        }
+
+        popupImage.sprite = data.sprite;
+        popupMaster.sizeDelta = data.size;
+
+        popupAnimator.SetInteger("type", (int)data.type);
+        popupAnimator.SetTrigger("popup");
+        currentPopup = data;
+    }
+    public void PassPopup()
+    {
+        inPopup = false;
+        popup.SetActive(false);
+        if (currentPopup.onEnding != null) currentPopup.onEnding.Execute();
     }
 }
 
