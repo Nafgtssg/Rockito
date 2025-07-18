@@ -800,8 +800,6 @@ MonoBehaviour:
     m_Scale: 1
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
-<<<<<<< HEAD
-=======
   - m_Index: 75
     m_Metrics:
       m_Width: 28.125
@@ -832,7 +830,6 @@ MonoBehaviour:
     m_Scale: 1
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
->>>>>>> origin/Nelson
   m_CharacterTable:
   - m_ElementType: 1
     m_Unicode: 32
@@ -994,8 +991,6 @@ MonoBehaviour:
     m_Unicode: 108
     m_GlyphIndex: 79
     m_Scale: 1
-<<<<<<< HEAD
-=======
   - m_ElementType: 1
     m_Unicode: 104
     m_GlyphIndex: 75
@@ -1004,7 +999,6 @@ MonoBehaviour:
     m_Unicode: 98
     m_GlyphIndex: 69
     m_Scale: 1
->>>>>>> origin/Nelson
   m_AtlasTextures:
   - {fileID: -3169291855263388083}
   m_AtlasTextureIndex: 0
@@ -1167,8 +1161,6 @@ MonoBehaviour:
     m_Y: 270
     m_Width: 25
     m_Height: 64
-<<<<<<< HEAD
-=======
   - m_X: 568
     m_Y: 0
     m_Width: 48
@@ -1177,7 +1169,6 @@ MonoBehaviour:
     m_Y: 0
     m_Width: 48
     m_Height: 64
->>>>>>> origin/Nelson
   m_FreeGlyphRects:
   - m_X: 73
     m_Y: 25
