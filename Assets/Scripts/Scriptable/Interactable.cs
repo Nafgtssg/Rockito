@@ -3,6 +3,7 @@ using UnityEngine;
 public class Interactable : ScriptableObject
 {
     [Header("Basic Info")]
+    [Tooltip("Nombre del objeto interactuable.")]
     public string displayName = "Object";
     public string action = "interactuar";
     public bool showDisplay = true;

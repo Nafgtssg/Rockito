@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0567d6a442311c743a5dbc26441f7405, type: 3}
+  m_Name: Camera45deg
+  m_EditorClassIdentifier: 
+  displayName: Object
+  action: interactuar
+  showDisplay: 0
+  interactionSound: {fileID: 0}
+  onInteract: {fileID: 0}
+  onPlayerEnterRange: {fileID: 11400000, guid: 0bfbe65731fbcbb4083c4b8e89543274, type: 2}
+  onPlayerExitRange: {fileID: 11400000, guid: 46da8ed4c20e985488d5ff9d945d640f, type: 2}

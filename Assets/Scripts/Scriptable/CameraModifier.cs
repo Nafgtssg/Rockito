@@ -11,4 +11,10 @@ public class CameraModifier : Effect
     public float addClipingPlane;
     //public Vector3 tempOffset;
     //public float tempRotation;
+    public override void Execute()
+    {
+        CameraController.controller.rotation += addRotation;
+        CameraController.controller.mainCamera.orthographicSize += addSize;
+        CameraController.controller.mainCamera.nearClipPlane += addClipingPlane;
+    }
 }

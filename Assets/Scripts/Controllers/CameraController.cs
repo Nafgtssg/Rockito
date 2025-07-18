@@ -5,13 +5,14 @@ public class CameraController : MonoBehaviour
 {
     [Header("Camera Settings")]
     public static CameraController controller;
+    public Camera mainCamera;
     public Transform target;
     public float height = 10f;
     public float distance = 5f;
     public float smoothSpeed = 0.125f;
     public Vector3 offset;
-    [Range(0.0f, 360.0f)] public float tilt = 45;
-    [Range(0.0f, 360.0f)] public float rotation = 0;
+    public float tilt = 45;
+    public float rotation = 0;
     //[Header("Temporal Target")]
     //public bool tempMove;
     //public Vector3 tempOffset;
@@ -24,6 +25,7 @@ public class CameraController : MonoBehaviour
             controller = this;
             DontDestroyOnLoad(gameObject);
         }
+        mainCamera = gameObject.GetComponent<Camera>();
     }
     void LateUpdate() {
         if (target == null) return;
