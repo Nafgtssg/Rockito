@@ -25,13 +25,13 @@ public class PlayerController : MonoBehaviour
         if (!GameManager.manager.inDialog && !GameManager.manager.inPopup)
         {
             movement = CameraController.controller.transform.forward * vertical + CameraController.controller.transform.right * horizontal;
-            if (Input.GetButtonDown("Jump") && isGrounded && !GameManager.manager.inDialog && !GameManager.manager.isPlaying)
+            if (Input.GetButtonDown("Jump") && isGrounded && !GameManager.manager.inDialog && !GameManager.manager.inPopup && !GameManager.manager.isPlaying && !GameManager.manager.isBookOpen)
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
 
     void FixedUpdate() {
-        if (!GameManager.manager.inDialog && !GameManager.manager.inPopup && !GameManager.manager.isPlaying)
+        if (!GameManager.manager.inDialog && !GameManager.manager.inPopup && !GameManager.manager.isPlaying && !GameManager.manager.isBookOpen)
         {
             Vector3 moveVelocity = movement.normalized * moveSpeed;
             rb.velocity = new Vector3(moveVelocity.x, rb.velocity.y, moveVelocity.z);

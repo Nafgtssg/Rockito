@@ -6,5 +6,10 @@ public class BookUIController : MonoBehaviour
 {
     public void TurnRight() => GameManager.manager.TurnRight();
     public void TurnLeft() => GameManager.manager.TurnLeft();
-    public void DisableBook() => gameObject.SetActive(false);
+    public void DisableBook()
+    {
+        gameObject.SetActive(false);
+        GameManager.manager.isBookOpen = false;
+        GameManager.manager.bookHints.SetActive(false);
+    }
 }

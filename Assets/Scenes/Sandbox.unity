@@ -630,6 +630,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1645444594648743110, guid: 812be14f061b08348b516bd2f735055e,
+        type: 3}
+      propertyPath: inventorySlot.Array.size
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 2503916137067747473, guid: 812be14f061b08348b516bd2f735055e,
         type: 3}
       propertyPath: target

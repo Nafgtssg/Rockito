@@ -11,10 +11,11 @@ public class GameManager : MonoBehaviour
     [Header("UI Stuff")]
     public GameObject book;
     public Animator bookAnimator;
-    private bool isBookOpen = false;
+    public bool isBookOpen = false;
     public TextMeshProUGUI text;
     public int stateBook = 0;
     public GameObject bookHints;
+    public GameObject inventoryButtons;
     public GameObject menuButtons;
     [Header("Inventory")]
     public List<Pickup> inventory;
@@ -67,28 +68,59 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (isBookOpen)
         {
-            isBookOpen = !isBookOpen;
-            book.SetActive(isBookOpen);
-            if (isBookOpen) OpenBook();
+            if (Input.GetKeyDown(KeyCode.LeftArrow)) bookAnimator.SetTrigger("turnLeft");
+            if (Input.GetKeyDown(KeyCode.RightArrow)) bookAnimator.SetTrigger("turnRight");
+            if (Input.GetKeyDown(KeyCode.Escape)) bookAnimator.SetTrigger("book");
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Escape)) OpenBook();
         }
         if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return))
             PassAction();
     }
     void OpenBook()
     {
-        
+        isBookOpen = true;
+        book.SetActive(true);
+        bookAnimator.SetTrigger("book");
+        bookHints.SetActive(true);
+        SetBookPage();
     }
     public void TurnLeft()
     {
         stateBook -= 1;
         if (stateBook < 0) stateBook += 4;
+        SetBookPage();
     }
     public void TurnRight()
     {
         stateBook += 1;
-        if (stateBook <= 4) stateBook -= 4;
+        if (stateBook >= 4) stateBook -= 4;
+        SetBookPage();
+    }
+    void SetBookPage()
+    {
+        switch (stateBook)
+        {
+            case 0:
+            case 1:
+            case 2:
+                inventoryButtons.SetActive(true);
+                menuButtons.SetActive(false);
+                UpdateInventory();
+                break;
+            case 3:
+                inventoryButtons.SetActive(false);
+                menuButtons.SetActive(true);
+                break;
+            default:
+                inventoryButtons.SetActive(false);
+                menuButtons.SetActive(false);
+                break;
+        }
     }
     void PassAction()
     {
@@ -106,9 +138,18 @@ public class GameManager : MonoBehaviour
         }
         switch (stateBook)
         {
-            case 0: LoadInventory(inventory); break;
-            case 1: LoadInventory(keyItems); break;
-            case 2: LoadInventory(rock); break;
+            case 0:
+                LoadInventory(inventory);
+                invName.text = "Inventario";
+                break;
+            case 1:
+                LoadInventory(keyItems);
+                invName.text = "Objetos Llave";
+                break;
+            case 2:
+                LoadInventory(rock);
+                invName.text = "Rocas y Minerales";
+                break;
             default: break;
         }
     }
@@ -164,7 +205,7 @@ public class GameManager : MonoBehaviour
     }
     void ClearItemDisplay()
     {
-        invName.text = "";
+        invName.text = stateBook switch { 0 => "Inventario", 1 => "Objetos Llave", 2 => "Rocas y Minerales", _ => "_"};
         invDescription.text = "Posa el cursor sobre un objeto para ver sus detalles.";
         invImage.sprite = null;
     }
