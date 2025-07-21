@@ -10,10 +10,16 @@ public class GameManager : MonoBehaviour
     public static GameManager manager;
     [Header("UI Stuff")]
     public GameObject book;
+    public Animator bookAnimator;
     private bool isBookOpen = false;
     public TextMeshProUGUI text;
+    public int stateBook = 0;
+    public GameObject bookHints;
+    public GameObject menuButtons;
     [Header("Inventory")]
     public List<Pickup> inventory;
+    public List<Pickup> keyItems;
+    public List<Pickup> rock;
     public GameObject[] inventorySlot;
     public TextMeshProUGUI invName;
     public TextMeshProUGUI invDescription;
@@ -65,10 +71,24 @@ public class GameManager : MonoBehaviour
         {
             isBookOpen = !isBookOpen;
             book.SetActive(isBookOpen);
-            if (isBookOpen) UpdateInventory();
+            if (isBookOpen) OpenBook();
         }
         if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return))
             PassAction();
+    }
+    void OpenBook()
+    {
+        
+    }
+    public void TurnLeft()
+    {
+        stateBook -= 1;
+        if (stateBook < 0) stateBook += 4;
+    }
+    public void TurnRight()
+    {
+        stateBook += 1;
+        if (stateBook <= 4) stateBook -= 4;
     }
     void PassAction()
     {
@@ -84,14 +104,23 @@ public class GameManager : MonoBehaviour
             slot.GetComponent<Button>().onClick.RemoveAllListeners();
             slot.SetActive(false);
         }
-
+        switch (stateBook)
+        {
+            case 0: LoadInventory(inventory); break;
+            case 1: LoadInventory(keyItems); break;
+            case 2: LoadInventory(rock); break;
+            default: break;
+        }
+    }
+    void LoadInventory(List<Pickup> list)
+    {
         // Populate slots with items
-        for (int i = 0; i < inventory.Count; i++)
+        for (int i = 0; i < list.Count; i++)
         {
             if (i >= inventorySlot.Length) break;
 
             GameObject slot = inventorySlot[i];
-            Pickup item = inventory[i];
+            Pickup item = list[i];
 
             // Set slot active and assign icon
             slot.SetActive(true);
@@ -122,7 +151,7 @@ public class GameManager : MonoBehaviour
         }
 
         // Clear details if inventory is empty
-        if (inventory.Count == 0)
+        if (list.Count == 0)
         {
             ClearItemDisplay();
         }
