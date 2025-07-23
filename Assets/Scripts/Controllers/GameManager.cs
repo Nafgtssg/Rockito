@@ -1,13 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager manager;
+    [Header("Data of the World")]
+    [SerializeField] private List<InteractableRecord> interactableStates = new List<InteractableRecord>();
+    [SerializeField] private List<DialogState> dialogStates = new List<DialogState>();
+    public List<Pickup> inventory;
+    public List<Pickup> keyItems;
+    public List<Pickup> rock;
     [Header("UI Stuff")]
     public GameObject book;
     public Animator bookAnimator;
@@ -17,17 +25,15 @@ public class GameManager : MonoBehaviour
     public GameObject bookHints;
     public GameObject inventoryButtons;
     public GameObject menuButtons;
+    public GameObject craftingButtons;
+    public GameObject questButtons;
     [Header("Inventory")]
-    public List<Pickup> inventory;
-    public List<Pickup> keyItems;
-    public List<Pickup> rock;
     public GameObject[] inventorySlot;
     public TextMeshProUGUI invName;
     public TextMeshProUGUI invDescription;
     public Image invImage;
     [Header("Dialog System")]
     public AudioSource audioSource;
-    [SerializeField] private List<DialogState> dialogStates = new List<DialogState>();
     public DialogNode currentDialog;
     public bool inDialog = false;
     public GameObject dialogBox;
@@ -62,7 +68,10 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         if (manager != null && manager != this) Destroy(gameObject);
-        else manager = this;
+        else
+        {
+            manager = this;
+        }
         audioSource.playOnAwake = false;
     }
 
@@ -81,6 +90,64 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return))
             PassAction();
     }
+
+    public bool RegisterInteractable(int internalId, GameObject data, Interactable interactable)
+    {
+        var record = interactableStates.Find(x => x.internalId == internalId);
+        if (record == null)
+        {
+            record = new InteractableRecord()
+            {
+                internalId = internalId,
+                interactable = interactable,
+                position = data.transform.position,
+                rotation = data.transform.rotation,
+                scale = data.transform.localScale,
+                available = true
+            };
+            interactableStates.Add(record);
+        }
+        return record.available;
+    }
+
+    public void LoadInteractableState(int internalId, InteractableController interactableController)
+    {
+        var record = interactableStates.Find(n => n.internalId == internalId);
+        if (record == null)
+        {
+            RegisterInteractable(internalId, interactableController.gameObject, interactableController.interactable);
+        }
+        else
+        {
+            interactableController.interactable = record.interactable;
+            interactableController.transform.position = record.position;
+            interactableController.transform.rotation = record.rotation;
+            interactableController.transform.localScale = record.scale;
+            interactableController.gameObject.SetActive(record.available);
+        }
+    }
+
+    public void DeleteGame() {
+        PlayerPrefs.DeleteKey("InteractableStates");
+        PlayerPrefs.Save();
+    }
+    public void SaveGame()
+    {
+        string jsonData = JsonUtility.ToJson(interactableStates);
+        PlayerPrefs.SetString("InteractableStates", jsonData);
+        PlayerPrefs.Save();
+    }
+
+    public void LoadGame()
+    {
+        if (PlayerPrefs.HasKey("InteractableStates"))
+        {
+            string jsonData = PlayerPrefs.GetString("InteractableStates");
+            interactableStates = JsonUtility.FromJson<List<InteractableRecord>>(jsonData);
+        }
+    }
+
+    /* UI STUFF */
     void OpenBook()
     {
         isBookOpen = true;
@@ -587,7 +654,6 @@ public class GameManager : MonoBehaviour
     IEnumerator PassPopup()
     {
         yield return new WaitForSeconds(.1f);
-        popup.SetActive(false);
         inPopup = false;
         if (currentPopup.onEnding != null) currentPopup.onEnding.Execute();
     }
@@ -598,4 +664,15 @@ public class DialogState
 {
     public string id;
     public int dialogState;
+}
+
+[System.Serializable]
+public class InteractableRecord
+{
+    public int internalId;
+    public Interactable interactable;
+    public Vector3 position;
+    public Quaternion rotation;
+    public Vector3 scale;
+    public bool available;
 }

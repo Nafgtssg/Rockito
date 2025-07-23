@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40ddff66592ccd04092385150abd2002, type: 3}
-  m_Name: Foo01
+  m_Name: pickup_perlita
   m_EditorClassIdentifier: 
-  displayName: Foo01
-  action: recoger
+  displayName: Object
+  action: interactuar
+  showDisplay: 1
   interactionSound: {fileID: 0}
   onInteract: {fileID: 0}
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
-  icon: {fileID: 876705384, guid: 531f02b3a8717f84a87bb2d09fdba0a3, type: 3}
-  description: 'Foo01 sample text
-
-'
-  maxInteractions: 1
+  type: 0
+  icon: {fileID: 0}
+  description: 

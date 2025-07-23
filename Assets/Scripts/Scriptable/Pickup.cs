@@ -12,12 +12,20 @@ public class Pickup : Interactable
     public Sprite icon;
     [Tooltip("Descripción del objeto dentro del inventario.")]
     [TextArea] public string description;
-    public override void Interact() => GameManager.manager.inventory.Add(this);
+    public override void Interact()
+    {
+        switch (type)
+        {
+            case PickupType.item: GameManager.manager.inventory.Add(this); break;
+            case PickupType.key: GameManager.manager.keyItems.Add(this); break;
+            case PickupType.rock: GameManager.manager.rock.Add(this); break;
+        }
+    }
 }
 
 public enum PickupType
 {
     item = 0,
-    mineral = 1,
-    gift = 2,
+    key = 1,
+    rock = 2,
 }

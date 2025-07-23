@@ -3,6 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class InteractableController : MonoBehaviour
 {
+    public int internalId;
     [Header("Interaction Settings")]
     public Interactable interactable;
     public Animator animator;
@@ -10,9 +11,23 @@ public class InteractableController : MonoBehaviour
     private Collider interactionCollider;
     //private bool canInteract = true;
 
-    void Awake() {
+    void Awake()
+    {
         interactionCollider = GetComponent<Collider>();
         interactionCollider.isTrigger = true;
+        RegisterInteractable();
+    }
+
+    void RegisterInteractable()
+    {
+        // Los únicos interactuables que hay que registrar, pues su estado es importante
+        // son los NPCs y los recolectables
+        if (interactable is DialogTrigger || interactable is Pickup)
+        {
+            bool available = GameManager.manager.RegisterInteractable(internalId, gameObject, interactable);
+            if (!available) gameObject.SetActive(false);
+            GameManager.manager.LoadInteractableState(internalId, this);
+        }
     }
 
     void Update() {
