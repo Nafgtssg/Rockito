@@ -22,17 +22,28 @@ public class GameManager : MonoBehaviour
     public bool isBookOpen = false;
     public TextMeshProUGUI text;
     public int stateBook = 0;
+    public int stateBookIncrement = 5;
     public GameObject bookHints;
     public GameObject inventoryButtons;
     public GameObject menuButtons;
     public GameObject craftingButtons;
     public GameObject questButtons;
-    [Header("Inventory")]
+    [Header("Sistema de Inventario")]
     public GameObject[] inventorySlot;
     public TextMeshProUGUI invName;
     public TextMeshProUGUI invDescription;
     public Image invImage;
-    [Header("Dialog System")]
+    [Header("Sistema de Misiones")]
+    public GameObject[] questSlot;
+    [Header("Sistema de Crafteo")]
+    public GameObject[] materialSlot;
+    public GameObject[] craftingSlots;
+    public List<Recipe> recipes = new List<Recipe>();
+    private Dictionary<Pickup, int> craftingMaterials = new Dictionary<Pickup, int>();
+    private Pickup[] selectedMaterials = new Pickup[2]; // Track the two selected materials
+    private int[] materialCounts = new int[2]; // Track counts for each material
+    public TextMeshProUGUI crafName;
+    [Header("Sistema de Diálogo")]
     public AudioSource audioSource;
     public DialogNode currentDialog;
     public bool inDialog = false;
@@ -46,7 +57,7 @@ public class GameManager : MonoBehaviour
     private bool isChoice = false;
     private bool safeDialog = false;
     private Coroutine typingRoutine;
-    [Header("Concept Game System")]
+    [Header("Sistema de Conceptos")]
     public GameObject conceptGame;
     public ConceptData gameData;
     public GameObject conceptPrefab;
@@ -56,7 +67,7 @@ public class GameManager : MonoBehaviour
     public GameObject resultsPanel;
     public TextMeshProUGUI resultsText;
     public bool isPlaying;
-    [Header("Popup System")]
+    [Header("Sistema de Popup")]
     public Popup currentPopup;
     public GameObject popup;
     public Animator popupAnimator;
@@ -75,12 +86,17 @@ public class GameManager : MonoBehaviour
         audioSource.playOnAwake = false;
     }
 
+    void Start()
+    {
+        ClearCraftingSlots();
+    }
+
     void Update()
     {
         if (isBookOpen)
         {
-            if (Input.GetKeyDown(KeyCode.LeftArrow)) bookAnimator.SetTrigger("turnLeft");
-            if (Input.GetKeyDown(KeyCode.RightArrow)) bookAnimator.SetTrigger("turnRight");
+            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) bookAnimator.SetTrigger("turnLeft");
+            if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) bookAnimator.SetTrigger("turnRight");
             if (Input.GetKeyDown(KeyCode.Escape)) bookAnimator.SetTrigger("book");
         }
         else
@@ -159,33 +175,65 @@ public class GameManager : MonoBehaviour
     public void TurnLeft()
     {
         stateBook -= 1;
-        if (stateBook < 0) stateBook += 4;
+        if (stateBook < 0) stateBook += stateBookIncrement;
         SetBookPage();
     }
     public void TurnRight()
     {
         stateBook += 1;
-        if (stateBook >= 4) stateBook -= 4;
+        if (stateBook >= stateBookIncrement) stateBook -= stateBookIncrement;
         SetBookPage();
     }
     void SetBookPage()
     {
+        TextMeshProUGUI[] data = bookHints.GetComponentsInChildren<TextMeshProUGUI>();
         switch (stateBook)
         {
             case 0:
+                inventoryButtons.SetActive(true);
+                menuButtons.SetActive(false);
+                craftingButtons.SetActive(false);
+                data[1].text = "Fabricación";
+                data[0].text = "Objetos Llave";
+                UpdateInventory();
+                break;
             case 1:
+                inventoryButtons.SetActive(true);
+                menuButtons.SetActive(false);
+                craftingButtons.SetActive(false);
+                data[1].text = "Inventario";
+                data[0].text = "Minerales";
+                UpdateInventory();
+                break;
             case 2:
                 inventoryButtons.SetActive(true);
                 menuButtons.SetActive(false);
+                craftingButtons.SetActive(false);
+                data[1].text = "Objetos Llave";
+                data[0].text = "Menú";
                 UpdateInventory();
                 break;
             case 3:
                 inventoryButtons.SetActive(false);
                 menuButtons.SetActive(true);
+                craftingButtons.SetActive(false);
+                data[1].text = "Minerales";
+                data[0].text = "Fabricación";
+                break;
+            case 4:
+                inventoryButtons.SetActive(false);
+                menuButtons.SetActive(false);
+                craftingButtons.SetActive(true);
+                data[1].text = "Menú";
+                data[0].text = "Inventario";
+                UpdateInventory();
                 break;
             default:
                 inventoryButtons.SetActive(false);
                 menuButtons.SetActive(false);
+                craftingButtons.SetActive(false);
+                data[1].text = "";
+                data[0].text = "";
                 break;
         }
     }
@@ -206,28 +254,32 @@ public class GameManager : MonoBehaviour
         switch (stateBook)
         {
             case 0:
-                LoadInventory(inventory);
+                LoadInventory(inventory, inventorySlot);
                 invName.text = "Inventario";
                 break;
             case 1:
-                LoadInventory(keyItems);
+                LoadInventory(keyItems, inventorySlot);
                 invName.text = "Objetos Llave";
                 break;
             case 2:
-                LoadInventory(rock);
+                LoadInventory(rock, inventorySlot);
                 invName.text = "Rocas y Minerales";
+                break;
+            case 4:
+                LoadInventory(rock, materialSlot);
+                crafName.text = "";
                 break;
             default: break;
         }
     }
-    void LoadInventory(List<Pickup> list)
+    void LoadInventory(List<Pickup> list, GameObject[] slots)
     {
         // Populate slots with items
         for (int i = 0; i < list.Count; i++)
         {
-            if (i >= inventorySlot.Length) break;
+            if (i >= slots.Length) break;
 
-            GameObject slot = inventorySlot[i];
+            GameObject slot = slots[i];
             Pickup item = list[i];
 
             // Set slot active and assign icon
@@ -266,7 +318,7 @@ public class GameManager : MonoBehaviour
     }
     void OnHoverItem(Pickup item)
     {
-        invName.text = item.displayName;
+        crafName.text = invName.text = item.displayName;
         invDescription.text = item.description;
         invImage.sprite = item.icon;
     }
@@ -278,8 +330,134 @@ public class GameManager : MonoBehaviour
     }
     public void SelectItem(Pickup item)
     {
-        // Handle item selection/use here
-        Debug.Log("Selected: " + item.displayName);
+        // Try to add to first empty slot or matching slot
+        bool added = false;
+        
+        for (int i = 0; i < 2; i++)
+        {
+            if (selectedMaterials[i] == null)
+            {
+                // Empty slot - add material
+                selectedMaterials[i] = item;
+                materialCounts[i] = 1;
+                UpdateCraftingUI();
+                added = true;
+                break;
+            }
+            else if (selectedMaterials[i] == item)
+            {
+                // Existing material - increment count
+                materialCounts[i]++;
+                UpdateCraftingUI();
+                added = true;
+                break;
+            }
+        }
+
+        if (!added)
+        {
+            Debug.Log("Both crafting slots are full with different materials");
+        }
+    }
+
+    public void ClearCraftingSlot(int slotIndex)
+    {
+        if (slotIndex >= 0 && slotIndex < 2)
+        {
+            selectedMaterials[slotIndex] = null;
+            materialCounts[slotIndex] = 0;
+            UpdateCraftingUI();
+        }
+    }
+
+    void UpdateCraftingUI()
+    {
+        // Update material slots display
+        for (int i = 0; i < 2; i++)
+        {
+            if (selectedMaterials[i] != null)
+            {
+                craftingSlots[i].SetActive(true);
+                craftingSlots[i].GetComponent<Image>().sprite = selectedMaterials[i].icon;
+                
+                // Update count text if available
+                TextMeshProUGUI countText = craftingSlots[i].GetComponentInChildren<TextMeshProUGUI>();
+                if (countText != null)
+                {
+                    countText.text = materialCounts[i].ToString();
+                }
+            }
+            else
+            {
+                craftingSlots[i].SetActive(false);
+            }
+        }
+
+        // Check for valid recipe
+        CheckRecipes();
+    }
+
+    void CheckRecipes()
+    {
+        craftingSlots[2].SetActive(false); // Hide result slot initially
+
+        if (selectedMaterials[0] == null || selectedMaterials[1] == null)
+            return;
+
+        foreach (Recipe recipe in recipes)
+        {
+            bool matchesRecipe = false;
+
+            // Check if materials match recipe (order doesn't matter)
+            if ((recipe.first.pickup == selectedMaterials[0] && recipe.second.pickup == selectedMaterials[1]) ||
+                (recipe.first.pickup == selectedMaterials[1] && recipe.second.pickup == selectedMaterials[0]))
+            {
+                // Check if we have enough materials
+                int count1 = selectedMaterials[0] == recipe.first.pickup ? materialCounts[0] : materialCounts[1];
+                int count2 = selectedMaterials[1] == recipe.second.pickup ? materialCounts[1] : materialCounts[0];
+
+                if (count1 >= recipe.first.amount && count2 >= recipe.second.amount)
+                {
+                    matchesRecipe = true;
+                }
+            }
+
+            if (matchesRecipe)
+            {
+                // Show result
+                craftingSlots[2].SetActive(true);
+                craftingSlots[2].GetComponent<Image>().sprite = recipe.result.icon;
+                
+                // Add click event to craft the item
+                Button resultButton = craftingSlots[2].GetComponent<Button>();
+                resultButton.onClick.RemoveAllListeners();
+                resultButton.onClick.AddListener(() => CraftItem(recipe));
+                return;
+            }
+        }
+    }
+
+    public void CraftItem(Recipe recipe)
+    {
+        // Add result to inventory
+        rock.Add(recipe.result);
+        
+        // Clear crafting slots
+        ClearCraftingSlots();
+        
+        // Update UI
+        LoadInventory(rock, materialSlot);
+    }
+
+    void ClearCraftingSlots()
+    {
+        for (int i = 0; i < 2; i++)
+        {
+            selectedMaterials[i] = null;
+            materialCounts[i] = 0;
+            craftingSlots[i].SetActive(false);
+        }
+        craftingSlots[2].SetActive(false);
     }
 
     /*************

@@ -12,13 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ddff66592ccd04092385150abd2002, type: 3}
   m_Name: pickup_cementita
   m_EditorClassIdentifier: 
-  displayName: Object
-  action: interactuar
+  displayName: Cementita
+  action: recoger
   showDisplay: 1
   interactionSound: {fileID: 0}
   onInteract: {fileID: 0}
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
-  type: 0
-  icon: {fileID: 0}
-  description: 
+  type: 2
+  icon: {fileID: 1303964368, guid: 531f02b3a8717f84a87bb2d09fdba0a3, type: 3}
+  description: "La cementita contiene un 6,67% de carbono,[1]\u200B y es un compuesto
+    intermet\xE1lico de inserci\xF3n. Si bien la composici\xF3n qu\xEDmica de la
+    cementita es Fe3C, la estructura cristalina es del tipo ortorr\xF3mbica con 12
+    \xE1tomos de hierro y 4 \xE1tomos de carbono por celda."

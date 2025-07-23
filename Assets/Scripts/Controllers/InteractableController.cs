@@ -11,7 +11,7 @@ public class InteractableController : MonoBehaviour
     private Collider interactionCollider;
     //private bool canInteract = true;
 
-    void Awake()
+    void Start()
     {
         interactionCollider = GetComponent<Collider>();
         interactionCollider.isTrigger = true;

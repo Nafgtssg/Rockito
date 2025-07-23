@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: perlita
   m_EditorClassIdentifier: 
   first:
-    pickup: {fileID: 0}
-    amount: 0
+    pickup: {fileID: 11400000, guid: 6cf41de5f817bcb468ea317af8609294, type: 2}
+    amount: 1
   second:
-    pickup: {fileID: 0}
-    amount: 0
-  result: {fileID: 0}
+    pickup: {fileID: 11400000, guid: 17f5372f0bcf5da4faffbb989e575b8b, type: 2}
+    amount: 2
+  result: {fileID: 11400000, guid: e2b26b3e05c57db4db4686416de45a47, type: 2}
