@@ -84,6 +84,7 @@ public class GameManager : MonoBehaviour
             manager = this;
         }
         audioSource.playOnAwake = false;
+        LoadGame();
     }
 
     void Start()
@@ -128,7 +129,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadInteractableState(int internalId, InteractableController interactableController)
     {
-        var record = interactableStates.Find(n => n.internalId == internalId);
+        var record = interactableStates.Find(x => x.internalId == internalId);
         if (record == null)
         {
             RegisterInteractable(internalId, interactableController.gameObject, interactableController.interactable);
@@ -142,25 +143,72 @@ public class GameManager : MonoBehaviour
             interactableController.gameObject.SetActive(record.available);
         }
     }
+    public void SetInteractableState(InteractableRecord state)
+    {
+        var record = interactableStates.Find(x => x.internalId == state.internalId);
+        interactableStates.Remove(record);
+        interactableStates.Add(state);
+    }
+    public void ToggleInteractableState(int id)
+    {
+        var record = interactableStates.Find(x => x.internalId == id);
+        interactableStates.Remove(record);
+        record.available = !record.available;
+        interactableStates.Add(record);
+    }
 
-    public void DeleteGame() {
+    public void DeleteGame()
+    {
         PlayerPrefs.DeleteKey("InteractableStates");
+        PlayerPrefs.DeleteKey("Inventory");
+        PlayerPrefs.DeleteKey("KeyItems");
+        PlayerPrefs.DeleteKey("Rock");
         PlayerPrefs.Save();
     }
     public void SaveGame()
     {
         string jsonData = JsonUtility.ToJson(interactableStates);
         PlayerPrefs.SetString("InteractableStates", jsonData);
+        
+        jsonData = JsonUtility.ToJson(inventory);
+        PlayerPrefs.SetString("Inventory", jsonData);
+
+        jsonData = JsonUtility.ToJson(keyItems);
+        PlayerPrefs.SetString("KeyItems", jsonData);
+        
+        jsonData = JsonUtility.ToJson(rock);
+        PlayerPrefs.SetString("Rock", jsonData);
+
         PlayerPrefs.Save();
     }
 
     public void LoadGame()
     {
+        string jsonData;
         if (PlayerPrefs.HasKey("InteractableStates"))
         {
-            string jsonData = PlayerPrefs.GetString("InteractableStates");
+            jsonData = PlayerPrefs.GetString("InteractableStates");
             interactableStates = JsonUtility.FromJson<List<InteractableRecord>>(jsonData);
         }
+
+        if (PlayerPrefs.HasKey("Inventory"))
+        {
+            jsonData = PlayerPrefs.GetString("Inventory");
+            inventory = JsonUtility.FromJson<List<Pickup>>(jsonData);
+        }
+
+        if (PlayerPrefs.HasKey("KeyItems"))
+        {
+            jsonData = PlayerPrefs.GetString("KeyItems");
+            keyItems = JsonUtility.FromJson<List<Pickup>>(jsonData);
+        }
+
+        if (PlayerPrefs.HasKey("Rock"))
+        {
+            jsonData = PlayerPrefs.GetString("Rock");
+            rock = JsonUtility.FromJson<List<Pickup>>(jsonData);
+        }
+        Debug.Log(interactableStates.Count);
     }
 
     /* UI STUFF */

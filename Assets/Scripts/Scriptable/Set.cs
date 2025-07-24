@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Set : MonoBehaviour
+[CreateAssetMenu(fileName = "Nuevo Conjunto", menuName = "Geodisea/Efectos/Conjunto")]
+public class Set : Effect
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("Datos del Efecto")]
+    [Tooltip("Conjunto de efectos que este efecto activará en secuencia cuando se ejecute.")]
+    public Effect[] effects;
+    public override void Execute()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        foreach (Effect effect in effects) {
+            effect.Execute();
+        }
     }
 }

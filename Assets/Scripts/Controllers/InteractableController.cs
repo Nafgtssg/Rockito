@@ -68,6 +68,7 @@ public class InteractableController : MonoBehaviour
         // If pickup, handle destruction
         if (interactable != null && interactable is Pickup)
         {
+            GameManager.manager.ToggleInteractableState(internalId);
             if (animator == null)
                 Destroy(gameObject);
             else
