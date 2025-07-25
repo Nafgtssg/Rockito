@@ -3,6 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController player;
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float jumpForce = 7f;
@@ -13,6 +14,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 movement;
 
     void Awake() {
+        if (player != null && player != this) Destroy(gameObject);
+        else player = this;
         rb = GetComponent<Rigidbody>();
     }
 

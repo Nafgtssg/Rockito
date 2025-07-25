@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class GameManager : MonoBehaviour
     public List<Pickup> inventory;
     public List<Pickup> keyItems;
     public List<Pickup> rock;
+    private const string SAVE_FOLDER = "Saves";
+    private const string saveName = "save";
+    private const string SAVE_EXTENSION = ".gaia";
     [Header("UI Stuff")]
     public GameObject book;
     public Animator bookAnimator;
@@ -159,57 +163,69 @@ public class GameManager : MonoBehaviour
 
     public void DeleteGame()
     {
-        PlayerPrefs.DeleteKey("InteractableStates");
-        PlayerPrefs.DeleteKey("Inventory");
-        PlayerPrefs.DeleteKey("KeyItems");
-        PlayerPrefs.DeleteKey("Rock");
-        PlayerPrefs.Save();
+        string savePath = Path.Combine(Application.persistentDataPath, SAVE_FOLDER, saveName + SAVE_EXTENSION);
+        
+        if (File.Exists(savePath))
+        {
+            File.Delete(savePath);
+            Debug.Log($"Save deleted: {savePath}");
+        }
     }
     public void SaveGame()
     {
-        string jsonData = JsonUtility.ToJson(interactableStates);
-        PlayerPrefs.SetString("InteractableStates", jsonData);
+        // Create save directory if it doesn't exist
+        string saveDir = Path.Combine(Application.persistentDataPath, SAVE_FOLDER);
+        if (!Directory.Exists(saveDir))
+        {
+            Directory.CreateDirectory(saveDir);
+        }
         
-        jsonData = JsonUtility.ToJson(inventory);
-        PlayerPrefs.SetString("Inventory", jsonData);
-
-        jsonData = JsonUtility.ToJson(keyItems);
-        PlayerPrefs.SetString("KeyItems", jsonData);
+        // Create save data
+        GameSaveData saveData = new GameSaveData
+        {
+            interactableStates = interactableStates,
+            dialogStates = dialogStates,
+            inventory = inventory,
+            keyItems = keyItems,
+            rock = rock,
+            playerPosition = PlayerController.player.transform.position,
+            currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name,
+            gameTime = Time.time
+        };
         
-        jsonData = JsonUtility.ToJson(rock);
-        PlayerPrefs.SetString("Rock", jsonData);
-
-        PlayerPrefs.Save();
+        // Convert to JSON
+        string jsonData = JsonUtility.ToJson(saveData, true);
+        
+        // Save to file
+        string savePath = Path.Combine(saveDir, saveName + SAVE_EXTENSION);
+        File.WriteAllText(savePath, jsonData);
+        
+        Debug.Log($"Game saved to: {savePath}");
     }
 
-    public void LoadGame()
+    public bool LoadGame()
     {
-        string jsonData;
-        if (PlayerPrefs.HasKey("InteractableStates"))
+        string savePath = Path.Combine(Application.persistentDataPath, SAVE_FOLDER, saveName + SAVE_EXTENSION);
+        
+        if (!File.Exists(savePath))
         {
-            jsonData = PlayerPrefs.GetString("InteractableStates");
-            interactableStates = JsonUtility.FromJson<List<InteractableRecord>>(jsonData);
+            Debug.LogWarning($"Save file not found: {savePath}");
+            return false;
         }
-
-        if (PlayerPrefs.HasKey("Inventory"))
-        {
-            jsonData = PlayerPrefs.GetString("Inventory");
-            inventory = JsonUtility.FromJson<List<Pickup>>(jsonData);
-        }
-
-        if (PlayerPrefs.HasKey("KeyItems"))
-        {
-            jsonData = PlayerPrefs.GetString("KeyItems");
-            keyItems = JsonUtility.FromJson<List<Pickup>>(jsonData);
-        }
-
-        if (PlayerPrefs.HasKey("Rock"))
-        {
-            jsonData = PlayerPrefs.GetString("Rock");
-            rock = JsonUtility.FromJson<List<Pickup>>(jsonData);
-        }
-        Debug.Log(interactableStates.Count);
-    }
+        
+        // Read save file
+        string jsonData = File.ReadAllText(savePath);
+        GameSaveData saveData = JsonUtility.FromJson<GameSaveData>(jsonData);
+        
+        // Apply save data
+        GameManager.manager.interactableStates = saveData.interactableStates;
+        GameManager.manager.dialogStates = saveData.dialogStates;
+        GameManager.manager.inventory = saveData.inventory;
+        GameManager.manager.keyItems = saveData.keyItems;
+        GameManager.manager.rock = saveData.rock;
+        
+        Debug.Log($"Game loaded from: {savePath}");
+        return true;    }
 
     /* UI STUFF */
     void OpenBook()
@@ -901,4 +917,17 @@ public class InteractableRecord
     public Quaternion rotation;
     public Vector3 scale;
     public bool available;
+}
+
+[System.Serializable]
+public class GameSaveData
+{
+    public List<InteractableRecord> interactableStates = new List<InteractableRecord>();
+    public List<DialogState> dialogStates = new List<DialogState>();
+    public List<Pickup> inventory = new List<Pickup>();
+    public List<Pickup> rock = new List<Pickup>();
+    public List<Pickup> keyItems = new List<Pickup>();
+    public Vector3 playerPosition;
+    public string currentScene;
+    public float gameTime;
 }
