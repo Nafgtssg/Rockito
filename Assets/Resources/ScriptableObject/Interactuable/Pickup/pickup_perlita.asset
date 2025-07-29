@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ddff66592ccd04092385150abd2002, type: 3}
   m_Name: pickup_perlita
   m_EditorClassIdentifier: 
-  displayName: Object
+  displayName: Perlita
   action: interactuar
   showDisplay: 1
   interactionSound: {fileID: 0}
