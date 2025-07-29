@@ -88,11 +88,11 @@ public class GameManager : MonoBehaviour
             manager = this;
         }
         audioSource.playOnAwake = false;
-        LoadGame();
     }
 
     void Start()
     {
+        LoadGame();
         ClearCraftingSlots();
     }
 
@@ -128,6 +128,7 @@ public class GameManager : MonoBehaviour
             };
             interactableStates.Add(record);
         }
+        Debug.Log($"{interactable.displayName} {record.available}");
         return record.available;
     }
 
@@ -209,7 +210,7 @@ public class GameManager : MonoBehaviour
         
         if (!File.Exists(savePath))
         {
-            Debug.LogWarning($"Save file not found: {savePath}");
+            SaveGame();
             return false;
         }
         
@@ -223,6 +224,8 @@ public class GameManager : MonoBehaviour
         GameManager.manager.inventory = saveData.inventory;
         GameManager.manager.keyItems = saveData.keyItems;
         GameManager.manager.rock = saveData.rock;
+        PlayerController.player.transform.position = saveData.playerPosition;
+
         
         Debug.Log($"Game loaded from: {savePath}");
         return true;    }

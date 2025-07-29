@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(Collider))]
 public class InteractableController : MonoBehaviour
@@ -15,6 +17,11 @@ public class InteractableController : MonoBehaviour
     {
         interactionCollider = GetComponent<Collider>();
         interactionCollider.isTrigger = true;
+        StartCoroutine(LateStart());
+    }
+    IEnumerator LateStart()
+    {
+        yield return new WaitForSeconds(0.1f);
         RegisterInteractable();
     }
 
@@ -25,7 +32,11 @@ public class InteractableController : MonoBehaviour
         if (interactable is DialogTrigger || interactable is Pickup)
         {
             bool available = GameManager.manager.RegisterInteractable(internalId, gameObject, interactable);
-            if (!available) gameObject.SetActive(false);
+            if (!available)
+            {
+                if (isPlayerInRange) OnTriggerExit(PlayerController.player.GetComponent<CapsuleCollider>());
+                gameObject.SetActive(false);
+            }
             GameManager.manager.LoadInteractableState(internalId, this);
         }
     }
