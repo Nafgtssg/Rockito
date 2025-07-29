@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40ddff66592ccd04092385150abd2002, type: 3}
-  m_Name: Foo01
+  m_Name: pickup_foo01
   m_EditorClassIdentifier: 
   displayName: Foo01
   action: recoger

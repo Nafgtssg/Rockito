@@ -1,8 +1,11 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(Collider))]
 public class InteractableController : MonoBehaviour
 {
+    public int internalId;
     [Header("Interaction Settings")]
     public Interactable interactable;
     public Animator animator;
@@ -10,14 +13,37 @@ public class InteractableController : MonoBehaviour
     private Collider interactionCollider;
     //private bool canInteract = true;
 
-    void Awake() {
+    void Start()
+    {
         interactionCollider = GetComponent<Collider>();
         interactionCollider.isTrigger = true;
+        StartCoroutine(LateStart());
+    }
+    IEnumerator LateStart()
+    {
+        yield return new WaitForSeconds(0.1f);
+        RegisterInteractable();
+    }
+
+    void RegisterInteractable()
+    {
+        // Los únicos interactuables que hay que registrar, pues su estado es importante
+        // son los NPCs y los recolectables
+        if (interactable is DialogTrigger || interactable is Pickup)
+        {
+            bool available = GameManager.manager.RegisterInteractable(internalId, gameObject, interactable);
+            if (!available)
+            {
+                if (isPlayerInRange) OnTriggerExit(PlayerController.player.GetComponent<CapsuleCollider>());
+                gameObject.SetActive(false);
+            }
+            GameManager.manager.LoadInteractableState(internalId, this);
+        }
     }
 
     void Update() {
-        if (isPlayerInRange && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && !GameManager.manager.inDialog && !GameManager.manager.inPopup)// && canInteract)
-        {
+        if (isPlayerInRange && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return))
+            && !GameManager.manager.inDialog && !GameManager.manager.inPopup && !GameManager.manager.isBookOpen) {
             Interact();
             GameManager.manager.text.text = "";
         }
@@ -53,6 +79,7 @@ public class InteractableController : MonoBehaviour
         // If pickup, handle destruction
         if (interactable != null && interactable is Pickup)
         {
+            GameManager.manager.ToggleInteractableState(internalId);
             if (animator == null)
                 Destroy(gameObject);
             else

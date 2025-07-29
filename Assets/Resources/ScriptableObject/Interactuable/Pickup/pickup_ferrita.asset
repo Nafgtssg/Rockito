@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ddff66592ccd04092385150abd2002, type: 3}
+  m_Name: pickup_ferrita
+  m_EditorClassIdentifier: 
+  displayName: Ferrita
+  action: recoger
+  showDisplay: 1
+  interactionSound: {fileID: 0}
+  onInteract: {fileID: 0}
+  onPlayerEnterRange: {fileID: 0}
+  onPlayerExitRange: {fileID: 0}
+  type: 2
+  icon: {fileID: 495709919, guid: 531f02b3a8717f84a87bb2d09fdba0a3, type: 3}
+  description: "La ferrita o hierro alfa (\u03B1-Fe) es una de las tres formas alotr\xF3picas
+    de hierro existentes a presi\xF3n atmosf\xE9rica. Es un componente importante
+    del acero."
