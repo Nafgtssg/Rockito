@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI text;
     public int stateBook = 0;
     public int stateBookIncrement = 5;
+    public GameObject gameHints;
     public GameObject bookHints;
     public GameObject inventoryButtons;
     public GameObject menuButtons;
@@ -106,10 +107,9 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.Escape)) OpenBook();
+            if (Input.GetKeyDown(KeyCode.Escape) && !inDialog && !inPopup) OpenBook();
+            if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) PassAction();
         }
-        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return))
-            PassAction();
     }
 
     public bool RegisterInteractable(int internalId, GameObject data, Interactable interactable)
@@ -219,11 +219,11 @@ public class GameManager : MonoBehaviour
         GameSaveData saveData = JsonUtility.FromJson<GameSaveData>(jsonData);
         
         // Apply save data
-        GameManager.manager.interactableStates = saveData.interactableStates;
-        GameManager.manager.dialogStates = saveData.dialogStates;
-        GameManager.manager.inventory = saveData.inventory;
-        GameManager.manager.keyItems = saveData.keyItems;
-        GameManager.manager.rock = saveData.rock;
+        interactableStates = saveData.interactableStates;
+        dialogStates = saveData.dialogStates;
+        inventory = saveData.inventory;
+        keyItems = saveData.keyItems;
+        rock = saveData.rock;
         PlayerController.player.transform.position = saveData.playerPosition;
 
         
@@ -236,6 +236,8 @@ public class GameManager : MonoBehaviour
         isBookOpen = true;
         book.SetActive(true);
         bookAnimator.SetTrigger("book");
+        text.gameObject.SetActive(false);
+        gameHints.SetActive(false);
         bookHints.SetActive(true);
         SetBookPage();
     }
@@ -507,7 +509,8 @@ public class GameManager : MonoBehaviour
     public void CraftItem(Recipe recipe)
     {
         // Add result to inventory
-        rock.Add(recipe.result);
+        var check = rock.Find(x => x.displayName == recipe.result.displayName);
+        if (check == null) rock.Add(recipe.result);
         
         // Clear crafting slots
         ClearCraftingSlots();
@@ -876,15 +879,13 @@ public class GameManager : MonoBehaviour
         inPopup = true;
         popup.SetActive(true);
         if (data.title == "") popupTitle.SetActive(false);
-        else
-        {
+        else {
             popupTitle.SetActive(true);
             popupTitle.GetComponentInChildren<TextMeshProUGUI>().text = data.title;
         }
 
         if (data.description == "") popupDescription.SetActive(false);
-        else
-        {
+        else {
             popupDescription.SetActive(true);
             popupDescription.GetComponentInChildren<TextMeshProUGUI>().text = data.description;
         }
@@ -898,8 +899,11 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator PassPopup()
     {
+        popupAnimator.SetTrigger("popup");
         yield return new WaitForSeconds(.1f);
         inPopup = false;
+        popupTitle.SetActive(false);
+        popupDescription.SetActive(false);
         if (currentPopup.onEnding != null) currentPopup.onEnding.Execute();
     }
 }

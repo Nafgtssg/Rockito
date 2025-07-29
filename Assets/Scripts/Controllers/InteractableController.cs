@@ -42,8 +42,8 @@ public class InteractableController : MonoBehaviour
     }
 
     void Update() {
-        if (isPlayerInRange && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && !GameManager.manager.inDialog && !GameManager.manager.inPopup)// && canInteract)
-        {
+        if (isPlayerInRange && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return))
+            && !GameManager.manager.inDialog && !GameManager.manager.inPopup && !GameManager.manager.isBookOpen) {
             Interact();
             GameManager.manager.text.text = "";
         }

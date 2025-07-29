@@ -10,6 +10,8 @@ public class BookUIController : MonoBehaviour
     {
         gameObject.SetActive(false);
         GameManager.manager.isBookOpen = false;
+        GameManager.manager.text.gameObject.SetActive(true);
+        GameManager.manager.gameHints.SetActive(true);
         GameManager.manager.bookHints.SetActive(false);
     }
 }
