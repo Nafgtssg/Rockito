@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 633893459de0d0a418bc27840d2c8960, type: 3}
+  m_Name: Mary Annieng
+  m_EditorClassIdentifier: 
+  displayName: Object
+  action: hablar
+  showDisplay: 1
+  interactionSound: {fileID: 0}
+  onInteract: {fileID: 0}
+  onPlayerEnterRange: {fileID: 0}
+  onPlayerExitRange: {fileID: 0}
+  id: MaryAnning
+  dialog:
+  - {fileID: 11400000, guid: 82e79e0641374ce44b999e86c0fb6c96, type: 2}
+  - {fileID: 11400000, guid: fabed3625ef72f4439b5d7a92414c585, type: 2}
+  - {fileID: 11400000, guid: 192c89a41c8575744bacdf81e2b55739, type: 2}
+  - {fileID: 11400000, guid: 4d9a0ac9814f27e41b2ce31bf27b118a, type: 2}
