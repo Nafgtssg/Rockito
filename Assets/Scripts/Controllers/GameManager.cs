@@ -839,6 +839,7 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(4f);
         isPlaying = false;
+        inDialog = false;
         conceptGame.SetActive(false);
         if (gameData.onCorrect != null && perfect) gameData.onCorrect.Execute();
         else if (gameData.onEnding != null) gameData.onEnding.Execute();
