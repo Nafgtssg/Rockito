@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   addRotation: -45
-  addSize: 0
+  addSize: 2
   addClipingPlane: 0
