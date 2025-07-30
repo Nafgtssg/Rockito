@@ -16,9 +16,18 @@ public class Pickup : Interactable
     {
         switch (type)
         {
-            case PickupType.item: GameManager.manager.inventory.Add(this); break;
-            case PickupType.key: GameManager.manager.keyItems.Add(this); break;
-            case PickupType.rock: GameManager.manager.rock.Add(this); break;
+            case PickupType.item:
+                var item1 = GameManager.manager.inventory.Find(x => x.displayName == displayName);
+                if (item1 == null) GameManager.manager.inventory.Add(this);
+                break;
+            case PickupType.key:
+                var item2 = GameManager.manager.keyItems.Find(x => x.displayName == displayName);
+                if (item2 == null) GameManager.manager.keyItems.Add(this);
+                break;
+            case PickupType.rock:
+                var item3 = GameManager.manager.rock.Find(x => x.displayName == displayName);
+                if (item3 == null) GameManager.manager.rock.Add(this);
+                break;
         }
     }
 }
