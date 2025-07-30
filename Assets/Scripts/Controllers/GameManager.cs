@@ -42,8 +42,10 @@ public class GameManager : MonoBehaviour
     public GameObject[] questSlot;
     [Header("Sistema de Crafteo")]
     public GameObject[] materialSlot;
+    public TextMeshProUGUI[] materialAmount;
     public GameObject[] craftingSlots;
     public List<Recipe> recipes = new List<Recipe>();
+    public Pickup wrongRecipe;
     private Dictionary<Pickup, int> craftingMaterials = new Dictionary<Pickup, int>();
     private Pickup[] selectedMaterials = new Pickup[2]; // Track the two selected materials
     private int[] materialCounts = new int[2]; // Track counts for each material
@@ -357,6 +359,7 @@ public class GameManager : MonoBehaviour
 
             // Add hover events
             Button slotButton = slot.GetComponent<Button>();
+            slotButton.onClick.RemoveAllListeners();
             slotButton.onClick.AddListener(() => SelectItem(item));
 
             // Add hover effect
@@ -369,12 +372,14 @@ public class GameManager : MonoBehaviour
             // Add pointer enter event
             var pointerEnter = new EventTrigger.Entry();
             pointerEnter.eventID = EventTriggerType.PointerEnter;
+            pointerEnter.callback.RemoveAllListeners();
             pointerEnter.callback.AddListener((data) => { OnHoverItem(item); });
             trigger.triggers.Add(pointerEnter);
 
             // Add pointer exit event
             var pointerExit = new EventTrigger.Entry();
             pointerExit.eventID = EventTriggerType.PointerExit;
+            pointerExit.callback.RemoveAllListeners();
             pointerExit.callback.AddListener((data) => { ClearItemDisplay(); });
             trigger.triggers.Add(pointerExit);
         }
@@ -399,9 +404,6 @@ public class GameManager : MonoBehaviour
     }
     public void SelectItem(Pickup item)
     {
-        // Try to add to first empty slot or matching slot
-        bool added = false;
-        
         for (int i = 0; i < 2; i++)
         {
             if (selectedMaterials[i] == null)
@@ -409,23 +411,18 @@ public class GameManager : MonoBehaviour
                 // Empty slot - add material
                 selectedMaterials[i] = item;
                 materialCounts[i] = 1;
+                materialAmount[i].text = $"{materialCounts[i]}";
                 UpdateCraftingUI();
-                added = true;
                 break;
             }
             else if (selectedMaterials[i] == item)
             {
                 // Existing material - increment count
                 materialCounts[i]++;
+                materialAmount[i].text = $"{materialCounts[i]}";
                 UpdateCraftingUI();
-                added = true;
                 break;
             }
-        }
-
-        if (!added)
-        {
-            Debug.Log("Both crafting slots are full with different materials");
         }
     }
 
@@ -448,18 +445,9 @@ public class GameManager : MonoBehaviour
             {
                 craftingSlots[i].SetActive(true);
                 craftingSlots[i].GetComponent<Image>().sprite = selectedMaterials[i].icon;
-                
-                // Update count text if available
-                TextMeshProUGUI countText = craftingSlots[i].GetComponentInChildren<TextMeshProUGUI>();
-                if (countText != null)
-                {
-                    countText.text = materialCounts[i].ToString();
-                }
             }
             else
-            {
                 craftingSlots[i].SetActive(false);
-            }
         }
 
         // Check for valid recipe
@@ -473,10 +461,9 @@ public class GameManager : MonoBehaviour
         if (selectedMaterials[0] == null || selectedMaterials[1] == null)
             return;
 
+        bool matchesRecipe = false;
         foreach (Recipe recipe in recipes)
         {
-            bool matchesRecipe = false;
-
             // Check if materials match recipe (order doesn't matter)
             if ((recipe.first.pickup == selectedMaterials[0] && recipe.second.pickup == selectedMaterials[1]) ||
                 (recipe.first.pickup == selectedMaterials[1] && recipe.second.pickup == selectedMaterials[0]))
@@ -485,7 +472,7 @@ public class GameManager : MonoBehaviour
                 int count1 = selectedMaterials[0] == recipe.first.pickup ? materialCounts[0] : materialCounts[1];
                 int count2 = selectedMaterials[1] == recipe.second.pickup ? materialCounts[1] : materialCounts[0];
 
-                if (count1 >= recipe.first.amount && count2 >= recipe.second.amount)
+                if (count1 == recipe.first.amount && count2 == recipe.second.amount)
                 {
                     matchesRecipe = true;
                 }
@@ -500,17 +487,26 @@ public class GameManager : MonoBehaviour
                 // Add click event to craft the item
                 Button resultButton = craftingSlots[2].GetComponent<Button>();
                 resultButton.onClick.RemoveAllListeners();
-                resultButton.onClick.AddListener(() => CraftItem(recipe));
+                resultButton.onClick.AddListener(() => CraftItem(recipe.result));
                 return;
             }
         }
+        if (!matchesRecipe)
+        {
+            craftingSlots[2].SetActive(true);
+            craftingSlots[2].GetComponent<Image>().sprite = wrongRecipe.icon;
+            
+            Button resultButton = craftingSlots[2].GetComponent<Button>();
+            resultButton.onClick.RemoveAllListeners();
+            resultButton.onClick.AddListener(() => CraftItem(wrongRecipe));
+        }
     }
 
-    public void CraftItem(Recipe recipe)
+    public void CraftItem(Pickup result)
     {
         // Add result to inventory
-        var check = rock.Find(x => x.displayName == recipe.result.displayName);
-        if (check == null) rock.Add(recipe.result);
+        var check = rock.Find(x => x.displayName == result.displayName);
+        if (check == null) rock.Add(result);
         
         // Clear crafting slots
         ClearCraftingSlots();
