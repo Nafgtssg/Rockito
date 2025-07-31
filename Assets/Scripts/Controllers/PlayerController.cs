@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 7f;
     public float groundCheckDistance = 1f;
     public LayerMask groundLayer;
-    private Rigidbody rb;
+    public Rigidbody rb;
     [SerializeField] private bool isGrounded;
     private Vector3 movement;
 
