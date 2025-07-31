@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float groundCheckDistance = 1f;
     public LayerMask groundLayer;
     public Rigidbody rb;
+    public Animator animator;
     [SerializeField] private bool isGrounded;
     private Vector3 movement;
 
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
         rb = GetComponent<Rigidbody>();
+        animator= GetComponent<Animator>();
     }
 
     void Update() {
@@ -29,7 +31,7 @@ public class PlayerController : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        if (!GameManager.manager.inDialog && !GameManager.manager.inPopup)
+        if (!GameManager.manager.inDialog && !GameManager.manager.inPopup && !GameManager.manager.isPlaying && !GameManager.manager.isBookOpen)
         {
             movement = CameraController.controller.transform.forward * vertical + CameraController.controller.transform.right * horizontal;
             if (Input.GetButtonDown("Jump") && isGrounded && !GameManager.manager.inDialog && !GameManager.manager.inPopup && !GameManager.manager.isPlaying && !GameManager.manager.isBookOpen)
@@ -38,10 +40,13 @@ public class PlayerController : MonoBehaviour
     }
 
     void FixedUpdate() {
+        Vector3 moveVelocity = movement.normalized * moveSpeed;
         if (!GameManager.manager.inDialog && !GameManager.manager.inPopup && !GameManager.manager.isPlaying && !GameManager.manager.isBookOpen)
         {
-            Vector3 moveVelocity = movement.normalized * moveSpeed;
             rb.velocity = new Vector3(moveVelocity.x, rb.velocity.y, moveVelocity.z);
+            if (rb.velocity.magnitude > 0.1)
+            transform.rotation = Quaternion.Euler(0, Mathf.Atan2(movement.x, movement.z) * Mathf.Rad2Deg + 90, 0);
         }
+        animator.SetFloat("speed", moveVelocity.magnitude);
     }
 }
