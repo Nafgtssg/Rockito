@@ -15,7 +15,11 @@ public class PlayerController : MonoBehaviour
 
     void Awake() {
         if (player != null && player != this) Destroy(gameObject);
-        else player = this;
+        else
+        {
+            player = this;
+            DontDestroyOnLoad(gameObject);
+        }
         rb = GetComponent<Rigidbody>();
     }
 

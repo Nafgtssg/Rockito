@@ -84,6 +84,7 @@ public class GameManager : MonoBehaviour
     public RectTransform popupMaster;
     public bool inPopup;
     [Header("Sistema de Cambio de Escena")]
+    public string loadedScene;
     public ChangeScene newScene;
     public Animator sceneChangeAnimator;
     void Awake()
@@ -133,7 +134,6 @@ public class GameManager : MonoBehaviour
             };
             interactableStates.Add(record);
         }
-        Debug.Log($"{interactable.displayName} {record.available}");
         return record.available;
     }
 
@@ -230,7 +230,9 @@ public class GameManager : MonoBehaviour
         keyItems = saveData.keyItems;
         rock = saveData.rock;
         PlayerController.player.transform.position = saveData.playerPosition;
+        loadedScene = saveData.currentScene;
 
+        if (loadedScene != UnityEngine.SceneManagement.SceneManager.GetActiveScene().name) LoadGameSceneChange();
 
         Debug.Log($"Game loaded from: {savePath}");
         return true;
@@ -912,9 +914,16 @@ public class GameManager : MonoBehaviour
 
     public void TriggerSceneChange(ChangeScene change)
     {
-        isPlaying = false;
+        isPlaying = true;
         PlayerController.player.rb.useGravity = false;
         newScene = change;
+        sceneChangeAnimator.gameObject.SetActive(true);
+        sceneChangeAnimator.SetTrigger("change");
+    }
+    void LoadGameSceneChange()
+    {
+        isPlaying = true;
+        PlayerController.player.rb.useGravity = false;
         sceneChangeAnimator.gameObject.SetActive(true);
         sceneChangeAnimator.SetTrigger("change");
     }
@@ -925,19 +934,36 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(newScene.sceneName);
             PlayerController.player.transform.position = newScene.playerNewPos;
         }
+        else
+        {
+            SceneManager.LoadScene(loadedScene);
+        }
+        StartCoroutine(WaitUntilSceneChanges());
     }
     IEnumerator WaitUntilSceneChanges()
     {
-        for (; SceneManager.GetSceneByName(newScene.sceneName).isLoaded ;)
+        if (newScene != null)
         {
-            yield return new WaitForSeconds(0.1f);
+            for (; !SceneManager.GetSceneByName(newScene.sceneName).isLoaded;)
+            {
+                yield return new WaitForSeconds(0.1f);
+                Debug.Log($"Still loading {!SceneManager.GetSceneByName(newScene.sceneName).isLoaded}");
+            }
+        }
+        else
+        {
+            for (; !SceneManager.GetSceneByName(loadedScene).isLoaded;)
+            {
+                yield return new WaitForSeconds(0.1f);
+                Debug.Log($"Still loading {!SceneManager.GetSceneByName(loadedScene).isLoaded}");
+            }
         }
         yield return new WaitForSeconds(0.1f);
         sceneChangeAnimator.SetTrigger("change");
     }
     public void EndSceneChange()
     {
-        isPlaying = true;
+        isPlaying = false;
         PlayerController.player.rb.useGravity = true;
         sceneChangeAnimator.gameObject.SetActive(false);
     }

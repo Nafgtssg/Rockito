@@ -5392,6 +5392,7 @@ MonoBehaviour:
   popupImage: {fileID: 1049570788808048401}
   popupMaster: {fileID: 6161459809066688741}
   inPopup: 0
+  loadedScene: 
   newScene: {fileID: 0}
   sceneChangeAnimator: {fileID: 2489817017544731579}
 --- !u!1 &3424231804398305614
@@ -6253,7 +6254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &426351510995616507
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14186,9 +14187,9 @@ MonoBehaviour:
   height: 10
   distance: 5
   smoothSpeed: 0.125
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: -0.41, y: -4.64, z: 0}
   tilt: 45
-  rotation: 0
+  rotation: 317
 --- !u!114 &1901966437256696002
 MonoBehaviour:
   m_ObjectHideFlags: 0

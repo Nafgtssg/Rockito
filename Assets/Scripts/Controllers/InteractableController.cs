@@ -72,8 +72,6 @@ public class InteractableController : MonoBehaviour
         if (interactable.onInteract != null) interactable.onInteract.Execute();
         interactable.Interact();
 
-        Debug.Log($"Interacted with {interactable.displayName}");
-
         //canInteract = false;
 
         // If pickup, handle destruction
