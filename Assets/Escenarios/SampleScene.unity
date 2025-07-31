@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37362456, g: 0.63273966, b: 0.68261516, a: 1}
+  m_IndirectSpecularColor: {r: 0.3736245, g: 0.63273925, b: 0.68261456, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -22026,7 +22026,8 @@ MonoBehaviour:
   groundCheckDistance: 1
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1025
+  rb: {fileID: 0}
   isGrounded: 0
 --- !u!54 &724102154
 Rigidbody:
@@ -34885,6 +34886,7 @@ GameObject:
   - component: {fileID: 1216473463}
   - component: {fileID: 1216473462}
   - component: {fileID: 1216473461}
+  - component: {fileID: 1216473464}
   m_Layer: 6
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -34978,6 +34980,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216473459}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1216473464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216473459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762ee7588cbdfbe4db0436c270f778d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  internalId: 100
+  interactable: {fileID: 11400000, guid: 17a538c573e5262418392d3bdde4eb2f, type: 2}
+  animator: {fileID: 0}
 --- !u!4 &1219517537 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7663772043682678790, guid: 60d7822a04485cf45b63c6ec929787fd,

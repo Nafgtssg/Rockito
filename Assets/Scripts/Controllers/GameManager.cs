@@ -83,6 +83,10 @@ public class GameManager : MonoBehaviour
     public Image popupImage;
     public RectTransform popupMaster;
     public bool inPopup;
+    [Header("Sistema de Cambio de Escena")]
+    public string loadedScene;
+    public ChangeScene newScene;
+    public Animator sceneChangeAnimator;
     void Awake()
     {
         if (manager != null && manager != this) Destroy(gameObject);
@@ -130,7 +134,6 @@ public class GameManager : MonoBehaviour
             };
             interactableStates.Add(record);
         }
-        Debug.Log($"{interactable.displayName} {record.available}");
         return record.available;
     }
 
@@ -167,7 +170,7 @@ public class GameManager : MonoBehaviour
     public void DeleteGame()
     {
         string savePath = Path.Combine(Application.persistentDataPath, SAVE_FOLDER, saveName + SAVE_EXTENSION);
-        
+
         if (File.Exists(savePath))
         {
             File.Delete(savePath);
@@ -182,7 +185,7 @@ public class GameManager : MonoBehaviour
         {
             Directory.CreateDirectory(saveDir);
         }
-        
+
         // Create save data
         GameSaveData saveData = new GameSaveData
         {
@@ -195,31 +198,31 @@ public class GameManager : MonoBehaviour
             currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name,
             gameTime = Time.time
         };
-        
+
         // Convert to JSON
         string jsonData = JsonUtility.ToJson(saveData, true);
-        
+
         // Save to file
         string savePath = Path.Combine(saveDir, saveName + SAVE_EXTENSION);
         File.WriteAllText(savePath, jsonData);
-        
+
         Debug.Log($"Game saved to: {savePath}");
     }
 
     public bool LoadGame()
     {
         string savePath = Path.Combine(Application.persistentDataPath, SAVE_FOLDER, saveName + SAVE_EXTENSION);
-        
+
         if (!File.Exists(savePath))
         {
             SaveGame();
             return false;
         }
-        
+
         // Read save file
         string jsonData = File.ReadAllText(savePath);
         GameSaveData saveData = JsonUtility.FromJson<GameSaveData>(jsonData);
-        
+
         // Apply save data
         interactableStates = saveData.interactableStates;
         dialogStates = saveData.dialogStates;
@@ -227,10 +230,13 @@ public class GameManager : MonoBehaviour
         keyItems = saveData.keyItems;
         rock = saveData.rock;
         PlayerController.player.transform.position = saveData.playerPosition;
+        loadedScene = saveData.currentScene;
 
-        
+        if (loadedScene != UnityEngine.SceneManagement.SceneManager.GetActiveScene().name) LoadGameSceneChange();
+
         Debug.Log($"Game loaded from: {savePath}");
-        return true;    }
+        return true;
+    }
 
     /* UI STUFF */
     void OpenBook()
@@ -398,7 +404,7 @@ public class GameManager : MonoBehaviour
     }
     void ClearItemDisplay()
     {
-        invName.text = stateBook switch { 0 => "Inventario", 1 => "Objetos Llave", 2 => "Rocas y Minerales", _ => "_"};
+        invName.text = stateBook switch { 0 => "Inventario", 1 => "Objetos Llave", 2 => "Rocas y Minerales", _ => "_" };
         invDescription.text = "Posa el cursor sobre un objeto para ver sus detalles.";
         invImage.sprite = null;
     }
@@ -483,7 +489,7 @@ public class GameManager : MonoBehaviour
                 // Show result
                 craftingSlots[2].SetActive(true);
                 craftingSlots[2].GetComponent<Image>().sprite = recipe.result.icon;
-                
+
                 // Add click event to craft the item
                 Button resultButton = craftingSlots[2].GetComponent<Button>();
                 resultButton.onClick.RemoveAllListeners();
@@ -495,7 +501,7 @@ public class GameManager : MonoBehaviour
         {
             craftingSlots[2].SetActive(true);
             craftingSlots[2].GetComponent<Image>().sprite = wrongRecipe.icon;
-            
+
             Button resultButton = craftingSlots[2].GetComponent<Button>();
             resultButton.onClick.RemoveAllListeners();
             resultButton.onClick.AddListener(() => CraftItem(wrongRecipe));
@@ -507,10 +513,10 @@ public class GameManager : MonoBehaviour
         // Add result to inventory
         var check = rock.Find(x => x.displayName == result.displayName);
         if (check == null) rock.Add(result);
-        
+
         // Clear crafting slots
         ClearCraftingSlots();
-        
+
         // Update UI
         LoadInventory(rock, materialSlot);
     }
@@ -876,13 +882,15 @@ public class GameManager : MonoBehaviour
         inPopup = true;
         popup.SetActive(true);
         if (data.title == "") popupTitle.SetActive(false);
-        else {
+        else
+        {
             popupTitle.SetActive(true);
             popupTitle.GetComponentInChildren<TextMeshProUGUI>().text = data.title;
         }
 
         if (data.description == "") popupDescription.SetActive(false);
-        else {
+        else
+        {
             popupDescription.SetActive(true);
             popupDescription.GetComponentInChildren<TextMeshProUGUI>().text = data.description;
         }
@@ -902,6 +910,62 @@ public class GameManager : MonoBehaviour
         popupTitle.SetActive(false);
         popupDescription.SetActive(false);
         if (currentPopup.onEnding != null) currentPopup.onEnding.Execute();
+    }
+
+    public void TriggerSceneChange(ChangeScene change)
+    {
+        isPlaying = true;
+        PlayerController.player.rb.useGravity = false;
+        newScene = change;
+        sceneChangeAnimator.gameObject.SetActive(true);
+        sceneChangeAnimator.SetTrigger("change");
+    }
+    void LoadGameSceneChange()
+    {
+        isPlaying = true;
+        PlayerController.player.rb.useGravity = false;
+        sceneChangeAnimator.gameObject.SetActive(true);
+        sceneChangeAnimator.SetTrigger("change");
+    }
+    public void PassSceneChange()
+    {
+        if (newScene != null)
+        {
+            SceneManager.LoadScene(newScene.sceneName);
+            PlayerController.player.transform.position = newScene.playerNewPos;
+        }
+        else
+        {
+            SceneManager.LoadScene(loadedScene);
+        }
+        StartCoroutine(WaitUntilSceneChanges());
+    }
+    IEnumerator WaitUntilSceneChanges()
+    {
+        if (newScene != null)
+        {
+            for (; !SceneManager.GetSceneByName(newScene.sceneName).isLoaded;)
+            {
+                yield return new WaitForSeconds(0.1f);
+                Debug.Log($"Still loading {!SceneManager.GetSceneByName(newScene.sceneName).isLoaded}");
+            }
+        }
+        else
+        {
+            for (; !SceneManager.GetSceneByName(loadedScene).isLoaded;)
+            {
+                yield return new WaitForSeconds(0.1f);
+                Debug.Log($"Still loading {!SceneManager.GetSceneByName(loadedScene).isLoaded}");
+            }
+        }
+        yield return new WaitForSeconds(0.1f);
+        sceneChangeAnimator.SetTrigger("change");
+    }
+    public void EndSceneChange()
+    {
+        isPlaying = false;
+        PlayerController.player.rb.useGravity = true;
+        sceneChangeAnimator.gameObject.SetActive(false);
     }
 }
 

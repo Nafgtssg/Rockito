@@ -27,6 +27,10 @@ public class CameraController : MonoBehaviour
         }
         mainCamera = gameObject.GetComponent<Camera>();
     }
+    void Start()
+    {
+        target = PlayerController.player.transform;
+    }
     void LateUpdate() {
         if (target == null) return;
 

@@ -25,5 +25,5 @@ public enum PopupType
 {
     none = 0,
     fade = 1,
-    //bounce = 2
+    bounce = 2
 }
