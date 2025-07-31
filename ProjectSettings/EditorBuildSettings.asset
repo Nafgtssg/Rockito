@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenarios/Sandbox.unity
     guid: 03178d7426037974d90b603b98f0bb06
+  - enabled: 1
+    path: Assets/Escenarios/SaladeClases.unity
+    guid: 91b4458cc79660c498d6f960172ae5c6
   m_configObjects: {}

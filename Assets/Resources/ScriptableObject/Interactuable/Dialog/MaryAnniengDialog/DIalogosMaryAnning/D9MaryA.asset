@@ -21,7 +21,7 @@ MonoBehaviour:
   dialogText: "Lo que recojas en este viaje ser\xE1 importante. Algunos objetos te
     ayudar\xE1n a entender, otros a desbloquear el camino."
   nextNode: {fileID: 11400000, guid: 4d9a0ac9814f27e41b2ce31bf27b118a, type: 2}
-  effect: {fileID: 0}
+  effect: {fileID: 11400000, guid: 81a594208f1f62e4299c87ebd6f2cb7b, type: 2}
   onEnding: {fileID: 0}
   choices: []
   choiceText: "Opci\xF3n"
