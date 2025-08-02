@@ -87,6 +87,9 @@ public class GameManager : MonoBehaviour
     public string loadedScene;
     public ChangeScene newScene;
     public Animator sceneChangeAnimator;
+    [Header("Debug")]
+    public bool stopGameLoading;
+    public TextMeshProUGUI stopGameLoadingText;
     void Awake()
     {
         if (manager != null && manager != this) Destroy(gameObject);
@@ -195,7 +198,10 @@ public class GameManager : MonoBehaviour
             keyItems = keyItems,
             rock = rock,
             playerPosition = PlayerController.player.transform.position,
+            playerScale = PlayerController.player.transform.localScale,
+            cameraSize = CameraController.controller.mainCamera.orthographicSize,
             currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name,
+            debugStopGameLoading = stopGameLoading,
             gameTime = Time.time
         };
 
@@ -222,6 +228,10 @@ public class GameManager : MonoBehaviour
         // Read save file
         string jsonData = File.ReadAllText(savePath);
         GameSaveData saveData = JsonUtility.FromJson<GameSaveData>(jsonData);
+        stopGameLoading = saveData.debugStopGameLoading;
+        UpdateGameLoading(stopGameLoading);
+
+        if (stopGameLoading) return true;
 
         // Apply save data
         interactableStates = saveData.interactableStates;
@@ -230,6 +240,8 @@ public class GameManager : MonoBehaviour
         keyItems = saveData.keyItems;
         rock = saveData.rock;
         PlayerController.player.transform.position = saveData.playerPosition;
+        PlayerController.player.transform.localScale = saveData.playerScale;
+        CameraController.controller.mainCamera.orthographicSize = saveData.cameraSize;
         loadedScene = saveData.currentScene;
 
         if (loadedScene != UnityEngine.SceneManagement.SceneManager.GetActiveScene().name) LoadGameSceneChange();
@@ -237,7 +249,16 @@ public class GameManager : MonoBehaviour
         Debug.Log($"Game loaded from: {savePath}");
         return true;
     }
-
+    public void ToggleGameLoading()
+    {
+        stopGameLoading = !stopGameLoading;
+        UpdateGameLoading(stopGameLoading);
+    }
+    void UpdateGameLoading(bool stopGameLoading)
+    {
+        if (stopGameLoading) stopGameLoadingText.text = "Activar Cargado";
+        else stopGameLoadingText.text = "Desactivar Cargado";
+    }
     /* UI STUFF */
     void OpenBook()
     {
@@ -996,6 +1017,9 @@ public class GameSaveData
     public List<Pickup> rock = new List<Pickup>();
     public List<Pickup> keyItems = new List<Pickup>();
     public Vector3 playerPosition;
+    public Vector3 playerScale;
+    public float cameraSize;
     public string currentScene;
+    public bool debugStopGameLoading;
     public float gameTime;
 }

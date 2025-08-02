@@ -6,15 +6,10 @@ using UnityEngine;
 public class CameraModifier : Effect
 {
     [Header("Configuración de Cámara")]
-    [Range(-180.0f, 180.0f)] public float addRotation;
+    public float addRotation;
+    public float addTilt;
     public float addSize;
     public float addClipingPlane;
-    //public Vector3 tempOffset;
-    //public float tempRotation;
-    public override void Execute()
-    {
-        CameraController.controller.rotation += addRotation;
-        CameraController.controller.mainCamera.orthographicSize += addSize;
-        CameraController.controller.mainCamera.nearClipPlane += addClipingPlane;
-    }
+    public Vector3 addOffset;
+    public override void Execute() => CameraController.controller.ModifyCameraData(this);
 }

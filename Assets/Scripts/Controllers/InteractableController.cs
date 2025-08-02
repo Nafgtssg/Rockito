@@ -54,7 +54,7 @@ public class InteractableController : MonoBehaviour
             isPlayerInRange = true;
             if (interactable.onPlayerEnterRange != null) interactable.onPlayerEnterRange.Execute();
             if (interactable.showDisplay)
-                GameManager.manager.text.text = $"Pulsa E o Enter para {interactable.action}";
+                GameManager.manager.text.text = $"Pulsa E o Enter para {interactable.action.ToLower()}";
         }
     }
 
