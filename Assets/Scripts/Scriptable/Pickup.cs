@@ -14,19 +14,25 @@ public class Pickup : Interactable
     [TextArea] public string description;
     public override void Interact()
     {
+        GameManager.manager.recievedAnimator.SetTrigger("appear");
+        GameManager.manager.recievedImage.sprite = icon;
+        GameManager.manager.recievedText.text = $"Conseguido {displayName}";
         switch (type)
         {
             case PickupType.item:
                 var item1 = GameManager.manager.inventory.Find(x => x.displayName == displayName);
                 if (item1 == null) GameManager.manager.inventory.Add(this);
+                GameManager.manager.recievedText.text += "\nAñadido a Inventario";
                 break;
             case PickupType.key:
                 var item2 = GameManager.manager.keyItems.Find(x => x.displayName == displayName);
                 if (item2 == null) GameManager.manager.keyItems.Add(this);
+                GameManager.manager.recievedText.text += "\nAñadido a Obj. Llave";
                 break;
             case PickupType.rock:
                 var item3 = GameManager.manager.rock.Find(x => x.displayName == displayName);
                 if (item3 == null) GameManager.manager.rock.Add(this);
+                GameManager.manager.recievedText.text += "\nAñadido a Minerales";
                 break;
         }
     }

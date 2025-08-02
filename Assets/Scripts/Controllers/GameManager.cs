@@ -38,6 +38,9 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI invName;
     public TextMeshProUGUI invDescription;
     public Image invImage;
+    public Image recievedImage;
+    public TextMeshProUGUI recievedText;
+    public Animator recievedAnimator;
     [Header("Sistema de Misiones")]
     public GameObject[] questSlot;
     [Header("Sistema de Crafteo")]

@@ -63,17 +63,19 @@ public class PlayerController : MonoBehaviour
             // Jump input
             if (Input.GetButtonDown("Jump") && isGrounded)
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        } else {
+            movement = Vector3.zero;
         }
     }
 
     void FixedUpdate() {
-        if (!GameManager.manager.inDialog && !GameManager.manager.inPopup && 
+        if (!GameManager.manager.inDialog && !GameManager.manager.inPopup &&
             !GameManager.manager.isPlaying && !GameManager.manager.isBookOpen)
         {
             // Apply movement
             Vector3 moveVelocity = movement * moveSpeed;
             rb.velocity = new Vector3(moveVelocity.x, rb.velocity.y, moveVelocity.z);
-            
+
             // Smoothly rotate player to face movement direction
             if (movement.magnitude > 0.1f)
             {
@@ -81,6 +83,7 @@ public class PlayerController : MonoBehaviour
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetQuaternion, rotationSpeed * Time.fixedDeltaTime);
             }
         }
+        else rb.velocity = Vector3.zero;
         
         // Update animator
         animator.SetFloat("speed", movement.magnitude);
