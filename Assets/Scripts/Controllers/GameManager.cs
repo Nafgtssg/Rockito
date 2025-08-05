@@ -90,6 +90,8 @@ public class GameManager : MonoBehaviour
     public string loadedScene;
     public ChangeScene newScene;
     public Animator sceneChangeAnimator;
+    [Header("Sistema de Menú Principal")]
+    public GameObject mainMenu;
     [Header("Debug")]
     public bool stopGameLoading;
     public TextMeshProUGUI stopGameLoadingText;
@@ -105,7 +107,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        LoadGame();
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "TitleScreen") LoadGame();
+        else mainMenu.SetActive(true);
         ClearCraftingSlots();
     }
 
@@ -172,7 +175,10 @@ public class GameManager : MonoBehaviour
         record.available = !record.available;
         interactableStates.Add(record);
     }
-
+    public void StartGame(Effect startGame)
+    {
+        startGame.Execute();
+    }
     public void DeleteGame()
     {
         string savePath = Path.Combine(Application.persistentDataPath, SAVE_FOLDER, saveName + SAVE_EXTENSION);
@@ -218,14 +224,13 @@ public class GameManager : MonoBehaviour
         Debug.Log($"Game saved to: {savePath}");
     }
 
-    public bool LoadGame()
+    public void LoadGame()
     {
         string savePath = Path.Combine(Application.persistentDataPath, SAVE_FOLDER, saveName + SAVE_EXTENSION);
 
         if (!File.Exists(savePath))
         {
             SaveGame();
-            return false;
         }
 
         // Read save file
@@ -234,7 +239,7 @@ public class GameManager : MonoBehaviour
         stopGameLoading = saveData.debugStopGameLoading;
         UpdateGameLoading(stopGameLoading);
 
-        if (stopGameLoading) return true;
+        if (stopGameLoading) return;
 
         // Apply save data
         interactableStates = saveData.interactableStates;
@@ -250,7 +255,6 @@ public class GameManager : MonoBehaviour
         if (loadedScene != UnityEngine.SceneManagement.SceneManager.GetActiveScene().name) LoadGameSceneChange();
 
         Debug.Log($"Game loaded from: {savePath}");
-        return true;
     }
     public void ToggleGameLoading()
     {
@@ -535,8 +539,7 @@ public class GameManager : MonoBehaviour
     public void CraftItem(Pickup result)
     {
         // Add result to inventory
-        var check = rock.Find(x => x.displayName == result.displayName);
-        if (check == null) rock.Add(result);
+        result.Interact();
 
         // Clear crafting slots
         ClearCraftingSlots();
@@ -990,6 +993,7 @@ public class GameManager : MonoBehaviour
         isPlaying = false;
         PlayerController.player.rb.useGravity = true;
         sceneChangeAnimator.gameObject.SetActive(false);
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "TitleScreen") gameHints.SetActive(true);
     }
 }
 

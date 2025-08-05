@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d34eb573653c0794dacb360acdf447e3, type: 3}
-  m_Name: MC_45deg
+  m_Name: CM_45deg
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   addRotation: 45
+  addTilt: 45
   addSize: -2
   addClipingPlane: 0
+  addOffset: {x: 0, y: 2, z: 0}

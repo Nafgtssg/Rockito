@@ -3,8 +3,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController player;
-    
+
     [Header("Movement Settings")]
+    public bool canMove = true;
     public float moveSpeed = 5f;
     public float jumpForce = 7f;
     public float groundCheckDistance = 1f;
@@ -39,7 +40,7 @@ public class PlayerController : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
         if (!GameManager.manager.inDialog && !GameManager.manager.inPopup && 
-            !GameManager.manager.isPlaying && !GameManager.manager.isBookOpen)
+            !GameManager.manager.isPlaying && !GameManager.manager.isBookOpen && canMove)
         {
             // Calculate movement direction relative to camera rotation
             Vector3 inputDirection = new Vector3(horizontal, 0f, vertical).normalized;
@@ -70,7 +71,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate() {
         if (!GameManager.manager.inDialog && !GameManager.manager.inPopup &&
-            !GameManager.manager.isPlaying && !GameManager.manager.isBookOpen)
+            !GameManager.manager.isPlaying && !GameManager.manager.isBookOpen && canMove)
         {
             // Apply movement
             Vector3 moveVelocity = movement * moveSpeed;

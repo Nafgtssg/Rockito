@@ -15,24 +15,30 @@ MonoBehaviour:
   validator: {fileID: 0}
   concepts:
   - conceptID: f
-    conceptImage: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    conceptImage: {fileID: 1303964368, guid: 531f02b3a8717f84a87bb2d09fdba0a3, type: 3}
     conceptText: :3
     description: 
-    correctBoxID: "F\xEDsica"
+    correctBoxID: Nuevo
   - conceptID: q
-    conceptImage: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    conceptImage: {fileID: 495709919, guid: 531f02b3a8717f84a87bb2d09fdba0a3, type: 3}
     conceptText: '>:3'
     description: 
-    correctBoxID: "Qu\xEDmica"
+    correctBoxID: Antiguo
   - conceptID: b
-    conceptImage: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    conceptImage: {fileID: 876705384, guid: 531f02b3a8717f84a87bb2d09fdba0a3, type: 3}
     conceptText: '>:3c'
     description: 
-    correctBoxID: "Biolog\xEDa"
+    correctBoxID: Smith
+  - conceptID: b
+    conceptImage: {fileID: 21300000, guid: 7d372db6734a33c4b85812ae7d8e6cdc, type: 3}
+    conceptText: '>:3c'
+    description: 
+    correctBoxID: Steno
   boxIDs:
-  - "F\xEDsica"
-  - "Qu\xEDmica"
-  - "Biolog\xEDa"
+  - Nuevo
+  - Antiguo
+  - Smith
+  - Steno
   columns: 1
   horizontalOffset: 316
   onEnding: {fileID: 0}
