@@ -75,16 +75,24 @@ public class InteractableController : MonoBehaviour
         //canInteract = false;
 
         // If pickup, handle destruction
-        if (interactable != null && interactable is Pickup)
+        if (interactable != null)
         {
-            GameManager.manager.ToggleInteractableState(internalId);
-            if (animator == null)
-                Destroy(gameObject);
-            else
+            if (interactable is Pickup)
             {
-                animator.gameObject.transform.SetParent(null, true);
-                animator.SetTrigger("Destroy");
-                Destroy(gameObject);
+                GameManager.manager.ToggleInteractableState(internalId);
+                if (animator == null)
+                    Destroy(gameObject);
+                else
+                {
+                    animator.gameObject.transform.SetParent(null, true);
+                    animator.SetTrigger("Destroy");
+                    Destroy(gameObject);
+                }
+            }
+            else if (interactable is DialogTrigger)
+            {
+                transform.LookAt(PlayerController.player.transform.position, Vector3.up);
+                transform.Rotate(0f, 180f, 0f, Space.Self);
             }
         }
     }

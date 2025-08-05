@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenarios/SaladeClases.unity
     guid: 91b4458cc79660c498d6f960172ae5c6
+  - enabled: 1
+    path: Assets/Escenarios/TitleScreen.unity
+    guid: f0ef45a9e9661b6438866052f7aec6e3
   m_configObjects: {}

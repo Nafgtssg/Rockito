@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
     public static CameraController controller;
     public Camera mainCamera;
     public Transform target;
-    
+    public bool followTarget = true;
     [Header("Position Settings")]
     public float distance = 5f;
     public float minDistance = 3f;
@@ -39,13 +39,16 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         target = PlayerController.player.transform;
-        UpdateCameraPosition(1);
-        transform.LookAt(target.position + offset);
+        if (followTarget)
+        {
+            UpdateCameraPosition(1);
+            transform.LookAt(target.position + offset);
+        }
     }
     
     void LateUpdate()
     {
-        if (target == null) return;
+        if (target == null && followTarget) return;
         
         UpdateCameraPosition(smoothSpeed);
     }
@@ -66,9 +69,23 @@ public class CameraController : MonoBehaviour
         // Smooth movement
         transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
     }
+    public void SetCameraData(CameraModifier cameraModifier)
+    {
+        StopAllCoroutines();
+        followTarget = cameraModifier.followTarget;
+        mainCamera.orthographic = cameraModifier.orthographic;
+        rotation = cameraModifier.addRotation;
+        tilt = cameraModifier.addTilt;
+        mainCamera.orthographicSize = cameraModifier.addSize;
+        mainCamera.nearClipPlane = cameraModifier.addClipingPlane;
+        offset = cameraModifier.addOffset;
+        StartCoroutine(StepsCameraUpdate());
+    }
     public void ModifyCameraData(CameraModifier cameraModifier)
     {
         StopAllCoroutines();
+        followTarget = cameraModifier.followTarget;
+        mainCamera.orthographic = cameraModifier.orthographic;
         rotation += cameraModifier.addRotation;
         tilt += cameraModifier.addTilt;
         mainCamera.orthographicSize += cameraModifier.addSize;
