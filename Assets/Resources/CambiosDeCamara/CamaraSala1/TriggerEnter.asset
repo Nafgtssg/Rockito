@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: TriggerEnter
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
+  set: 1
+  orthographic: 0
+  followTarget: 1
   addRotation: 0
   addTilt: 0
   addSize: 0

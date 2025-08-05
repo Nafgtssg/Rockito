@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: CambioCamaraSala1
   m_EditorClassIdentifier: 
   displayName: Object
-  action: interactuar
-  showDisplay: 1
+  action: 
+  showDisplay: 0
   interactionSound: {fileID: 0}
   onInteract: {fileID: 0}
-  onPlayerEnterRange: {fileID: 0}
-  onPlayerExitRange: {fileID: 0}
+  onPlayerEnterRange: {fileID: 11400000, guid: 4907291faa2f1b74799f213d4826e1e3, type: 2}
+  onPlayerExitRange: {fileID: 11400000, guid: 673e2ba90feb55843b1e41756821ffb7, type: 2}
