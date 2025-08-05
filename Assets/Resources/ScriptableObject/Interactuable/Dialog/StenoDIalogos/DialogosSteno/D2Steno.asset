@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
+  m_Name: D2Steno
+  m_EditorClassIdentifier: 
+  validator: {fileID: 0}
+  displayName: Nicolas Steno
+  leftSpeaker: {fileID: 21300000, guid: 0b582ced812a44242aed80ced25cb16a, type: 3}
+  rightSpeaker: {fileID: 0}
+  sound: {fileID: 0}
+  pitchVariation: 0
+  dialogText: "Formul\xE9 tres principios b\xE1sicos: el de superposici\xF3n, que
+    dice que las capas m\xE1s antiguas est\xE1n abajo; el de horizontalidad original,
+    que nos recuerda que todo comenz\xF3 plano; y el de continuidad lateral, que
+    dice que una capa se extiende hasta que encuentra un obst\xE1culo."
+  nextNode: {fileID: 11400000, guid: 546fd5755b3ecc742a807003b0518613, type: 2}
+  effect: {fileID: 0}
+  onEnding: {fileID: 0}
+  choices: []
+  choiceText: "Opci\xF3n"
