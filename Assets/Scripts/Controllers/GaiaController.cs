@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GaiaController : MonoBehaviour
 {
-    public GaiaController gaia;
+    public static GaiaController gaia;
     [Header("Follow Settings")]
     public Transform player; // Assign the player's transform in inspector
     public float followDistance = 2f; // How close to stay to player

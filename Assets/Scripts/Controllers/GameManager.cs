@@ -178,6 +178,7 @@ public class GameManager : MonoBehaviour
     }
     public void StartGame(Effect startGame)
     {
+        DeleteGame();
         startGame.Execute();
         PlayerController.player.canMove = true;
         mainMenu.SetActive(false);
@@ -191,6 +192,12 @@ public class GameManager : MonoBehaviour
             File.Delete(savePath);
             Debug.Log($"Save deleted: {savePath}");
         }
+        interactableStates.Clear();
+        dialogStates.Clear();
+        inventory.Clear();
+        keyItems.Clear();
+        rock.Clear();
+        stateBook = 0;
     }
     public void SaveGame()
     {
@@ -211,7 +218,13 @@ public class GameManager : MonoBehaviour
             rock = rock,
             playerPosition = PlayerController.player.transform.position,
             playerScale = PlayerController.player.transform.localScale,
+            cameraRotation = CameraController.controller.rotation,
+            cameraTilt = CameraController.controller.tilt,
+            cameraNearClippingPlane = CameraController.controller.mainCamera.nearClipPlane,
             cameraSize = CameraController.controller.mainCamera.orthographicSize,
+            cameraOrthographic = CameraController.controller.mainCamera.orthographic,
+            cameraFollowTarget = CameraController.controller.followTarget,
+            cameraOffset = CameraController.controller.offset,
             currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name,
             debugStopGameLoading = stopGameLoading,
             gameTime = Time.time
@@ -232,10 +245,7 @@ public class GameManager : MonoBehaviour
         mainMenu.SetActive(false);
         string savePath = Path.Combine(Application.persistentDataPath, SAVE_FOLDER, saveName + SAVE_EXTENSION);
 
-        if (!File.Exists(savePath))
-        {
-            SaveGame();
-        }
+        if (!File.Exists(savePath)) return;
 
         // Read save file
         string jsonData = File.ReadAllText(savePath);
@@ -245,7 +255,21 @@ public class GameManager : MonoBehaviour
 
         if (stopGameLoading) return;
 
-        // Apply save data
+        loadedScene = saveData.currentScene;
+        if (loadedScene != UnityEngine.SceneManagement.SceneManager.GetActiveScene().name) LoadGameSceneChange();
+        else
+        {
+            ApplyLoadGame();
+        }
+
+        Debug.Log($"Game loaded from: {savePath}");
+    }
+    public void ApplyLoadGame()
+    {
+        string savePath = Path.Combine(Application.persistentDataPath, SAVE_FOLDER, saveName + SAVE_EXTENSION);
+        string jsonData = File.ReadAllText(savePath);
+        GameSaveData saveData = JsonUtility.FromJson<GameSaveData>(jsonData);
+
         interactableStates = saveData.interactableStates;
         dialogStates = saveData.dialogStates;
         inventory = saveData.inventory;
@@ -253,12 +277,17 @@ public class GameManager : MonoBehaviour
         rock = saveData.rock;
         PlayerController.player.transform.position = saveData.playerPosition;
         PlayerController.player.transform.localScale = saveData.playerScale;
+        CameraController.controller.rotation = saveData.cameraRotation;
+        CameraController.controller.tilt = saveData.cameraTilt;
+        CameraController.controller.mainCamera.nearClipPlane = saveData.cameraNearClippingPlane;
         CameraController.controller.mainCamera.orthographicSize = saveData.cameraSize;
-        loadedScene = saveData.currentScene;
+        CameraController.controller.mainCamera.orthographic = saveData.cameraOrthographic;
+        CameraController.controller.followTarget = saveData.cameraFollowTarget;
+        CameraController.controller.offset = saveData.cameraOffset;
+        if (saveData.cameraFollowTarget) StartCoroutine(CameraController.controller.StepsCameraUpdate());
 
-        if (loadedScene != UnityEngine.SceneManagement.SceneManager.GetActiveScene().name) LoadGameSceneChange();
-
-        Debug.Log($"Game loaded from: {savePath}");
+        PlayerController.player.canMove = true;
+        loadedScene = "";
     }
     public void ToggleGameLoading()
     {
@@ -953,6 +982,11 @@ public class GameManager : MonoBehaviour
 
     public void TriggerSceneChange(ChangeScene change)
     {
+        if (isBookOpen)
+        {
+            isBookOpen = !isBookOpen;
+            bookAnimator.SetTrigger("book");
+        }
         isPlaying = true;
         PlayerController.player.rb.useGravity = false;
         newScene = change;
@@ -968,14 +1002,18 @@ public class GameManager : MonoBehaviour
     }
     public void PassSceneChange()
     {
-        if (newScene != null)
+        if (loadedScene != "")
         {
-            SceneManager.LoadScene(newScene.sceneName);
-            PlayerController.player.transform.position = newScene.playerNewPos;
+            SceneManager.LoadScene(loadedScene);
+            ApplyLoadGame();
         }
         else
         {
-            SceneManager.LoadScene(loadedScene);
+            PlayerController.player.transform.position = newScene.playerNewPos;
+            PlayerController.player.transform.localScale = newScene.playerNewLocalScale;
+            PlayerController.player.transform.rotation = Quaternion.Euler(newScene.playerNewRot);
+            if (newScene.duringChange != null) newScene.duringChange.Execute();
+            SceneManager.LoadScene(newScene.sceneName);
         }
         StartCoroutine(WaitUntilSceneChanges());
     }
@@ -991,22 +1029,28 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            for (; !SceneManager.GetSceneByName(loadedScene).isLoaded;)
+            for (; SceneManager.GetSceneByName(loadedScene).isLoaded;)
             {
                 yield return new WaitForSeconds(0.1f);
-                Debug.Log($"Still loading {!SceneManager.GetSceneByName(loadedScene).isLoaded}");
+                Debug.Log($"Still loading {SceneManager.GetSceneByName(loadedScene).isLoaded}");
             }
         }
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.25f);
         sceneChangeAnimator.SetTrigger("change");
     }
     public void EndSceneChange()
     {
+        text.text = "";
         isPlaying = false;
         PlayerController.player.rb.useGravity = true;
         sceneChangeAnimator.gameObject.SetActive(false);
         string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        if (sceneName == "TitleScreen") gameHints.SetActive(false);
+        if (sceneName == "TitleScreen")
+        {
+            PlayerController.player.canMove = false;
+            mainMenu.SetActive(true);
+            gameHints.SetActive(false);
+        }
         else if (sceneName == "DarkStart") gameHints.SetActive(false);
         else gameHints.SetActive(true);
     }
@@ -1040,7 +1084,13 @@ public class GameSaveData
     public List<Pickup> keyItems = new List<Pickup>();
     public Vector3 playerPosition;
     public Vector3 playerScale;
+    public float cameraRotation;
+    public float cameraTilt;
+    public float cameraNearClippingPlane;
     public float cameraSize;
+    public bool cameraOrthographic;
+    public bool cameraFollowTarget;
+    public Vector3 cameraOffset;
     public string currentScene;
     public bool debugStopGameLoading;
     public float gameTime;

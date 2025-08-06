@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80c8d363f8995d24888690fb49abca5a, type: 3}
-  m_Name: SC_StartGame
+  m_Name: SC_BackMainMenu
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  sceneName: DarkStart
-  playerNewPos: {x: 0, y: 0, z: 0}
+  sceneName: TitleScreen
+  playerNewPos: {x: 24.9, y: 0.07000244, z: 23.3}
   playerNewLocalScale: {x: 1, y: 1, z: 1}
-  playerNewRot: {x: 0, y: 0, z: 0}
-  duringChange: {fileID: 0}
+  playerNewRot: {x: 0, y: -185.8, z: 0}
+  duringChange: {fileID: 11400000, guid: d25046b5bbc88fd4e9a1b9656c1fd68b, type: 2}

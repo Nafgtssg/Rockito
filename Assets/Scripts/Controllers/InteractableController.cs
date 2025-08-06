@@ -27,18 +27,13 @@ public class InteractableController : MonoBehaviour
 
     void RegisterInteractable()
     {
-        // Los únicos interactuables que hay que registrar, pues su estado es importante
-        // son los NPCs y los recolectables
-        if (interactable is DialogTrigger || interactable is Pickup)
+        bool available = GameManager.manager.RegisterInteractable(internalId, gameObject, interactable);
+        if (!available)
         {
-            bool available = GameManager.manager.RegisterInteractable(internalId, gameObject, interactable);
-            if (!available)
-            {
-                if (isPlayerInRange) OnTriggerExit(PlayerController.player.GetComponent<CapsuleCollider>());
-                gameObject.SetActive(false);
-            }
-            GameManager.manager.LoadInteractableState(internalId, this);
+            if (isPlayerInRange) OnTriggerExit(PlayerController.player.GetComponent<BoxCollider>());
+            gameObject.SetActive(false);
         }
+        GameManager.manager.LoadInteractableState(internalId, this);
     }
 
     void Update() {

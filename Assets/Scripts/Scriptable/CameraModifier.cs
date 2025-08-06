@@ -14,9 +14,11 @@ public class CameraModifier : Effect
     public float addSize;
     public float addClipingPlane;
     public Vector3 addOffset;
+    public Vector3 setPosition;
+    public Vector3 setRotation;
     public override void Execute()
     {
         if (set) CameraController.controller.SetCameraData(this);
-        else  CameraController.controller.ModifyCameraData(this);
+        else CameraController.controller.ModifyCameraData(this);
     }
 }

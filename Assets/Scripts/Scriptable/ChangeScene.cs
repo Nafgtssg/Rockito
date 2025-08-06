@@ -11,6 +11,7 @@ public class ChangeScene : Effect
     [Tooltip("Posición que el jugador debería tomar cuando cambie de escena.")]
     public Vector3 playerNewPos;
     public Vector3 playerNewLocalScale = Vector3.one;
-    public float cameraNewSize;
+    public Vector3 playerNewRot;
+    public Effect duringChange;
     public override void Execute() => GameManager.manager.TriggerSceneChange(this);
 }

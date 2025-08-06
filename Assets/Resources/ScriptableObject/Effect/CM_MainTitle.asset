@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d34eb573653c0794dacb360acdf447e3, type: 3}
-  m_Name: CM_Base
+  m_Name: CM_MainTitle
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   set: 1
-  orthographic: 1
-  followTarget: 1
-  addRotation: 137
-  addTilt: 45
+  orthographic: 0
+  followTarget: 0
+  addRotation: -289.9
+  addTilt: 0
   addSize: 4.47
-  addClipingPlane: -21.42
-  addOffset: {x: 0, y: 0, z: 0}
+  addClipingPlane: 0.01
+  addOffset: {x: 4, y: -3.75, z: 0}
+  setPosition: {x: 29.169933, y: 1.4877772, z: 23.29999}
+  setRotation: {x: 2.7, y: -109.9, z: 0}

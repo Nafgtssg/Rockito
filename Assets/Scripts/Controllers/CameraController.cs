@@ -68,6 +68,8 @@ public class CameraController : MonoBehaviour
         
         // Smooth movement
         transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+        if (followTarget && !(!GameManager.manager.inDialog || !GameManager.manager.inPopup ||
+            !GameManager.manager.isPlaying || !GameManager.manager.isBookOpen || PlayerController.player.canMove)) transform.LookAt(target.position + offset);
     }
     public void SetCameraData(CameraModifier cameraModifier)
     {
@@ -79,7 +81,9 @@ public class CameraController : MonoBehaviour
         mainCamera.orthographicSize = cameraModifier.addSize;
         mainCamera.nearClipPlane = cameraModifier.addClipingPlane;
         offset = cameraModifier.addOffset;
-        StartCoroutine(StepsCameraUpdate());
+        transform.position = cameraModifier.setPosition;
+        transform.rotation = Quaternion.Euler(cameraModifier.setRotation);
+        if (followTarget) StartCoroutine(StepsCameraUpdate());
     }
     public void ModifyCameraData(CameraModifier cameraModifier)
     {
@@ -91,9 +95,9 @@ public class CameraController : MonoBehaviour
         mainCamera.orthographicSize += cameraModifier.addSize;
         mainCamera.nearClipPlane += cameraModifier.addClipingPlane;
         offset += cameraModifier.addOffset;
-        StartCoroutine(StepsCameraUpdate());
+        if (followTarget) StartCoroutine(StepsCameraUpdate());
     }
-    IEnumerator StepsCameraUpdate()
+    public IEnumerator StepsCameraUpdate()
     {
         for (int i = 0; i < Mathf.Floor(1 / smoothSpeed); i++)
         {
