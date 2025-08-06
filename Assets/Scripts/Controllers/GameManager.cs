@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
     public bool inDialog = false;
     public GameObject dialogBox;
     public GameObject charName;
+    public GameObject dialogHints;
     public TextMeshProUGUI dialogText;
     public Image[] dialogPortrait;
     public GameObject[] choiceButtons;
@@ -178,6 +179,8 @@ public class GameManager : MonoBehaviour
     public void StartGame(Effect startGame)
     {
         startGame.Execute();
+        PlayerController.player.canMove = true;
+        mainMenu.SetActive(false);
     }
     public void DeleteGame()
     {
@@ -226,6 +229,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadGame()
     {
+        mainMenu.SetActive(false);
         string savePath = Path.Combine(Application.persistentDataPath, SAVE_FOLDER, saveName + SAVE_EXTENSION);
 
         if (!File.Exists(savePath))
@@ -573,8 +577,14 @@ public class GameManager : MonoBehaviour
         }
         inDialog = true;
         dialogBox.SetActive(true);
-        charName.GetComponentInChildren<TextMeshProUGUI>().text = currentDialog.displayName;
+        if (currentDialog.displayName == "") charName.SetActive(false);
+        else
+        {
+            charName.SetActive(true);
+            charName.GetComponentInChildren<TextMeshProUGUI>().text = currentDialog.displayName;
+        }
         typingRoutine = StartCoroutine(TypeText(currentDialog.dialogText));
+        dialogHints.GetComponentInChildren<TextMeshProUGUI>().text = "Saltar texto";
 
         // Portraits come here
         if (currentDialog.leftSpeaker != null)
@@ -629,6 +639,7 @@ public class GameManager : MonoBehaviour
             StopCoroutine(typingRoutine);
             dialogText.text = currentDialog.dialogText;
             isTyping = false;
+            dialogHints.GetComponentInChildren<TextMeshProUGUI>().text = "Siguiente diálogo";
             return;
         }
         if (!isPlaying)
@@ -692,6 +703,7 @@ public class GameManager : MonoBehaviour
         }
 
         isTyping = false;
+        dialogHints.GetComponentInChildren<TextMeshProUGUI>().text = "Siguiente diálogo";
     }
     void PlayTypeSound()
     {
@@ -993,7 +1005,10 @@ public class GameManager : MonoBehaviour
         isPlaying = false;
         PlayerController.player.rb.useGravity = true;
         sceneChangeAnimator.gameObject.SetActive(false);
-        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "TitleScreen") gameHints.SetActive(true);
+        string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        if (sceneName == "TitleScreen") gameHints.SetActive(false);
+        else if (sceneName == "DarkStart") gameHints.SetActive(false);
+        else gameHints.SetActive(true);
     }
 }
 

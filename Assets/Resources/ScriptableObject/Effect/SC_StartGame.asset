@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80c8d363f8995d24888690fb49abca5a, type: 3}
-  m_Name: SC_SampleSceneTest
+  m_Name: SC_StartGame
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  sceneName: SampleScene
-  playerNewPos: {x: 29.37, y: 0.07000244, z: 39.13}
+  sceneName: DarkStart
+  playerNewPos: {x: 0, y: 0, z: 0}
   playerNewLocalScale: {x: 1, y: 1, z: 1}
   cameraNewSize: 0
