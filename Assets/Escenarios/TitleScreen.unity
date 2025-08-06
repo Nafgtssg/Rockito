@@ -22020,11 +22020,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 397049920530850543, guid: 812be14f061b08348b516bd2f735055e,
-        type: 3}
-      propertyPath: m_text
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1552347999875818336, guid: 812be14f061b08348b516bd2f735055e,
         type: 3}
       propertyPath: m_Colors.m_PressedColor.b
@@ -22130,11 +22125,6 @@ PrefabInstance:
       propertyPath: followTarget
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3290455634415267068, guid: 812be14f061b08348b516bd2f735055e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4270746380212068436, guid: 812be14f061b08348b516bd2f735055e,
         type: 3}
       propertyPath: m_Colors.m_PressedColor.b
@@ -22209,21 +22199,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6114627722131439526, guid: 812be14f061b08348b516bd2f735055e,
-        type: 3}
-      propertyPath: m_fontColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6114627722131439526, guid: 812be14f061b08348b516bd2f735055e,
-        type: 3}
-      propertyPath: m_fontColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6114627722131439526, guid: 812be14f061b08348b516bd2f735055e,
-        type: 3}
-      propertyPath: m_fontColor.r
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7459428532096161235, guid: 812be14f061b08348b516bd2f735055e,
         type: 3}
@@ -22303,11 +22278,6 @@ PrefabInstance:
     - target: {fileID: 7595384496661725112, guid: 812be14f061b08348b516bd2f735055e,
         type: 3}
       propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7606605114546839571, guid: 812be14f061b08348b516bd2f735055e,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7783138038924757423, guid: 812be14f061b08348b516bd2f735055e,

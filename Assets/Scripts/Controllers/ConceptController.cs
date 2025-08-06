@@ -4,18 +4,19 @@ using UnityEngine.UI;
 using TMPro;
 
 [RequireComponent(typeof(Image))]
-public class ConceptController : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class ConceptController : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public string conceptID;
     public Image conceptImage;
     public TextMeshProUGUI conceptText;
-    
+    public string conceptDescription;
     private Transform originalParent;
     private Vector3 originalPosition;
     private CanvasGroup canvasGroup;
     public ConceptBoxController currentBox;
     private RectTransform rectTransform;
-
+    public System.Action<string> OnPointerEnterEvent;
+    public System.Action OnPointerExitEvent;
     void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -29,6 +30,7 @@ public class ConceptController : MonoBehaviour, IBeginDragHandler, IDragHandler,
     public void Initialize(ConceptPair conceptData)
     {
         conceptID = conceptData.conceptID;
+        conceptDescription = conceptData.description;
         conceptImage.sprite = conceptData.conceptImage;
         conceptText.text = conceptData.conceptText;
     }
@@ -65,7 +67,6 @@ public class ConceptController : MonoBehaviour, IBeginDragHandler, IDragHandler,
     public void OnEndDrag(PointerEventData eventData)
     {
         canvasGroup.blocksRaycasts = true;
-        
         // If not dropped on a box, stay where it was dropped
         if (currentBox == null)
         {
@@ -73,7 +74,15 @@ public class ConceptController : MonoBehaviour, IBeginDragHandler, IDragHandler,
             ClampToContainer();
         }
     }
-
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        OnPointerEnterEvent?.Invoke(conceptDescription);
+    }
+    
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        OnPointerExitEvent?.Invoke();
+    }
     private void ClampToContainer()
     {
         // Get the container's bounds
@@ -97,7 +106,6 @@ public class ConceptController : MonoBehaviour, IBeginDragHandler, IDragHandler,
         worldPos.y = Mathf.Clamp(worldPos.y, minY, maxY);
         rectTransform.position = worldPos;
     }
-
     public void AssignToBox(ConceptBoxController box)
     {
         currentBox = box;

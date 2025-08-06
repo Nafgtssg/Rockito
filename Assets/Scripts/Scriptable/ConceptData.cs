@@ -8,10 +8,8 @@ public class ConceptData : Effect
     public ConceptPair[] concepts;
     [Tooltip("ID y nombre de cajas donde se depositan los conceptos. Las Id colocadas aquí deben coincidir con las Id de los conceptos.")]
     public string[] boxIDs; // IDs of all available boxes
-    [Tooltip("Numero de columnas utilizadas para mostrar los conceptos.")]
-    public int columns = 1;
-    [Tooltip("Espaciado en horizontal entre los conceptos.")]
-    public float horizontalOffset = 316f;
+    [Tooltip("Tamaño de los conceptos, es un tamaño regular que todos estos poseerán.")]
+    public Vector2 size = new Vector2(300, 100);
     [Tooltip("Efecto que se activa una vez temina el juego. Ideal para continuar con diálogo, o activar algún evento.")]
     public Effect onEnding;
     [Tooltip("Efecto que sobreescribe el efecto de fin de juego y que sólo se activa si se tiene puntuación perfecta en el juego. Ideal para continuar con diálogo, o activar algún evento.")]

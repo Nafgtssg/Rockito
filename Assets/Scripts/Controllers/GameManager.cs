@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
     public Transform conceptsContainer;
     public Transform boxesContainer;
     public GameObject resultsPanel;
-    public TextMeshProUGUI resultsText;
+    public GameObject resultsButton;
     public bool isPlaying;
     [Header("Sistema de Popup")]
     public Popup currentPopup;
@@ -94,6 +94,7 @@ public class GameManager : MonoBehaviour
     [Header("Sistema de Menú Principal")]
     public GameObject mainMenu;
     [Header("Debug")]
+    public Sprite saveIcon;
     public bool stopGameLoading;
     public TextMeshProUGUI stopGameLoadingText;
     void Awake()
@@ -237,6 +238,9 @@ public class GameManager : MonoBehaviour
         string savePath = Path.Combine(saveDir, saveName + SAVE_EXTENSION);
         File.WriteAllText(savePath, jsonData);
 
+        recievedAnimator.SetTrigger("appear");
+        recievedImage.sprite = saveIcon;
+        recievedText.text = "Partida Guardada";
         Debug.Log($"Game saved to: {savePath}");
     }
 
@@ -779,68 +783,99 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
         dialogBox.SetActive(false);
         conceptGame.SetActive(true);
+        resultsPanel.SetActive(true);
+        resultsButton.SetActive(true);
 
         // Limpio los conceptos y cajas ya existentes
         foreach (Transform child in conceptsContainer) Destroy(child.gameObject);
         foreach (Transform child in boxesContainer) Destroy(child.gameObject);
 
         // Se inicializa el juego
+        resultsPanel.GetComponentInChildren<TextMeshProUGUI>().text = "";
         CreateConceptsInColumns();
         CreateBoxesInColumns();
         RandomizeConceptPositions();
     }
-    private void CreateConceptsInColumns() // Se crean los conceptos en columnas bien organizadas
+    private void CreateConceptsInColumns()
     {
-        int conceptsPerColumn = Mathf.CeilToInt((float)gameData.concepts.Length / gameData.columns);
-
+        RectTransform containerRect = conceptsContainer as RectTransform;
+        float containerHeight = containerRect.rect.height;
+        float containerWidth = containerRect.rect.width;
+        
+        float conceptHeight = gameData.size.y;
+        float verticalSpacing = 8f;
+        float totalHeightPerConcept = conceptHeight + verticalSpacing;
+        int maxConceptsPerColumn = Mathf.FloorToInt(containerHeight / totalHeightPerConcept);
+        maxConceptsPerColumn = Mathf.Max(1, maxConceptsPerColumn);
+        int columns = Mathf.CeilToInt((float)gameData.concepts.Length / maxConceptsPerColumn);
+        columns = Mathf.Max(1, columns);
+        float conceptWidth = gameData.size.x;
+        float horizontalSpacing = 8f;
+        float totalWidthPerColumn = conceptWidth + horizontalSpacing;
+        float startX = -(columns - 1) * totalWidthPerColumn * 0.5f;
+        
         for (int i = 0; i < gameData.concepts.Length; i++)
         {
-            // Determine which column (0 or 1)
-            int column = i / conceptsPerColumn;
-            int positionInColumn = i % conceptsPerColumn;
-            float containerHeight = ((RectTransform)conceptsContainer).rect.height;
-            float verticalSpacing = containerHeight / (conceptsPerColumn + 1);
-
+            int column = i / maxConceptsPerColumn;
+            int positionInColumn = i % maxConceptsPerColumn;
+            
             // Calculate position
-            Vector2 position = new Vector2(
-            column * gameData.horizontalOffset,
-            -positionInColumn * verticalSpacing + containerHeight / 4
-        );
+            float xPos = startX + column * totalWidthPerColumn;
+            float yPos = (containerHeight * 0.5f) - (positionInColumn * totalHeightPerConcept) - (conceptHeight * 0.5f);
 
             // Instantiate concept
             GameObject conceptObj = Instantiate(conceptPrefab, conceptsContainer);
-            conceptObj.GetComponent<RectTransform>().anchoredPosition = position;
-
+            RectTransform conceptRect = conceptObj.GetComponent<RectTransform>();
+            conceptRect.anchoredPosition = new Vector2(xPos, yPos);
+            conceptRect.sizeDelta = gameData.size;
+     
             ConceptController draggable = conceptObj.GetComponent<ConceptController>();
             draggable.Initialize(gameData.concepts[i]);
+            draggable.OnPointerEnterEvent += OnHoverConcept;
+            draggable.OnPointerExitEvent += ClearConceptDisplay;
         }
     }
+    void OnHoverConcept(string description) =>
+    resultsPanel.GetComponentInChildren<TextMeshProUGUI>().text =
+    description;
+    void ClearConceptDisplay() =>
+    resultsPanel.GetComponentInChildren<TextMeshProUGUI>().text =
+    "";
 
-    private void CreateBoxesInColumns() // Se crean las cajas en columnas bien organizadas
+    private void CreateBoxesInColumns()
     {
-        int boxesPerColumn = Mathf.CeilToInt(gameData.boxIDs.Length / gameData.columns);
-
-        // Shuffle box IDs for randomization
+        RectTransform containerRect = boxesContainer as RectTransform;
+        float containerHeight = containerRect.rect.height;
+        float containerWidth = containerRect.rect.width;
+        
+        float boxHeight = gameData.size.y + 8;
+        float verticalSpacing = 16f;
+        float totalHeightPerBox = boxHeight + verticalSpacing;
+        int maxBoxPerColumn = Mathf.FloorToInt(containerHeight / totalHeightPerBox);
+        maxBoxPerColumn = Mathf.Max(1, maxBoxPerColumn);
+        int columns = Mathf.CeilToInt((float)gameData.concepts.Length / maxBoxPerColumn);
+        columns = Mathf.Max(1, columns);
+        float boxWidth = gameData.size.x + 8;
+        float horizontalSpacing = 16f;
+        float totalWidthPerColumn = boxWidth + horizontalSpacing;
+        float startX = -(columns - 1) * totalWidthPerColumn * 0.5f;
+        
         string[] shuffledBoxIDs = ShuffleArray(gameData.boxIDs);
-
-        for (int i = 0; i < shuffledBoxIDs.Length; i++)
+        for (int i = 0; i < gameData.concepts.Length; i++)
         {
-            // Determine which column (0 or 1)
-            int column = i / boxesPerColumn;
-            int positionInColumn = i % boxesPerColumn;
-            float containerHeight = ((RectTransform)conceptsContainer).rect.height;
-            float verticalSpacing = containerHeight / (boxesPerColumn + 1);
-
+            int column = i / maxBoxPerColumn;
+            int positionInColumn = i % maxBoxPerColumn;
+            
             // Calculate position
-            Vector2 position = new Vector2(
-                column * gameData.horizontalOffset,
-                -positionInColumn * verticalSpacing + containerHeight / 4
-            );
-
-            // Instantiate box
+            float xPos = startX + column * totalWidthPerColumn;
+            float yPos = (containerHeight * 0.5f) - (positionInColumn * totalHeightPerBox) - (boxHeight * 0.5f);
+            
+            // Instantiate concept
             GameObject boxObj = Instantiate(boxPrefab, boxesContainer);
-            boxObj.GetComponent<RectTransform>().anchoredPosition = position;
-
+            RectTransform boxRect = boxObj.GetComponent<RectTransform>();
+            boxRect.anchoredPosition = new Vector2(xPos, yPos);
+            boxRect.sizeDelta = gameData.size + new Vector2(8, 8);
+     
             ConceptBoxController box = boxObj.GetComponent<ConceptBoxController>();
             box.boxID = shuffledBoxIDs[i];
             box.GetComponentInChildren<TextMeshProUGUI>().text = shuffledBoxIDs[i];
@@ -902,8 +937,8 @@ public class GameManager : MonoBehaviour
         }
 
         // Show results
-        resultsPanel.SetActive(true);
-        resultsText.text = $"You got {correctMatches} out of {totalMatches} correct!";
+        resultsButton.SetActive(false);
+        resultsPanel.GetComponentInChildren<TextMeshProUGUI>().text = $"¡Has obtenido {correctMatches} correctas de {totalMatches}!";
 
         // Optional: Highlight correct/incorrect matches
         HighlightMatches();
@@ -914,6 +949,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(4f);
         isPlaying = false;
         inDialog = false;
+        resultsPanel.GetComponentInChildren<TextMeshProUGUI>().text = "";
         conceptGame.SetActive(false);
         if (gameData.onCorrect != null && perfect) gameData.onCorrect.Execute();
         else if (gameData.onEnding != null) gameData.onEnding.Execute();
@@ -1053,6 +1089,16 @@ public class GameManager : MonoBehaviour
         }
         else if (sceneName == "DarkStart") gameHints.SetActive(false);
         else gameHints.SetActive(true);
+    }
+    public void TriggerEffectDelay(float delayInSeconds, Effect effect)
+    {
+        if (effect == null) return;
+        StartCoroutine(EffectWithDelay(delayInSeconds, effect));
+    }
+    IEnumerator EffectWithDelay(float delayInSeconds, Effect effect)
+    {
+        yield return new WaitForSeconds(delayInSeconds);
+        effect.Execute();
     }
 }
 
