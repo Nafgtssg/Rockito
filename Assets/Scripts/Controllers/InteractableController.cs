@@ -66,6 +66,8 @@ public class InteractableController : MonoBehaviour
     public void Interact() {
         if (interactable.onInteract != null) interactable.onInteract.Execute();
         interactable.Interact();
+        if (interactable.interactionSound != null)
+            GameManager.manager.audioSource.PlayOneShot(interactable.interactionSound);
 
         //canInteract = false;
 

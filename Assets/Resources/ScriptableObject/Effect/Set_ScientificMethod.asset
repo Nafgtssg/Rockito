@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d33a7f2a7e8607d4d94207cc324f9a55, type: 3}
-  m_Name: Set
+  m_Name: Set_ScientificMethod
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: 64da5235d51b65842be190c5b9859776, type: 2}
+  - {fileID: 11400000, guid: 98c5803e1f31ba345971495229ebb372, type: 2}

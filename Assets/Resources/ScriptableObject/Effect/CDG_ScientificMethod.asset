@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d620a17beb99bea42b7ff1a462943c18, type: 3}
+  m_Name: CDG_ScientificMethod
+  m_EditorClassIdentifier: 
+  validator: {fileID: 0}
+  concepts:
+  - conceptID: o
+    conceptImage: {fileID: 385087049, guid: 8d4770524d88db1419249bdbae025587, type: 3}
+    conceptText: 
+    description: "Parece haberse topado con alg\xFAn tipo de problema..."
+    correctBoxID: "Hacer una Observaci\xF3n"
+  - conceptID: p
+    conceptImage: {fileID: 1610421306, guid: 8d4770524d88db1419249bdbae025587, type: 3}
+    conceptText: 
+    description: "\xBFQu\xE9 se estar\xE1 cuestionando?"
+    correctBoxID: Hacer una Pregunta
+  - conceptID: h
+    conceptImage: {fileID: -1724490527, guid: 8d4770524d88db1419249bdbae025587, type: 3}
+    conceptText: 
+    description: "Est\xE1 intentando dar alg\xFAn tipo de explicaci\xF3n."
+    correctBoxID: "Formular una Hip\xF3tesis"
+  - conceptID: e
+    conceptImage: {fileID: -1639893972, guid: 8d4770524d88db1419249bdbae025587, type: 3}
+    conceptText: 
+    description: Parece estar experimentando...
+    correctBoxID: Realizar un Experimento
+  - conceptID: c
+    conceptImage: {fileID: -260723819, guid: 8d4770524d88db1419249bdbae025587, type: 3}
+    conceptText: 
+    description: "Est\xE1 procesando lo ocurrido."
+    correctBoxID: Sacar Conclusiones
+  - conceptID: r
+    conceptImage: {fileID: -869527184, guid: 8d4770524d88db1419249bdbae025587, type: 3}
+    conceptText: 
+    description: Pareciera que ha trabajado mucho...
+    correctBoxID: Reportar Resultados
+  boxIDs:
+  - "Hacer una Observaci\xF3n"
+  - Hacer una Pregunta
+  - "Formular una Hip\xF3tesis"
+  - Realizar un Experimento
+  - Sacar Conclusiones
+  - Reportar Resultados
+  size: {x: 250, y: 250}
+  onEnding: {fileID: 11400000, guid: 4496d7c992d890244802da1afb3df25c, type: 2}
+  onCorrect: {fileID: 11400000, guid: 1ec30f534a1839b4cb38f09882ef957e, type: 2}
