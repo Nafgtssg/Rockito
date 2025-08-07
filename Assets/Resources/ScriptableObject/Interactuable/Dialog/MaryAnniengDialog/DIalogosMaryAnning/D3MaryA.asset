@@ -14,15 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   displayName: Mary Anning
-  leftSpeaker: {fileID: 0}
-  rightSpeaker: {fileID: 0}
+  leftSpeaker: {fileID: 21300000, guid: 18288f9ef08de27448e3bd275c83b137, type: 3}
+  rightSpeaker: {fileID: 21300000, guid: 903fe82c18dd17c4e878d02fcb9e16d1, type: 3}
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: "Me llamo Mary Anning. Sol\xEDa caminar los acantilados de Lyme Regis,
-    buscando tesoros escondidos en las rocas. Este de aqu\xED... es un ictiosaurio.
-    Lo encontr\xE9 cuando ten\xEDa solo 12 a\xF1os. \xBFT\xFA tambi\xE9n sientes
-    que las rocas tienen historias que contar?"
-  nextNode: {fileID: 11400000, guid: 757faf787e06fa74fa20c001634f1aac, type: 2}
+    buscando tesoros escondidos en las rocas. "
+  nextNode: {fileID: 11400000, guid: 63ad49cb4be61ce4caf86438edc0c3b8, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

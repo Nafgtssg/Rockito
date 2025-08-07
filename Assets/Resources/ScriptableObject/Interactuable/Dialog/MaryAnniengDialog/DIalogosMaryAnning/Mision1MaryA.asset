@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Mision1MaryA
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  type: 0
+  type: 2
   title: 'Mision 1: EL primer Hallazgo'
   description: 
-  sprite: {fileID: 21300000, guid: aa98386682076ac43a56e920e87ee2cf, type: 3}
-  size: {x: 480, y: 360}
+  sprite: {fileID: 21300000, guid: 9ce6e6c8f8916d54fb5313222e5183df, type: 3}
+  size: {x: 1080, y: 720}
   onEnding: {fileID: 11400000, guid: d4a4859198facad4498dbd7983274162, type: 2}
