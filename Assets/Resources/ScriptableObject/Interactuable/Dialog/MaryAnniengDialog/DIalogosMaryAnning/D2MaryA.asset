@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: D2MaryA
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: Talamuri
+  displayName: Talamuri G
   leftSpeaker: {fileID: 0}
-  rightSpeaker: {fileID: 0}
+  rightSpeaker: {fileID: 21300000, guid: 903fe82c18dd17c4e878d02fcb9e16d1, type: 3}
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: "\"\xA1Oh! Hola peque\xF1o... no te hab\xEDa visto. \xA1Qu\xE9 curioso

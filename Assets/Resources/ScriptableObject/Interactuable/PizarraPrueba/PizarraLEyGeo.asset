@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Object
   action: interactuar
-  showDisplay: 1
+  showDisplay: 0
   interactionSound: {fileID: 0}
   onInteract: {fileID: 11400000, guid: 2bfe93f1fc7044945afb14e8d747e457, type: 2}
   onPlayerEnterRange: {fileID: 0}
