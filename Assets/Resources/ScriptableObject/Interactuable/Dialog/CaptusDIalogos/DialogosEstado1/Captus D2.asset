@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: DN_ScientificMethod011 1
+  m_Name: Captus D2
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: 
+  displayName: Captus
   leftSpeaker: {fileID: 0}
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: La pregunta.
+  dialogText: "\xBFPodr\xEDas ayudarme a ordenarlo de la manera correcta?"
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []
-  choiceText: "Observaci\xF3n"
+  choiceText: "Opci\xF3n"

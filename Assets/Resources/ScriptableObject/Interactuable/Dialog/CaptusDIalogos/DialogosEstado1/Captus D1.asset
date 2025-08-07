@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: D0Smith
+  m_Name: Captus D1
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: Talamuri C
-  leftSpeaker: {fileID: 21300000, guid: 18288f9ef08de27448e3bd275c83b137, type: 3}
-  rightSpeaker: {fileID: 21300000, guid: 698b57d30d6918a488982fcbb34f31eb, type: 3}
+  displayName: Kaikura C
+  leftSpeaker: {fileID: 0}
+  rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Hola joven, ti vi hablando con Steno. Mi nombre William Smith. Fui
-    el primero en cartografiar un pa\xEDs entero gracias a los f\xF3siles. "
-  nextNode: {fileID: 11400000, guid: 3aa1aa5985c582d48aec3f98aab79255, type: 2}
+  dialogText: Hola mi nombre es Captus, llevo un tiempo intentando completar este
+    puzle, no he logrado encontrar su orden correcto.
+  nextNode: {fileID: 11400000, guid: e5cb8b1f4e0e7ef40909c6b864f07fde, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

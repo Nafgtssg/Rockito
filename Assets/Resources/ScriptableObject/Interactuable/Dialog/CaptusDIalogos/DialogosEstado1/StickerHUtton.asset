@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ddff66592ccd04092385150abd2002, type: 3}
+  m_Name: StickerHUtton
+  m_EditorClassIdentifier: 
+  displayName: James Hutton
+  action: interactuar
+  showDisplay: 1
+  interactionSound: {fileID: 0}
+  onInteract: {fileID: 0}
+  onPlayerEnterRange: {fileID: 0}
+  onPlayerExitRange: {fileID: 0}
+  type: 1
+  icon: {fileID: 21300000, guid: c2fd739f439151c489d9dfb85e93977d, type: 3}
+  description: "M\xE9dico escoc\xE9s a menudo considerado \u201Cel padre de la geolog\xEDa
+    moderna\u201D, present\xF3 en 1785 ante la Sociedad Real de Edimburgo su trabajo
+    Theory of the Earth. "
