@@ -126,6 +126,8 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Escape) && !inDialog && !inPopup) OpenBook();
             if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) PassAction();
+            if (Input.GetKeyDown(KeyCode.Q)) TriggerCinematicMode();
+            if (Input.GetKeyDown(KeyCode.Z)) sceneChangeAnimator.SetTrigger("flash");
         }
     }
 
@@ -1080,7 +1082,7 @@ public class GameManager : MonoBehaviour
             }
         }
         yield return new WaitForSeconds(0.25f);
-        sceneChangeAnimator.SetTrigger("change");
+        sceneChangeAnimator.SetTrigger("proceed");
     }
     public void EndSceneChange()
     {
@@ -1097,6 +1099,37 @@ public class GameManager : MonoBehaviour
         }
         else if (sceneName == "DarkStart") gameHints.SetActive(false);
         else gameHints.SetActive(true);
+    }
+    public void TriggerCinematicMode()
+    {
+        if (isBookOpen)
+        {
+            isBookOpen = !isBookOpen;
+            bookAnimator.SetTrigger("book");
+        }
+        if (isPlaying)
+        {
+            isPlaying = false;
+            PlayerController.player.rb.useGravity = true;
+            sceneChangeAnimator.SetTrigger("proceed");
+        }
+        else
+        {
+            isPlaying = true;
+            PlayerController.player.rb.useGravity = false;
+            sceneChangeAnimator.gameObject.SetActive(true);
+            sceneChangeAnimator.SetTrigger("cinema");
+        }
+    }
+    public void StartCinematicMode()
+    {
+        CCController.controller.cinematic.enabled = true;
+        CameraController.controller.mainCamera.enabled = false;
+    }
+    public void EndCinematicMode()
+    {
+        CameraController.controller.mainCamera.enabled = true;
+        CCController.controller.cinematic.enabled = false;
     }
     public void TriggerEffectDelay(float delayInSeconds, Effect effect)
     {
