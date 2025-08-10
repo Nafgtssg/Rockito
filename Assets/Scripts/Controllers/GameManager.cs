@@ -91,6 +91,7 @@ public class GameManager : MonoBehaviour
     public string loadedScene;
     public ChangeScene newScene;
     public Animator sceneChangeAnimator;
+    public bool isCamera;
     [Header("Sistema de Menú Principal")]
     public GameObject mainMenu;
     [Header("Debug")]
@@ -126,8 +127,6 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Escape) && !inDialog && !inPopup) OpenBook();
             if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) PassAction();
-            if (Input.GetKeyDown(KeyCode.Q)) TriggerCinematicMode();
-            if (Input.GetKeyDown(KeyCode.Z)) sceneChangeAnimator.SetTrigger("flash");
         }
     }
 
@@ -1033,7 +1032,7 @@ public class GameManager : MonoBehaviour
             isBookOpen = !isBookOpen;
             bookAnimator.SetTrigger("book");
         }
-        isPlaying = true;
+        isCamera = true;
         PlayerController.player.rb.useGravity = false;
         newScene = change;
         sceneChangeAnimator.gameObject.SetActive(true);
@@ -1041,7 +1040,7 @@ public class GameManager : MonoBehaviour
     }
     void LoadGameSceneChange()
     {
-        isPlaying = true;
+        isCamera = true;
         PlayerController.player.rb.useGravity = false;
         sceneChangeAnimator.gameObject.SetActive(true);
         sceneChangeAnimator.SetTrigger("change");
@@ -1087,7 +1086,7 @@ public class GameManager : MonoBehaviour
     public void EndSceneChange()
     {
         text.text = "";
-        isPlaying = false;
+        isCamera = false;
         PlayerController.player.rb.useGravity = true;
         sceneChangeAnimator.gameObject.SetActive(false);
         string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
@@ -1100,25 +1099,25 @@ public class GameManager : MonoBehaviour
         else if (sceneName == "DarkStart") gameHints.SetActive(false);
         else gameHints.SetActive(true);
     }
-    public void TriggerCinematicMode()
+    public void TriggerCinematicMode(CinematicModifier modifier = null)
     {
         if (isBookOpen)
         {
             isBookOpen = !isBookOpen;
             bookAnimator.SetTrigger("book");
         }
-        if (isPlaying)
+        if (isCamera)
         {
-            isPlaying = false;
             PlayerController.player.rb.useGravity = true;
             sceneChangeAnimator.SetTrigger("proceed");
         }
         else
         {
-            isPlaying = true;
+            isCamera = true;
             PlayerController.player.rb.useGravity = false;
             sceneChangeAnimator.gameObject.SetActive(true);
             sceneChangeAnimator.SetTrigger("cinema");
+            sceneChangeAnimator.SetBool("finishCinematic", false);
         }
     }
     public void StartCinematicMode()
@@ -1126,10 +1125,16 @@ public class GameManager : MonoBehaviour
         CCController.controller.cinematic.enabled = true;
         CameraController.controller.mainCamera.enabled = false;
     }
+    public void FinishCinematicMode()
+    {
+        sceneChangeAnimator.SetBool("finishCinematic", false);
+        sceneChangeAnimator.SetTrigger("proceed");
+    }
     public void EndCinematicMode()
     {
         CameraController.controller.mainCamera.enabled = true;
         CCController.controller.cinematic.enabled = false;
+        isCamera = false;
     }
     public void TriggerEffectDelay(float delayInSeconds, Effect effect)
     {

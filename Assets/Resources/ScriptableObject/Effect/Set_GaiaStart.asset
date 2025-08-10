@@ -9,12 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c8d363f8995d24888690fb49abca5a, type: 3}
-  m_Name: SC_Introduction
+  m_Script: {fileID: 11500000, guid: d33a7f2a7e8607d4d94207cc324f9a55, type: 3}
+  m_Name: Set_GaiaStart
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  sceneName: SampleScene
-  playerNewPos: {x: 22.97, y: 2.3, z: 40.87}
-  playerNewLocalScale: {x: 1, y: 1, z: 1}
-  playerNewRot: {x: 0, y: 0, z: 0}
-  duringChange: {fileID: 0}
+  effects:
+  - {fileID: 11400000, guid: 52bfc8e93e80dfe4793e9b4dc450bcb0, type: 2}
+  - {fileID: 11400000, guid: ad63cf17cc4e21947ad00b8d5aa6c18d, type: 2}
