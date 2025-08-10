@@ -11,7 +11,7 @@ public class Delay : Effect
     public override void Execute()
     {
         if (validator != null) {
-            if (validator.Validat4e()) GameManager.manager.TriggerEffectDelay(delayInSeconds, effect);
+            if (validator.Validate()) GameManager.manager.TriggerEffectDelay(delayInSeconds, effect);
         }
         else GameManager.manager.TriggerEffectDelay(delayInSeconds, effect);
     }
