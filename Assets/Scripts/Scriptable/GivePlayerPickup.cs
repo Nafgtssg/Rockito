@@ -8,5 +8,12 @@ public class GivePlayerPickup : Effect
     [Header("Datos del Efecto")]
     [Tooltip("Recogible a dar al jugador.")]
     public Pickup pickup;
-    public override void Execute() => pickup.Interact();
+    public override void Execute()
+    {
+        if (validator != null)
+        {
+            if (validator.Validate()) pickup.Interact();
+        }
+        else pickup.Interact();
+    }
 }

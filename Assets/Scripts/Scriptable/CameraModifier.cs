@@ -18,7 +18,18 @@ public class CameraModifier : Effect
     public Vector3 setRotation;
     public override void Execute()
     {
-        if (set) CameraController.controller.SetCameraData(this);
-        else CameraController.controller.ModifyCameraData(this);
+        if (validator != null)
+        {
+            if (validator.Validate())
+            {
+                if (set) CameraController.controller.SetCameraData(this);
+                else CameraController.controller.ModifyCameraData(this);
+            }
+        }
+        else
+        {
+            if (set) CameraController.controller.SetCameraData(this);
+            else CameraController.controller.ModifyCameraData(this);
+        }
     }
 }

@@ -8,5 +8,12 @@ public class SetInteractableState : Effect
     [Header("Datos del Efecto")]
     [Tooltip("Nuevo estado para este interactuable.")]
     public InteractableRecord state;
-    public override void Execute() => GameManager.manager.SetInteractableState(state);
+    public override void Execute()
+    {
+        if (validator != null)
+        {
+            if (validator.Validate()) GameManager.manager.SetInteractableState(state);
+        }
+        else GameManager.manager.SetInteractableState(state);
+    }
 }

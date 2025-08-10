@@ -10,8 +10,22 @@ public class Set : Effect
     public Effect[] effects;
     public override void Execute()
     {
-        foreach (Effect effect in effects) {
-            effect.Execute();
+        if (validator != null)
+        {
+            if (validator.Validate())
+            {
+                foreach (Effect effect in effects)
+                {
+                    effect.Execute();
+                }
+            }
+        }
+        else
+        {
+            foreach (Effect effect in effects)
+            {
+                effect.Execute();
+            }
         }
     }
 }

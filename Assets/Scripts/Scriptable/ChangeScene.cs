@@ -13,5 +13,12 @@ public class ChangeScene : Effect
     public Vector3 playerNewLocalScale = Vector3.one;
     public Vector3 playerNewRot;
     public Effect duringChange;
-    public override void Execute() => GameManager.manager.TriggerSceneChange(this);
+    public override void Execute()
+    {
+        if (validator != null)
+        {
+            if (validator.Validate()) GameManager.manager.TriggerSceneChange(this);
+        }
+        else GameManager.manager.TriggerSceneChange(this);
+    }
 }

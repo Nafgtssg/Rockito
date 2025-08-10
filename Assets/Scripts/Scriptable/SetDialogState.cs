@@ -10,5 +10,12 @@ public class SetDialogState : Effect
     public string id;
     [Tooltip("Nuevo estado para este diálogo, recordando que el número de estado, activa el diálogo con el que abre el activador, siendo 0, el primer diálogo disponible en el arreglo.")]
     [Min(0)] public int state = 0;
-    public override void Execute() => GameManager.manager.SetDialogState(id, state);
+    public override void Execute()
+    {
+        if (validator != null)
+        {
+            if (validator.Validate()) GameManager.manager.SetDialogState(id, state);
+        }
+        else GameManager.manager.SetDialogState(id, state);
+    }
 }

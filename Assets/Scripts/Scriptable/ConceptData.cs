@@ -14,7 +14,13 @@ public class ConceptData : Effect
     public Effect onEnding;
     [Tooltip("Efecto que sobreescribe el efecto de fin de juego y que sólo se activa si se tiene puntuación perfecta en el juego. Ideal para continuar con diálogo, o activar algún evento.")]
     public Effect onCorrect;
-    public override void Execute() => GameManager.manager.StartConceptGame(this);
+    public override void Execute()
+    {
+        if (validator != null) {
+            if (validator) GameManager.manager.StartConceptGame(this);
+        }
+        else GameManager.manager.StartConceptGame(this);
+    }
 }
 
 [System.Serializable]

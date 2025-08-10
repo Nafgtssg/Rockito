@@ -18,7 +18,14 @@ public class Popup : Effect
     public Vector2 size;
     [Tooltip("Efecto que se debe activar luego de mostrar el popup.")]
     public Effect onEnding;
-    public override void Execute() => GameManager.manager.TriggerPopup(this);
+    public override void Execute()
+    {
+        if (validator != null)
+        {
+            if (validator.Validate()) GameManager.manager.TriggerPopup(this);
+        }
+        else GameManager.manager.TriggerPopup(this);
+    }
 }
 
 public enum PopupType
