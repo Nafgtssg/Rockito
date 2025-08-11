@@ -1119,6 +1119,17 @@ public class GameManager : MonoBehaviour
             sceneChangeAnimator.SetTrigger("cinema");
             sceneChangeAnimator.SetBool("finishCinematic", false);
         }
+        if (modifier != null)
+        {
+            StartCoroutine(SetCinematicMode(modifier));
+        }
+    }
+    IEnumerator SetCinematicMode(CinematicModifier modifier)
+    {
+        yield return new WaitForSeconds(1.5f);
+        CCController.controller.transform.position = modifier.camPos;
+        CCController.controller.transform.rotation = Quaternion.Euler(modifier.camRot);
+        CCController.controller.cinematic.fieldOfView = modifier.camFOV;
     }
     public void StartCinematicMode()
     {
@@ -1127,11 +1138,12 @@ public class GameManager : MonoBehaviour
     }
     public void FinishCinematicMode()
     {
-        sceneChangeAnimator.SetBool("finishCinematic", false);
+        sceneChangeAnimator.SetBool("finishCinematic", true);
         sceneChangeAnimator.SetTrigger("proceed");
     }
     public void EndCinematicMode()
     {
+        Debug.Log("Test");
         CameraController.controller.mainCamera.enabled = true;
         CCController.controller.cinematic.enabled = false;
         isCamera = false;

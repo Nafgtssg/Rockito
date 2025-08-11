@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c8d363f8995d24888690fb49abca5a, type: 3}
-  m_Name: SC_Introduction
+  m_Script: {fileID: 11500000, guid: 801c5f8070bb9cc4c9a2410768196408, type: 3}
+  m_Name: Delay_GaiaStart03
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  sceneName: SampleScene
-  playerNewPos: {x: 22.97, y: 0, z: 40.87}
-  playerNewLocalScale: {x: 1, y: 1, z: 1}
-  playerNewRot: {x: 0, y: 0, z: 0}
-  duringChange: {fileID: 0}
+  delayInSeconds: 2
+  effect: {fileID: 11400000, guid: 42ac41f929491be469b4d9b398ea4bcc, type: 2}

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28b5d8bfc1a82364fb702922bda62e56, type: 3}
-  m_Name: Cine_GaiaStart
+  m_Name: Cine_GaiaStart01
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   type: 0
-  camPos: {x: 25.8, y: 0.8, z: 40.6}
+  camPos: {x: 45, y: 1, z: 37}
   camRot: {x: 0, y: -90, z: 0}
-  camFOV: 0
+  camFOV: 80

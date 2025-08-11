@@ -25,6 +25,8 @@ public class CinematicModifier : Effect
                         GameManager.manager.TriggerCinematicMode(this);
                         break;
                     case CinematicModifierType.instant:
+                        CCController.controller.cinematic.enabled = true;
+                        CameraController.controller.mainCamera.enabled = false;
                         GameManager.manager.isCamera = true;
                         PlayerController.player.rb.useGravity = false;
                         GameManager.manager.sceneChangeAnimator.gameObject.SetActive(true);
@@ -51,6 +53,8 @@ public class CinematicModifier : Effect
                     GameManager.manager.TriggerCinematicMode(this);
                     break;
                 case CinematicModifierType.instant:
+                    CCController.controller.cinematic.enabled = true;
+                    CameraController.controller.mainCamera.enabled = false;
                     GameManager.manager.isCamera = true;
                     PlayerController.player.rb.useGravity = false;
                     GameManager.manager.sceneChangeAnimator.gameObject.SetActive(true);
