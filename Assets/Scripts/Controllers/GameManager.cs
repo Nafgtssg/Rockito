@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
     [Header("Sistema de Diálogo")]
     public AudioSource audioSource;
     public DialogNode currentDialog;
-    public bool inDialog = false;
+    public Interactable gaiaInteractable;
     public GameObject dialogBox;
     public GameObject charName;
     public GameObject dialogHints;
@@ -68,6 +68,7 @@ public class GameManager : MonoBehaviour
     private bool isChoice = false;
     private bool safeDialog = false;
     private Coroutine typingRoutine;
+    public bool inDialog = false;
     [Header("Sistema de Conceptos")]
     public GameObject conceptGame;
     public ConceptData gameData;
@@ -127,6 +128,7 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Escape) && !inDialog && !inPopup) OpenBook();
             if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) PassAction();
+            if (Input.GetKeyDown(KeyCode.Q) && gaiaInteractable != null) gaiaInteractable.Interact(); 
         }
     }
 
