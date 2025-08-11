@@ -21,7 +21,7 @@ MonoBehaviour:
   dialogText: "De momento, has de saber:\nMi nombre es GAIA, ser\xE9 tu ayudante
     es este lugar."
   nextNode: {fileID: 0}
-  effect: {fileID: 11400000, guid: bad8cab8abbaa484eaf42b3e7cba3ae7, type: 2}
+  effect: {fileID: 0}
   onEnding: {fileID: 11400000, guid: 4767d1cd6e4e25a48a5cf0aaa11da03a, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

@@ -12,7 +12,7 @@ public class InteractableController : MonoBehaviour
     private bool isPlayerInRange = false;
     private Collider interactionCollider;
     //private bool canInteract = true;
-
+    private bool loaded = false;
     void Start()
     {
         interactionCollider = GetComponent<Collider>();
@@ -34,6 +34,7 @@ public class InteractableController : MonoBehaviour
             gameObject.SetActive(false);
         }
         GameManager.manager.LoadInteractableState(internalId, this);
+        loaded = true;
     }
 
     void Update() {
@@ -45,14 +46,20 @@ public class InteractableController : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Player") && interactable != null && !GameManager.manager.inDialog && !GameManager.manager.inPopup) {
+        StartCoroutine(DelayEnterUntilLoaded(other));
+    }
+    IEnumerator DelayEnterUntilLoaded(Collider other)
+    {
+        for ( ; !loaded ; ) yield return new WaitForSeconds(.1f);
+        if (other.CompareTag("Player") && interactable != null && !GameManager.manager.inDialog && !GameManager.manager.inPopup)
+        {
             isPlayerInRange = true;
             if (interactable.onPlayerEnterRange != null) interactable.onPlayerEnterRange.Execute();
             if (interactable.showDisplay)
                 GameManager.manager.text.text = $"Pulsa E o Enter para {interactable.action.ToLower()}";
         }
+        yield return new WaitForSeconds(0);
     }
-
     void OnTriggerExit(Collider other) {
         if (other.CompareTag("Player"))
         {

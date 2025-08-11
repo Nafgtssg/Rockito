@@ -1143,7 +1143,6 @@ public class GameManager : MonoBehaviour
     }
     public void EndCinematicMode()
     {
-        Debug.Log("Test");
         CameraController.controller.mainCamera.enabled = true;
         CCController.controller.cinematic.enabled = false;
         isCamera = false;
