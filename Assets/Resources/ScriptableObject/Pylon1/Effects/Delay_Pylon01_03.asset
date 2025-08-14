@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Delay_Pylon01_03
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  delayInSeconds: 10
-  effect: {fileID: 11400000, guid: 3eaabb87f9807f64d8cf6a43dbc0f84b, type: 2}
+  delayInSeconds: 8
+  effect: {fileID: 11400000, guid: b4b38b45e34c3c445a4bb199de21bbb3, type: 2}
