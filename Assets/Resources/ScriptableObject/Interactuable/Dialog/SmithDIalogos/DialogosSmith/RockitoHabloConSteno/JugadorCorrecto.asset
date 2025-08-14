@@ -21,6 +21,6 @@ MonoBehaviour:
   dialogText: "Muy bien es correcto, acabas de aprender los principios Geol\xF3gicos."
   nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 11400000, guid: 2870954a105d1dc48ab37d950f2380d7, type: 2}
+  onEnding: {fileID: 11400000, guid: bf073f77bc35d404ea62405cb1fda949, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

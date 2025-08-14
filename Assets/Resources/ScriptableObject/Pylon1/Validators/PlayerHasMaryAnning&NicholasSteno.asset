@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: PlayerHasMaryAnning&NicholasSteno
   m_EditorClassIdentifier: 
   negation: 0
-  validatorA: {fileID: 0}
-  validatorB: {fileID: 0}
+  validatorA: {fileID: 11400000, guid: b1dd3aa9f3a87bc468c833038aed63fe, type: 2}
+  validatorB: {fileID: 11400000, guid: eda16fa509098974ea0328965a830d6d, type: 2}
   logicOperator: 0

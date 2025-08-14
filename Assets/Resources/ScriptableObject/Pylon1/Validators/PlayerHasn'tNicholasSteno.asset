@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28b5d8bfc1a82364fb702922bda62e56, type: 3}
-  m_Name: Cine_Pylon1_000
+  m_Script: {fileID: 11500000, guid: d6874f8492c02f94188fc879143b38ff, type: 3}
+  m_Name: PlayerHasn'tNicholasSteno
   m_EditorClassIdentifier: 
-  validator: {fileID: 11400000, guid: 0ce2e01c1a20e894ba7670b733225a4d, type: 2}
+  negation: 1
   type: 1
-  camPos: {x: 36, y: 2, z: 13}
-  camRot: {x: 20, y: -45, z: 0}
-  camFOV: 80
+  item: {fileID: 11400000, guid: 28aa2620b11ab154ca8fec473fccaec9, type: 2}

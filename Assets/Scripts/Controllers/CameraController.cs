@@ -69,7 +69,7 @@ public class CameraController : MonoBehaviour
         // Smooth movement
         transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
         if (followTarget && !(!GameManager.manager.inDialog || !GameManager.manager.inPopup ||
-            !GameManager.manager.isPlaying || !GameManager.manager.isBookOpen || PlayerController.player.canMove)) transform.LookAt(target.position + offset);
+            !GameManager.manager.isPlaying || !GameManager.manager.isBookOpen || !GameManager.manager.isCamera || PlayerController.player.canMove)) transform.LookAt(target.position + offset);
     }
     public void SetCameraData(CameraModifier cameraModifier)
     {

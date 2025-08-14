@@ -18,5 +18,5 @@ MonoBehaviour:
     interactable: {fileID: 11400000, guid: dae7ee7640540ac4b93f67f79f1104ff, type: 2}
     position: {x: 34.245, y: 1.6, z: 14.76}
     rotation: {x: 0.34013206, y: 0.6199275, z: 0.6199275, w: -0.34013206}
-    scale: {x: 715.32184, y: 715.32184, z: 715.32184}
-    available: 0
+    scale: {x: 715.322, y: 715.32196, z: 715.3218}
+    available: 1

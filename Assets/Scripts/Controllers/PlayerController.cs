@@ -39,8 +39,7 @@ public class PlayerController : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        if (!GameManager.manager.inDialog && !GameManager.manager.inPopup && 
-            !GameManager.manager.isPlaying && !GameManager.manager.isBookOpen && canMove)
+        if (GameManager.manager.CanMove() && canMove)
         {
             // Calculate movement direction relative to camera rotation
             Vector3 inputDirection = new Vector3(horizontal, 0f, vertical).normalized;
@@ -70,8 +69,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void FixedUpdate() {
-        if (!GameManager.manager.inDialog && !GameManager.manager.inPopup &&
-            !GameManager.manager.isPlaying && !GameManager.manager.isBookOpen && canMove)
+        if (GameManager.manager.CanMove() && canMove)
         {
             // Apply movement
             Vector3 moveVelocity = movement * moveSpeed;
@@ -84,7 +82,7 @@ public class PlayerController : MonoBehaviour
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetQuaternion, rotationSpeed * Time.fixedDeltaTime);
             }
         }
-        else rb.velocity = Vector3.zero;
+        else rb.velocity = new Vector3(0, rb.velocity.y, 0);
         
         // Update animator
         animator.SetFloat("speed", movement.magnitude);

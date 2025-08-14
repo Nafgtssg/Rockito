@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25b42d4370562c946a730d73f3a80e9f, type: 3}
   m_Name: JugadorRecibeStickerSteno
   m_EditorClassIdentifier: 
-  validator: {fileID: 0}
+  validator: {fileID: 11400000, guid: 5e0e886044d65714ebd70feb38d98ee3, type: 2}
   pickup: {fileID: 11400000, guid: 28aa2620b11ab154ca8fec473fccaec9, type: 2}

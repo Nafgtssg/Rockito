@@ -126,7 +126,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.Escape) && !inDialog && !inPopup) OpenBook();
+            if (Input.GetKeyDown(KeyCode.Escape) && !(isCamera && isChoice && isPlaying && isTyping && inDialog && inPopup)) OpenBook();
             if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) PassAction();
             if (Input.GetKeyDown(KeyCode.Q) && gaiaInteractable != null) gaiaInteractable.Interact(); 
         }
@@ -1128,7 +1128,7 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator SetCinematicMode(CinematicModifier modifier)
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.4f);
         CCController.controller.transform.position = modifier.camPos;
         CCController.controller.transform.rotation = Quaternion.Euler(modifier.camRot);
         CCController.controller.cinematic.fieldOfView = modifier.camFOV;
@@ -1147,6 +1147,7 @@ public class GameManager : MonoBehaviour
     {
         CameraController.controller.mainCamera.enabled = true;
         CCController.controller.cinematic.enabled = false;
+        PlayerController.player.rb.useGravity = true;
         isCamera = false;
     }
     public void TriggerEffectDelay(float delayInSeconds, Effect effect)
@@ -1158,6 +1159,10 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delayInSeconds);
         effect.Execute();
+    }
+    public bool CanMove()
+    {
+        return !(isBookOpen || isCamera || isChoice || isPlaying || isTyping || inDialog || inPopup);
     }
 }
 

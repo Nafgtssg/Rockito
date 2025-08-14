@@ -21,7 +21,7 @@ MonoBehaviour:
   dialogText: "He visto a otros como t\xFA... buscando, aprendiendo. No est\xE1s
     solo. Sigue explorando."
   nextNode: {fileID: 0}
-  effect: {fileID: 11400000, guid: 903f7c66524f42a47ab80457da38439d, type: 2}
+  effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []
   choiceText: "Opci\xF3n"
