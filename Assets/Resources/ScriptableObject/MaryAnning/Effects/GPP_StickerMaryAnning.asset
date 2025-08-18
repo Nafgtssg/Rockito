@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25b42d4370562c946a730d73f3a80e9f, type: 3}
-  m_Name: MARYANNINGENTREGA
+  m_Name: GPP_StickerMaryAnning
   m_EditorClassIdentifier: 
-  validator: {fileID: 0}
+  validator: {fileID: 11400000, guid: 26ca1533a9e760145bd2bf1fcd18de98, type: 2}
   pickup: {fileID: 11400000, guid: f1c46dc714b9d9b4688984d5a56a55b0, type: 2}

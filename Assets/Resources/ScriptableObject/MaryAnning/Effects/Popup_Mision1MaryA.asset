@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80290fc34e7938f4ca38258137ca383e, type: 3}
-  m_Name: Mision1MaryA
+  m_Name: Popup_Mision1MaryA
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   type: 2

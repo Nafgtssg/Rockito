@@ -53092,16 +53092,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rockito Final
       objectReference: {fileID: 0}
-    - target: {fileID: 6890349112447807913, guid: 1c36bfbcd8426054ba2166219c71ec48,
-        type: 3}
-      propertyPath: canMove
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6890349112447807913, guid: 1c36bfbcd8426054ba2166219c71ec48,
-        type: 3}
-      propertyPath: jumpForce
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

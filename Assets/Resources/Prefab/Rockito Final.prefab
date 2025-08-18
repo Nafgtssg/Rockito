@@ -262,7 +262,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f788db7f36e4d5342a6f6b8b192522b3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.37
+      value: 24.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f788db7f36e4d5342a6f6b8b192522b3,
         type: 3}
@@ -272,12 +272,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f788db7f36e4d5342a6f6b8b192522b3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 39.13
+      value: 23.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f788db7f36e4d5342a6f6b8b192522b3,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7302246
+      value: -0.05059282
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f788db7f36e4d5342a6f6b8b192522b3,
         type: 3}
@@ -287,12 +287,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f788db7f36e4d5342a6f6b8b192522b3,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.6832072
+      value: -0.99871933
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f788db7f36e4d5342a6f6b8b192522b3,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f788db7f36e4d5342a6f6b8b192522b3,
         type: 3}
@@ -302,7 +302,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f788db7f36e4d5342a6f6b8b192522b3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -86.19
+      value: -185.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f788db7f36e4d5342a6f6b8b192522b3,
         type: 3}
@@ -404,6 +404,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 5978762252717688305, guid: f788db7f36e4d5342a6f6b8b192522b3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d98a95b9ae2b4d347af1a548284fa93d, type: 2}
     - target: {fileID: 6905609870639353253, guid: f788db7f36e4d5342a6f6b8b192522b3,
         type: 3}
       propertyPath: m_Layer
@@ -555,12 +560,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9305719f993d0e488e08550f80f0dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 0
   moveSpeed: 5
-  jumpForce: 7
+  jumpForce: 4
   groundCheckDistance: 1
   groundLayer:
     serializedVersion: 2
     m_Bits: 1025
+  rotationSpeed: 10
   rb: {fileID: 0}
   animator: {fileID: 0}
   isGrounded: 0
