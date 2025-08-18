@@ -1148,6 +1148,7 @@ public class GameManager : MonoBehaviour
         CameraController.controller.mainCamera.enabled = true;
         CCController.controller.cinematic.enabled = false;
         PlayerController.player.rb.useGravity = true;
+        PlayerController.player.canMove = true;
         isCamera = false;
     }
     public void TriggerEffectDelay(float delayInSeconds, Effect effect)

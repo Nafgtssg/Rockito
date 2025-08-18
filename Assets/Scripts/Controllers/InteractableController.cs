@@ -39,7 +39,10 @@ public class InteractableController : MonoBehaviour
 
     void Update() {
         if (isPlayerInRange && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return))
-            && !GameManager.manager.inDialog && !GameManager.manager.inPopup && !GameManager.manager.isBookOpen) {
+                    && !GameManager.manager.inDialog
+                    && !GameManager.manager.inPopup
+                    && !GameManager.manager.isBookOpen
+                    && !GameManager.manager.isCamera) {
             Interact();
             GameManager.manager.text.text = "";
         }

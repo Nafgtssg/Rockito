@@ -14,18 +14,12 @@ public class Set : Effect
         {
             if (validator.Validate())
             {
-                foreach (Effect effect in effects)
-                {
-                    effect.Execute();
-                }
+                foreach (Effect effect in effects) effect.Execute();
             }
         }
         else
         {
-            foreach (Effect effect in effects)
-            {
-                effect.Execute();
-            }
+            foreach (Effect effect in effects) effect.Execute();
         }
     }
 }

@@ -563,7 +563,7 @@ MonoBehaviour:
   canMove: 0
   moveSpeed: 5
   jumpForce: 4
-  groundCheckDistance: 1
+  groundCheckDistance: 0.5
   groundLayer:
     serializedVersion: 2
     m_Bits: 1025
