@@ -787,11 +787,7 @@ public class GameManager : MonoBehaviour
         gameData = data;
         isPlaying = true;
         inDialog = false;
-        StartCoroutine(SetupConceptGame());
-    }
-    IEnumerator SetupConceptGame()
-    {
-        yield return new WaitForSeconds(2f);
+
         dialogBox.SetActive(false);
         conceptGame.SetActive(true);
         resultsPanel.SetActive(true);

@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: DN_Pylon1_020
+  m_Name: 02Smith
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: 
-  leftSpeaker: {fileID: 0}
-  rightSpeaker: {fileID: 0}
+  displayName: William Smith
+  leftSpeaker: {fileID: 21300000, guid: 18288f9ef08de27448e3bd275c83b137, type: 3}
+  rightSpeaker: {fileID: 21300000, guid: 698b57d30d6918a488982fcbb34f31eb, type: 3}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Se ha activado el primer pilar del conocimiento.\n\xBFQu\xE9 significa
-    esto?"
+  dialogText: "Ese principio se llama sucesi\xF3n faun\xEDstica. Me ayud\xF3 a construir
+    el primer mapa geol\xF3gico de Inglaterra, en 1815. Quiz\xE1 t\xFA tambi\xE9n
+    traces un mapa de sabidur\xEDa con cada paso."
   nextNode: {fileID: 0}
-  effect: {fileID: 0}
+  effect: {fileID: 11400000, guid: d0436a4f60aa4304e935a6f110fce3d5, type: 2}
   onEnding: {fileID: 0}
   choices: []
   choiceText: "Opci\xF3n"

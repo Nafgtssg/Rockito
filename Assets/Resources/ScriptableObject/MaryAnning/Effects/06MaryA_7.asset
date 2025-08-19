@@ -9,12 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c8d363f8995d24888690fb49abca5a, type: 3}
-  m_Name: SC_SampleSceneTest
+  m_Script: {fileID: 11500000, guid: d33a7f2a7e8607d4d94207cc324f9a55, type: 3}
+  m_Name: 06MaryA_7
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  sceneName: SampleScene
-  playerNewPos: {x: 38.796, y: 0.11, z: 42.958}
-  playerNewLocalScale: {x: 1, y: 1, z: 1}
-  playerNewRot: {x: 0, y: 0, z: 0}
-  duringChange: {fileID: 0}
+  effects:
+  - {fileID: 11400000, guid: 1c099c47c4421024088d9aff4a405b43, type: 2}
+  - {fileID: 11400000, guid: b96b61afb76944a4384b0fdce9eed68b, type: 2}

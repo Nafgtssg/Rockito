@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenarios/DarkStart.unity
     guid: 6adb6fc77c2e54a4f87e54b094fb1e24
+  - enabled: 1
+    path: Assets/Escenarios/MuseoAstronomico.unity
+    guid: 08a58996c41c51846ad37fa08f268246
   m_configObjects: {}

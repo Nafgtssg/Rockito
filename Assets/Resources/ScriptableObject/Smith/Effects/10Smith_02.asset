@@ -10,17 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: DN_Pylon1_020
+  m_Name: 10Smith_02
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: 
-  leftSpeaker: {fileID: 0}
-  rightSpeaker: {fileID: 0}
+  displayName: "\xBF?"
+  leftSpeaker: {fileID: 21300000, guid: 18288f9ef08de27448e3bd275c83b137, type: 3}
+  rightSpeaker: {fileID: 21300000, guid: 698b57d30d6918a488982fcbb34f31eb, type: 3}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Se ha activado el primer pilar del conocimiento.\n\xBFQu\xE9 significa
-    esto?"
-  nextNode: {fileID: 0}
+  dialogText: "Oh, \xBFD\xF3nde he dejado mis modales? D\xE9jame presentarme."
+  nextNode: {fileID: 11400000, guid: c4f1f0e935e743c4bb90bd67c25dbbc4, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

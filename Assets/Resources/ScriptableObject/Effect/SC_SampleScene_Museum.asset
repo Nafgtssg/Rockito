@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80c8d363f8995d24888690fb49abca5a, type: 3}
-  m_Name: SC_SampleSceneTest
+  m_Name: SC_SampleScene_Museum
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   sceneName: SampleScene
-  playerNewPos: {x: 38.796, y: 0.11, z: 42.958}
+  playerNewPos: {x: 38.84923, y: 0.072695315, z: 59.731365}
   playerNewLocalScale: {x: 1, y: 1, z: 1}
   playerNewRot: {x: 0, y: 0, z: 0}
   duringChange: {fileID: 0}

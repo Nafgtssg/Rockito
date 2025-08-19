@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: DN_Pylon1_020
+  m_Name: 11Steno
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: 
-  leftSpeaker: {fileID: 0}
-  rightSpeaker: {fileID: 0}
+  displayName: Nicolas Steno
+  leftSpeaker: {fileID: 21300000, guid: 18288f9ef08de27448e3bd275c83b137, type: 3}
+  rightSpeaker: {fileID: 21300000, guid: 7a00b3c353a2cd4498d2e72987904c8b, type: 3}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Se ha activado el primer pilar del conocimiento.\n\xBFQu\xE9 significa
-    esto?"
-  nextNode: {fileID: 0}
+  dialogText: "En el siglo XVII, observando los Alpes, comprend\xED que las rocas
+    sedimentarias eran como las p\xE1ginas de un libro antiguo. Cada capa, cada estrato,
+    tiene un orden, una direcci\xF3n, una historia."
+  nextNode: {fileID: 11400000, guid: a2d7422ddaa6f2d43918518cf47f59bb, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []
