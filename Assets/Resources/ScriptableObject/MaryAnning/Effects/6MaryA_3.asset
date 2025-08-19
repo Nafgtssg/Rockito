@@ -21,6 +21,6 @@ MonoBehaviour:
   dialogText: "Estoy segura que lo vi por aqu\xED..."
   nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 0}
+  onEnding: {fileID: 11400000, guid: f0502f235d6878141b15453350f4597b, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

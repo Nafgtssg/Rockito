@@ -22,6 +22,6 @@ MonoBehaviour:
     Rockito"
   nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 11400000, guid: 3eaabb87f9807f64d8cf6a43dbc0f84b, type: 2}
+  onEnding: {fileID: 11400000, guid: f26cb3e68c7f5b341ada34c1091b7743, type: 2}
   choices: []
   choiceText: "Opci\xF3n"
