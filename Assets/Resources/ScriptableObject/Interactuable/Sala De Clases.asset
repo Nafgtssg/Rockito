@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   sceneName: SaladeClases
-  playerNewPos: {x: 36.68, y: 5.165, z: 105.13}
+  playerNewPos: {x: 37.45, y: 5.14838, z: 105.19}
+  playerNewLocalScale: {x: 1, y: 1, z: 1}
+  playerNewRot: {x: 0, y: 0, z: 0}
+  duringChange: {fileID: 0}

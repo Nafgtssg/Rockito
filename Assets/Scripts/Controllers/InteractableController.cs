@@ -16,7 +16,6 @@ public class InteractableController : MonoBehaviour
     void Start()
     {
         interactionCollider = GetComponent<Collider>();
-        interactionCollider.isTrigger = true;
         StartCoroutine(LateStart());
     }
     IEnumerator LateStart()

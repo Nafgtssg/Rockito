@@ -5168,7 +5168,7 @@ PrefabInstance:
     - target: {fileID: 398068320965531966, guid: fb50b9aeeb689e6488d473799ff8a893,
         type: 3}
       propertyPath: m_Name
-      value: NPC
+      value: Captus
       objectReference: {fileID: 0}
     - target: {fileID: 2753586078313040760, guid: fb50b9aeeb689e6488d473799ff8a893,
         type: 3}
@@ -5223,7 +5223,7 @@ PrefabInstance:
     - target: {fileID: 5527354318996885174, guid: fb50b9aeeb689e6488d473799ff8a893,
         type: 3}
       propertyPath: m_Radius
-      value: 1.4058174
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 5527354318996885174, guid: fb50b9aeeb689e6488d473799ff8a893,
         type: 3}
@@ -5234,6 +5234,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.z
       value: 0.0000000038098786
+      objectReference: {fileID: 0}
+    - target: {fileID: 5527354318996885174, guid: fb50b9aeeb689e6488d473799ff8a893,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6358340603803851235, guid: fb50b9aeeb689e6488d473799ff8a893,
+        type: 3}
+      propertyPath: internalId
+      value: 4001
       objectReference: {fileID: 0}
     - target: {fileID: 6358340603803851235, guid: fb50b9aeeb689e6488d473799ff8a893,
         type: 3}
@@ -9676,7 +9686,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a426d56140bb9804a893a123b6d3e9e7,
         type: 3}
       propertyPath: m_Name
-      value: cuadro de pared (1)
+      value: Cuadro01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -11652,7 +11662,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a426d56140bb9804a893a123b6d3e9e7,
         type: 3}
       propertyPath: m_Name
-      value: cuadro de pared (2)
+      value: Cuadro02
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a426d56140bb9804a893a123b6d3e9e7,
         type: 3}

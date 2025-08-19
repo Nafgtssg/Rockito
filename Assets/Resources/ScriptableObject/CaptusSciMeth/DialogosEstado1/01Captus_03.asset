@@ -10,17 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: 11Smith
+  m_Name: 01Captus_03
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: William Smith
-  leftSpeaker: {fileID: 21300000, guid: 18288f9ef08de27448e3bd275c83b137, type: 3}
-  rightSpeaker: {fileID: 21300000, guid: 698b57d30d6918a488982fcbb34f31eb, type: 3}
+  displayName: Captus
+  leftSpeaker: {fileID: 0}
+  rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Descubr\xED que cada conjunto de f\xF3siles aparece en un orden espec\xEDfico
-    y puede rastrearse a trav\xE9s de grandes distancias."
-  nextNode: {fileID: 11400000, guid: 2c2c0f4b239d9e24fb511c7dcb77caa4, type: 2}
+  dialogText: Me llamo Captus, y llevo un tiempo intentando completar este puzle...
+  nextNode: {fileID: 11400000, guid: a6681b260a4f33d47a9a7ab4d2b1b788, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []
