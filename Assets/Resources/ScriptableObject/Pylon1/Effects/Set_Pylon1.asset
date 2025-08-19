@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33a7f2a7e8607d4d94207cc324f9a55, type: 3}
   m_Name: Set_Pylon1
   m_EditorClassIdentifier: 
-  validator: {fileID: 0}
+  validator: {fileID: 11400000, guid: 0ce2e01c1a20e894ba7670b733225a4d, type: 2}
   effects:
   - {fileID: 11400000, guid: 07760e3eba90d104899debb9eadf9fc9, type: 2}
   - {fileID: 11400000, guid: 532b03b0e9887734399aaafc8109da9a, type: 2}
