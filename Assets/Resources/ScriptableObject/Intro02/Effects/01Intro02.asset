@@ -10,18 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: DN_Intro02_013
+  m_Name: 01Intro02
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: Inge Lehmann
+  displayName: GAIA
   leftSpeaker: {fileID: 0}
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Pero la Tierra no solo se siente... Tambi\xE9n se clasifica. Hay quienes
-    la ven por lo que est\xE1 hecha, y otros por c\xF3mo se comporta."
-  nextNode: {fileID: 11400000, guid: 0013e467ee2624841ade38e3bffee5a0, type: 2}
+  dialogText: "Hemos llegado al coraz\xF3n de nuestro planeta."
+  nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 0}
+  onEnding: {fileID: 11400000, guid: 600b32f851c72dc4a9a69f852cbfa935, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

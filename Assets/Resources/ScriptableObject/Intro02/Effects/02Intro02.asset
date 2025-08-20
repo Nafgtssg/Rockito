@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: DN_Intro02_012
+  m_Name: 02Intro02
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: Inge Lehmann
+  displayName: GAIA
   leftSpeaker: {fileID: 0}
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Me llamo Inge Lehmann, y descubr\xED que bajo el n\xFAcleo l\xEDquido
-    hay un coraz\xF3n s\xF3lido."
-  nextNode: {fileID: 11400000, guid: 5a0fde8103941c94d847f9edc85f2e39, type: 2}
+  dialogText: "Para entender c\xF3mo fluye la energ\xEDa interna, debes conocer sus
+    capas... y c\xF3mo escucharlas."
+  nextNode: {fileID: 11400000, guid: 1a90b3ea291e1504ca34c61dd669916b, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []
