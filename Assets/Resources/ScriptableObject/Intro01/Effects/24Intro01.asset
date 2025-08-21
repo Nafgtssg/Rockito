@@ -21,6 +21,6 @@ MonoBehaviour:
   dialogText: "\xBFQu\xE9 buscas? \xBFLe ense\xF1as la caja de arena a tu nueva roquita?"
   nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 0}
+  onEnding: {fileID: 11400000, guid: 3b803d7725fa9a64981aa8e02c81ba82, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

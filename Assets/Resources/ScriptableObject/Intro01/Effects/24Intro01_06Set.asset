@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: 24Intro01_06Set
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: e2609d4973edb00449ce8475af6d584c, type: 2}
+  - {fileID: 11400000, guid: bcb74c1138ed02c42adc3b668391efa8, type: 2}
+  - {fileID: 11400000, guid: 487f24edf1ee2454a8c8b04ee4a54106, type: 2}
