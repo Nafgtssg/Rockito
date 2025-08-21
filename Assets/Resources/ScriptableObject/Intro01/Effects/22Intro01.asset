@@ -20,8 +20,8 @@ MonoBehaviour:
   pitchVariation: 0
   dialogText: "Kentu, que sorpresa ver que est\xE1s libre otra vez. \xBFNo te gust\xF3
     tu jaulita?"
-  nextNode: {fileID: 11400000, guid: b028b3ccfed610e4ea5e80a917e4794b, type: 2}
+  nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 11400000, guid: b6d23be92a4fc8844904b8ce60c8126a, type: 2}
+  onEnding: {fileID: 11400000, guid: 2b4c3a0267cd80d468ae72cf0f2fd693, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

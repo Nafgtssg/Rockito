@@ -25,6 +25,7 @@ public class CinematicModifier : Effect
                         GameManager.manager.TriggerCinematicMode(this);
                         break;
                     case CinematicModifierType.instant:
+                        Debug.Log("Triggered!");
                         CCController.controller.cinematic.enabled = true;
                         CameraController.controller.mainCamera.enabled = false;
                         GameManager.manager.isCamera = true;
@@ -52,6 +53,7 @@ public class CinematicModifier : Effect
                     GameManager.manager.TriggerCinematicMode(this);
                     break;
                 case CinematicModifierType.instant:
+                    Debug.Log("Triggered!");
                     CCController.controller.cinematic.enabled = true;
                     CameraController.controller.mainCamera.enabled = false;
                     GameManager.manager.isCamera = true;

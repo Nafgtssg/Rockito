@@ -20,8 +20,8 @@ MonoBehaviour:
   pitchVariation: 0
   dialogText: "Oh... GAIA, eres t\xFA.\n\xBFQu\xE9 te trae a ti y a tu nueva roquita
     por aqu\xED? Cre\xED que ya hab\xEDamos hablado de esto."
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: 0477ea8b884d16c458908c0902c485ea, type: 2}
   effect: {fileID: 0}
-  onEnding: {fileID: 11400000, guid: 2423e45d307a3e946a5fcf46761baace, type: 2}
+  onEnding: {fileID: 0}
   choices: []
   choiceText: "Opci\xF3n"

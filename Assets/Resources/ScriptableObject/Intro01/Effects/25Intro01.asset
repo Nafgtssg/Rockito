@@ -20,7 +20,7 @@ MonoBehaviour:
   pitchVariation: 0
   dialogText: "Kantu, ahora que lo pienso, que bien que est\xE9s aqu\xED, Rockito
     y yo queremos activar los pilares del conocimiento."
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: fadc19f1e0e1df346af2e68d10ef8fc3, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

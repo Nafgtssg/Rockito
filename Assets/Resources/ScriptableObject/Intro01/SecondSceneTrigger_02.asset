@@ -18,4 +18,4 @@ MonoBehaviour:
   interactionSound: {fileID: 0}
   onInteract: {fileID: 0}
   onPlayerEnterRange: {fileID: 0}
-  onPlayerExitRange: {fileID: 0}
+  onPlayerExitRange: {fileID: 11400000, guid: 9e4ab3390b92d7549b86a32e564d7b8a, type: 2}

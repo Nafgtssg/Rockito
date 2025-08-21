@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: 20Intro01
+  m_Name: 28Intro01
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: "\xBF?"
+  displayName: Kantu
   leftSpeaker: {fileID: 0}
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "\xBFQu\xE9 demonios...?"
-  nextNode: {fileID: 0}
+  dialogText: "Ese pe\xF1azco de all\xED necesita m\xE1s que s\xF3lo conocimiento
+    si lo quieres desenterrado."
+  nextNode: {fileID: 11400000, guid: ac9cbfc36d542044ebd22a5d5ecdc401, type: 2}
   effect: {fileID: 0}
-  onEnding: {fileID: 11400000, guid: 2423e45d307a3e946a5fcf46761baace, type: 2}
+  onEnding: {fileID: 0}
   choices: []
   choiceText: "Opci\xF3n"

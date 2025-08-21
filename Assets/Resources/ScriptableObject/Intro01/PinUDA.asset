@@ -20,6 +20,6 @@ MonoBehaviour:
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
   type: 0
-  icon: {fileID: -1447603808, guid: c537f57d4cd77964a88d22d4b3c07063, type: 3}
-  description: "Un extra\xF1o y gastado pin de metal. Parece representar un martillo
-    y un cincel."
+  icon: {fileID: -199680127, guid: f26a1efe3b99e5b438addbabd7e84dcf, type: 3}
+  description: "Un extra\xF1o y gastado pin de metal. Un extra\xF1o n\xFAmero se
+    puede ver bajo un martillo y un cincel."

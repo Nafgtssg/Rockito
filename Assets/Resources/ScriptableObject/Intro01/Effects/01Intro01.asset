@@ -20,7 +20,7 @@ MonoBehaviour:
   pitchVariation: 0
   dialogText: "\xA1Oh!"
   nextNode: {fileID: 11400000, guid: 1ea1bbbfeff788c499161b3d315af1a1, type: 2}
-  effect: {fileID: 0}
+  effect: {fileID: 11400000, guid: 366bd53da2ea2e2428f888020a37414c, type: 2}
   onEnding: {fileID: 0}
   choices: []
   choiceText: "Opci\xF3n"

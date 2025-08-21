@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d33a7f2a7e8607d4d94207cc324f9a55, type: 3}
-  m_Name: 20Intro01_03Set
+  m_Name: 210AIntro01_05Set
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   effects:
-  - {fileID: 11400000, guid: 619eaefc75ff83e48aa38e5163c80a6a, type: 2}
-  - {fileID: 11400000, guid: 51e8d2a08316e7f46a991fd962a4f521, type: 2}
-  - {fileID: 11400000, guid: 8238ab7e281938c469b41fd700c83271, type: 2}
-  - {fileID: 11400000, guid: 07970d6eb7162874db06e9eed649465a, type: 2}
-  - {fileID: 11400000, guid: 5d3b17354bf15c245811f037d72a4f08, type: 2}
+  - {fileID: 11400000, guid: af564f21ee71db8409c45ec722b69a6b, type: 2}
+  - {fileID: 11400000, guid: 5228f542954ccf247a03f2f491a857f9, type: 2}
+  - {fileID: 11400000, guid: e9b2d32a93166b04aac3abbbb736cd07, type: 2}

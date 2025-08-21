@@ -15,5 +15,5 @@ MonoBehaviour:
   validator: {fileID: 0}
   type: 0
   camPos: {x: 27.6, y: 1.1, z: 28.5}
-  camRot: {x: 30, y: 10, z: 0}
+  camRot: {x: 30, y: 270, z: 0}
   camFOV: 80

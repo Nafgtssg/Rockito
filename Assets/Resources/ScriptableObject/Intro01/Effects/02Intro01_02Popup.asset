@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 02Intro01_02Popup
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  type: 0
-  title: Recojer Objetos
+  type: 2
+  title: Recoger Objetos
   description: "Cuando est\xE9s cerca de un objeto, pulsa E o Enter para recogerlo
     y a\xF1adirlo a tu inventario."
   sprite: {fileID: 21300000, guid: d2bf9b21649ea6a4191fa47eccea2a7d, type: 3}

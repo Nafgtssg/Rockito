@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d33a7f2a7e8607d4d94207cc324f9a55, type: 3}
-  m_Name: 01Intro01_02Set
+  m_Name: 27Intro01_04Set
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   effects:
-  - {fileID: 11400000, guid: 0ddd1e2cfa6d4084da939ae28031fe78, type: 2}
+  - {fileID: 11400000, guid: b2da93da1a230db46aeb037ab71a90fc, type: 2}
+  - {fileID: 11400000, guid: 826117d88b0cebe4da6775766d75ab16, type: 2}

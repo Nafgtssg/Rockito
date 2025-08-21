@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 11Intro01_02Popup
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  type: 0
+  type: 2
   title: Inventario
   description: "Pulsa Escape (Esc) para escudri\xF1ar entre las p\xE1ginas de GAIA.
     Aqu\xED podr\xE1s echarle un ojo a todo lo que vayas recogiendo en tu aventura."

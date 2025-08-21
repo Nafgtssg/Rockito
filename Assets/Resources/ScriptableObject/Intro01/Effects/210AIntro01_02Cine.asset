@@ -9,14 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b02ba3008b2e90c41baadc04b3676bb0, type: 3}
-  m_Name: 20Intro01_02SISIntro
+  m_Script: {fileID: 11500000, guid: 28b5d8bfc1a82364fb702922bda62e56, type: 3}
+  m_Name: 210AIntro01_02Cine
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  state:
-    internalId: 604
-    interactable: {fileID: 0}
-    position: {x: 30, y: -10, z: 21.02}
-    rotation: {x: 0, y: 0, z: 0, w: 0}
-    scale: {x: 12.3243065, y: 5, z: 0.5}
-    available: 0
+  type: 3
+  camPos: {x: 26.5, y: 1.1, z: 27}
+  camRot: {x: 10, y: 180, z: 0}
+  camFOV: 80
