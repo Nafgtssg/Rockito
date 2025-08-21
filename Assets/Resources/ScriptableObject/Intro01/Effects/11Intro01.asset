@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: 10Intro02
+  m_Name: 11Intro01
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: "\xBF?"
+  displayName: GAIA
   leftSpeaker: {fileID: 0}
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: Dicen que la Tierra no habla...
-  nextNode: {fileID: 11400000, guid: 4e3a465dc20ed1d478e163068534db48, type: 2}
+  dialogText: "\xBFTe interesa? \xBFQui\xE9res saber m\xE1s al respecto? Busquemos
+    entre mis p\xE1ginas, \xA1A ver qu\xE9 podemos averiguar!"
+  nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 0}
+  onEnding: {fileID: 11400000, guid: b0028cc23d3dac34d8d50a06a7b0bd38, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

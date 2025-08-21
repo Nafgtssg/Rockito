@@ -40,6 +40,7 @@ public class InteractableController : MonoBehaviour
         if (isPlayerInRange && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return))
                     && !GameManager.manager.inDialog
                     && !GameManager.manager.inPopup
+                    && !GameManager.manager.isPlaying
                     && !GameManager.manager.isBookOpen
                     && !GameManager.manager.isCamera) {
             Interact();
