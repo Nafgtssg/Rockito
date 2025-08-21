@@ -9,9 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 801c5f8070bb9cc4c9a2410768196408, type: 3}
-  m_Name: 01Intro02_03
+  m_Script: {fileID: 11500000, guid: 0567d6a442311c743a5dbc26441f7405, type: 3}
+  m_Name: SecondSceneTrigger
   m_EditorClassIdentifier: 
-  validator: {fileID: 0}
-  delayInSeconds: 2
-  effect: {fileID: 11400000, guid: 0fb9c59cd4737d243a5c1699a7fbd44a, type: 2}
+  displayName: Object
+  action: interactuar
+  showDisplay: 1
+  interactionSound: {fileID: 0}
+  onInteract: {fileID: 0}
+  onPlayerEnterRange: {fileID: 0}
+  onPlayerExitRange: {fileID: 0}

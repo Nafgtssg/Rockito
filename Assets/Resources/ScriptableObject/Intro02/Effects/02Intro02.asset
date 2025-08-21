@@ -20,7 +20,7 @@ MonoBehaviour:
   pitchVariation: 0
   dialogText: "Para entender c\xF3mo fluye la energ\xEDa interna, debes conocer sus
     capas... y c\xF3mo escucharlas."
-  nextNode: {fileID: 11400000, guid: 1a90b3ea291e1504ca34c61dd669916b, type: 2}
+  nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []
