@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d620a17beb99bea42b7ff1a462943c18, type: 3}
+  m_Name: 00MiniJuegoConceptosCeleste
+  m_EditorClassIdentifier: 
+  validator: {fileID: 0}
+  concepts:
+  - conceptID: 0
+    conceptImage: {fileID: 0}
+    conceptText: "Lit\xF3sfera"
+    description: 
+    correctBoxID: 0
+  - conceptID: 1
+    conceptImage: {fileID: 0}
+    conceptText: Astenosfera
+    description: 
+    correctBoxID: 1
+  - conceptID: 2
+    conceptImage: {fileID: 0}
+    conceptText: Mesosfera
+    description: 
+    correctBoxID: 2
+  - conceptID: 3
+    conceptImage: {fileID: 0}
+    conceptText: Endosfera
+    description: 
+    correctBoxID: 3
+  boxIDs:
+  - 0
+  - 1
+  - 2
+  - 3
+  size: {x: 300, y: 100}
+  randomize: 1
+  onEnding: {fileID: 11400000, guid: dfe101ffeb426304ba5b8d150ab6563b, type: 2}
+  onCorrect: {fileID: 11400000, guid: 78885a43d92651f4f8dcb95d299e0c6b, type: 2}

@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d620a17beb99bea42b7ff1a462943c18, type: 3}
+  m_Name: 01MiniJuegoConceptos 1
+  m_EditorClassIdentifier: 
+  validator: {fileID: 0}
+  concepts:
+  - conceptID: 0
+    conceptImage: {fileID: 0}
+    conceptText: Manto Superior
+    description: 
+    correctBoxID: 0
+  - conceptID: 1
+    conceptImage: {fileID: 0}
+    conceptText: "Zona de trancisi\xF3n"
+    description: 
+    correctBoxID: 1
+  - conceptID: 2
+    conceptImage: {fileID: 0}
+    conceptText: Manto Inferior
+    description: 
+    correctBoxID: 2
+  - conceptID: 3
+    conceptImage: {fileID: 0}
+    conceptText: "N\xFAcleo Externo"
+    description: 
+    correctBoxID: 3
+  - conceptID: 4
+    conceptImage: {fileID: 0}
+    conceptText: "N\xFAcleo Interno"
+    description: 
+    correctBoxID: 4
+  boxIDs:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  size: {x: 300, y: 100}
+  randomize: 1
+  onEnding: {fileID: 11400000, guid: c17d65744358da445a06ed8807adb859, type: 2}
+  onCorrect: {fileID: 11400000, guid: a41563999d29d7b4185e71bcf287dfb7, type: 2}

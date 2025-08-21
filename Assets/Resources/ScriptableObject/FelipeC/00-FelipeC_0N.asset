@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
+  m_Name: 00-FelipeC_0N
+  m_EditorClassIdentifier: 
+  validator: {fileID: 0}
+  displayName: Felipe C
+  leftSpeaker: {fileID: 21300000, guid: 18288f9ef08de27448e3bd275c83b137, type: 3}
+  rightSpeaker: {fileID: 0}
+  sound: {fileID: 0}
+  pitchVariation: 0
+  dialogText: "Hola amigo, intento leer las capas del modelo estatico de lla estructura
+    interna de la Tierra, pero no logro ver bien  \xBFme podr\xEDas ayudar a ordenar
+    cada modelo?"
+  nextNode: {fileID: 0}
+  effect: {fileID: 0}
+  onEnding: {fileID: 11400000, guid: 96f72156e646aaf4f8f0173a09b7a2ec, type: 2}
+  choices: []
+  choiceText: "Opci\xF3n"
