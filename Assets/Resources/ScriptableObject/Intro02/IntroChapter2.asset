@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Object
   action: interactuar
-  showDisplay: 1
+  showDisplay: 0
   interactionSound: {fileID: 0}
   onInteract: {fileID: 0}
-  onPlayerEnterRange: {fileID: 11400000, guid: 52bfc8e93e80dfe4793e9b4dc450bcb0, type: 2}
+  onPlayerEnterRange: {fileID: 11400000, guid: cd6f02f4c84a62940af6929861cbed95, type: 2}
   onPlayerExitRange: {fileID: 0}

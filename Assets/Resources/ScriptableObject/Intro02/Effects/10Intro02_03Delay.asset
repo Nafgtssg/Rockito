@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: 10Intro02_03Delay
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  delayInSeconds: 0.5
+  delayInSeconds: 1.5
   effect: {fileID: 11400000, guid: 1a90b3ea291e1504ca34c61dd669916b, type: 2}
