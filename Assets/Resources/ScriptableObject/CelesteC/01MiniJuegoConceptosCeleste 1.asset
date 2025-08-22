@@ -16,35 +16,29 @@ MonoBehaviour:
   concepts:
   - conceptID: 0
     conceptImage: {fileID: 0}
-    conceptText: Manto Superior
+    conceptText: "Lit\xF3sfera"
     description: 
     correctBoxID: 0
   - conceptID: 1
     conceptImage: {fileID: 0}
-    conceptText: "Zona de trancisi\xF3n"
+    conceptText: "Ast\xE9nosfera"
     description: 
     correctBoxID: 1
   - conceptID: 2
     conceptImage: {fileID: 0}
-    conceptText: Manto Inferior
+    conceptText: Mesosfera
     description: 
     correctBoxID: 2
   - conceptID: 3
     conceptImage: {fileID: 0}
-    conceptText: "N\xFAcleo Externo"
+    conceptText: Endosfera
     description: 
     correctBoxID: 3
-  - conceptID: 4
-    conceptImage: {fileID: 0}
-    conceptText: "N\xFAcleo Interno"
-    description: 
-    correctBoxID: 4
   boxIDs:
   - 0
   - 1
   - 2
   - 3
-  - 4
   size: {x: 300, y: 100}
   randomize: 1
   onEnding: {fileID: 11400000, guid: dfe101ffeb426304ba5b8d150ab6563b, type: 2}
