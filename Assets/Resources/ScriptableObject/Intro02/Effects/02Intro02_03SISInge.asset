@@ -18,5 +18,5 @@ MonoBehaviour:
     interactable: {fileID: 0}
     position: {x: 13, y: 0.65, z: -46}
     rotation: {x: 0, y: 0, z: 0, w: 0}
-    scale: {x: 0, y: 0, z: 0}
+    scale: {x: 1, y: 1, z: 1}
     available: 1

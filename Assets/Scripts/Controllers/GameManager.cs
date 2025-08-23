@@ -801,7 +801,7 @@ public class GameManager : MonoBehaviour
         resultsPanel.GetComponentInChildren<TextMeshProUGUI>().text = "";
         CreateConceptsInColumns();
         CreateBoxesInColumns();
-        if (gameData.randomize) RandomizeConceptPositions();
+        if (gameData.randomizeConcepts) RandomizeConceptPositions();
     }
     private void CreateConceptsInColumns()
     {
@@ -867,7 +867,7 @@ public class GameManager : MonoBehaviour
         float totalWidthPerColumn = boxWidth + horizontalSpacing;
         float startX = -(columns - 1) * totalWidthPerColumn * 0.5f;
         
-        string[] shuffledBoxIDs = gameData.randomize ? ShuffleArray(gameData.boxIDs) : gameData.boxIDs;
+        string[] shuffledBoxIDs = gameData.randomizeBoxes ? ShuffleArray(gameData.boxIDs) : gameData.boxIDs;
         for (int i = 0; i < gameData.concepts.Length; i++)
         {
             int column = i / maxBoxPerColumn;

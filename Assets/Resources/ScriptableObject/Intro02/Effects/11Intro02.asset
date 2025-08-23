@@ -19,8 +19,8 @@ MonoBehaviour:
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: Pero yo la he escuchado.
-  nextNode: {fileID: 11400000, guid: 87df1ce2e24f9b341b2ab36b653e9730, type: 2}
+  nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 0}
+  onEnding: {fileID: 11400000, guid: c9b23d14d8d30b447b286b8e9eef65b3, type: 2}
   choices: []
   choiceText: "Opci\xF3n"
