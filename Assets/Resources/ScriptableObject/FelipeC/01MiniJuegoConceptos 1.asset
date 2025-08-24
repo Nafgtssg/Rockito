@@ -14,38 +14,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   concepts:
-  - conceptID: 0
-    conceptImage: {fileID: 0}
-    conceptText: Manto Superior
-    description: 
-    correctBoxID: 0
   - conceptID: 1
     conceptImage: {fileID: 0}
-    conceptText: "Zona de trancisi\xF3n"
+    conceptText: Manto Superior
     description: 
     correctBoxID: 1
   - conceptID: 2
     conceptImage: {fileID: 0}
-    conceptText: Manto Inferior
+    conceptText: "Zona de trancisi\xF3n"
     description: 
     correctBoxID: 2
   - conceptID: 3
     conceptImage: {fileID: 0}
-    conceptText: "N\xFAcleo Externo"
+    conceptText: Manto Inferior
     description: 
     correctBoxID: 3
   - conceptID: 4
     conceptImage: {fileID: 0}
-    conceptText: "N\xFAcleo Interno"
+    conceptText: "N\xFAcleo Externo"
     description: 
     correctBoxID: 4
+  - conceptID: 5
+    conceptImage: {fileID: 0}
+    conceptText: "N\xFAcleo Interno"
+    description: 
+    correctBoxID: 5
   boxIDs:
-  - 0
   - 1
   - 2
   - 3
   - 4
-  size: {x: 300, y: 100}
-  randomize: 1
+  - 5
+  size: {x: 300, y: 96}
+  randomizeConcepts: 1
+  randomizeBoxes: 0
+  boxesBackground: {fileID: 21300000, guid: e46436b912b25be4ab5d40de1b2f24a2, type: 3}
   onEnding: {fileID: 11400000, guid: c17d65744358da445a06ed8807adb859, type: 2}
   onCorrect: {fileID: 11400000, guid: a41563999d29d7b4185e71bcf287dfb7, type: 2}

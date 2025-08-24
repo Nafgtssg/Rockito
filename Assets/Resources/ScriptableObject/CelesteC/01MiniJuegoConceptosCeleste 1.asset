@@ -14,32 +14,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   concepts:
-  - conceptID: 0
-    conceptImage: {fileID: 0}
-    conceptText: "Lit\xF3sfera"
-    description: 
-    correctBoxID: 0
   - conceptID: 1
     conceptImage: {fileID: 0}
-    conceptText: "Ast\xE9nosfera"
+    conceptText: "Lit\xF3sfera"
     description: 
     correctBoxID: 1
   - conceptID: 2
     conceptImage: {fileID: 0}
-    conceptText: Mesosfera
+    conceptText: "Ast\xE9nosfera"
     description: 
     correctBoxID: 2
   - conceptID: 3
     conceptImage: {fileID: 0}
-    conceptText: Endosfera
+    conceptText: Mesosfera
     description: 
     correctBoxID: 3
+  - conceptID: 4
+    conceptImage: {fileID: 0}
+    conceptText: Endosfera
+    description: 
+    correctBoxID: 4
   boxIDs:
-  - 0
   - 1
   - 2
   - 3
-  size: {x: 300, y: 100}
+  - 4
+  size: {x: 300, y: 126}
   randomizeConcepts: 1
   randomizeBoxes: 0
   boxesBackground: {fileID: 21300000, guid: e46436b912b25be4ab5d40de1b2f24a2, type: 3}
