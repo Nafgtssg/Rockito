@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b02ba3008b2e90c41baadc04b3676bb0, type: 3}
-  m_Name: 02Intro02_03SISInge
+  m_Name: 02Intro02_03SISTrigger
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   state:
-    internalId: 5001
-    interactable: {fileID: 11400000, guid: 507f036aef0a36c42ac751cebdb9d1d0, type: 2}
-    position: {x: 13, y: 0.65, z: -46}
+    internalId: 5600
+    interactable: {fileID: 11400000, guid: d0c3e940dc24600488f4695854d818a6, type: 2}
+    position: {x: -0.4, y: -20, z: -55.33}
     rotation: {x: 0, y: 0, z: 0, w: 0}
     scale: {x: 1, y: 1, z: 1}
-    available: 1
+    available: 0

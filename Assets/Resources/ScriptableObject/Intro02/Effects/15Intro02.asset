@@ -18,11 +18,11 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Observa esas proyecciones e interact\xFAa con cada imagen. Cada una
-    es una est\xE1 esperando ser le\xEDda. El conocimiento est\xE1 oculto en lo que
-    parece obvio."
+  dialogText: "Observa, interact\xFAa, descubre y habla con todo lo que encuentres.
+    Todo es una experiencia esperando a ser descubierta. El conocimiento est\xE1
+    oculto en lo que parece obvio."
   nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 0}
+  onEnding: {fileID: 11400000, guid: 3542928d0af594b4abd21433f5de1538, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

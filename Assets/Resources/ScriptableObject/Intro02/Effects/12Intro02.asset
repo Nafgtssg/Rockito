@@ -20,8 +20,8 @@ MonoBehaviour:
   pitchVariation: 0
   dialogText: "Me llamo Inge Lehmann, y descubr\xED que bajo el n\xFAcleo l\xEDquido
     hay un coraz\xF3n s\xF3lido."
-  nextNode: {fileID: 11400000, guid: 5a0fde8103941c94d847f9edc85f2e39, type: 2}
+  nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 0}
+  onEnding: {fileID: 11400000, guid: 1d9b2c832bd5523478ac555c8ea47cd8, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

@@ -20,8 +20,8 @@ MonoBehaviour:
   pitchVariation: 0
   dialogText: "Pero la Tierra no solo se siente... Tambi\xE9n se clasifica. Hay quienes
     la ven por lo que est\xE1 hecha, y otros por c\xF3mo se comporta."
-  nextNode: {fileID: 11400000, guid: 0013e467ee2624841ade38e3bffee5a0, type: 2}
+  nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 0}
+  onEnding: {fileID: 11400000, guid: b0b8d1c8d7d5db6478a637eab930f424, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

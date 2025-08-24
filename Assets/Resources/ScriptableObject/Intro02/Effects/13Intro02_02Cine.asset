@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   type: 1
-  camPos: {x: 12, y: 0.3, z: -46}
-  camRot: {x: -20, y: 90, z: 0}
+  camPos: {x: -20.1, y: 2.5, z: -62.4}
+  camRot: {x: 0, y: 170, z: 0}
   camFOV: 80
