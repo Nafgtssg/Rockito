@@ -126,9 +126,9 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.Escape) && !(isCamera && isChoice && isPlaying && isTyping && inDialog && inPopup)) OpenBook();
+            if (Input.GetKeyDown(KeyCode.Escape) && !isCamera && !isChoice && !isPlaying && !isTyping && !inDialog && !inPopup) OpenBook();
             if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) PassAction();
-            if (Input.GetKeyDown(KeyCode.Q) && gaiaInteractable != null && !(isCamera && isChoice && isPlaying && isTyping && inDialog && inPopup)) gaiaInteractable.Interact(); 
+            if (Input.GetKeyDown(KeyCode.Q) && gaiaInteractable != null && !isCamera && !isChoice && !isPlaying && !isTyping && !inDialog && !inPopup) gaiaInteractable.Interact(); 
         }
     }
 

@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d33a7f2a7e8607d4d94207cc324f9a55, type: 3}
-  m_Name: 12Intro02_04Set
+  m_Script: {fileID: 11500000, guid: 032236bdcc0056b4d95ea9f81a06ea1f, type: 3}
+  m_Name: CambiaEstado1
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  effects:
-  - {fileID: 11400000, guid: f21ef6f7d58a3f54ba0837cf3c5d0811, type: 2}
-  - {fileID: 11400000, guid: 1016da4108a06a046abb67937b3030a8, type: 2}
+  id: DanielA
+  state: 1

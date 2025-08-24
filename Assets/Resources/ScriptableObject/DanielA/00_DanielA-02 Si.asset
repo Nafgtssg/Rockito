@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
+  m_Name: 00_DanielA-02 Si
+  m_EditorClassIdentifier: 
+  validator: {fileID: 0}
+  displayName: 
+  leftSpeaker: {fileID: 0}
+  rightSpeaker: {fileID: 0}
+  sound: {fileID: 0}
+  pitchVariation: 0
+  dialogText: "\xBFPor qu\xE9 las ondas S no atraviesan el n\xFAcleo externo? "
+  nextNode: {fileID: 0}
+  effect: {fileID: 0}
+  onEnding: {fileID: 0}
+  choices:
+  - {fileID: 11400000, guid: fe42d542fbe55eb4b929f257626f4831, type: 2}
+  - {fileID: 11400000, guid: ed3f7055a774729469f2dcc22219517b, type: 2}
+  - {fileID: 11400000, guid: ee06a5f69201dcc4595b774d91b59f68, type: 2}
+  choiceText: "S\xED"
