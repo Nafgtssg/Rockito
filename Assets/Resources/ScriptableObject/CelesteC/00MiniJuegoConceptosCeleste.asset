@@ -39,7 +39,9 @@ MonoBehaviour:
   - 1
   - 2
   - 3
-  size: {x: 300, y: 100}
-  randomize: 1
+  size: {x: 300, y: 126}
+  randomizeConcepts: 1
+  randomizeBoxes: 0
+  boxesBackground: {fileID: 21300000, guid: e46436b912b25be4ab5d40de1b2f24a2, type: 3}
   onEnding: {fileID: 11400000, guid: dfe101ffeb426304ba5b8d150ab6563b, type: 2}
   onCorrect: {fileID: 11400000, guid: 78885a43d92651f4f8dcb95d299e0c6b, type: 2}

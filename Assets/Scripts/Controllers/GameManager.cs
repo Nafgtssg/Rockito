@@ -851,6 +851,9 @@ public class GameManager : MonoBehaviour
 
     private void CreateBoxesInColumns()
     {
+        if (gameData.boxesBackground != null)
+            boxesContainer.GetComponent<Image>().sprite = gameData.boxesBackground;
+        else boxesContainer.GetComponent<Image>().sprite = null;
         RectTransform containerRect = boxesContainer as RectTransform;
         float containerHeight = containerRect.rect.height;
         float containerWidth = containerRect.rect.width;

@@ -14,6 +14,8 @@ public class ConceptData : Effect
     public bool randomizeConcepts = true;
     [Tooltip("Si es que al generarse el juego, las cajas se colocan en posiciones aleatorias. Si no, se colocan en la posición en la que se definieron.")]
     public bool randomizeBoxes = true;
+    [Tooltip("Imagen de fondo que tendrán las cajas donde se colocan los conceptos.")]
+    public Sprite boxesBackground;
     [Tooltip("Efecto que se activa una vez temina el juego. Ideal para continuar con diálogo, o activar algún evento.")]
     public Effect onEnding;
     [Tooltip("Efecto que sobreescribe el efecto de fin de juego y que sólo se activa si se tiene puntuación perfecta en el juego. Ideal para continuar con diálogo, o activar algún evento.")]
