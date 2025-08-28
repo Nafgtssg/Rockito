@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenarios/MuseoAstronomico.unity
     guid: 08a58996c41c51846ad37fa08f268246
+  - enabled: 1
+    path: Assets/Escenarios/Cueva.unity
+    guid: 0ac1bbd6644fcb741b02068290172f54
+  - enabled: 1
+    path: Assets/Escenarios/Laboratorio.unity
+    guid: a3bd6e45505f6d34d895ec9743f808e0
   m_configObjects: {}
