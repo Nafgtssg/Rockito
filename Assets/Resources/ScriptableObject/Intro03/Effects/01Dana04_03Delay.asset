@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: 01Dana04_03Delay
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  delayInSeconds: 4
-  effect: {fileID: 11400000, guid: 931ac048aff20794fbb83170bb6229b3, type: 2}
+  delayInSeconds: 1.5
+  effect: {fileID: 11400000, guid: 9f238f071816b8942884c838dcbd1658, type: 2}

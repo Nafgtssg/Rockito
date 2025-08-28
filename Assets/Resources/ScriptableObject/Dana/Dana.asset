@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Dana
   m_EditorClassIdentifier: 
   displayName: Object
-  action: interactuar
+  action: hablar
   showDisplay: 1
   interactionSound: {fileID: 0}
   onInteract: {fileID: 0}
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
-  id: 
-  dialog: []
+  id: Dana
+  dialog:
+  - {fileID: 11400000, guid: c1c0e0c2ea8aa844f8a7e6f141ea7ae1, type: 2}

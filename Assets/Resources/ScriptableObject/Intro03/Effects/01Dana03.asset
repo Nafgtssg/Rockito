@@ -22,6 +22,6 @@ MonoBehaviour:
     los minerales. Pero primero, necesitar\xE1s esto."
   nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 11400000, guid: ee69f8f18ef83bd43b68b2443d72e2e7, type: 2}
+  onEnding: {fileID: 11400000, guid: 0a9cd55563f99ea4fb3cd3d90d9eaa70, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

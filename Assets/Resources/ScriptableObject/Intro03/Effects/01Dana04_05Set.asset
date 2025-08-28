@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   effects:
-  - {fileID: 11400000, guid: cad98e558521ce04d8c4487810217c25, type: 2}
-  - {fileID: 11400000, guid: 83aff692a8e589c4099235a6604d9246, type: 2}
-  - {fileID: 11400000, guid: 46bdbfdae5fc6364589152fd03c71aee, type: 2}
-  - {fileID: 11400000, guid: 38418f436fbc4d34cbfeb5d878880a11, type: 2}
+  - {fileID: 11400000, guid: ee69f8f18ef83bd43b68b2443d72e2e7, type: 2}
+  - {fileID: 11400000, guid: a2acc519726741a4eb7120cb67e6ae75, type: 2}
+  - {fileID: 11400000, guid: aa0183cf69970924daa29dc0eaa22f93, type: 2}

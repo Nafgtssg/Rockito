@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: 02Dana01
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: 
+  displayName: Dana
   leftSpeaker: {fileID: 0}
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: 
+  dialogText: "\xBFTe comi\xF3 la lengua el gato? \xBFEn qu\xE9 andas peque\xF1ajo?"
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
