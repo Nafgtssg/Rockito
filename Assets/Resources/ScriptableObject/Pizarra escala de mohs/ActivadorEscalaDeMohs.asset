@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0567d6a442311c743a5dbc26441f7405, type: 3}
+  m_Name: ActivadorEscalaDeMohs
+  m_EditorClassIdentifier: 
+  displayName: Object
+  action: interactuar
+  showDisplay: 1
+  interactionSound: {fileID: 0}
+  onInteract: {fileID: 11400000, guid: fe1df37729a349f48949be378c478540, type: 2}
+  onPlayerEnterRange: {fileID: 0}
+  onPlayerExitRange: {fileID: 0}
