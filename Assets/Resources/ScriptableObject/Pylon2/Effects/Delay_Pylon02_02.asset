@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   delayInSeconds: 6
-  effect: {fileID: 11400000, guid: 08c48d2b99860724aa6f9cf82de7d2b3, type: 2}
+  effect: {fileID: 11400000, guid: 19341be9561b3934fac0a9459784544d, type: 2}

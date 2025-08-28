@@ -175,11 +175,13 @@ public class GameManager : MonoBehaviour
         // Actualizar el objeto, no sólo su estado
         InteractableController[] controllers = (InteractableController[])GameObject.FindObjectsOfType<InteractableController>();
         InteractableController fix = controllers.ToList().Find(x => x.internalId == state.internalId);
-        fix.interactable = state.interactable;
-        fix.transform.position = state.position;
-        fix.transform.rotation = state.rotation;
-        fix.transform.localScale = state.scale;
-        fix.gameObject.SetActive(state.available);
+        if (fix != null) {
+            fix.interactable = state.interactable;
+            fix.transform.position = state.position;
+            fix.transform.rotation = state.rotation;
+            fix.transform.localScale = state.scale;
+            fix.gameObject.SetActive(state.available);
+        }
     }
     public void ToggleInteractableState(int id)
     {

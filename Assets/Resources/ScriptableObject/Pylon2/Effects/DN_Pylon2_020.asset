@@ -18,8 +18,7 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Se ha activado el primer pilar del conocimiento.\n\xBFQu\xE9 significa
-    esto?"
+  dialogText: Se ha activado el segundo pilar del conocimiento.
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}

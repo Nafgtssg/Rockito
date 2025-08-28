@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 801c5f8070bb9cc4c9a2410768196408, type: 3}
-  m_Name: Delay_Pylon02_12
+  m_Script: {fileID: 11500000, guid: d33a7f2a7e8607d4d94207cc324f9a55, type: 3}
+  m_Name: Set_PremioEto
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  delayInSeconds: 4
-  effect: {fileID: 11400000, guid: 4283063e97f1f9d4f8b2e39a0e3f7d38, type: 2}
+  effects:
+  - {fileID: 11400000, guid: 691b588fe6b6f21478e8784b9f105a80, type: 2}
+  - {fileID: 11400000, guid: 91cec233555640149ab5eebfc3ccdb23, type: 2}

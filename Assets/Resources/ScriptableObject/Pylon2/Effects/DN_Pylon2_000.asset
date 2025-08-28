@@ -18,7 +18,7 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: No hay manera de sacarlo por la fuerza...
+  dialogText: "\xBFC\xF3mo siquiera lleg\xF3 esto aqu\xED? \xBFC\xF3mo lo sacamos?"
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}

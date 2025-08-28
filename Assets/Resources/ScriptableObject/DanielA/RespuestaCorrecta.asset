@@ -21,6 +21,6 @@ MonoBehaviour:
   dialogText: Gracias por tu ayuda, ahora tu y yo sabemos algo nuevo.
   nextNode: {fileID: 0}
   effect: {fileID: 11400000, guid: 2c5ec8668c0b4614abca43a3c214aa93, type: 2}
-  onEnding: {fileID: 11400000, guid: 9b15ad561e4c1f6468d7834d61ad8678, type: 2}
+  onEnding: {fileID: 11400000, guid: de91678b7bb63494f9ba7d03fe7f4a9a, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

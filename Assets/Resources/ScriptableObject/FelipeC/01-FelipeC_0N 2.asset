@@ -22,6 +22,6 @@ MonoBehaviour:
     y todas juntas forman un sistema vivo. Por ahora ten esto."
   nextNode: {fileID: 0}
   effect: {fileID: 11400000, guid: 3a5cc1f4f4f824f4fbc4d9ceddd5a39d, type: 2}
-  onEnding: {fileID: 11400000, guid: 6634f19bcec227a45879990da9b75b71, type: 2}
+  onEnding: {fileID: 11400000, guid: 80768e0378fd2514f93380f8449e17e4, type: 2}
   choices: []
   choiceText: "Opci\xF3n"
