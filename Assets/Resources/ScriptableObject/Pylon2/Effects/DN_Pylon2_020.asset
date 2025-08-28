@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: DN_Pylon1_010
+  m_Name: DN_Pylon2_020
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: GAIA
+  displayName: 
   leftSpeaker: {fileID: 0}
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: Pilar uno restaurado.
-  nextNode: {fileID: 11400000, guid: 75ab1e1b83be3b346a4687a91f12712b, type: 2}
+  dialogText: "Se ha activado el primer pilar del conocimiento.\n\xBFQu\xE9 significa
+    esto?"
+  nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

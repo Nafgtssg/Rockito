@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 801c5f8070bb9cc4c9a2410768196408, type: 3}
-  m_Name: Delay_Pylon01_10
+  m_Script: {fileID: 11500000, guid: 28b5d8bfc1a82364fb702922bda62e56, type: 3}
+  m_Name: Cine_Pylon2_000
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  delayInSeconds: 1.5
-  effect: {fileID: 11400000, guid: 72af60afeecab174bb98712d23dca457, type: 2}
+  type: 1
+  camPos: {x: 28.75, y: 3, z: 13.5}
+  camRot: {x: 30, y: -50, z: 0}
+  camFOV: 80

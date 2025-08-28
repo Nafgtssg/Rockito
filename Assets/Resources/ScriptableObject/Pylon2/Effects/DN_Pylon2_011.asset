@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: DN_Pylon1_020
+  m_Name: DN_Pylon2_011
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: 
+  displayName: GAIA
   leftSpeaker: {fileID: 0}
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Se ha activado el primer pilar del conocimiento.\n\xBFQu\xE9 significa
-    esto?"
+  dialogText: "Se ha guardado un nuevo fragmento en el Libro. Contin\xFAa tu viaje,
+    Rockito"
   nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 0}
+  onEnding: {fileID: 11400000, guid: f26cb3e68c7f5b341ada34c1091b7743, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

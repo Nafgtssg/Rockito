@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28b5d8bfc1a82364fb702922bda62e56, type: 3}
-  m_Name: Cine_Pylon1_000
+  m_Name: Cine_Pylon2_012
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  type: 1
-  camPos: {x: 28.75, y: 3, z: 13.5}
-  camRot: {x: 30, y: -50, z: 0}
+  type: 3
+  camPos: {x: 36, y: 2, z: 13}
+  camRot: {x: 20, y: -45, z: 0}
   camFOV: 80
