@@ -136509,9 +136509,6 @@ SceneRoots:
   - {fileID: 8802392}
   - {fileID: 1554282699}
   - {fileID: 1541840154}
-<<<<<<< HEAD
-  - {fileID: 512914061}
-=======
   - {fileID: 629849994}
   - {fileID: 357822649}
   - {fileID: 101016106}
@@ -136520,4 +136517,3 @@ SceneRoots:
   - {fileID: 2120117267}
   - {fileID: 1785815406}
   - {fileID: 409240902}
->>>>>>> origin/Nelson
