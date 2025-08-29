@@ -20,5 +20,5 @@ MonoBehaviour:
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
   type: 2
-  icon: {fileID: 876705384, guid: 531f02b3a8717f84a87bb2d09fdba0a3, type: 3}
+  icon: {fileID: 21300000, guid: 6883cfc80171d6343a2b42f7eeddc316, type: 3}
   description: 

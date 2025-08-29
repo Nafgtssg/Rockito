@@ -9,17 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ddff66592ccd04092385150abd2002, type: 3}
-  m_Name: Hierro
+  m_Script: {fileID: 11500000, guid: 633893459de0d0a418bc27840d2c8960, type: 3}
+  m_Name: 00-ActivadorOyarzun
   m_EditorClassIdentifier: 
-  displayName: Hierro
+  displayName: Object
   action: interactuar
   showDisplay: 1
   interactionSound: {fileID: 0}
   onInteract: {fileID: 0}
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
-  type: 2
-  icon: {fileID: 21300000, guid: eb896f54bc0ecaf4ebadc2d2ac10611e, type: 3}
-  description: "La lupa es un objeto muy importante para los ge\xF3logos y mineros,
-    ayuda con la identificaci\xF3n de minerales y rocas. "
+  id: Oyarzun
+  dialog:
+  - {fileID: 11400000, guid: 2a09f994fc28a0647b33f0e5d1ae4639, type: 2}
+  - {fileID: 11400000, guid: 3fe20f86671a04b4f8b91125c4def09b, type: 2}
