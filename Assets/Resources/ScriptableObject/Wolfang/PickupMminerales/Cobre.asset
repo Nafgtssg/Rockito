@@ -16,7 +16,7 @@ MonoBehaviour:
   action: interactuar
   showDisplay: 1
   interactionSound: {fileID: 0}
-  onInteract: {fileID: 11400000, guid: abb2bc65b2452964289a3f970087cdeb, type: 2}
+  onInteract: {fileID: 11400000, guid: d986788b4a841484693065c2131bada5, type: 2}
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
   type: 2
