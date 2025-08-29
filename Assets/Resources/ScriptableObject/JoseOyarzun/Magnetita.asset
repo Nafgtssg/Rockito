@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40ddff66592ccd04092385150abd2002, type: 3}
-  m_Name: Hierro
+  m_Name: Magnetita
   m_EditorClassIdentifier: 
-  displayName: Hierro
+  displayName: Magnetita
   action: interactuar
   showDisplay: 1
   interactionSound: {fileID: 0}
   onInteract: {fileID: 0}
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
-  type: 2
-  icon: {fileID: 21300000, guid: eb896f54bc0ecaf4ebadc2d2ac10611e, type: 3}
-  description: "La lupa es un objeto muy importante para los ge\xF3logos y mineros,
-    ayuda con la identificaci\xF3n de minerales y rocas. "
+  type: 0
+  icon: {fileID: 21300000, guid: 66cb002220c784141816cd5792dff3e9, type: 3}
+  description: "principal mena de hierro para la industria sider\xFArgica. Adem\xE1s,
+    sus propiedades magn\xE9ticas la hacen \xFAtil en aplicaciones tecnol\xF3gicas,
+    como filtros, pigmentos y hasta nanopart\xEDculas para medicina."
