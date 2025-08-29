@@ -22,6 +22,6 @@ MonoBehaviour:
     mi colecci\xF3n! Muchas gracias, ten esto como recompensa."
   nextNode: {fileID: 11400000, guid: b1f047ab3b311b245aa6dd6e038e8ed8, type: 2}
   effect: {fileID: 0}
-  onEnding: {fileID: 11400000, guid: 4a4dd9194d7308848a55c8bb3297346b, type: 2}
+  onEnding: {fileID: 0}
   choices: []
   choiceText: "Opci\xF3n"

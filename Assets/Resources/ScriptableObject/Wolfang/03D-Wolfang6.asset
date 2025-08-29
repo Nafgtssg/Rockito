@@ -18,9 +18,9 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: y esto tambien, espero te sirva.
-  nextNode: {fileID: 0}
-  effect: {fileID: 11400000, guid: 5a9b5d28fed5cd64585a3eb2541520f9, type: 2}
-  onEnding: {fileID: 11400000, guid: a23b29411a2ed244da12eaf39ccc712e, type: 2}
+  dialogText: Y esto tambien, espero te sirva.
+  nextNode: {fileID: 11400000, guid: ad1f07fb8d5effd4083219bc2030eede, type: 2}
+  effect: {fileID: 11400000, guid: a23b29411a2ed244da12eaf39ccc712e, type: 2}
+  onEnding: {fileID: 0}
   choices: []
   choiceText: "Opci\xF3n"

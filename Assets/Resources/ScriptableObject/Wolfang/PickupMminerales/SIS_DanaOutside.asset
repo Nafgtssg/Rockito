@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b02ba3008b2e90c41baadc04b3676bb0, type: 3}
-  m_Name: 01Dana02_07SIS
+  m_Name: SIS_DanaOutside
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   state:
-    internalId: 7400
-    interactable: {fileID: 11400000, guid: 7497f83fdcbc8d0479327fee1f8951bf, type: 2}
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 0}
-    scale: {x: 0, y: 0, z: 0}
-    available: 0
+    internalId: 13
+    interactable: {fileID: 11400000, guid: 6929fab10beddc4448c85a8710f4b5aa, type: 2}
+    position: {x: -1.28, y: -0.31, z: -10.54}
+    rotation: {x: 0, y: 0.9945219, z: 0, w: 0.10452842}
+    scale: {x: 1, y: 1, z: 1}
+    available: 1

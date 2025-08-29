@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: 03D-Wolfang2
+  m_Name: 03D-Wolfang9
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   displayName: Wolfgang
@@ -18,11 +18,9 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Ya que ahora somos amigos, quiero contarte un secreto, busca en el
-    men\xFA de GAIA una hoja de fabricaci\xF3n donde puedes realizar alquimia (je
-    je je)"
-  nextNode: {fileID: 11400000, guid: be8a816ef8a13ee48a7c719ed5aa6afe, type: 2}
-  effect: {fileID: 11400000, guid: 4a4dd9194d7308848a55c8bb3297346b, type: 2}
+  dialogText: "Quiz\xE1s y s\xF3lo quiz\xE1s... T\xFA y tu librajo ese..."
+  nextNode: {fileID: 0}
+  effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []
   choiceText: "Opci\xF3n"
