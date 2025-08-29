@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: 02D-Wolfang3
+  m_Name: 01D-Wolfang
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: Wolfgang.G
+  displayName: "\xBF?"
   leftSpeaker: {fileID: 21300000, guid: 18288f9ef08de27448e3bd275c83b137, type: 3}
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: Ten esto
-  nextNode: {fileID: 11400000, guid: 294dd304374a0d5469682c95f8f1289b, type: 2}
+  dialogText: "\xBFQu\xE9 quieres? Ya te dije que-\n\xBFOh? \xBFVienes a ayudarme
+    entonces?"
+  nextNode: {fileID: 11400000, guid: a53446f8722c46744bae239eaefe5dad, type: 2}
   effect: {fileID: 0}
-  onEnding: {fileID: 11400000, guid: deffda570a719d44a920e9f6ee6eac30, type: 2}
+  onEnding: {fileID: 0}
   choices: []
   choiceText: "Opci\xF3n"

@@ -19,7 +19,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: "\xA1Ah! Oye, \xBFEse es Wolfito? Est\xE1 afuera, anda a hablar con
-    \xE9l cuando tengas un tiempo."
+    \xE9l cuando tengas un tiempo, dile que vienes de mi parte. De seguro se alegra."
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 11400000, guid: ee69f8f18ef83bd43b68b2443d72e2e7, type: 2}

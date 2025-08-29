@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40ddff66592ccd04092385150abd2002, type: 3}
-  m_Name: Plata
+  m_Name: Calcopirita
   m_EditorClassIdentifier: 
-  displayName: Plata
+  displayName: Calcopirita
   action: interactuar
   showDisplay: 1
   interactionSound: {fileID: 0}
-  onInteract: {fileID: 0}
+  onInteract: {fileID: 11400000, guid: abb2bc65b2452964289a3f970087cdeb, type: 2}
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
   type: 2
-  icon: {fileID: 21300000, guid: fe3577fb520c94c41a17f6e246ad1c75, type: 3}
-  description: "Color: Blanco plata, Brillo: Met\xE1lico, Fractura: Astillosa, Dureza:
-    2.5-3"
+  icon: {fileID: 21300000, guid: 260385e997db1114897b8fa479988bef, type: 3}
+  description: "Color: Amarillo lat\xF3n, Brillo: Met\xE1lico, Fractura: concoidea
+    o irregular, Dureza: 3.5 - 4"

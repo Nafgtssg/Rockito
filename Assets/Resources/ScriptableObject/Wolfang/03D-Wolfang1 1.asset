@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: 02D-Wolfang4
+  m_Name: 03D-Wolfang1 1
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: Wolfgang.G
+  displayName: Wolfgang
   leftSpeaker: {fileID: 21300000, guid: 18288f9ef08de27448e3bd275c83b137, type: 3}
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: un poco de esto
-  nextNode: {fileID: 11400000, guid: 0815241919b9b4c4e87e8fb8cc7e6f18, type: 2}
+  dialogText: "Wow!! los has encontrado, por fin podr\xE9 terminar mi colecci\xF3n!,
+    muchas gracias. ten esto como recompensa."
+  nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 11400000, guid: e322f6ece62a89b4095bf868e869c014, type: 2}
+  onEnding: {fileID: 11400000, guid: 4a4dd9194d7308848a55c8bb3297346b, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

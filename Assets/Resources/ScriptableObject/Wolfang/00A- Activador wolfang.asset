@@ -21,7 +21,8 @@ MonoBehaviour:
   onPlayerExitRange: {fileID: 0}
   id: wolfgang
   dialog:
+  - {fileID: 11400000, guid: 2e21023c255648c47b700b8fdd93ab48, type: 2}
   - {fileID: 11400000, guid: b757c3692cd145c47b8f5f080b727a7c, type: 2}
-  - {fileID: 11400000, guid: b757c3692cd145c47b8f5f080b727a7c, type: 2}
+  - {fileID: 11400000, guid: 4fefb314f9203cd48abe1d83c005085b, type: 2}
   - {fileID: 11400000, guid: 084742765f4f08d41b063b25b207921a, type: 2}
   - {fileID: 11400000, guid: f7f2ca5712d86f64387149d18f4e78df, type: 2}

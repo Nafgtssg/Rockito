@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: 00D-Wolfang
+  m_Name: 04D-Wolfang 1
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: "\xBF?"
+  displayName: Wolfgang
   leftSpeaker: {fileID: 21300000, guid: 18288f9ef08de27448e3bd275c83b137, type: 3}
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "\xBFD\xF3nde es que los dej\xE9...?"
-  nextNode: {fileID: 11400000, guid: 93d7f57250a56cc459c6bb6bb33c7879, type: 2}
+  dialogText: Espero esos elementos te ayuden en el futuro
+  nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40ddff66592ccd04092385150abd2002, type: 3}
-  m_Name: Crisocola
+  m_Name: Oro
   m_EditorClassIdentifier: 
-  displayName: Crisocola
+  displayName: Oro
   action: interactuar
   showDisplay: 1
   interactionSound: {fileID: 0}
-  onInteract: {fileID: 0}
+  onInteract: {fileID: 11400000, guid: abb2bc65b2452964289a3f970087cdeb, type: 2}
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
   type: 2
-  icon: {fileID: 21300000, guid: 158393bdd56eea34ba263eb4ca6b5d7e, type: 3}
-  description: "Color: Verde Azulado, Brillo: Met\xE1lico, Fractura: concoide, Dureza:
-    2-4"
+  icon: {fileID: 21300000, guid: 14915f91e48d718488646f7452fc3d04, type: 3}
+  description: "Color: Amarillo, Brillo: Met\xE1lico, Fractura: Astillosa, Dureza:2.5"

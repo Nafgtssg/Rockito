@@ -19,7 +19,7 @@ MonoBehaviour:
   onInteract: {fileID: 0}
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
-  type: 0
+  type: 2
   icon: {fileID: 495709919, guid: 531f02b3a8717f84a87bb2d09fdba0a3, type: 3}
   description: "La lupa es un objeto muy importante para los ge\xF3logos y mineros,
     ayuda con la identificaci\xF3n de minerales y rocas. "

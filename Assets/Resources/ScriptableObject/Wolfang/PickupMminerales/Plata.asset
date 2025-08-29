@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40ddff66592ccd04092385150abd2002, type: 3}
-  m_Name: Cobre
+  m_Name: Plata
   m_EditorClassIdentifier: 
-  displayName: Cobre
+  displayName: Plata
   action: interactuar
   showDisplay: 1
   interactionSound: {fileID: 0}
-  onInteract: {fileID: 0}
+  onInteract: {fileID: 11400000, guid: abb2bc65b2452964289a3f970087cdeb, type: 2}
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
   type: 2
   icon: {fileID: 21300000, guid: fe3577fb520c94c41a17f6e246ad1c75, type: 3}
-  description: "Color: Rojo cobre, Brillo: Met\xE1lico, Fractura: --, Dureza: 3"
+  description: "Color: Blanco plata, Brillo: Met\xE1lico, Fractura: Astillosa, Dureza:
+    2.5-3"

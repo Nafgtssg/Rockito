@@ -8936,6 +8936,12 @@ PrefabInstance:
       propertyPath: internalId
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1715415317149602753, guid: 4197a5778f1062641bfe26322f93827f,
+        type: 3}
+      propertyPath: interactable
+      value: 
+      objectReference: {fileID: 11400000, guid: 719c2aefd32ea534eb4417195c444c2b,
+        type: 2}
     - target: {fileID: 3722674630466802430, guid: 4197a5778f1062641bfe26322f93827f,
         type: 3}
       propertyPath: m_Name
@@ -23190,7 +23196,7 @@ PrefabInstance:
     - target: {fileID: 6258496110999044070, guid: 9fea3f738a721b642b10d0735a3c2ff4,
         type: 3}
       propertyPath: m_Name
-      value: Model (1)
+      value: Model
       objectReference: {fileID: 0}
     - target: {fileID: 6742299452825052508, guid: 9fea3f738a721b642b10d0735a3c2ff4,
         type: 3}
@@ -30456,7 +30462,7 @@ PrefabInstance:
     - target: {fileID: 6258496110999044070, guid: 9fea3f738a721b642b10d0735a3c2ff4,
         type: 3}
       propertyPath: m_Name
-      value: Model (2)
+      value: Model
       objectReference: {fileID: 0}
     - target: {fileID: 6742299452825052508, guid: 9fea3f738a721b642b10d0735a3c2ff4,
         type: 3}
@@ -32575,7 +32581,7 @@ PrefabInstance:
     - target: {fileID: 2753586078313040760, guid: fb50b9aeeb689e6488d473799ff8a893,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.69
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: 2753586078313040760, guid: fb50b9aeeb689e6488d473799ff8a893,
         type: 3}
@@ -47026,7 +47032,7 @@ PrefabInstance:
     - target: {fileID: 6258496110999044070, guid: 9fea3f738a721b642b10d0735a3c2ff4,
         type: 3}
       propertyPath: m_Name
-      value: Model (3)
+      value: Model
       objectReference: {fileID: 0}
     - target: {fileID: 6742299452825052508, guid: 9fea3f738a721b642b10d0735a3c2ff4,
         type: 3}
@@ -80700,7 +80706,7 @@ PrefabInstance:
     - target: {fileID: 6258496110999044070, guid: 9fea3f738a721b642b10d0735a3c2ff4,
         type: 3}
       propertyPath: m_Name
-      value: Model (4)
+      value: Model
       objectReference: {fileID: 0}
     - target: {fileID: 6742299452825052508, guid: 9fea3f738a721b642b10d0735a3c2ff4,
         type: 3}
@@ -133596,6 +133602,12 @@ PrefabInstance:
       propertyPath: internalId
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1715415317149602753, guid: 4197a5778f1062641bfe26322f93827f,
+        type: 3}
+      propertyPath: interactable
+      value: 
+      objectReference: {fileID: 11400000, guid: ba866d9efc2dea8409b5e75794ae97a8,
+        type: 2}
     - target: {fileID: 3722674630466802430, guid: 4197a5778f1062641bfe26322f93827f,
         type: 3}
       propertyPath: m_Name
