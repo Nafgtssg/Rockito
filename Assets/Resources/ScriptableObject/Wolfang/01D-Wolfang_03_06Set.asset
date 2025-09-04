@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: 01D-Wolfang_03_06Set
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: 828f3318baf19b542aa414076f9e142b, type: 2}
+  - {fileID: 11400000, guid: 70940f2169492f94c8078f52958dc0ca, type: 2}
+  - {fileID: 11400000, guid: b48bfff4cf97f58419128670ee71366f, type: 2}
+  - {fileID: 11400000, guid: 0b627dc87f379114b8512000eb819700, type: 2}

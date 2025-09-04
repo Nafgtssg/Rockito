@@ -10,19 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: 01D-Wolfang_03
+  m_Name: DN_Pylon3_020
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: Wolfgang
-  leftSpeaker: {fileID: 21300000, guid: 18288f9ef08de27448e3bd275c83b137, type: 3}
+  displayName: 
+  leftSpeaker: {fileID: 0}
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "S\xE9 que por aqu\xED, en alg\xFAn lado, deje unos minerales que necesito.
-    \xBFMe ayudar\xEDas a encontrarlos?\nKantu deber\xEDa quitar el resto de molestos
-    conos para que te muevas libremente."
+  dialogText: "Se ha activado el tercer pilar del conocimiento... Y sigo sin saber
+    para qu\xE9."
   nextNode: {fileID: 0}
-  effect: {fileID: 11400000, guid: 25e3903539090f243aae7abafca7faa8, type: 2}
+  effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []
   choiceText: "Opci\xF3n"
