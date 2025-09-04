@@ -19,7 +19,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: "Espero LE sirva... \xBFCrees que puedes hacerme un favor, peque\xF1ajo?"
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: d689bd0fb6ce2e64eb386dc31874da51, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

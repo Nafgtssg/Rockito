@@ -18,9 +18,9 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Un respeto, no fuiste dise\xF1ado para esto."
-  nextNode: {fileID: 0}
-  effect: {fileID: 0}
+  dialogText: "Un respeto, que no fuiste dise\xF1ado para esto."
+  nextNode: {fileID: 11400000, guid: e6e6f2db574ae75448dd5bff2ddf997e, type: 2}
+  effect: {fileID: 11400000, guid: 43b3a3a8a803b684cb73777a90c76807, type: 2}
   onEnding: {fileID: 0}
   choices: []
   choiceText: "Opci\xF3n"

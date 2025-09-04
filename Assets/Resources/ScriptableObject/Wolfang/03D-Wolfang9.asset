@@ -19,7 +19,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: "Quiz\xE1s y s\xF3lo quiz\xE1s... T\xFA y tu librajo ese..."
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: 06d805bff2cbb664eb26d01157c98fcd, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

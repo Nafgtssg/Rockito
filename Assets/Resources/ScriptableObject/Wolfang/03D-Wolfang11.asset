@@ -18,7 +18,8 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Quiz\xE1s y s\xF3lo quiz\xE1s... T\xFA y tu librajo ese..."
+  dialogText: "Como quieras. En cualquier caso, estoy seguro de que un buen conocimiento
+    se esconde por all\xED. Jo jo jo..."
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
