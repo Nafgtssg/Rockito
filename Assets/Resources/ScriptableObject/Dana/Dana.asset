@@ -17,9 +17,10 @@ MonoBehaviour:
   showDisplay: 1
   interactionSound: {fileID: 0}
   onInteract: {fileID: 0}
-  onPlayerEnterRange: {fileID: 0}
+  onPlayerEnterRange: {fileID: 11400000, guid: 428a645fc17113547955bacd22180914, type: 2}
   onPlayerExitRange: {fileID: 0}
   id: Dana
   dialog:
   - {fileID: 11400000, guid: c1c0e0c2ea8aa844f8a7e6f141ea7ae1, type: 2}
   - {fileID: 11400000, guid: 6b060f689c9da0c438a1540ae55cbcde, type: 2}
+  - {fileID: 11400000, guid: 71566f1d6410b3144875920262997a68, type: 2}

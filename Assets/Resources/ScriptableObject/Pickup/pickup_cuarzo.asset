@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40ddff66592ccd04092385150abd2002, type: 3}
-  m_Name: Pirita
+  m_Name: pickup_cuarzo
   m_EditorClassIdentifier: 
-  displayName: Object
+  displayName: Cuarzo
   action: interactuar
   showDisplay: 1
   interactionSound: {fileID: 0}
   onInteract: {fileID: 0}
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
-  type: 0
-  icon: {fileID: 0}
-  description: 
+  type: 2
+  icon: {fileID: 21300000, guid: f7e914cb111a1374ba569b5439708d32, type: 3}
+  description: Sample text

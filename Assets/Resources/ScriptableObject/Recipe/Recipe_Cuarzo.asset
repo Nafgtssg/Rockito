@@ -18,4 +18,4 @@ MonoBehaviour:
   second:
     pickup: {fileID: 11400000, guid: ab112938dd206464f9e2c8145498cb03, type: 2}
     amount: 2
-  result: {fileID: 0}
+  result: {fileID: 11400000, guid: 46284fd11c2ad1a47879586f7b8b46bc, type: 2}
