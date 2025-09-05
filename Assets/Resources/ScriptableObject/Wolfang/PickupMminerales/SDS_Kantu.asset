@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28b5d8bfc1a82364fb702922bda62e56, type: 3}
-  m_Name: Cine_Pylon3_000
+  m_Script: {fileID: 11500000, guid: 032236bdcc0056b4d95ea9f81a06ea1f, type: 3}
+  m_Name: SDS_Kantu
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  type: 1
-  camPos: {x: 13.5, y: 2, z: 28}
-  camRot: {x: 15, y: 310, z: 0}
-  camFOV: 80
+  id: KantuInside
+  state: 1

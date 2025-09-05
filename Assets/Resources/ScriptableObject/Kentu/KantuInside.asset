@@ -19,7 +19,9 @@ MonoBehaviour:
   onInteract: {fileID: 0}
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
-  id: KentuInside
+  id: KantuInside
   dialog:
   - {fileID: 11400000, guid: 5bd6dfa08a28f954e8622a6294b4989a, type: 2}
   - {fileID: 11400000, guid: 3ce0417c9f46c7a4fb831aedbd5777d7, type: 2}
+  - {fileID: 11400000, guid: 1557cca5c884d014186361a666dc4669, type: 2}
+  - {fileID: 11400000, guid: f45638d841fb27947883acf7f6c5259b, type: 2}

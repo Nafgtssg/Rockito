@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TP_Cave_ChangeToSS
   m_EditorClassIdentifier: 
   displayName: Object
-  action: CambioEscena
+  action: salir de la cueva
   showDisplay: 1
   interactionSound: {fileID: 0}
   onInteract: {fileID: 11400000, guid: 36f0ba1d8bb3e0e4f9d3b6fa772b9474, type: 2}

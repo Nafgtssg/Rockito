@@ -19459,7 +19459,7 @@ PrefabInstance:
     - target: {fileID: 398068320965531966, guid: fb50b9aeeb689e6488d473799ff8a893,
         type: 3}
       propertyPath: m_Name
-      value: NPCOyarzun
+      value: Oyarzun
       objectReference: {fileID: 0}
     - target: {fileID: 2753586078313040760, guid: fb50b9aeeb689e6488d473799ff8a893,
         type: 3}
@@ -32505,6 +32505,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1043871231}
+    - targetCorrespondingSourceObject: {fileID: 1053175772057487888, guid: c9455369b4f953942afc969d56e5d54e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1043871233}
   m_SourcePrefab: {fileID: 100100000, guid: c9455369b4f953942afc969d56e5d54e, type: 3}
 --- !u!1 &1043871229 stripped
 GameObject:
@@ -32530,7 +32534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 762ee7588cbdfbe4db0436c270f778d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  internalId: 6000
+  internalId: 6001
   interactable: {fileID: 11400000, guid: b1a05733181fb564ea214143b6f52189, type: 2}
   animator: {fileID: 0}
 --- !u!65 &1043871232
@@ -32554,6 +32558,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5, y: 1, z: 0.5}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!135 &1043871233
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043871229}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1049322976
 GameObject:
   m_ObjectHideFlags: 0
@@ -39646,7 +39671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 762ee7588cbdfbe4db0436c270f778d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  internalId: 0
+  internalId: 6610
   interactable: {fileID: 11400000, guid: 0129daf34fd2aa443879943db73c9c6e, type: 2}
   animator: {fileID: 0}
 --- !u!135 &1234831296
