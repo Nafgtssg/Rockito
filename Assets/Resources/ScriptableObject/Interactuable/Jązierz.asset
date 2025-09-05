@@ -9,16 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ddff66592ccd04092385150abd2002, type: 3}
-  m_Name: Cobre
+  m_Script: {fileID: 11500000, guid: 633893459de0d0a418bc27840d2c8960, type: 3}
+  m_Name: "J\u0105zierz"
   m_EditorClassIdentifier: 
-  displayName: Cobre
-  action: interactuar
+  displayName: Object
+  action: hablar
   showDisplay: 1
   interactionSound: {fileID: 0}
-  onInteract: {fileID: 11400000, guid: bc5a2e442b2e6364da9099cf24dde72f, type: 2}
+  onInteract: {fileID: 0}
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
-  type: 2
-  icon: {fileID: 21300000, guid: e4b91b107180d1d4a99bb8400ff0cf86, type: 3}
-  description: "Color: Rojo cobre, Brillo: Met\xE1lico, Fractura: --, Dureza: 3"
+  id: jonzierz
+  dialog:
+  - {fileID: 11400000, guid: c4ac7feeee6a5b54fb78416431e6529b, type: 2}

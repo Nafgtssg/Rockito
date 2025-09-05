@@ -9,14 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b02ba3008b2e90c41baadc04b3676bb0, type: 3}
-  m_Name: 01D-Wolfang_03_03SISCh33
+  m_Script: {fileID: 11500000, guid: 032236bdcc0056b4d95ea9f81a06ea1f, type: 3}
+  m_Name: SDS_Kentu
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  state:
-    internalId: 607
-    interactable: {fileID: 0}
-    position: {x: 28.2549, y: -50, z: 1.9083999}
-    rotation: {x: 0, y: 0, z: 0, w: 0}
-    scale: {x: 1, y: 1, z: 1}
-    available: 0
+  id: KentuInside
+  state: 1

@@ -32531,7 +32531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   internalId: 6000
-  interactable: {fileID: 0}
+  interactable: {fileID: 11400000, guid: b1a05733181fb564ea214143b6f52189, type: 2}
   animator: {fileID: 0}
 --- !u!65 &1043871232
 BoxCollider:
@@ -40280,6 +40280,7 @@ GameObject:
   - component: {fileID: 1259471013}
   - component: {fileID: 1259471012}
   - component: {fileID: 1259471011}
+  - component: {fileID: 1259471014}
   m_Layer: 0
   m_Name: ConosCave01
   m_TagString: Untagged
@@ -40375,6 +40376,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1259471009}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1259471014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259471009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762ee7588cbdfbe4db0436c270f778d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  internalId: 6600
+  interactable: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!1 &1267070705
 GameObject:
   m_ObjectHideFlags: 0
@@ -57856,7 +57872,7 @@ PrefabInstance:
     - target: {fileID: 9019463857728277437, guid: 4197a5778f1062641bfe26322f93827f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 888.55
+      value: 886.07
       objectReference: {fileID: 0}
     - target: {fileID: 9019463857728277437, guid: 4197a5778f1062641bfe26322f93827f,
         type: 3}
@@ -57866,7 +57882,7 @@ PrefabInstance:
     - target: {fileID: 9019463857728277437, guid: 4197a5778f1062641bfe26322f93827f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.28
+      value: 19.93
       objectReference: {fileID: 0}
     - target: {fileID: 9019463857728277437, guid: 4197a5778f1062641bfe26322f93827f,
         type: 3}
@@ -69675,13 +69691,13 @@ MeshFilter:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1587701476}
   - {fileID: 1167648278}
   - {fileID: 292827025}
   - {fileID: 908773508}
   - {fileID: 1768058262}
   - {fileID: 1043871228}
   - {fileID: 1259471010}
-  - {fileID: 1587701476}
   - {fileID: 554068418}
   - {fileID: 1234831298}
   - {fileID: 1188838150}

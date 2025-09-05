@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 633893459de0d0a418bc27840d2c8960, type: 3}
-  m_Name: Kantu
+  m_Name: KantuInside
   m_EditorClassIdentifier: 
   displayName: Object
   action: hablar
@@ -19,5 +19,7 @@ MonoBehaviour:
   onInteract: {fileID: 0}
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
-  id: Kentu
-  dialog: []
+  id: KentuInside
+  dialog:
+  - {fileID: 11400000, guid: 5bd6dfa08a28f954e8622a6294b4989a, type: 2}
+  - {fileID: 11400000, guid: 3ce0417c9f46c7a4fb831aedbd5777d7, type: 2}

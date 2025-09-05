@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: 00-receta
+  m_Name: 110Kantu
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: "Pieszkat\xF3rz"
+  displayName: Kantu
   leftSpeaker: {fileID: 0}
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Sabias que con un Silicio y dos Ox\xEDgeno puedes crear un Cuarzo."
-  nextNode: {fileID: 0}
+  dialogText: Ya veo que lo encontraste, bien.
+  nextNode: {fileID: 11400000, guid: 09a0014bb085acf4fa77e4b898c3e133, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

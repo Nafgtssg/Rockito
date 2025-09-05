@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 00D- RecetaPirita
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: 
+  displayName: Walerzan
   leftSpeaker: {fileID: 0}
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}

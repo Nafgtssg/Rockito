@@ -16,7 +16,7 @@ MonoBehaviour:
   state:
     internalId: 608
     interactable: {fileID: 0}
-    position: {x: 0, y: -20, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 0}
+    position: {x: 1.1978564, y: -50, z: 11.038607}
+    rotation: {x: 0, y: 0.58476657, z: 0, w: 0.81120163}
     scale: {x: 1, y: 1, z: 1}
     available: 0
