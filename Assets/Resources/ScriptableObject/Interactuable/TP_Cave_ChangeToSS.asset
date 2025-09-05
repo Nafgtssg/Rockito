@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0567d6a442311c743a5dbc26441f7405, type: 3}
-  m_Name: Cambio de escena
+  m_Name: TP_Cave_ChangeToSS
   m_EditorClassIdentifier: 
   displayName: Object
   action: CambioEscena
