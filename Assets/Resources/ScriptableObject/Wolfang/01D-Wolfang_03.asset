@@ -19,9 +19,10 @@ MonoBehaviour:
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: "S\xE9 que por aqu\xED, en alg\xFAn lado, deje unos minerales que necesito.
-    \xBFMe ayudar\xEDas a encontrarlos?"
+    \xBFMe ayudar\xEDas a encontrarlos?\nKantu deber\xEDa quitar el resto de molestos
+    conos para que te muevas libremente."
   nextNode: {fileID: 0}
-  effect: {fileID: 11400000, guid: 828f3318baf19b542aa414076f9e142b, type: 2}
-  onEnding: {fileID: 0}
+  effect: {fileID: 0}
+  onEnding: {fileID: 11400000, guid: 25e3903539090f243aae7abafca7faa8, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

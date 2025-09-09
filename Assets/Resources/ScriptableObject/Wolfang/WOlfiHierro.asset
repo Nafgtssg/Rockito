@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: WOlfiHierro
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  pickup: {fileID: 11400000, guid: ac74d13ec21ec4745a35ca1af50cb979, type: 2}
+  pickup: {fileID: 11400000, guid: 90dfe11bf71bcf041b2bbbeb07e71067, type: 2}

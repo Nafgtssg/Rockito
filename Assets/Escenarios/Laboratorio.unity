@@ -12292,7 +12292,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565483981}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
@@ -16393,6 +16393,8 @@ SceneRoots:
   - {fileID: 1565483986}
   - {fileID: 1143558446}
   - {fileID: 739494467}
+  - {fileID: 1836000413}
+  - {fileID: 491855337}
   - {fileID: 10760447}
   - {fileID: 1077032245}
   - {fileID: 835147974}
@@ -16420,5 +16422,3 @@ SceneRoots:
   - {fileID: 361141836}
   - {fileID: 1745376042}
   - {fileID: 1400442599}
-  - {fileID: 491855337}
-  - {fileID: 1836000413}

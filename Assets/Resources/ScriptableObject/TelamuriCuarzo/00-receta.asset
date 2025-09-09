@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 00-receta
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: 
+  displayName: "Pieszkat\xF3rz"
   leftSpeaker: {fileID: 0}
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}

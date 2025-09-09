@@ -22,7 +22,7 @@ MonoBehaviour:
     men\xFA de GAIA una hoja de fabricaci\xF3n donde puedes realizar alquimia (je
     je je)"
   nextNode: {fileID: 11400000, guid: be8a816ef8a13ee48a7c719ed5aa6afe, type: 2}
-  effect: {fileID: 0}
+  effect: {fileID: 11400000, guid: 4a4dd9194d7308848a55c8bb3297346b, type: 2}
   onEnding: {fileID: 0}
   choices: []
   choiceText: "Opci\xF3n"

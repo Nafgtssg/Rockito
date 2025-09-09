@@ -18,7 +18,7 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Kentu, que sorpresa ver que est\xE1s libre otra vez. \xBFNo te gust\xF3
+  dialogText: "Kantu, que sorpresa ver que est\xE1s libre otra vez. \xBFNo te gust\xF3
     tu jaulita?"
   nextNode: {fileID: 0}
   effect: {fileID: 0}

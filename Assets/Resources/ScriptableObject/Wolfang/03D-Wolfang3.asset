@@ -20,7 +20,7 @@ MonoBehaviour:
   pitchVariation: 0
   dialogText: Ten esto.
   nextNode: {fileID: 11400000, guid: 294dd304374a0d5469682c95f8f1289b, type: 2}
-  effect: {fileID: 0}
-  onEnding: {fileID: 11400000, guid: deffda570a719d44a920e9f6ee6eac30, type: 2}
+  effect: {fileID: 11400000, guid: deffda570a719d44a920e9f6ee6eac30, type: 2}
+  onEnding: {fileID: 0}
   choices: []
   choiceText: "Opci\xF3n"
