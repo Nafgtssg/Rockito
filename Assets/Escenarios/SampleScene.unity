@@ -136001,6 +136001,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rockito Final
       objectReference: {fileID: 0}
+    - target: {fileID: 6568813684902013870, guid: 1c36bfbcd8426054ba2166219c71ec48,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.005
+      objectReference: {fileID: 0}
     - target: {fileID: 8379872958161653425, guid: 1c36bfbcd8426054ba2166219c71ec48,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
