@@ -96,11 +96,13 @@ public class InteractableController : MonoBehaviour
                     Destroy(gameObject);
                 }
             }
+            /*
             else if (interactable is DialogTrigger)
             {
                 transform.LookAt(PlayerController.player.transform.position, Vector3.up);
                 transform.Rotate(0f, 180f, 0f, Space.Self);
             }
+            */
         }
     }
 }

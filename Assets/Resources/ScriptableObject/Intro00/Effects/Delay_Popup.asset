@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Delay_Popup
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  delayInSeconds: 0
-  effect: {fileID: 0}
+  delayInSeconds: 1
+  effect: {fileID: 11400000, guid: 498513f5b999fc343a48924bc83705e8, type: 2}

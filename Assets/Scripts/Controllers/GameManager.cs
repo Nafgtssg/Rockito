@@ -479,12 +479,14 @@ public class GameManager : MonoBehaviour
         crafName.text = invName.text = item.displayName;
         invDescription.text = item.description;
         invImage.sprite = item.icon;
+        invImage.color = new Color(1, 1, 1, 1);
     }
     void ClearItemDisplay()
     {
         invName.text = stateBook switch { 0 => "Inventario", 1 => "Objetos Llave", 2 => "Rocas y Minerales", _ => "_" };
         invDescription.text = "Posa el cursor sobre un objeto para ver sus detalles.";
         invImage.sprite = null;
+        invImage.color = new Color(1, 1, 1, 0);
     }
     public void SelectItem(Pickup item)
     {

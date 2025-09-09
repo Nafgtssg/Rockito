@@ -18,4 +18,4 @@ MonoBehaviour:
   description: Pulsa las teclas WASD o las flechas direccionales para empezar a moverte.
   sprite: {fileID: 21300000, guid: d2bf9b21649ea6a4191fa47eccea2a7d, type: 3}
   size: {x: 642, y: 373}
-  onEnding: {fileID: 0}
+  onEnding: {fileID: 11400000, guid: bc81ab5b23aa36c40b7da704b3fdfe4c, type: 2}
