@@ -18,10 +18,9 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Se ha guardado un nuevo fragmento en el Libro. Contin\xFAa tu viaje,
-    Rockito"
+  dialogText: "Has o\xEDdo el latido interno del planeta. Contin\xFAa tu viaje, Rockito."
   nextNode: {fileID: 0}
-  effect: {fileID: 0}
+  effect: {fileID: 11400000, guid: 5bfe088d0d0fb8448a648e5aee5c2a42, type: 2}
   onEnding: {fileID: 11400000, guid: e7b8ce94b3324c74e8672927e70fb906, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

@@ -22,6 +22,6 @@ MonoBehaviour:
     \xE9l cuando tengas un tiempo, dile que vienes de mi parte. De seguro se alegra."
   nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 11400000, guid: ee69f8f18ef83bd43b68b2443d72e2e7, type: 2}
+  onEnding: {fileID: 11400000, guid: 90d6ce01871d1e34b830ab363a825b8d, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

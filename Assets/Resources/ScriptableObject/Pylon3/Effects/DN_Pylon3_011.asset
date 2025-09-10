@@ -18,10 +18,9 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Se ha guardado un nuevo fragmento en el Libro. Contin\xFAa tu viaje,
-    Rockito"
+  dialogText: "Otro fragmento se ha guardado en el Libro. El viaje contin\xFAa, Rockito."
   nextNode: {fileID: 0}
-  effect: {fileID: 0}
+  effect: {fileID: 11400000, guid: ab778e1a3f7e5a542ad060ee4754a3c9, type: 2}
   onEnding: {fileID: 11400000, guid: 7f4c3ae889905234c9e70894cb91a01b, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

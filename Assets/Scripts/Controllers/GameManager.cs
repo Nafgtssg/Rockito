@@ -319,7 +319,9 @@ public class GameManager : MonoBehaviour
         else stopGameLoadingText.text = "Desactivar Cargado";
     }
     public void QuitGame() => Application.Quit();
+
     /* UI STUFF */
+
     void OpenBook()
     {
         isBookOpen = true;
