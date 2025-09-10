@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     private const string SAVE_FOLDER = "Saves";
     private const string saveName = "save";
     private const string SAVE_EXTENSION = ".gaia";
+    public bool canUseFlashlight = false;
     [Header("UI Stuff")]
     public GameObject book;
     public Animator bookAnimator;
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
     public int stateBookIncrement = 5;
     public GameObject gameHints;
     public GameObject bookHints;
+    public GameObject flashlightHint;
     public GameObject inventoryButtons;
     public GameObject menuButtons;
     public GameObject craftingButtons;
@@ -316,6 +318,7 @@ public class GameManager : MonoBehaviour
         if (stopGameLoading) stopGameLoadingText.text = "Activar Cargado";
         else stopGameLoadingText.text = "Desactivar Cargado";
     }
+    public void QuitGame() => Application.Quit();
     /* UI STUFF */
     void OpenBook()
     {

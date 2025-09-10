@@ -6,23 +6,34 @@ using UnityEngine;
 public class SetBool : Effect
 {
     public StateBool state;
+    public bool value = true;
     public override void Execute()
     {
         if (validator != null)
         {
             if (validator.Validate())
             {
-                PlayerController.player.canMove = false;
+                DoTheThing();
             }
         }
         else
         {
-            PlayerController.player.canMove = false;
+            DoTheThing();
+        }
+    }
+    public void DoTheThing()
+    {
+        switch (state)
+        {
+            case StateBool.Flashlight:
+                GameManager.manager.canUseFlashlight = value;
+                GameManager.manager.flashlightHint.SetActive(value);
+                break;
         }
     }
 }
 
 public enum StateBool
 {
-    
+    Flashlight
 }

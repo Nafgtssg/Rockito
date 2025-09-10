@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviour
     public GameObject flashlight;
     public GameObject topLight;
     public bool flashlightOn = false;
-    public Validator canUseFlashlight;
 
     void Awake() {
         if (player != null && player != this) Destroy(gameObject);
@@ -68,12 +67,10 @@ public class PlayerController : MonoBehaviour
             // Jump input
             if (Input.GetButtonDown("Jump") && isGrounded)
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            if (Input.GetKeyDown(KeyCode.F) && canUseFlashlight != null) {
-                if (canUseFlashlight.Validate()) {
-                    flashlightOn = !flashlightOn;
-                    flashlight.SetActive(flashlightOn);
-                    topLight.SetActive(flashlightOn);
-                }
+            if (Input.GetKeyDown(KeyCode.F) && GameManager.manager.canUseFlashlight) {
+                flashlightOn = !flashlightOn;
+                flashlight.SetActive(flashlightOn);
+                topLight.SetActive(flashlightOn);
             }
         } else {
             movement = Vector3.zero;

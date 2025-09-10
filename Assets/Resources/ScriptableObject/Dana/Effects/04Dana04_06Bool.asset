@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28b5d8bfc1a82364fb702922bda62e56, type: 3}
-  m_Name: 15Intro02_02CineEnd
+  m_Script: {fileID: 11500000, guid: cb4ce0102586cc048bcfb2854c6c8e4d, type: 3}
+  m_Name: 04Dana04_06Bool
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  type: 3
-  camPos: {x: 0.5, y: 2.5, z: -46.83}
-  camRot: {x: 25, y: 300, z: 0}
-  camFOV: 80
+  state: 0
+  value: 1
