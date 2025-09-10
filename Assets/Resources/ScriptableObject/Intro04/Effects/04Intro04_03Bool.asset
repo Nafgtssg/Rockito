@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb4ce0102586cc048bcfb2854c6c8e4d, type: 3}
-  m_Name: 04Dana04_06Bool
+  m_Name: 04Intro04_03Bool
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   state: 0

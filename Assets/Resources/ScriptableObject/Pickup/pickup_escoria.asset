@@ -20,6 +20,6 @@ MonoBehaviour:
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
   type: 2
-  icon: {fileID: 1303964368, guid: 531f02b3a8717f84a87bb2d09fdba0a3, type: 3}
+  icon: {fileID: 829839399, guid: ca8c5af10e0cb8f41aa482ff6e03008b, type: 3}
   description: "Sustancia v\xEDtrea que sobrenada en el crisol de los hornos de fundir
     metales, y procede de la parte menos pura de estos unida con las gangas y fundentes."

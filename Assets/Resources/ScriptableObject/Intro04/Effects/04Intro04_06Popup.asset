@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0567d6a442311c743a5dbc26441f7405, type: 3}
-  m_Name: Intro04
+  m_Script: {fileID: 11500000, guid: 80290fc34e7938f4ca38258137ca383e, type: 3}
+  m_Name: 04Intro04_06Popup
   m_EditorClassIdentifier: 
-  displayName: Object
-  action: interactuar
-  showDisplay: 0
-  interactionSound: {fileID: 0}
-  onInteract: {fileID: 0}
-  onPlayerEnterRange: {fileID: 0}
-  onPlayerExitRange: {fileID: 0}
+  validator: {fileID: 0}
+  type: 1
+  title: 
+  description: 
+  sprite: {fileID: 21300000, guid: ab69aafc222a82e4d9ba4f178a198d94, type: 3}
+  size: {x: 1920, y: 1080}
+  onEnding: {fileID: 0}
