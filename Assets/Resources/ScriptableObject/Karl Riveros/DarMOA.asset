@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25b42d4370562c946a730d73f3a80e9f, type: 3}
-  m_Name: DarStickerSusanne
+  m_Name: DarMOA
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  pickup: {fileID: 11400000, guid: 3601d2d036fe1e8468add75ab4658e27, type: 2}
+  pickup: {fileID: 11400000, guid: 73ef1f353d3a0fd4097cd35933ca870c, type: 2}

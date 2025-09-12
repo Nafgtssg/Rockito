@@ -10,18 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: 00-SusanneE0D7
+  m_Name: 00-CarolsRuizD4
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: Susanne
+  displayName: Carlos Ruiz
   leftSpeaker: {fileID: 0}
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: Ahora con lo que te he contado, intenta emparejar el tipo de deposito
-    con su ambiente correspondiente.
-  nextNode: {fileID: 0}
+  dialogText: "Los minerales estrat\xE9gicos son importantes para apoyar fines industriales,
+    militares o comerciales de vital importancia para el Pa\xEDs. Una de sus caracter\xEDsticas
+    es la baja concentraci\xF3n que se encuentra en la naturaleza y la existencia
+    de pocos dep\xF3sitos conocidos."
+  nextNode: {fileID: 11400000, guid: 444a8852f61109a48a8732f15b3dad52, type: 2}
   effect: {fileID: 0}
-  onEnding: {fileID: 11400000, guid: 990f6fbab38bf184c96670a8660ffc88, type: 2}
+  onEnding: {fileID: 0}
   choices: []
   choiceText: "Opci\xF3n"

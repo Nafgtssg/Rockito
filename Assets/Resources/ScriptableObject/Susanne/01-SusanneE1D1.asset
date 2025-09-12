@@ -18,9 +18,9 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: Hola amiguito, veo que has llegado bastante lejos. Mi nombre es Susanne
-    Griem, soy profesora de la Universidad de Atacama.
-  nextNode: {fileID: 11400000, guid: e5e20e9174103e74baeb0b866807ac99, type: 2}
+  dialogText: Recuerda todo lo que haz aprendido, te podra ayudar mas adelante o
+    en un futuro lejano.
+  nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

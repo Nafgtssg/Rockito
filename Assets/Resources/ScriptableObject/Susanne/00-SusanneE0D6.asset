@@ -21,7 +21,7 @@ MonoBehaviour:
   dialogText: "Un Skarn es un dep\xF3sito formado en un Ambiente Metam\xF3rfico (de
     contacto). Formado en la aureola de contacto de secuencias carbonatadas intruidas
     por granitoides"
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: 4e352c33f7e282d4e8362d3301507fd4, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

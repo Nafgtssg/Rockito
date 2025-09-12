@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40ddff66592ccd04092385150abd2002, type: 3}
-  m_Name: StickerSusanne
+  m_Name: MisteriosoObjetoAncestral
   m_EditorClassIdentifier: 
-  displayName: Susanne Griem-Klee
+  displayName: Misterioso Objeto Ancestral
   action: interactuar
   showDisplay: 1
   interactionSound: {fileID: 0}
   onInteract: {fileID: 0}
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
-  type: 1
-  icon: {fileID: 21300000, guid: f020e51310465d444abbd41f82290c8a, type: 3}
-  description: " Ge\xF3loga, investigadora y docente de la Universidad de Atacama
-    en las carreras de Geolog\xEDa y de Ingenier\xEDa Civil en Minas."
+  type: 2
+  icon: {fileID: 21300000, guid: 9b91db5d54de1b149839f1660651647e, type: 3}
+  description: Este es un misterioso objeto ancestral

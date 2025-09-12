@@ -22,4 +22,4 @@ MonoBehaviour:
   id: Susanne
   dialog:
   - {fileID: 11400000, guid: f7c5e7ad85022204187f103158b2a263, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 80e8c13f49aaa354bb0ea147a338239d, type: 2}

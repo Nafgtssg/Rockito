@@ -9,17 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ddff66592ccd04092385150abd2002, type: 3}
-  m_Name: StickerSusanne
+  m_Script: {fileID: 11500000, guid: 633893459de0d0a418bc27840d2c8960, type: 3}
+  m_Name: 00-CarlosRuiz
   m_EditorClassIdentifier: 
-  displayName: Susanne Griem-Klee
+  displayName: Object
   action: interactuar
   showDisplay: 1
   interactionSound: {fileID: 0}
   onInteract: {fileID: 0}
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
-  type: 1
-  icon: {fileID: 21300000, guid: f020e51310465d444abbd41f82290c8a, type: 3}
-  description: " Ge\xF3loga, investigadora y docente de la Universidad de Atacama
-    en las carreras de Geolog\xEDa y de Ingenier\xEDa Civil en Minas."
+  id: CarlosRuiz
+  dialog:
+  - {fileID: 11400000, guid: 25bb242852198a5429979bc09da146e3, type: 2}
