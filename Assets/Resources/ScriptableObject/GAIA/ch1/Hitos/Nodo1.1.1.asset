@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
+  m_Name: Nodo1.1.1
+  m_EditorClassIdentifier: 
+  validator: {fileID: 0}
+  displayName: GAIA
+  leftSpeaker: {fileID: 0}
+  rightSpeaker: {fileID: 0}
+  sound: {fileID: 0}
+  pitchVariation: 0
+  dialogText: "La geolog\xEDa se ha construido sobre principios que nos permiten
+    ordenar el tiempo, interpretar los estratos y comprender la historia de la Tierra.
+    Vamos a recorrer algunos de los m\xE1s importantes."
+  nextNode: {fileID: 0}
+  effect: {fileID: 0}
+  onEnding: {fileID: 0}
+  choices:
+  - {fileID: 11400000, guid: 040b6d9bca0aa334eb8a345c9e29f697, type: 2}
+  - {fileID: 11400000, guid: c6376c71069bd8f48b9e12ce9ad47d0a, type: 2}
+  - {fileID: 11400000, guid: a2c3fbc9f2e46ed4c8cc5a63f63cd2a0, type: 2}
+  - {fileID: 11400000, guid: 7c314d2bb710a144eba032bb121b3cc3, type: 2}
+  - {fileID: 11400000, guid: b2f9edcba1aa7a94aa3bf6c6503e4248, type: 2}
+  - {fileID: 0}
+  choiceText: "Opci\xF3n"
