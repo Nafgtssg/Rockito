@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33a7f2a7e8607d4d94207cc324f9a55, type: 3}
   m_Name: Set_Pylon4_01
   m_EditorClassIdentifier: 
-  validator: {fileID: 11400000, guid: d3cf02f2e280e3b46963f2ac79b72c26, type: 2}
+  validator: {fileID: 11400000, guid: f280e7337b1dffe4b9876294a0a513ba, type: 2}
   effects:
-  - {fileID: 11400000, guid: f93d71b58d6cf524890ddd6c06055334, type: 2}
-  - {fileID: 11400000, guid: 6ab2a45a550f2174e97c8a294622c5dd, type: 2}
-  - {fileID: 11400000, guid: 883977f00dd0128418f4f6b6be02be64, type: 2}
-  - {fileID: 11400000, guid: 7f136ec66d414e040892203075653a37, type: 2}
-  - {fileID: 11400000, guid: 0b3686f775d5e4a4bb6574128d4832c1, type: 2}
-  - {fileID: 11400000, guid: fd21dcc5feb19444d9af2a03e5519047, type: 2}
+  - {fileID: 11400000, guid: 7997831730872ff45bde945f8204773c, type: 2}
+  - {fileID: 11400000, guid: f4cd3ce93a1fd2a479f969db2f692528, type: 2}
+  - {fileID: 11400000, guid: b95515762019b30488b88fa504304d06, type: 2}
+  - {fileID: 11400000, guid: 7f4987bf63cec0f449aa012e714bbd47, type: 2}
+  - {fileID: 11400000, guid: 094a6dbb8fef5d944ba29351483b51b5, type: 2}
+  - {fileID: 11400000, guid: 0e4dc6ef48cccf049b6e72b91c1e1822, type: 2}

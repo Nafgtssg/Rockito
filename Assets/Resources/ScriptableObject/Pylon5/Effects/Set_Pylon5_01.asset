@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d33a7f2a7e8607d4d94207cc324f9a55, type: 3}
+  m_Name: Set_Pylon5_01
+  m_EditorClassIdentifier: 
+  validator: {fileID: 0}
+  effects:
+  - {fileID: 11400000, guid: 0a2c4f5821704aa4cb5120e536fae4ad, type: 2}
+  - {fileID: 11400000, guid: 2dd88889d05c57c48a09be041f2a8881, type: 2}
+  - {fileID: 11400000, guid: 19b5096df99f34f4e822fd683de69323, type: 2}
+  - {fileID: 11400000, guid: 4ac7044b9e2cac54db60338fd1bdf3c2, type: 2}
+  - {fileID: 11400000, guid: 306c9455600813549b54e1b83acce6a6, type: 2}
+  - {fileID: 11400000, guid: 90b82d388eaf8a449875cb538f7fead6, type: 2}
+  - {fileID: 11400000, guid: ca7b2c631c665cd4ea30058dfeec0d9d, type: 2}
+  - {fileID: 11400000, guid: 6068c9fb7bc4bcc4c9f4f8badf6d15a1, type: 2}

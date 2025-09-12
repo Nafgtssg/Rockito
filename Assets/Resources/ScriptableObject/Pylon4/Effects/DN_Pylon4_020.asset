@@ -18,8 +18,8 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Se ha activado el tercer pilar del conocimiento... Y sigo sin saber
-    para qu\xE9."
+  dialogText: "Un cuarto pilar se ha activado, esta vez bajo tierra. \xBFPero es
+    realmente conocimiento lo que hace que emerjan de las profundidades?"
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}

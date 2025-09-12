@@ -10,18 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: DN_Pylon4_011
+  m_Name: "01Fa\u0142ku\u014404"
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: GAIA
+  displayName: "Fa\u0142ku\u0144"
   leftSpeaker: {fileID: 0}
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: Pese a las tinieblas, el conocimiento brilla con intensidad. Otro fragmento
-    se ha guardado en el Libro. Sigue adelante, Rockito.
-  nextNode: {fileID: 0}
-  effect: {fileID: 11400000, guid: 61fe47d0f891fff41a3ad81b391ce4dc, type: 2}
-  onEnding: {fileID: 11400000, guid: 6f673211dd42d0b4996ee7f5299c7407, type: 2}
+  dialogText: "\xBFPrecisamente a esta hora?"
+  nextNode: {fileID: 11400000, guid: b02a05c3c5db624468130bb236d49439, type: 2}
+  effect: {fileID: 0}
+  onEnding: {fileID: 0}
   choices: []
   choiceText: "Opci\xF3n"
