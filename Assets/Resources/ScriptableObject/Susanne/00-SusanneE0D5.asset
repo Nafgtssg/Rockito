@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
+  m_Name: 00-SusanneE0D5
+  m_EditorClassIdentifier: 
+  validator: {fileID: 0}
+  displayName: Susanne
+  leftSpeaker: {fileID: 0}
+  rightSpeaker: {fileID: 0}
+  sound: {fileID: 0}
+  pitchVariation: 0
+  dialogText: "Los Lavaderos son acumulaciones de sustancias en el Ambiente Sedimentario.
+    Especialmente de minerales pesados y/o muy duros que pueden acumularse en algunos
+    sectores. Generalmente el transporte del agua y viento pueden provocar una acumulaci\xF3n
+    sedimentaria."
+  nextNode: {fileID: 11400000, guid: a663d53a4b2271741851b7a01f3548b3, type: 2}
+  effect: {fileID: 0}
+  onEnding: {fileID: 0}
+  choices: []
+  choiceText: "Opci\xF3n"
