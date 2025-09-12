@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2401089903455081163}
   serializedVersion: 2
   m_LocalRotation: {x: 0.012470262, y: 0.7534715, z: 0.004874803, w: -0.65734434}
-  m_LocalPosition: {x: 0.33428624, y: 0.79, z: 0.41531187}
+  m_LocalPosition: {x: -0.209, y: 0.215, z: -0.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -145,7 +145,7 @@ Transform:
   m_GameObject: {fileID: 4077370169251918916}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.57535577, z: -0, w: -0.8179032}
-  m_LocalPosition: {x: -0.40292132, y: 1.11, z: 0.11691475}
+  m_LocalPosition: {x: -0.71, y: 1.11, z: -0.084}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -818,7 +818,6 @@ MonoBehaviour:
   flashlight: {fileID: 2401089903455081163}
   topLight: {fileID: 4077370169251918916}
   flashlightOn: 0
-  canUseFlashlight: {fileID: 11400000, guid: 6190571704444874c9f0248c5cb72a2d, type: 2}
 --- !u!65 &5541397020991298782
 BoxCollider:
   m_ObjectHideFlags: 0
