@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6874f8492c02f94188fc879143b38ff, type: 3}
-  m_Name: HasIrene
+  m_Script: {fileID: 11500000, guid: 28b5d8bfc1a82364fb702922bda62e56, type: 3}
+  m_Name: Cine_Pylon6_001
   m_EditorClassIdentifier: 
-  negation: 0
-  type: 1
-  item: {fileID: 11400000, guid: 0b1390ff09393c24990d239ec368f482, type: 2}
+  validator: {fileID: 0}
+  type: 2
+  camPos: {x: 0, y: 0, z: 0}
+  camRot: {x: 0, y: 0, z: 0}
+  camFOV: 80

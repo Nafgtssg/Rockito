@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b02ba3008b2e90c41baadc04b3676bb0, type: 3}
-  m_Name: SIS_Pylon5_Usable
+  m_Name: SIS_ConosCueva8
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   state:
-    internalId: 6901
-    interactable: {fileID: 11400000, guid: b1596e7ed128f5d40b8341ca6d68597e, type: 2}
-    position: {x: 935.0631, y: 1.4, z: 175.32732}
-    rotation: {x: 0.49999997, y: -0.49999997, z: -0.49999997, w: -0.49999997}
-    scale: {x: 623.74603, y: 623.74603, z: 623.746}
+    internalId: 6601
+    interactable: {fileID: 0}
+    position: {x: -0.02, y: -50, z: -45.92}
+    rotation: {x: 0.5702424, y: -0.41811907, z: -0.41811907, w: -0.5702424}
+    scale: {x: 1, y: 1, z: 1}
     available: 1

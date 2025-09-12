@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6874f8492c02f94188fc879143b38ff, type: 3}
-  m_Name: HasIrene
+  m_Script: {fileID: 11500000, guid: 25b42d4370562c946a730d73f3a80e9f, type: 3}
+  m_Name: Dar_Pylon6
   m_EditorClassIdentifier: 
-  negation: 0
-  type: 1
-  item: {fileID: 11400000, guid: 0b1390ff09393c24990d239ec368f482, type: 2}
+  validator: {fileID: 0}
+  pickup: {fileID: 11400000, guid: f629bd1d754a81043965fd68fc21aeaa, type: 2}

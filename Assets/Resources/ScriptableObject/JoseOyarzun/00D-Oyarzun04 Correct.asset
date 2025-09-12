@@ -21,6 +21,6 @@ MonoBehaviour:
   dialogText: Muy bien hecho ten este mineral como premio por tu conocimiento.
   nextNode: {fileID: 0}
   effect: {fileID: 11400000, guid: 8d514c80f514e4140ad44516d8248b93, type: 2}
-  onEnding: {fileID: 11400000, guid: ad1927bd6ca6c4b47a12a8008fd7ec38, type: 2}
+  onEnding: {fileID: 11400000, guid: b15e77129a982db48aafa09d20ae9cde, type: 2}
   choices: []
   choiceText: "Opci\xF3n"
