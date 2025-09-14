@@ -18,8 +18,8 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "El cuarto pilar, ba\xF1ado por uno sobrenatural, pero c\xE1lido haz
-    de luz..."
+  dialogText: "Yace aqu\xED el sexto pilar... Una m\xEDstica e irreal iluminaci\xF3n
+    ba\xF1a el ambiente."
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}

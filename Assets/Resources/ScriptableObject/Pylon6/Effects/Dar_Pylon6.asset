@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Dar_Pylon6
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  pickup: {fileID: 11400000, guid: f629bd1d754a81043965fd68fc21aeaa, type: 2}
+  pickup: {fileID: 11400000, guid: f1bd3297e12200d41a21b8265559fabc, type: 2}

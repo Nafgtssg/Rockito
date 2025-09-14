@@ -18,8 +18,7 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Un cuarto pilar se ha activado, esta vez bajo tierra. \xBFPero es
-    realmente conocimiento lo que hace que emerjan de las profundidades?"
+  dialogText: "Este era el \xFAltimo... \xBFHuh? \xBFAhora qu\xE9?"
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
