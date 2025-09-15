@@ -19,7 +19,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: Pilar seis restaurado.
-  nextNode: {fileID: 11400000, guid: 1a4e9ec2cad2d3a468f228695398e638, type: 2}
+  nextNode: {fileID: 11400000, guid: 9ea6ba634503c04479d7d13267a0f1e7, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

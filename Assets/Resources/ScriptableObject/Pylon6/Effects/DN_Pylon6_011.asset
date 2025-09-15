@@ -21,7 +21,7 @@ MonoBehaviour:
   dialogText: "Se ha guardado el \xFAltimo fragmento en el Libro. Ahora\u2026 Camina
     el final de tu viaje, Rockito."
   nextNode: {fileID: 0}
-  effect: {fileID: 11400000, guid: 61fe47d0f891fff41a3ad81b391ce4dc, type: 2}
-  onEnding: {fileID: 11400000, guid: 6f673211dd42d0b4996ee7f5299c7407, type: 2}
+  effect: {fileID: 11400000, guid: 2ed03026398c6c84f89b5fda11279990, type: 2}
+  onEnding: {fileID: 11400000, guid: 34d6779434cac474cba5fd5c9294a664, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

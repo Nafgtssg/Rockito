@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   state:
-    internalId: 6900
-    interactable: {fileID: 11400000, guid: 71a37093f12865942a5b7178678f219d, type: 2}
+    internalId: 6902
+    interactable: {fileID: 11400000, guid: e52ec52bba6f4a44d875ffc83bfbee8c, type: 2}
     position: {x: 877.09, y: 0.3, z: 35.82}
     rotation: {x: 0.57073826, y: -0.41744196, z: -0.41744196, w: -0.57073826}
     scale: {x: 623.7459, y: 623.7459, z: 623.746}

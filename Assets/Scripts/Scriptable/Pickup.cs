@@ -12,6 +12,8 @@ public class Pickup : Interactable
     public Sprite icon;
     [Tooltip("Descripción del objeto dentro del inventario.")]
     [TextArea] public string description;
+    [Tooltip("Efecto que se activa cuando este objeto es fabricado.")]
+    public Effect onCraft;
     public override void Interact()
     {
         GameManager.manager.recievedAnimator.SetTrigger("appear");

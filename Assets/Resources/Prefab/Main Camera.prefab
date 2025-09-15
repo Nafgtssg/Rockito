@@ -6107,6 +6107,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 526108086788be4438a8bb6e238d4510, type: 2}
   - {fileID: 11400000, guid: 4759072a04672c64988e404cdc29fb86, type: 2}
   - {fileID: 11400000, guid: 2a4cf2e129abecb4a8bc453f29dadacd, type: 2}
+  - {fileID: 11400000, guid: c842c07bfaa854c439faea2d3013e5a6, type: 2}
   wrongRecipe: {fileID: 11400000, guid: 0ae2e65d5955ebc4798d1bb3da29c2a6, type: 2}
   crafName: {fileID: 1170809143973485854}
   audioSource: {fileID: 6370759326552917077}

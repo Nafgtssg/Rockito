@@ -10,15 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40ddff66592ccd04092385150abd2002, type: 3}
-  m_Name: MisteriosoObjetoAncestral
+  m_Name: pickup_litio
   m_EditorClassIdentifier: 
-  displayName: Misterioso Objeto Ancestral
-  action: interactuar
+  displayName: Litio
+  action: recoger
   showDisplay: 1
   interactionSound: {fileID: 0}
-  onInteract: {fileID: 0}
+  onInteract: {fileID: 11400000, guid: abb67ecd6a83efc4dbc635a674be366b, type: 2}
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
   type: 2
-  icon: {fileID: 21300000, guid: 9b91db5d54de1b149839f1660651647e, type: 3}
-  description: Este es un misterioso objeto ancestral
+  icon: {fileID: 21300000, guid: cd62db3cdf3318e4db7b3fefb3a8dd7c, type: 3}
+  description: "El Litio es un elemento qu\xEDmico que forma parte de distintos minerales.
+    No se encuentra como s\xF3lido cristalino de manera elemental, es decir, no existe
+    un mineral de litio puro."
+  onCraft: {fileID: 0}
