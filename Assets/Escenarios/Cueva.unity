@@ -13732,7 +13732,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.93333334, b: 0.32156864, a: 1}
   m_Intensity: 1
-  m_Range: 4
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -36885,7 +36885,7 @@ Transform:
   m_GameObject: {fileID: 1167648273}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 773.4, y: 0.5, z: 143.3}
+  m_LocalPosition: {x: 773.5, y: 1, z: 143.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -54938,6 +54938,9 @@ GameObject:
   - component: {fileID: 1686186327}
   - component: {fileID: 1686186326}
   - component: {fileID: 1686186325}
+  - component: {fileID: 1686186330}
+  - component: {fileID: 1686186329}
+  - component: {fileID: 1686186328}
   m_Layer: 0
   m_Name: Pilar6
   m_TagString: Untagged
@@ -55004,12 +55007,69 @@ Transform:
   m_GameObject: {fileID: 1686186324}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: -0.5}
-  m_LocalPosition: {x: 777.16, y: -0.01, z: 146.51}
+  m_LocalPosition: {x: 777.16, y: 0, z: 146.51}
   m_LocalScale: {x: 836.9423, y: 836.9421, z: 836.9421}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 270, y: 90, z: 0}
+--- !u!114 &1686186328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686186324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762ee7588cbdfbe4db0436c270f778d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  internalId: 6902
+  interactable: {fileID: 11400000, guid: 81d89bd048a023d4bb8cd32238c3e6f6, type: 2}
+  animator: {fileID: 0}
+--- !u!135 &1686186329
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686186324}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.0025
+  m_Center: {x: -0.00000047683713, y: 0.0043974305, z: -0.00010314945}
+--- !u!65 &1686186330
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686186324}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0012058638, y: 0.0012112428, z: 0.0040481566}
+  m_Center: {x: -0.00000047683713, y: 0.0043974305, z: -0.00010314945}
 --- !u!1001 &1692344925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69064,7 +69124,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -69264,7 +69324,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

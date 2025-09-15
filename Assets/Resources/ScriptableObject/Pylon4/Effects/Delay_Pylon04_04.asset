@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28b5d8bfc1a82364fb702922bda62e56, type: 3}
-  m_Name: Cine_Pylon6_000
+  m_Script: {fileID: 11500000, guid: 801c5f8070bb9cc4c9a2410768196408, type: 3}
+  m_Name: Delay_Pylon04_04
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  type: 1
-  camPos: {x: 773.5, y: 1, z: 143.3}
-  camRot: {x: 0, y: 0, z: 0}
-  camFOV: 80
+  delayInSeconds: 1
+  effect: {fileID: 11400000, guid: c4a78f5034d179a4f92ae9dee49807b2, type: 2}

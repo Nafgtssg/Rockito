@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d33a7f2a7e8607d4d94207cc324f9a55, type: 3}
-  m_Name: 04Dana04_04Set
+  m_Name: Set_Pylon4_02
   m_EditorClassIdentifier: 
-  validator: {fileID: 0}
+  validator: {fileID: 11400000, guid: f280e7337b1dffe4b9876294a0a513ba, type: 2}
   effects:
-  - {fileID: 11400000, guid: 262e798de2d3e32439aa96047b204be1, type: 2}
-  - {fileID: 11400000, guid: d9e21dbb85718e443abf403ae0c7f08b, type: 2}
-  - {fileID: 11400000, guid: 19ce5e9b1892fc347ba2a299574477cb, type: 2}
+  - {fileID: 11400000, guid: 6f673211dd42d0b4996ee7f5299c7407, type: 2}
+  - {fileID: 11400000, guid: 3fd02bc9731f04947bb0491368455234, type: 2}

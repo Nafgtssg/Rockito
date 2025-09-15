@@ -22,6 +22,6 @@ MonoBehaviour:
     se ha guardado en el Libro. Continua con tu misi\xF3n, Rockito."
   nextNode: {fileID: 0}
   effect: {fileID: 11400000, guid: 2dab69123845ebe4bae1761d6e36fa82, type: 2}
-  onEnding: {fileID: 11400000, guid: b75f499ef27aece43a31e50caf638e6c, type: 2}
+  onEnding: {fileID: 11400000, guid: 423cbd8dc2264b64687291a735174951, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

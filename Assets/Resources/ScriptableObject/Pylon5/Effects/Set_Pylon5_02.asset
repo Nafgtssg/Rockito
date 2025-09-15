@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28b5d8bfc1a82364fb702922bda62e56, type: 3}
-  m_Name: Cine_Pylon6_000
+  m_Script: {fileID: 11500000, guid: d33a7f2a7e8607d4d94207cc324f9a55, type: 3}
+  m_Name: Set_Pylon5_02
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  type: 1
-  camPos: {x: 773.5, y: 1, z: 143.3}
-  camRot: {x: 0, y: 0, z: 0}
-  camFOV: 80
+  effects:
+  - {fileID: 11400000, guid: b75f499ef27aece43a31e50caf638e6c, type: 2}
+  - {fileID: 11400000, guid: 719a48ea62c09d14282bffcff1b7eb96, type: 2}
