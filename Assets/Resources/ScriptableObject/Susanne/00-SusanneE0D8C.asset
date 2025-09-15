@@ -21,6 +21,6 @@ MonoBehaviour:
   dialogText: "Muy bien amiguito, ten este peque\xF1o presente de mi parte. "
   nextNode: {fileID: 0}
   effect: {fileID: 11400000, guid: 0d77e8a9720c9f24d936b0c5e96c56a2, type: 2}
-  onEnding: {fileID: 11400000, guid: 7fe88f955dad74b4aa898caae1b62c95, type: 2}
+  onEnding: {fileID: 11400000, guid: 0108f14fff85d8f4daf896e0eb8048d8, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

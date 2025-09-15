@@ -19,5 +19,5 @@ MonoBehaviour:
     un potente haz de luz ilumina tu camino en las oscuridades. Pulsa F otra vez
     para apagarla.
   sprite: {fileID: 21300000, guid: 901a34e998c1cbc49ae2715500e88c9d, type: 3}
-  size: {x: 1920, y: 1080}
+  size: {x: 642, y: 373}
   onEnding: {fileID: 11400000, guid: 804083575f286f24d9783c49e88777f0, type: 2}

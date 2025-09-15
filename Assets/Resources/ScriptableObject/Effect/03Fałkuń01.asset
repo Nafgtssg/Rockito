@@ -18,8 +18,8 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Jejeje... Los compuestos que tiene enlaces i\xF3nicos no pueden ser
-    metales..."
+  dialogText: "Jejeje... Los compuestos que tienen enlaces i\xF3nicos no pueden comportarse
+    como metales..."
   nextNode: {fileID: 11400000, guid: 6ae6a118274f3dc4c8526de8ca75c2ef, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}

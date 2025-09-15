@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 801c5f8070bb9cc4c9a2410768196408, type: 3}
-  m_Name: Delay_Pylon05_04
+  m_Name: Delay_Pylon05_00
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  delayInSeconds: 2
-  effect: {fileID: 11400000, guid: b0f260aac54e8684fb8739070a981be8, type: 2}
+  delayInSeconds: 1
+  effect: {fileID: 11400000, guid: 1c2859169f12ec64a8fd0e439c32a5dc, type: 2}

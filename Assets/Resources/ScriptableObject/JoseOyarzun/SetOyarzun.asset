@@ -15,4 +15,4 @@ MonoBehaviour:
   validator: {fileID: 0}
   effects:
   - {fileID: 11400000, guid: ad1927bd6ca6c4b47a12a8008fd7ec38, type: 2}
-  - {fileID: 11400000, guid: 22964f2c512b17747a4abd6e786cf925, type: 2}
+  - {fileID: 11400000, guid: f640a7c20f640c944a8b3cf97adc198b, type: 2}
