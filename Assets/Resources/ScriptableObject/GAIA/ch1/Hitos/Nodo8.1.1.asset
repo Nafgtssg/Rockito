@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: Nodo4.1
+  m_Name: Nodo8.1.1
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   displayName: GAIA
@@ -18,9 +18,9 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Un ejemplo de uniformitarismo es\_la formaci\xF3n del Gran Ca\xF1\xF3n,
-    que se form\xF3 gradualmente a lo largo de millones de a\xF1os por la\_erosi\xF3n
-    del r\xEDo Colorado."
+  dialogText: "William Smith (1769\u20131839) realiz\xF3 el primer mapa geol\xF3gico
+    (Inglaterra, 1815) y aplic\xF3 la sucesi\xF3n faun\xEDstica para correlacionar
+    estratos."
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}

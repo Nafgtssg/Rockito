@@ -23,4 +23,4 @@ MonoBehaviour:
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []
-  choiceText: "Capa r\xEDgida formada por la corteza y parte superior del manto"
+  choiceText: "Ondas s\xEDsmicas"

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: Nodo5.1
+  m_Name: Nodo5.3.1
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   displayName: GAIA
@@ -18,9 +18,8 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Un f\xF3sil marino del Dev\xF3nico encontrado en Am\xE9rica y Europa
-    indica que esas capas son de la misma edad, aunque est\xE9n a miles de km de
-    distancia."
+  dialogText: "\xBFQu\xE9 tan importante crees que fueron los f\xF3siles para construir
+    el tiempo geol\xF3gico?"
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
