@@ -598,6 +598,9 @@ public class GameManager : MonoBehaviour
         // Add result to inventory
         result.Interact();
 
+        // Add crafting effect if any
+        if (result.onCraft != null) result.onCraft.Execute();
+
         // Clear crafting slots
         ClearCraftingSlots();
 

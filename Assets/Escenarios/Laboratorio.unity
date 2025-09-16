@@ -2991,7 +2991,7 @@ GameObject:
   - component: {fileID: 331939834}
   - component: {fileID: 331939833}
   m_Layer: 0
-  m_Name: puerta (1)
+  m_Name: TPSampleScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3005,12 +3005,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331939831}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.0000020621776, y: 0.9972526, z: -0.37527445}
-  m_LocalScale: {x: 1.5, y: 40, z: 100}
+  m_LocalRotation: {x: 0.5021791, y: 0.50012904, z: -0.4978903, w: 0.49979234}
+  m_LocalPosition: {x: 28.382553, y: 6.5390835, z: 106.96973}
+  m_LocalScale: {x: 1.9959931, y: 53.226482, z: 133.06621}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1389929585}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &331939833
 MonoBehaviour:
@@ -3024,7 +3024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 762ee7588cbdfbe4db0436c270f778d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  internalId: 2000
+  internalId: 7600
   interactable: {fileID: 11400000, guid: bf19c026fc91ee641a5a084ab11c179d, type: 2}
   animator: {fileID: 0}
 --- !u!65 &331939834
@@ -10964,10 +10964,6 @@ PrefabInstance:
         type: 3}
       insertIndex: 7
       addedObject: {fileID: 1777435762}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0ee521fb7690fb94495643db8d6459df,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 331939832}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ee521fb7690fb94495643db8d6459df,
         type: 3}
@@ -16391,6 +16387,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 705507995}
   - {fileID: 1565483986}
+  - {fileID: 331939832}
   - {fileID: 1143558446}
   - {fileID: 739494467}
   - {fileID: 1836000413}
