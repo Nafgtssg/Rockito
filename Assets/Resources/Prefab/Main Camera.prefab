@@ -2993,8 +2993,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Hipopotomonstruopsesquipedaliof\xF3bia es un tipo de fobia bastante divertida
-    cuando piensas un poco sobre ella, like, no jodas, es una palabra largu\xEDsima."
+  m_text: Posa el cursor sobre un objeto para ver sus detalles.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8e230be287c4dbf46b7e00824a799fdb, type: 2}
   m_sharedMaterial: {fileID: -2081794555391054233, guid: 8e230be287c4dbf46b7e00824a799fdb,
