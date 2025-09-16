@@ -21,11 +21,11 @@ MonoBehaviour:
   dialogText: "William Smith (1769\u20131839) realiz\xF3 el primer mapa geol\xF3gico
     (Inglaterra, 1815) y aplic\xF3 la sucesi\xF3n faun\xEDstica para correlacionar
     estratos."
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: 3d328c18a336ed84d8fe7a7796427d2c, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  choiceText: "Opci\xF3n"
+  choiceText: "Smith y la cartograf\xEDa geol\xF3gica"

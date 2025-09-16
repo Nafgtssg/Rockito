@@ -20,7 +20,7 @@ MonoBehaviour:
   pitchVariation: 0
   dialogText: "Cuvier explicaba las extinciones f\xF3siles como producto de cat\xE1strofes
     globales, no de procesos lentos.\n"
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: c9f370a0bca57e646808b28d1dbd9e14, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices:

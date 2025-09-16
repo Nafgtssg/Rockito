@@ -20,11 +20,11 @@ MonoBehaviour:
   pitchVariation: 0
   dialogText: "En una sucesi\xF3n de estratos, los m\xE1s antiguos est\xE1n abajo
     y los m\xE1s modernos arriba. Es la base de la dataci\xF3n relativa."
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: 4b4d2e1e828feb442b4f56678649e748, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  choiceText: "Opci\xF3n"
+  choiceText: "Principio de Superposici\xF3n"
