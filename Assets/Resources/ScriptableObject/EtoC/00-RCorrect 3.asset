@@ -18,8 +18,7 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "\xBFCu\xE1l es el principal agente para estudiar el interior de la
-    Tierra?"
+  dialogText: "\xBFCon qu\xE9 est\xE1 relacionado el estudio del interior de la Tierra?"
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}

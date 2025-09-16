@@ -18,7 +18,7 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Hola amigo, intento leer las capas del modelo estatico de lla estructura
+  dialogText: "Hola amigo, intento leer las capas del modelo estatico de la estructura
     interna de la Tierra, pero no logro ver bien  \xBFme podr\xEDas ayudar a ordenar
     cada modelo?"
   nextNode: {fileID: 0}
