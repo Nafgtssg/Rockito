@@ -232,6 +232,8 @@ public class GameManager : MonoBehaviour
             inventory = inventory,
             keyItems = keyItems,
             rock = rock,
+            canUseFlashlight = canUseFlashlight,
+            flashlightOn = flashlightOn,
             playerPosition = PlayerController.player.transform.position,
             playerScale = PlayerController.player.transform.localScale,
             cameraRotation = CameraController.controller.rotation,
@@ -294,6 +296,11 @@ public class GameManager : MonoBehaviour
         inventory = saveData.inventory;
         keyItems = saveData.keyItems;
         rock = saveData.rock;
+        canUseFlashlight = saveData.canUseFlashlight;
+        flashlightHint.SetActive(saveData.canUseFlashlight);
+        PlayerController.player.flashlightOn = saveData.flashlightOn;
+        PlayerController.player.flashlight.SetActive(saveData.flashlightOn);
+        PlayerController.player.topLight.SetActive(saveData.flashlightOn);
         PlayerController.player.transform.position = saveData.playerPosition;
         PlayerController.player.transform.localScale = saveData.playerScale;
         CameraController.controller.rotation = saveData.cameraRotation;
@@ -1204,6 +1211,8 @@ public class GameSaveData
     public List<Pickup> inventory = new List<Pickup>();
     public List<Pickup> rock = new List<Pickup>();
     public List<Pickup> keyItems = new List<Pickup>();
+    public bool canUseFlashlight;
+    public bool flashlightOn;
     public Vector3 playerPosition;
     public Vector3 playerScale;
     public float cameraRotation;
