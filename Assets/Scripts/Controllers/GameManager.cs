@@ -233,7 +233,7 @@ public class GameManager : MonoBehaviour
             keyItems = keyItems,
             rock = rock,
             canUseFlashlight = canUseFlashlight,
-            flashlightOn = flashlightOn,
+            flashlightOn = PlayerController.player.flashlightOn,
             playerPosition = PlayerController.player.transform.position,
             playerScale = PlayerController.player.transform.localScale,
             cameraRotation = CameraController.controller.rotation,

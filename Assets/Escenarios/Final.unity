@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 651417809}
   - component: {fileID: 651417808}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 762ee7588cbdfbe4db0436c270f778d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  internalId: 0
+  internalId: 8000
   interactable: {fileID: 0}
   animator: {fileID: 0}
 --- !u!65 &651417805
