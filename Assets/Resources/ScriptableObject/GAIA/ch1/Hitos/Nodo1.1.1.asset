@@ -26,8 +26,8 @@ MonoBehaviour:
   onEnding: {fileID: 0}
   choices:
   - {fileID: 11400000, guid: 040b6d9bca0aa334eb8a345c9e29f697, type: 2}
-  - {fileID: 11400000, guid: c6376c71069bd8f48b9e12ce9ad47d0a, type: 2}
-  - {fileID: 11400000, guid: a2c3fbc9f2e46ed4c8cc5a63f63cd2a0, type: 2}
+  - {fileID: 11400000, guid: 7bdfb0d166b8a0749a0b601ed62a2797, type: 2}
+  - {fileID: 11400000, guid: 65248a26deaa4204e9d3dbe1283d1857, type: 2}
   - {fileID: 11400000, guid: 7c314d2bb710a144eba032bb121b3cc3, type: 2}
   - {fileID: 11400000, guid: b2f9edcba1aa7a94aa3bf6c6503e4248, type: 2}
   - {fileID: 11400000, guid: 314e2cf28fc0df84ebace0a4cb73bf9a, type: 2}

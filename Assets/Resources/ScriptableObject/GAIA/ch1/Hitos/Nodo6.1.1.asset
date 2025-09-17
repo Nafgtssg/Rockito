@@ -21,11 +21,11 @@ MonoBehaviour:
   dialogText: "Explicaba la historia de la Tierra como una serie de cat\xE1strofes
     s\xFAbitas (como la ca\xEDda de un meteorito), que provocaban grandes extinciones
     y daban origen a nuevas faunas.\n"
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: 0eaa5534851384b42912e6ed89d51ce3, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  choiceText: "Opci\xF3n"
+  choiceText: Doctrina del catastrofismo
