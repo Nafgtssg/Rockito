@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   type: 2
-  title: Estructura Interna de la Tierra
+  title: 
   description: 
   sprite: {fileID: 21300000, guid: e6d26c68f88bbf843937125626e71401, type: 3}
-  size: {x: 1080, y: 720}
+  size: {x: 1920, y: 1080}
   onEnding: {fileID: 0}
