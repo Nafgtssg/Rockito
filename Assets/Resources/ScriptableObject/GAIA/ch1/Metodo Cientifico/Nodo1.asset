@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
+  m_Name: Nodo1
+  m_EditorClassIdentifier: 
+  validator: {fileID: 0}
+  displayName: GAIA
+  leftSpeaker: {fileID: 0}
+  rightSpeaker: {fileID: 0}
+  sound: {fileID: 0}
+  pitchVariation: 0
+  dialogText: "El m\xE9todo cient\xEDfico es un proceso ordenado que usamos para
+    investigar fen\xF3menos y responder preguntas. Nos ayuda a pasar de la observaci\xF3n
+    a la comprensi\xF3n."
+  nextNode: {fileID: 0}
+  effect: {fileID: 0}
+  onEnding: {fileID: 0}
+  choices:
+  - {fileID: 11400000, guid: e6a579771dbd7304d8f89a693b231e79, type: 2}
+  - {fileID: 11400000, guid: 389384585c7de9049b3c087402583f97, type: 2}
+  - {fileID: 11400000, guid: 797112b551623da478a34818517e4d27, type: 2}
+  - {fileID: 11400000, guid: 6fa02fc5b17d3dd4988e8bd0887ba4b4, type: 2}
+  - {fileID: 11400000, guid: d193b84d8eb003f49ae17697d732bb30, type: 2}
+  - {fileID: 11400000, guid: f945b42c34209c24581e4a1b751cacc5, type: 2}
+  choiceText: "M\xE9todo cient\xEDfico"
