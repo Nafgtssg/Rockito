@@ -20,7 +20,7 @@ MonoBehaviour:
   pitchVariation: 0
   dialogText: "Era recordar qui\xE9nes somos como guardianes de la Tierra. Los Pilares
     no son objetos\u2026"
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: 197712abada5fa1489e91b1be416598f, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

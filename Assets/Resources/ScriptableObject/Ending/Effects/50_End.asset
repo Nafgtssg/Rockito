@@ -19,7 +19,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: Sus procesos son hilos invisibles que conectan eras.
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: b7d362874b0c98c4cbbbdbf3b87cc6d4, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

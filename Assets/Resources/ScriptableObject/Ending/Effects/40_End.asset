@@ -19,7 +19,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: "Un dep\xF3sito es un regalo\u2026 Y una responsabilidad."
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: 9df036b7ea0b57d4d954cf2273db59da, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

@@ -19,7 +19,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: "Rockito\u2026 Este viaje siempre fue m\xE1s que aprender."
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: a2ddd8180fb688345840e3872d313034, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

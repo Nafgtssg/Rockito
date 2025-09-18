@@ -97,6 +97,9 @@ public class GameManager : MonoBehaviour
     public bool isCamera;
     [Header("Sistema de Menú Principal")]
     public GameObject mainMenu;
+    [Header("Sistema de Créditos")]
+    public Animator creditsAnimator;
+    public GameObject blackout;
     [Header("Debug")]
     public Sprite saveIcon;
     public bool stopGameLoading;
@@ -640,6 +643,7 @@ public class GameManager : MonoBehaviour
         }
         inDialog = true;
         dialogBox.SetActive(true);
+        gameHints.SetActive(false);
         if (currentDialog.displayName == "") charName.SetActive(false);
         else
         {
@@ -723,6 +727,7 @@ public class GameManager : MonoBehaviour
         inDialog = false;
         safeDialog = false;
         isChoice = false;
+        gameHints.SetActive(true);
         if (currentDialog.onEnding != null) currentDialog.onEnding.Execute();
     }
     public void MakeChoice(int choiceIndex)
@@ -1182,6 +1187,16 @@ public class GameManager : MonoBehaviour
     public bool CanMove()
     {
         return !(isBookOpen || isCamera || isChoice || isPlaying || isTyping || inDialog || inPopup);
+    }
+    public void TriggerCredits()
+    {
+        if (isBookOpen)
+        {
+            isBookOpen = !isBookOpen;
+            bookAnimator.SetTrigger("book");
+        }
+        creditsAnimator.gameObject.SetActive(true);
+        creditsAnimator.SetTrigger("start");
     }
 }
 

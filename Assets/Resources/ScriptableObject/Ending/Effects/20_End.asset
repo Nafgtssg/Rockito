@@ -19,7 +19,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: "\u2026 Y cada capa, un orden."
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: 0e1dd759ff0a0544d884646d1072ad71, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

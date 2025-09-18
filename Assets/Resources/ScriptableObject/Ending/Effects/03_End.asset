@@ -19,7 +19,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: Has escuchado voces de quienes dedicaron su vida a entender la Tierra.
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: 83a8ea1c051dc6b49b6360a540bbf738, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

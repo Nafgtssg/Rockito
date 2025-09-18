@@ -22,6 +22,6 @@ MonoBehaviour:
     generaciones futuras."
   nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 0}
+  onEnding: {fileID: 11400000, guid: 0950bc9da3debd042951b10fd59e8e6b, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

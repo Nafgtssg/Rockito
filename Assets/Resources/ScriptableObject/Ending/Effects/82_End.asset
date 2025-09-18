@@ -20,7 +20,7 @@ MonoBehaviour:
   pitchVariation: 0
   dialogText: "Son valores: Curiosidad, Orden, Conexi\xF3n, Responsabilidad, Visi\xF3n
     y Cuidado."
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: 0241ec06c94837c4dac57f5ca799df04, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

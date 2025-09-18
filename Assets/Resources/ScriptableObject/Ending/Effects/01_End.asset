@@ -21,6 +21,6 @@ MonoBehaviour:
   dialogText: "As\xED es que finalmente acaba, \xBFEh?"
   nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 0}
+  onEnding: {fileID: 11400000, guid: 232a74dd1b7ae3f48b2a1a32be04df25, type: 2}
   choices: []
   choiceText: "Opci\xF3n"
