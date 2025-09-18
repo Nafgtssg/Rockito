@@ -21,6 +21,6 @@ MonoBehaviour:
   dialogText: "\xBFO la olvidar\xE1s...?"
   nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 0}
+  onEnding: {fileID: 11400000, guid: f13bc0302de8be34383354fecd20070d, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

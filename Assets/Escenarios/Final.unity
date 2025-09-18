@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   internalId: 8000
-  interactable: {fileID: 0}
+  interactable: {fileID: 11400000, guid: dbe61e22d6ec14945a94af6bd9359158, type: 2}
   animator: {fileID: 0}
 --- !u!65 &651417805
 BoxCollider:

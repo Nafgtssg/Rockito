@@ -22,6 +22,6 @@ MonoBehaviour:
     Tierra sigue escribiendo su historia. La leer\xE1s\u2026"
   nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 0}
+  onEnding: {fileID: 11400000, guid: 8ff793f3e74a7dc4688f63ded6321510, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

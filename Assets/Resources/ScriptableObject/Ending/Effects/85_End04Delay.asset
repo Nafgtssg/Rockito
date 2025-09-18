@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28b5d8bfc1a82364fb702922bda62e56, type: 3}
-  m_Name: 70_End02Cine
+  m_Script: {fileID: 11500000, guid: 801c5f8070bb9cc4c9a2410768196408, type: 3}
+  m_Name: 85_End04Delay
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  type: 1
-  camPos: {x: -2, y: 1, z: 0}
-  camRot: {x: 0, y: 90, z: 0}
-  camFOV: 80
+  delayInSeconds: 1.5
+  effect: {fileID: 11400000, guid: d72b4c4ff5ceec84da3b7ad39ed08847, type: 2}

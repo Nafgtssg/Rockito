@@ -6304,7 +6304,7 @@ MonoBehaviour:
   sceneChangeAnimator: {fileID: 2489817017544731579}
   isCamera: 0
   mainMenu: {fileID: 2402202888172809291}
-  creditsAnimator: {fileID: 0}
+  creditsAnimator: {fileID: 1172871895660859873}
   blackout: {fileID: 104815158702774286}
   saveIcon: {fileID: 21300000, guid: bfe64ded7ac89d54eac5251a9ad7465e, type: 3}
   stopGameLoading: 0
@@ -16741,14 +16741,14 @@ GameObject:
   - component: {fileID: 2303826853588337842}
   - component: {fileID: 4770643598258054733}
   - component: {fileID: 1172871895660859873}
-  - component: {fileID: 662273707595654407}
+  - component: {fileID: 7839600423283974996}
   m_Layer: 0
   m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4775526964816276066
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16828,7 +16828,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &662273707595654407
+--- !u!114 &7839600423283974996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16837,9 +16837,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8213992738477931817}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ec8c940a0c213044bc3cd98bf093a33, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c48b76fe3becf941a9d4e048ab3eb62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  returnToMainMenu: {fileID: 11400000, guid: b78226b1e023e0047a75f3b6f23cfc88, type: 2}
 --- !u!1 &8312973333131019622
 GameObject:
   m_ObjectHideFlags: 0

@@ -244,7 +244,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 46.333332
-    functionName: ChangeScene
+    functionName: ExitCredits
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

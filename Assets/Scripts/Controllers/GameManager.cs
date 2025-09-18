@@ -643,6 +643,7 @@ public class GameManager : MonoBehaviour
         }
         inDialog = true;
         dialogBox.SetActive(true);
+        gameHints.SetActive(false);
         if (currentDialog.displayName == "") charName.SetActive(false);
         else
         {
@@ -726,6 +727,7 @@ public class GameManager : MonoBehaviour
         inDialog = false;
         safeDialog = false;
         isChoice = false;
+        gameHints.SetActive(true);
         if (currentDialog.onEnding != null) currentDialog.onEnding.Execute();
     }
     public void MakeChoice(int choiceIndex)

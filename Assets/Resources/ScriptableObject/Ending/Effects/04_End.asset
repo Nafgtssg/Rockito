@@ -21,6 +21,6 @@ MonoBehaviour:
   dialogText: "Y ahora\u2026 la memoria completa te espera."
   nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 0}
+  onEnding: {fileID: 11400000, guid: 338638c994e368e40bb7f0f2d8bd188c, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

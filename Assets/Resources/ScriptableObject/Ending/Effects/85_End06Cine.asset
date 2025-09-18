@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28b5d8bfc1a82364fb702922bda62e56, type: 3}
-  m_Name: 70_End02Cine
+  m_Name: 85_End06Cine
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  type: 1
+  type: 3
   camPos: {x: -2, y: 1, z: 0}
   camRot: {x: 0, y: 90, z: 0}
   camFOV: 80
