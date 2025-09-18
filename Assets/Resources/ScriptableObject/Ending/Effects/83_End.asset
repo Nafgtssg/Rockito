@@ -19,7 +19,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: "Tu viaje aqu\xED termina\u2026 Pero..."
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

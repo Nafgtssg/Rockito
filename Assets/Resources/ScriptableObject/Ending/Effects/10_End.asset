@@ -19,7 +19,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: "Cada roca guarda una historia\u2026"
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: 689203939a42d074c9b68bd121a8b409, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

@@ -97,6 +97,9 @@ public class GameManager : MonoBehaviour
     public bool isCamera;
     [Header("Sistema de Menú Principal")]
     public GameObject mainMenu;
+    [Header("Sistema de Créditos")]
+    public Animator creditsAnimator;
+    public GameObject blackout;
     [Header("Debug")]
     public Sprite saveIcon;
     public bool stopGameLoading;
@@ -1182,6 +1185,16 @@ public class GameManager : MonoBehaviour
     public bool CanMove()
     {
         return !(isBookOpen || isCamera || isChoice || isPlaying || isTyping || inDialog || inPopup);
+    }
+    public void TriggerCredits()
+    {
+        if (isBookOpen)
+        {
+            isBookOpen = !isBookOpen;
+            bookAnimator.SetTrigger("book");
+        }
+        creditsAnimator.gameObject.SetActive(true);
+        creditsAnimator.SetTrigger("start");
     }
 }
 

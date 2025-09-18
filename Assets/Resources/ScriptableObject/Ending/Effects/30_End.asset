@@ -19,7 +19,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: "Los f\xF3siles son recuerdos de vida que pertenecen a un tiempo pasado."
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: e605ce06323e583469ef459e2d7171a7, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

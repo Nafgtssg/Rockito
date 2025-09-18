@@ -29,11 +29,19 @@ public class SetBool : Effect
                 GameManager.manager.canUseFlashlight = value;
                 GameManager.manager.flashlightHint.SetActive(value);
                 break;
+            case StateBool.Credits:
+                GameManager.manager.TriggerCredits();
+                break;
+            case StateBool.Blackout:
+                GameManager.manager.blackout.SetActive(value);
+                break;
         }
     }
 }
 
 public enum StateBool
 {
-    Flashlight
+    Flashlight,
+    Credits,
+    Blackout
 }
