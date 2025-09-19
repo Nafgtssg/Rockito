@@ -9,16 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 633893459de0d0a418bc27840d2c8960, type: 3}
-  m_Name: KantuOutside
+  m_Script: {fileID: 11500000, guid: 0567d6a442311c743a5dbc26441f7405, type: 3}
+  m_Name: ActivadorMAPA4
   m_EditorClassIdentifier: 
   displayName: Object
-  action: hablar
+  action: interactuar
   showDisplay: 1
   interactionSound: {fileID: 0}
-  onInteract: {fileID: 0}
+  onInteract: {fileID: 11400000, guid: 94b8ffed9f5433944b3dac69932c106c, type: 2}
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
-  id: Kentu
-  dialog:
-  - {fileID: 11400000, guid: 231763df437ae134b8f306af302f8649, type: 2}
