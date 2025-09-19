@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: DN_ScientificMethod010
+  m_Name: 01-Conclusiones
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   displayName: 
@@ -18,12 +18,9 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Impresionante, m\xE1s informaci\xF3n ha aparecido.\n\xBFQu\xE9 deber\xEDa
-    ex\xE1minar?"
+  dialogText: Conclusiones
   nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 0}
-  choices:
-  - {fileID: 11400000, guid: 662ed9729b406044fa57ec24f0e3816b, type: 2}
-  - {fileID: 11400000, guid: b40c95541da3f25428a00daf842fbe12, type: 2}
-  choiceText: "Opci\xF3n"
+  onEnding: {fileID: 11400000, guid: 882376f16c85a8e4fbfd4c5de58c2f01, type: 2}
+  choices: []
+  choiceText: Conclusiones

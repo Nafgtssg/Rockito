@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: DN_ScientificMethod010
+  m_Name: Ver alguna etapa
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   displayName: 
@@ -18,12 +18,15 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Impresionante, m\xE1s informaci\xF3n ha aparecido.\n\xBFQu\xE9 deber\xEDa
-    ex\xE1minar?"
+  dialogText: "\xBFCu'al etapa quieres ver?"
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices:
-  - {fileID: 11400000, guid: 662ed9729b406044fa57ec24f0e3816b, type: 2}
-  - {fileID: 11400000, guid: b40c95541da3f25428a00daf842fbe12, type: 2}
-  choiceText: "Opci\xF3n"
+  - {fileID: 11400000, guid: cfde0dea6b020e74c8b3c7132a4c568e, type: 2}
+  - {fileID: 11400000, guid: 995cce2653504cb439fef50ba75331b8, type: 2}
+  - {fileID: 11400000, guid: e7f713310a62d7b4e8957046105c4112, type: 2}
+  - {fileID: 11400000, guid: 32d4b47e96d05f844bfc5892d1e082b1, type: 2}
+  - {fileID: 11400000, guid: 2400d9f66ba790349ac360fea1b362e3, type: 2}
+  - {fileID: 11400000, guid: 6dd3535d67664ce41a63b136ebc524fb, type: 2}
+  choiceText: Ver alguna etapa

@@ -21,6 +21,6 @@ MonoBehaviour:
   dialogText: La pregunta.
   nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 11400000, guid: 488e44a0f8f8af64ca66dfbec8f7a112, type: 2}
+  onEnding: {fileID: 11400000, guid: 5b27438bae635b844bdfdd9a3ab8017e, type: 2}
   choices: []
   choiceText: Pregunta
