@@ -27,4 +27,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a4efcf362f4588b44854a95ffc0d66fa, type: 2}
   - {fileID: 11400000, guid: 63b3251f8ca8199469b65956b6f862e5, type: 2}
   - {fileID: 11400000, guid: 2ce2007031203bb4a9eff02ea7b5b897, type: 2}
-  choiceText: "Opci\xF3n"
+  - {fileID: 11400000, guid: 33b961f05d2d4d84ebb51c470b498d6e, type: 2}
+  choiceText: Volver al inico

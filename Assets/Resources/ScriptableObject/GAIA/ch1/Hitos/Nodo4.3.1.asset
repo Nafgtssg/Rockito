@@ -19,7 +19,8 @@ MonoBehaviour:
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: "Si la Tierra necesit\xF3 millones de a\xF1os para formar monta\xF1as
-    y oc\xE9anos, \xBFqu\xE9 dice eso sobre su edad?"
+    y oc\xE9anos, \xBFqu\xE9 dice eso sobre su edad?, Es una pregunta para que puedas
+    reflexionar."
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}

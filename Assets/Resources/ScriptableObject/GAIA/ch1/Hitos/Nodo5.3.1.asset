@@ -19,7 +19,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: "\xBFQu\xE9 tan importante crees que fueron los f\xF3siles para construir
-    el tiempo geol\xF3gico?"
+    el tiempo geol\xF3gico?, Espero encuentres respuesta a esto mas adelante. "
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}

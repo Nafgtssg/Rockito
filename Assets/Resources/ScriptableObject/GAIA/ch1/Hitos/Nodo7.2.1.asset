@@ -18,13 +18,12 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Los Andes muestran estratos originalmente horizontales que fueron
-    levantados y plegados por la subducci\xF3n."
+  dialogText: "Por ejemplo, los Andes muestran estratos originalmente horizontales
+    que fueron levantados y plegados por la subducci\xF3n."
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices:
   - {fileID: 11400000, guid: 040b6d9bca0aa334eb8a345c9e29f697, type: 2}
   - {fileID: 11400000, guid: 314e2cf28fc0df84ebace0a4cb73bf9a, type: 2}
-  - {fileID: 0}
   choiceText: "Opci\xF3n"

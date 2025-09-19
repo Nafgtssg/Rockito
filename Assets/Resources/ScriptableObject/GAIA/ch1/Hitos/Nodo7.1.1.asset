@@ -24,8 +24,5 @@ MonoBehaviour:
   nextNode: {fileID: 11400000, guid: 77bc6716015bc4243acb37466ef369e8, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
-  choices:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  choices: []
   choiceText: "Ejemplo de tect\xF3nica de placas"

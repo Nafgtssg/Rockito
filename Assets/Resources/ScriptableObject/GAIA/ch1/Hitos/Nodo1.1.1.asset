@@ -30,5 +30,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 65248a26deaa4204e9d3dbe1283d1857, type: 2}
   - {fileID: 11400000, guid: 7c314d2bb710a144eba032bb121b3cc3, type: 2}
   - {fileID: 11400000, guid: b2f9edcba1aa7a94aa3bf6c6503e4248, type: 2}
-  - {fileID: 11400000, guid: 314e2cf28fc0df84ebace0a4cb73bf9a, type: 2}
-  choiceText: "Opci\xF3n"
+  - {fileID: 11400000, guid: b7058bad6ae917d4e82b91caea1fbcc4, type: 2}
+  choiceText: Hitos de la Geologia

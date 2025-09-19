@@ -24,8 +24,5 @@ MonoBehaviour:
   nextNode: {fileID: 11400000, guid: a2c3fbc9f2e46ed4c8cc5a63f63cd2a0, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
-  choices:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  choiceText: "Opci\xF3n"
+  choices: []
+  choiceText: Principio de Uniformismo
