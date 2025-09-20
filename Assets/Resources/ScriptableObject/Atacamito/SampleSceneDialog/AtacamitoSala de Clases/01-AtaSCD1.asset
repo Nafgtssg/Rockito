@@ -18,10 +18,11 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: Recuerda, que si estas perdido, puedes usar los mapas que reparti por
-    este mundo. Los encontraras en ciertas zonas por las que pases.
-  nextNode: {fileID: 11400000, guid: 55831890eb9a37d42bb1a835ed5cb09d, type: 2}
-  effect: {fileID: 0}
+  dialogText: "Que bien que ayudaste a ese Kaikura, recuerda Rockito el orden del
+    m\xE9todo cient\xEDfico y sus caracteristicas siempre aparecen en las pruebas
+    que puedas tener mas adelante, tanto en este mundo como en otros. "
+  nextNode: {fileID: 11400000, guid: b0c4073283e7554458a1c09014880984, type: 2}
+  effect: {fileID: 11400000, guid: c76e2f4153e63c44890cc7e0a56eb49d, type: 2}
   onEnding: {fileID: 0}
   choices: []
   choiceText: "Opci\xF3n"

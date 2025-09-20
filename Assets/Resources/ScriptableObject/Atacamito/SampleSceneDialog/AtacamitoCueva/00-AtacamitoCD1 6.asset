@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: 00-AtaSCD1
+  m_Name: 00-AtacamitoCD1 6
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   displayName: Atacamito
@@ -18,10 +18,11 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Hola nuevamente Rockito, ves a ese Kaikura de all\xE1, est\xE1 buscando
-    ayuda, \xBFpor qu\xE9 no intentas darle una mano?"
+  dialogText: "Cuando veas una mezcla de ambos, quiere decir que muy cerca de ah\xED
+    se encuentra algun objeto importante o alguna persona. RECUERDALO YA QUE ES MUY
+    FACIL PERDERTE SIN UN GUIA."
   nextNode: {fileID: 0}
-  effect: {fileID: 0}
+  effect: {fileID: 11400000, guid: b4641c401105d3e41a9089ae72d715bc, type: 2}
   onEnding: {fileID: 0}
   choices: []
   choiceText: "Opci\xF3n"

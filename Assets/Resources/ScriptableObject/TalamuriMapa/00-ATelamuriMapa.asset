@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 633893459de0d0a418bc27840d2c8960, type: 3}
-  m_Name: 00-AtacamitoSalaDeClases
+  m_Name: 00-ATelamuriMapa
   m_EditorClassIdentifier: 
   displayName: Object
   action: interactuar
@@ -19,7 +19,7 @@ MonoBehaviour:
   onInteract: {fileID: 0}
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
-  id: Atacamito2
+  id: Mapatesoro
   dialog:
-  - {fileID: 11400000, guid: 4aabafe4894392d48a33cf7721e719d1, type: 2}
-  - {fileID: 11400000, guid: 55831890eb9a37d42bb1a835ed5cb09d, type: 2}
+  - {fileID: 11400000, guid: 4bf0286101c948f41b1301ae1609b789, type: 2}
+  - {fileID: 11400000, guid: 2d9b02ec2b91d754a9a6054a16ab4250, type: 2}

@@ -10,19 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: 01-AtaSCD1 1
+  m_Name: 00-TMapaD1 4
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: Atacamito
+  displayName: Talamuri E
   leftSpeaker: {fileID: 0}
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: 'Que bien que ayudaste a ese Kaikura, recuerda Rockito el orden del
-    metodo cientifico y sus caracteristicas siempre aparecen en las pruebas que puedas
-    tener mas adelante en este mundo o en otro. '
+  dialogText: Ten te lo regalo.
   nextNode: {fileID: 0}
-  effect: {fileID: 11400000, guid: c76e2f4153e63c44890cc7e0a56eb49d, type: 2}
-  onEnding: {fileID: 0}
+  effect: {fileID: 11400000, guid: f0284c6ac4da5bf4dad96135a95c1c24, type: 2}
+  onEnding: {fileID: 11400000, guid: a9fb229c2f95fbc41a417ab381ec7cc4, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

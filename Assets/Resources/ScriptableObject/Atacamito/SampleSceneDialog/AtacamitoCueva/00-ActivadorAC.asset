@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 633893459de0d0a418bc27840d2c8960, type: 3}
-  m_Name: 00-AtacamitoSalaDeClases
+  m_Name: 00-ActivadorAC
   m_EditorClassIdentifier: 
   displayName: Object
   action: interactuar
   showDisplay: 1
   interactionSound: {fileID: 0}
-  onInteract: {fileID: 0}
+  onInteract: {fileID: 11400000, guid: 47875b7216bf63143a72d375b4bbdadd, type: 2}
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
-  id: Atacamito2
+  id: Atacamito3
   dialog:
-  - {fileID: 11400000, guid: 4aabafe4894392d48a33cf7721e719d1, type: 2}
-  - {fileID: 11400000, guid: 55831890eb9a37d42bb1a835ed5cb09d, type: 2}
+  - {fileID: 11400000, guid: 47875b7216bf63143a72d375b4bbdadd, type: 2}
+  - {fileID: 11400000, guid: a6796677d289f0a41a50901573d15b54, type: 2}
