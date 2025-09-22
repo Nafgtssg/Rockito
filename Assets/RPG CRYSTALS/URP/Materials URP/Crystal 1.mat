@@ -325,7 +325,8 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DiffusionProfileAsset: {r: -0.00014032297, g: -0.00000021831781, b: -4.122721e+32, a: -1.14787605e-35}
+    - _DiffusionProfileAsset: {r: -0.00014032297, g: -0.00000021831781, b: -4.122721e+32,
+        a: -1.14787605e-35}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 2, g: 2, b: 2, a: 1}
     - _EmissiveColor: {r: 1.4980391, g: 1.4980391, b: 1.4980391, a: 1.3350785}
@@ -340,7 +341,6 @@ Material:
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!114 &4515608973260182847
 MonoBehaviour:
   m_ObjectHideFlags: 11

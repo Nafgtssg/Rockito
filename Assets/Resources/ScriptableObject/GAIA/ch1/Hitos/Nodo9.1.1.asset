@@ -24,6 +24,4 @@ MonoBehaviour:
   onEnding: {fileID: 0}
   choices:
   - {fileID: 11400000, guid: 33b961f05d2d4d84ebb51c470b498d6e, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
   choiceText: "Volver a introducci\xF3n"

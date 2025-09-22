@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
+  m_Name: Ch2Nodo2.1.1 1
+  m_EditorClassIdentifier: 
+  validator: {fileID: 0}
+  displayName: GAIA
+  leftSpeaker: {fileID: 0}
+  rightSpeaker: {fileID: 0}
+  sound: {fileID: 0}
+  pitchVariation: 0
+  dialogText: Sobre que quieres saber?
+  nextNode: {fileID: 0}
+  effect: {fileID: 0}
+  onEnding: {fileID: 0}
+  choices:
+  - {fileID: 11400000, guid: d935f3d219d3ccf4aaf497df4ef2f2e3, type: 2}
+  - {fileID: 11400000, guid: 09567dedc8aa44c48ab110b0753d9583, type: 2}
+  - {fileID: 11400000, guid: 6b3ae1be60135d54fa5a0cc5120207ff, type: 2}
+  - {fileID: 11400000, guid: 42c9a03021848d44790b47e2fb6ca423, type: 2}
+  - {fileID: 11400000, guid: b7058bad6ae917d4e82b91caea1fbcc4, type: 2}
+  choiceText: "Introducci\xF3n"

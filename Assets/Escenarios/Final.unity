@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.03553571, g: 0.03553571, b: 0.03553571, a: 1}
+  m_IndirectSpecularColor: {r: 0.03552655, g: 0.03552655, b: 0.03552655, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1348,6 +1348,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 934491689268402330, guid: 812be14f061b08348b516bd2f735055e,
+        type: 3}
+      propertyPath: m_text
+      value: "\nFin\n\n\nPor ahora?\n\n\nGeoOdisea\n\nUn videojuego realizado por
+        3 Llamas Team.\n\n\n\n\n\n\n\u2022    Direcci\xF3n:  Nelson Tapia, Loreto
+        Meza, Celeste Sarmiento, Nahur Mel\xE9ndez.\r \n\n\u2022    Producci\xF3n:
+        Nelson Tapia.\n\n\u2022    Gui\xF3n: Loreto Meza, Nelson Tapia.\n\n\u2022   
+        Dise\xF1o pedag\xF3gico: Loreto Meza.\n\n\u2022    Programaci\xF3n y desarrollo
+        Unity: Celeste Sarmiento, Nelson Tapia.\n\n\u2022    Arte y dise\xF1o visual:
+        Nelson Tapia, Loreto Meza.\n\n\u2022    Gu\xEDa de dise\xF1o: Loreto Meza.\n\n\u2022   
+        Instituciones y financiamiento: Universidad de Atacama, Loreto Meza.\n\n\n
+        Licencia / Derechos de autor\nEl videojuego es propiedad de la Universidad
+        de Atacama\n\n\nAgradecimientos a Creadores de Assets\r\n\n\u2022    \u201CChair
+        Low-poly \u201D \u2013 creado por we3d1234 (cgtrader)\n\n\u2022    \u201CAnime
+        Nature\u201D \u2013 creado por phoenix_trived (Unity Asset Store)\n\n\nAgradecimiento
+        a nuestros tester's\n\n\u2022    Melissa Cort\xE9s.\n\n\u2022    Franco Bulacio.\n\n\u2022   
+        Misael Castro.\n\n\u2022    Nahur Mel\xE9ndez.\n\nGracias por jugar GeoOdisea\nLa
+        Tierra habla\u2026 Si aprendes a escucharla\n\xA9 2025 Universidad de Atacama.
+        Todos los derechos reservados.\r"
+      objectReference: {fileID: 0}
     - target: {fileID: 1552347999875818336, guid: 812be14f061b08348b516bd2f735055e,
         type: 3}
       propertyPath: m_Colors.m_PressedColor.b
@@ -1402,6 +1422,21 @@ PrefabInstance:
         type: 3}
       propertyPath: controller
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3720528192139500787, guid: 812be14f061b08348b516bd2f735055e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3720528192139500787, guid: 812be14f061b08348b516bd2f735055e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3720528192139500787, guid: 812be14f061b08348b516bd2f735055e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1288
       objectReference: {fileID: 0}
     - target: {fileID: 3840198568377914934, guid: 812be14f061b08348b516bd2f735055e,
         type: 3}
@@ -1572,6 +1607,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213992738477931817, guid: 812be14f061b08348b516bd2f735055e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8312973333131019622, guid: 812be14f061b08348b516bd2f735055e,
         type: 3}

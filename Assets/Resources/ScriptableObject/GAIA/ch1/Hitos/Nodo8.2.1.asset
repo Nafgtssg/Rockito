@@ -23,8 +23,5 @@ MonoBehaviour:
   nextNode: {fileID: 11400000, guid: 229d08c260c79d548b6ffbef6d9d4831, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
-  choices:
-  - {fileID: 11400000, guid: 7c314d2bb710a144eba032bb121b3cc3, type: 2}
-  - {fileID: 11400000, guid: 314e2cf28fc0df84ebace0a4cb73bf9a, type: 2}
-  - {fileID: 0}
+  choices: []
   choiceText: "Opci\xF3n"

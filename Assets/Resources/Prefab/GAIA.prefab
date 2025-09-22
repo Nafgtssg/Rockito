@@ -11,17 +11,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 77d077166c68beb498db9d93a4c5f168,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.9
+      value: 0.562707
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 77d077166c68beb498db9d93a4c5f168,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.9
+      value: 0.562707
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 77d077166c68beb498db9d93a4c5f168,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.9
+      value: 0.562707
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 77d077166c68beb498db9d93a4c5f168,
         type: 3}
@@ -31,12 +31,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 77d077166c68beb498db9d93a4c5f168,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00000047683716
+      value: 0.18688
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 77d077166c68beb498db9d93a4c5f168,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.80492926
+      value: 0.81395
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 77d077166c68beb498db9d93a4c5f168,
         type: 3}
@@ -153,7 +153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff006ae9f82e18347a2737e87f94c54f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gaia: {fileID: 0}
   player: {fileID: 0}
   followDistance: 2
   smoothSpeed: 5

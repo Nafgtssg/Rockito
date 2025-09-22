@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
+  m_Name: Ch2Nodo2.2.6
+  m_EditorClassIdentifier: 
+  validator: {fileID: 0}
+  displayName: GAIA
+  leftSpeaker: {fileID: 0}
+  rightSpeaker: {fileID: 0}
+  sound: {fileID: 0}
+  pitchVariation: 0
+  dialogText: "La erosi\xF3n y la meteorizaci\xF3n son procesos que ocurren debido
+    a la interacci\xF3n entre la atm\xF3sfera y la lit\xF3sfera. La erosi\xF3n es
+    el proceso del inicio del trasporte de materiales, mientras que la meteorizaci\xF3n
+    es la fragmentaci\xF3n f\xEDsica y qu\xEDmica de las rocas de la superficie terrestre."
+  nextNode: {fileID: 11400000, guid: 5a5871c02fb44f74385ba0fb3f9a29e9, type: 2}
+  effect: {fileID: 0}
+  onEnding: {fileID: 0}
+  choices: []
+  choiceText: "Erosi\xF3n y meteorizaci\xF3n"

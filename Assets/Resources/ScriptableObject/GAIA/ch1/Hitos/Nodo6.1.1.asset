@@ -24,8 +24,5 @@ MonoBehaviour:
   nextNode: {fileID: 11400000, guid: 0eaa5534851384b42912e6ed89d51ce3, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
-  choices:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  choices: []
   choiceText: Doctrina del catastrofismo

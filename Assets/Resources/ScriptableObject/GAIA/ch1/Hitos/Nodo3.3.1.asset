@@ -19,8 +19,9 @@ MonoBehaviour:
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: "Si encuentras un f\xF3sil en una capa inferior y otro en una capa
-    superior, \xBFqu\xE9 puedes concluir sobre su antig\xFCedad relativa?"
-  nextNode: {fileID: 11400000}
+    superior, \xBFqu\xE9 puedes concluir sobre su antig\xFCedad relativa?, Te dejo
+    esa pregunta para que razones por ti mismo."
+  nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices:

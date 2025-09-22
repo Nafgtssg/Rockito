@@ -18,7 +18,8 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: Creo que esa no es la respuesta.
+  dialogText: 'Creo que esa no es la respuesta, pero se que la respuesta correcta
+    esta en el cuadro que estoy mirando frente a mi. '
   nextNode: {fileID: 11400000, guid: f39ce9308a89d744da3115445cfb4abe, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}

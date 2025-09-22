@@ -16,7 +16,7 @@ MonoBehaviour:
   type: 2
   title: Linterna
   description: Puedes encender la linterna de Dana pulsando la tecla F. Esto emite
-    un potente haz de luz ilumina tu camino en las oscuridades. Pulsa F otra vez
+    un potente haz de luz que ilumina tu camino en la oscuridad. Pulsa F otra vez
     para apagarla.
   sprite: {fileID: 21300000, guid: 901a34e998c1cbc49ae2715500e88c9d, type: 3}
   size: {x: 642, y: 373}

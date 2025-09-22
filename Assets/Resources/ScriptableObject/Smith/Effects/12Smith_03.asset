@@ -16,23 +16,25 @@ MonoBehaviour:
   concepts:
   - conceptID: w
     conceptImage: {fileID: 112462040, guid: 3eae5315f97e3734e8815632ce9f65d0, type: 3}
-    conceptText: Amarillo
-    description: Joven
+    conceptText: Superior
+    description: Es la capa de estratos mas reciente
     correctBoxID: Joven
   - conceptID: x
     conceptImage: {fileID: 1552189693, guid: 3eae5315f97e3734e8815632ce9f65d0, type: 3}
-    conceptText: Cafe
-    description: Viejo
+    conceptText: Inferior
+    description: Este estrato se encuentra en la base
     correctBoxID: Antiguo
   - conceptID: y
     conceptImage: {fileID: 583777680, guid: 3eae5315f97e3734e8815632ce9f65d0, type: 3}
     conceptText: 
-    description: Concha
+    description: "Los f\xF3siles encontrados aparecen en un orden definido y reconocible
+      a lo largo del tiempo geol\xF3gico."
     correctBoxID: "Sucesi\xF3n Faunistica"
   - conceptID: z
     conceptImage: {fileID: 21300000, guid: 8cc9a7b2aa1412449b1e0a3d352b4188, type: 3}
     conceptText: 
-    description: "a\xF1hf\xF1ikashoias"
+    description: "Establece que en un sistema lineal,cada influencia o est\xEDmulo
+      actua por separado"
     correctBoxID: "Superposici\xF3n"
   boxIDs:
   - Antiguo
@@ -40,5 +42,8 @@ MonoBehaviour:
   - "Superposici\xF3n"
   - "Sucesi\xF3n Faunistica"
   size: {x: 300, y: 100}
+  randomizeConcepts: 1
+  randomizeBoxes: 1
+  boxesBackground: {fileID: 0}
   onEnding: {fileID: 11400000, guid: af4cb69b5dda29c409dffc5ff9724294, type: 2}
   onCorrect: {fileID: 11400000, guid: 30616e7a5e832714c9c89ba9ec0fda37, type: 2}

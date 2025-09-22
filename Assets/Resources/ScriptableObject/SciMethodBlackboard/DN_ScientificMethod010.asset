@@ -24,6 +24,6 @@ MonoBehaviour:
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices:
-  - {fileID: 11400000, guid: 04797f6af68c8fe4c93daab6824cc0d8, type: 2}
   - {fileID: 11400000, guid: 662ed9729b406044fa57ec24f0e3816b, type: 2}
+  - {fileID: 11400000, guid: b40c95541da3f25428a00daf842fbe12, type: 2}
   choiceText: "Opci\xF3n"

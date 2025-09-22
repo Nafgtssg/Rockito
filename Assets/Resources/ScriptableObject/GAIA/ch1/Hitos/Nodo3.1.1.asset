@@ -23,8 +23,5 @@ MonoBehaviour:
   nextNode: {fileID: 11400000, guid: 4b4d2e1e828feb442b4f56678649e748, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
-  choices:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  choices: []
   choiceText: "Principio de Superposici\xF3n"

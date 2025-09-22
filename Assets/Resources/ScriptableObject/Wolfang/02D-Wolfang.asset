@@ -18,8 +18,8 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "\xBFC\xF3mo vas con la tarea que te encargu\xE9? Ve con calma, no
-    hay mayores prisas."
+  dialogText: "\xBFC\xF3mo vas con la tarea que te encargu\xE9? Ve con calma a encontrar
+    esos cinco minerales, no hay mayores prisas."
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}

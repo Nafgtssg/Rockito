@@ -53264,6 +53264,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rockito Final
       objectReference: {fileID: 0}
+    - target: {fileID: 6568813684902013870, guid: 1c36bfbcd8426054ba2166219c71ec48,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

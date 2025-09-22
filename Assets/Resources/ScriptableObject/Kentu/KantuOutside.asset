@@ -20,4 +20,5 @@ MonoBehaviour:
   onPlayerEnterRange: {fileID: 0}
   onPlayerExitRange: {fileID: 0}
   id: Kentu
-  dialog: []
+  dialog:
+  - {fileID: 11400000, guid: 231763df437ae134b8f306af302f8649, type: 2}

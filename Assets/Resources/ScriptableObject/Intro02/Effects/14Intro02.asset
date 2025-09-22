@@ -18,9 +18,9 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Este museo... Dedicado a al tiempo y al espacio... Al nacimiento y
-    vida de todo lo conocido... Se testigo de qu\xE9 tiene por ense\xF1ar nuestro
-    humilde punto azul en medio del universo."
+  dialogText: "Este museo... Dedicado al tiempo y al espacio... Al nacimiento y vida
+    de todo lo conocido... Se testigo de qu\xE9 tiene por ense\xF1ar nuestro humilde
+    punto azul en medio del universo."
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 11400000, guid: c0db862481f573f41b3b3c5c6cc41885, type: 2}

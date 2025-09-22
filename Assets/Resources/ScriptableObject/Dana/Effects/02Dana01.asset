@@ -19,7 +19,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: "\xBFTe comi\xF3 la lengua el gato? \xBFEn qu\xE9 andas peque\xF1ajo?"
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: dda1fd1574038ef4a80ffad56bfc2de9, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []
