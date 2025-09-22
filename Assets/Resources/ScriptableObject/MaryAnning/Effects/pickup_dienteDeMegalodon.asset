@@ -21,6 +21,7 @@ MonoBehaviour:
   onPlayerExitRange: {fileID: 0}
   type: 0
   icon: {fileID: 21300000, guid: e597ebb5cbb11074a8ebe854f59d1172, type: 3}
-  description: "Este hermoso diente de Megalod\xF3n, es evidencia que, muy cerca
-    de este aqu\xED, en un lugar llamado Bah\xEDa Inglesa, alguna vez vivi\xF3 uno
-    de los mayores depredadores marinos de todos los tiempos."
+  description: "Este hermoso diente de Megalod\xF3n, es evidencia que, en un lugar
+    llamado Bah\xEDa Inglesa, alguna vez vivi\xF3 uno de los mayores depredadores
+    marinos de todos los tiempos."
+  onCraft: {fileID: 0}

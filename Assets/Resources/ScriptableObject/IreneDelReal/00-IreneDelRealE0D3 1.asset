@@ -18,7 +18,7 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "con la informaci\xF3n que te entregue, \xBFserpas capaz de clasificar
+  dialogText: "con la informaci\xF3n que te entregue, \xBFser\xE1s capaz de clasificar
     estos tipos de dep\xF3sitos ?"
   nextNode: {fileID: 0}
   effect: {fileID: 0}

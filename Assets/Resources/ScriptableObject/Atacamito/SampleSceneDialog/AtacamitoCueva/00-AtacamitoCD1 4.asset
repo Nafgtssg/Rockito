@@ -18,8 +18,8 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: 'Y son muy utiles para guiarte ya que son fluorecentes y su funcion
-    es la siguiente. '
+  dialogText: "Y son muy \xFAtiles para guiarte ya que son fluorecentes y su funci\xF3n
+    es la siguiente. "
   nextNode: {fileID: 11400000, guid: 926b975b8be400045b325f08253d169d, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}

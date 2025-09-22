@@ -19,8 +19,8 @@ MonoBehaviour:
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: "Excelente. Este hermoso diente de Megalod\xF3n, es evidencia que,
-    muy cerca de este aqu\xED, en un lugar  llamado Bah\xEDa Inglesa,  alguna vez
-    vivi\xF3 uno de los mayores depredadores marinos de todos los tiempos."
+    muy cerca de aqu\xED, en un lugar  llamado Bah\xEDa Inglesa,  alguna vez vivi\xF3
+    uno de los mayores depredadores marinos de todos los tiempos."
   nextNode: {fileID: 11400000, guid: f67887332270a3843b501a223c814037, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}

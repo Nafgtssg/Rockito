@@ -20,7 +20,7 @@ MonoBehaviour:
   pitchVariation: 0
   dialogText: "Hola peque\xF1a roca con patas, de seguro te sientes un poco perdido.
     Te cuento mi nombre es Atacamito y soy una chinchilla que ha estado deambulando
-    de aqui para alla. "
+    de aqui para all\xE1. "
   nextNode: {fileID: 11400000, guid: 37fb8b2d4a0991c4cb312265ca534795, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}

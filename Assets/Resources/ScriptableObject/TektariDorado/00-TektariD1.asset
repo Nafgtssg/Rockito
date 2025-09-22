@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
-  m_Name: DN_GAIACH1_040
+  m_Name: 00-TektariD1
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
-  displayName: GAIA
+  displayName: 'Tektari D '
   leftSpeaker: {fileID: 0}
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "\xA1Pues vamos all\xE1!"
+  dialogText: "Amigo mira esto me lo regalaron los se\xF1ores Stheno y Smith, tal
+    vez te ayude a aprender algo "
   nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 0}
+  onEnding: {fileID: 11400000, guid: f91ffdd2743be31499408d57dece7f94, type: 2}
   choices: []
-  choiceText: No es nada
+  choiceText: "Opci\xF3n"

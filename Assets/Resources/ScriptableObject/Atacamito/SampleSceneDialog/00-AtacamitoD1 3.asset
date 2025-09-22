@@ -18,8 +18,8 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Como? as\xED que tu nombre es Rockito, muy bien Rockito espero nos
-    volvamos a ver nuevamente."
+  dialogText: "C\xF3mo? as\xED que tu nombre es Rockito, muy bi\xE9n Rockito espero
+    nos volvamos a ver nuevamente."
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 11400000, guid: c1b4358fb84cd7e47aad161a34b46bf4, type: 2}

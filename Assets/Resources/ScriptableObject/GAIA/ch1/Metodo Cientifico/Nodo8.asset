@@ -18,9 +18,9 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: 
-  nextNode: {fileID: 0}
+  dialogText: esta bien.
+  nextNode: {fileID: 11400000, guid: b7058bad6ae917d4e82b91caea1fbcc4, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []
-  choiceText: "Volver a cap\xEDtulos"
+  choiceText: Volver al Inicio

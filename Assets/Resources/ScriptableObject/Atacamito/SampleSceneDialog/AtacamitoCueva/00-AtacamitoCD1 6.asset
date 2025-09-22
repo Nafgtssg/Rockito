@@ -19,8 +19,8 @@ MonoBehaviour:
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: "Cuando veas una mezcla de ambos, quiere decir que muy cerca de ah\xED
-    se encuentra algun objeto importante o alguna persona. RECUERDALO YA QUE ES MUY
-    FACIL PERDERTE SIN UN GUIA."
+    se encuentra alg\xFAn objeto importante o alguna persona. RECUERDALO YA QUE ES
+    MUY FACIL PERDERTE SIN UN GUIA."
   nextNode: {fileID: 0}
   effect: {fileID: 11400000, guid: b4641c401105d3e41a9089ae72d715bc, type: 2}
   onEnding: {fileID: 0}

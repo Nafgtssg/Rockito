@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
+  m_Name: ch2nodo2.3.2 2
+  m_EditorClassIdentifier: 
+  validator: {fileID: 0}
+  displayName: GAIA
+  leftSpeaker: {fileID: 0}
+  rightSpeaker: {fileID: 0}
+  sound: {fileID: 0}
+  pitchVariation: 0
+  dialogText: "Qu\xE9 mas quieres saber?"
+  nextNode: {fileID: 0}
+  effect: {fileID: 0}
+  onEnding: {fileID: 0}
+  choices:
+  - {fileID: 11400000, guid: 907731c66f2f51040b3b3151c2367cd9, type: 2}
+  - {fileID: 11400000, guid: 3d876807b7a7df84b8d86b572d9c82fc, type: 2}
+  - {fileID: 11400000, guid: 61e8f16b4fc403447a4d606ebe06cc1a, type: 2}
+  choiceText: "Lit\xF3sfera"

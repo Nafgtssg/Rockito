@@ -18,8 +18,8 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: Si te sientes perdido, utiliza los mapas para ubicarte Rockito, mientras
-    tanto yo seguire investigando nuevos lugares.
+  dialogText: "Si te sientes perdido, utiliza los mapas para ubicarte Rockito, mientras
+    tanto yo seguir\xE9 investigando nuevos lugares."
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}

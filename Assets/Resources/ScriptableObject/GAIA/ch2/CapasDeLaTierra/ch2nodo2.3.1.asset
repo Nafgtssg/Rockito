@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
+  m_Name: ch2nodo2.3.1
+  m_EditorClassIdentifier: 
+  validator: {fileID: 0}
+  displayName: GAIA
+  leftSpeaker: {fileID: 0}
+  rightSpeaker: {fileID: 0}
+  sound: {fileID: 0}
+  pitchVariation: 0
+  dialogText: "El interior de la Tierra no se observa directamente, lo conocemos
+    gracias a las ondas s\xEDsmicas. Las ondas S no atraviesan l\xEDquidos \u2192
+    revelan un n\xFAcleo externo l\xEDquido. Las ondas P cambian su velocidad \u2192
+    muestran la existencia de un n\xFAcleo interno s\xF3lido."
+  nextNode: {fileID: 11400000, guid: 08649fc9d4e57bc44931bb1d94ed42d8, type: 2}
+  effect: {fileID: 0}
+  onEnding: {fileID: 0}
+  choices: []
+  choiceText: "Introduci\xF3n y tect\xF3nica de placas"

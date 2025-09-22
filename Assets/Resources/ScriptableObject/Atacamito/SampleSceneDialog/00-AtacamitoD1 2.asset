@@ -18,9 +18,9 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Reparti dichos mapas por distintas zonas de por aqui, si te acercas
-    a ellos, te indicaran en que parte te encuentras, usalos si estas muy perdido,
-    peque\xF1a roca con patas. "
+  dialogText: "Repart\xED dichos mapas por distintas zonas de por aqu\xED, si te
+    acercas a ellos, te indicar\xE1n en que parte te encuentras, \xFAsalos si est\xE1s
+    muy perdido, peque\xF1a roca con patas. "
   nextNode: {fileID: 11400000, guid: 11a4104668d282d41ba7eda659a91c1b, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}

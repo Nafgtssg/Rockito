@@ -18,9 +18,9 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: 'Recuerda, los cristales celestes siempre te indicaran una ruta del
-    camino, mientras que los cristales rojos te indicaran que por dicho camino hay
-    algo importante. '
+  dialogText: "Recuerda, los cristales celestes siempre te indicar\xE1n una ruta
+    del camino, mientras que los cristales rojos te indicar\xE1n que por dicho camino
+    hay algo importante. "
   nextNode: {fileID: 11400000, guid: 21608084e600cda4dbfc0ed671006be3, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}

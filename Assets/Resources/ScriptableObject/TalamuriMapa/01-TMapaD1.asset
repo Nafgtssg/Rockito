@@ -18,9 +18,10 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: Mira el mapa para encontrar los minerales que escondi.
+  dialogText: Mira el mapa para encontrar los minerales que escondi, igualmente tengo
+    una copia por si perdiste el tuyo. Mira.
   nextNode: {fileID: 0}
   effect: {fileID: 0}
-  onEnding: {fileID: 0}
+  onEnding: {fileID: 11400000, guid: aa18763aa25dcfd4f87c78f181361f2e, type: 2}
   choices: []
   choiceText: "Opci\xF3n"

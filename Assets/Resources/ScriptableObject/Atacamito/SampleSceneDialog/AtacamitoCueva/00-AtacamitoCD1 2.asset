@@ -18,8 +18,8 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Bueno, viendo que es tu primera vez por aqu\xED, te ayudare con algo
-    ya que yo explore antes que tu esta cueva. "
+  dialogText: "Bueno, viendo que es tu primera vez por aqu\xED te ayudar\xE9, ya
+    que explor\xE9 antes que t\xFA esta cueva. "
   nextNode: {fileID: 11400000, guid: 8c904de86dbe5874090128318bf51812, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}

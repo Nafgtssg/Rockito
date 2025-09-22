@@ -18,7 +18,7 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "\xA1Ya'o Pancho! \xA1Ponte vi'o y ordena un poco!"
+  dialogText: "\xA1Azulito ordena un poco!"
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 11400000, guid: 3c749861b5959e9499bdd636382812c9, type: 2}

@@ -18,7 +18,8 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: Utiliza estos objetos ancestrales con sabiduria y sigue tu camino.
+  dialogText: "Combina este objeto ancestral con el Litio con sabidur\xEDa y sigue
+    tu camino."
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}

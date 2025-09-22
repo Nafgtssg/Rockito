@@ -18,8 +18,8 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: "Ves los cristales Celestes y Rojos que hay por aqu\xED?, estos cristales
-    los arroje yo. "
+  dialogText: "\xBFVes los cristales Celestes y Rojos que hay por aqu\xED? Estos
+    cristales los arroj\xE9 yo. "
   nextNode: {fileID: 11400000, guid: 2adef8c06fbcf834f9a7bb44b5218507, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
