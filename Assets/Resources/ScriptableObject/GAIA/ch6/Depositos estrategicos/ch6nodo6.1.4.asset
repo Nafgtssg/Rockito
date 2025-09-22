@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
+  m_Name: ch6nodo6.1.4
+  m_EditorClassIdentifier: 
+  validator: {fileID: 0}
+  displayName: 
+  leftSpeaker: {fileID: 0}
+  rightSpeaker: {fileID: 0}
+  sound: {fileID: 0}
+  pitchVariation: 0
+  dialogText: "Los dep\xF3sitos de \xE1ridos son esenciales para la construcci\xF3n
+    y la infraestructura. Se forman por la acci\xF3n de r\xEDos, glaciares, olas
+    y viento, que erosionan rocas y transportan fragmentos hasta depositarlos en
+    terrazas fluviales, playas, dunas o canteras naturales."
+  nextNode: {fileID: 11400000, guid: fc89c95d27974fc4795f927db1b5ac85, type: 2}
+  effect: {fileID: 0}
+  onEnding: {fileID: 0}
+  choices: []
+  choiceText: "Dep\xF3sitos de \xE1ridos"

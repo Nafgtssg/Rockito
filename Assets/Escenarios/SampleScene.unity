@@ -27306,6 +27306,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kaikura1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5da766ca434d8804eab1348c68ba5b9c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3164982295968437048, guid: 5da766ca434d8804eab1348c68ba5b9c,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -27433,6 +27438,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Kaikura3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5da766ca434d8804eab1348c68ba5b9c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3164982295968437048, guid: 5da766ca434d8804eab1348c68ba5b9c,
         type: 3}
@@ -30899,6 +30909,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tektari3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eddf2493d0bc75d4c87e311752fb77f7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2042709290117977785, guid: eddf2493d0bc75d4c87e311752fb77f7,
         type: 3}
@@ -58971,6 +58986,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tektari2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eddf2493d0bc75d4c87e311752fb77f7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2042709290117977785, guid: eddf2493d0bc75d4c87e311752fb77f7,
         type: 3}
@@ -88449,6 +88469,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kaikura4
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5da766ca434d8804eab1348c68ba5b9c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3164982295968437048, guid: 5da766ca434d8804eab1348c68ba5b9c,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -90961,6 +90986,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Kaikura2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5da766ca434d8804eab1348c68ba5b9c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3164982295968437048, guid: 5da766ca434d8804eab1348c68ba5b9c,
         type: 3}
@@ -139821,6 +139851,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tektari5
       objectReference: {fileID: 0}
+    - target: {fileID: 8156699732344915534, guid: 70084cc58f5fb0944b00d33e6dec15fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8825291225096592628, guid: 70084cc58f5fb0944b00d33e6dec15fa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -139925,6 +139960,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TakuriModel
       objectReference: {fileID: 0}
+    - target: {fileID: 8114845125945048891, guid: 3258f437cb7b94b4bbce8d9c209cc5a8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8923434100785931649, guid: 3258f437cb7b94b4bbce8d9c209cc5a8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -139992,6 +140032,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tektari5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729650787972923521, guid: 8b458b4cc5a75b04aab02df1875efbe3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3362634493311425083, guid: 8b458b4cc5a75b04aab02df1875efbe3,
         type: 3}
@@ -140125,6 +140170,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Telamuri3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057621210271343645, guid: be3fa0b1dc421ae44b246330c43acb54,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -140261,6 +140311,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Kaikura5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076975914452576008, guid: 39961e210e1ec884c85735eb33776145,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3017130909524330849, guid: 39961e210e1ec884c85735eb33776145,
         type: 3}

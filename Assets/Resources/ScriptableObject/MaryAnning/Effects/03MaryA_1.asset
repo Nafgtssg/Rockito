@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   displayName: Mary Anning
-  leftSpeaker: {fileID: 21300000, guid: 18288f9ef08de27448e3bd275c83b137, type: 3}
-  rightSpeaker: {fileID: 21300000, guid: 903fe82c18dd17c4e878d02fcb9e16d1, type: 3}
+  leftSpeaker: {fileID: 0}
+  rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: "Me llamo Mary Anning. Sol\xEDa caminar los acantilados de Lyme Regis,

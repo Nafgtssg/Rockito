@@ -18,9 +18,10 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: 
-  nextNode: {fileID: 0}
+  dialogText: "El n\xFAcleo est\xE1 dividido en externo l\xEDquido e interno s\xF3lido.
+    Su movimiento genera el campo magn\xE9tico terrestre."
+  nextNode: {fileID: 11400000, guid: febed824d99211a49a01daacb3e57c65, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []
-  choiceText: "Opci\xF3n"
+  choiceText: "N\xFAcleo"

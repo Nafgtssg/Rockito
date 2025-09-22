@@ -18,9 +18,10 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: 
-  nextNode: {fileID: 0}
+  dialogText: "La corteza oce\xE1nica se forma en dorsales. Est\xE1 hecha de basaltos,
+    gabros y sedimentos marinos."
+  nextNode: {fileID: 11400000, guid: fbb23fedb5f63634792f6733d3cad32e, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []
-  choiceText: "Opci\xF3n"
+  choiceText: "Corteza Oce\xE1nica"
