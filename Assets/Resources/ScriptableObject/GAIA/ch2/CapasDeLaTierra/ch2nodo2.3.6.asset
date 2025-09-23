@@ -18,9 +18,11 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: 
+  dialogText: El manto se extiende hasta 2.900 km de profundidad. Contiene el manto
+    superior, donde se forma el magma, y el manto inferior, donde ocurren movimientos
+    convectivos.
   nextNode: {fileID: 0}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []
-  choiceText: "Opci\xF3n"
+  choiceText: Manto

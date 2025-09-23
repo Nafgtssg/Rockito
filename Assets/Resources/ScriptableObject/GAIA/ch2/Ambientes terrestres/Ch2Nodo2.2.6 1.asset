@@ -20,7 +20,7 @@ MonoBehaviour:
   pitchVariation: 0
   dialogText: "El Gran Ca\xF1\xF3n del Colorado es resultado de millones de a\xF1os
     de erosi\xF3n fluvial."
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: c8fa7c709f7630e469decfaa19b80b5e, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []

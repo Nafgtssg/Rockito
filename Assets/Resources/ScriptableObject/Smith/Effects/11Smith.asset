@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   displayName: William Smith
-  leftSpeaker: {fileID: 21300000, guid: 18288f9ef08de27448e3bd275c83b137, type: 3}
-  rightSpeaker: {fileID: 21300000, guid: 698b57d30d6918a488982fcbb34f31eb, type: 3}
+  leftSpeaker: {fileID: 0}
+  rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
   dialogText: "Descubr\xED que cada conjunto de f\xF3siles aparece en un orden espec\xEDfico

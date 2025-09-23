@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   validator: {fileID: 0}
   displayName: "\xBF?"
-  leftSpeaker: {fileID: 21300000, guid: 18288f9ef08de27448e3bd275c83b137, type: 3}
+  leftSpeaker: {fileID: 0}
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0

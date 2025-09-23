@@ -18,9 +18,10 @@ MonoBehaviour:
   rightSpeaker: {fileID: 0}
   sound: {fileID: 0}
   pitchVariation: 0
-  dialogText: 
-  nextNode: {fileID: 0}
+  dialogText: "La corteza continental es m\xE1s gruesa y variada. Tiene granitos,
+    rocas metam\xF3rficas y sedimentos. Es mucho m\xE1s antigua que la oce\xE1nica."
+  nextNode: {fileID: 11400000, guid: e81622c9f13bffa4fb329b9071c4aa00, type: 2}
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices: []
-  choiceText: "Opci\xF3n"
+  choiceText: Corteza continental

@@ -23,8 +23,8 @@ MonoBehaviour:
   effect: {fileID: 0}
   onEnding: {fileID: 0}
   choices:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: f381ca1247f55824db5e25d48db51012, type: 2}
+  - {fileID: 11400000, guid: 99324fa0edd24db41bdbbda109813e00, type: 2}
+  - {fileID: 11400000, guid: 9338ed098f1064c4fa4938f2eb4b6a61, type: 2}
+  - {fileID: 11400000, guid: 61e8f16b4fc403447a4d606ebe06cc1a, type: 2}
   choiceText: Corteza

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7131706fc8b5d4a92a6ee39e062422, type: 3}
+  m_Name: ch3Nodo3.1.6
+  m_EditorClassIdentifier: 
+  validator: {fileID: 0}
+  displayName: GAIA
+  leftSpeaker: {fileID: 0}
+  rightSpeaker: {fileID: 0}
+  sound: {fileID: 0}
+  pitchVariation: 0
+  dialogText: "Las detr\xEDticas se forman por acumulaci\xF3n de fragmentos (ej:
+    arenisca). Las qu\xEDmicas o bioqu\xEDmicas por precipitaci\xF3n o restos org\xE1nicos
+    (ej: caliza con f\xF3siles)."
+  nextNode: {fileID: 11400000, guid: 21d507c83dbdc2a488fd23053f9d0bff, type: 2}
+  effect: {fileID: 0}
+  onEnding: {fileID: 0}
+  choices: []
+  choiceText: "Sedimentarias: detr\xEDticas y qu\xEDmicas"
